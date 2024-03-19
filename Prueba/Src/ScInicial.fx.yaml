@@ -53,3 +53,8 @@ ScInicial As screen:
         Y: =330
         ZIndex: =6
 
+    Rectangle5 As rectangle:
+        X: =847
+        Y: =294
+        ZIndex: =7
+
