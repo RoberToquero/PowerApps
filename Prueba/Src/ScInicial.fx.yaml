@@ -54,6 +54,7 @@ ScInicial As screen:
         ZIndex: =6
 
     Rectangle5 As rectangle:
+        Fill: =RGBA(255, 255, 0, 1)
         X: =847
         Y: =294
         ZIndex: =7
