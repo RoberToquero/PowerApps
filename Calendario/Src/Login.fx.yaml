@@ -1,0 +1,136 @@
+Login As screen:
+
+    Label4 As label:
+        Size: =20
+        Text: |-
+            ="Usuario:"
+        X: =121
+        Y: =210
+        ZIndex: =1
+
+    Label5 As label:
+        Height: =38
+        Size: =20
+        Text: |-
+            ="Contraseña:"
+        Width: =162
+        X: =121
+        Y: =365
+        ZIndex: =2
+
+    txt_Usuario_Login As text:
+        Default: =
+        Height: =50
+        Size: =20
+        Width: =377
+        X: =121
+        Y: =264
+        ZIndex: =3
+
+    txt_Contraseña_Login As text:
+        Default: =
+        Height: =50
+        Mode: =If(pw_visible,TextMode.SingleLine,TextMode.Password)
+        Size: =20
+        Width: =377
+        X: =121
+        Y: =416
+        ZIndex: =4
+
+    Boton_Entrar_Login As button:
+        Fill: =RGBA(0, 16, 96, 1)
+        OnSelect: |-
+            =If(
+                IsBlank(
+                    First(
+                        Filter(
+                            Coll_usuarios,
+                            Nombre=txt_Usuario_Login.Text
+                        )
+                    )
+                ),
+                Notify(
+                    "Usuario inexistente",
+                    NotificationType.Error,
+                    2000
+                ),
+                If(
+                    LookUp(
+                        Coll_usuarios,
+                        Nombre = txt_Usuario_Login.Text,
+                        Pw
+                    ) <> txt_Contraseña_Login.Text,
+                    Notify(
+                        "Contraseña incorrecta",
+                        NotificationType.Error,
+                        2000
+                    ),
+                    Set(dep_user,First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Departamento);
+                    Set(var_mes,Month(Today()));
+                    Set(var_año,Year(Today()));
+                    Navigate(Calendario)
+                )    
+            )
+        Text: ="Entrar"
+        X: =230
+        Y: =589
+        ZIndex: =5
+
+    Rectangle4 As rectangle:
+        Fill: =RGBA(39, 113, 194, 1)
+        Height: =95
+        Width: =620
+        ZIndex: =7
+
+    Label6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =58
+        Size: =30
+        Text: |-
+            ="Login
+            "
+        Width: =125
+        X: =241
+        Y: =18
+        ZIndex: =8
+
+    Icono_No_Ver_Contraseña As icon.View:
+        Height: =50
+        Icon: =Icon.View
+        OnSelect: =Set(pw_visible,!pw_visible)
+        Visible: =If(pw_visible,false,true)
+        Width: =35
+        X: =455
+        Y: =416
+        ZIndex: =9
+
+    Icono_Ver_Contraseña As icon.Hide:
+        Height: =43
+        Icon: =Icon.Hide
+        OnSelect: =Set(pw_visible,!pw_visible)
+        Visible: =If(pw_visible,true,false)
+        Width: =35
+        X: =455
+        Y: =423
+        ZIndex: =10
+
+    Image1 As image:
+        Fill: =RGBA(0, 16, 96, 1)
+        Height: =768
+        Image: =vacaciones
+        Width: =746
+        X: =620
+        ZIndex: =11
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Bold
+        Italic: =true
+        Size: =34
+        Text: ="S"
+        X: =1013
+        Y: =80
+        ZIndex: =12
+

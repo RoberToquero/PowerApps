@@ -1,0 +1,22 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-15T18:34:15.6260000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Departamento": "Departamento",
+      "Fecha": "Fecha",
+      "Fiesta": "Fiesta"
+    },
+    "DatasetName": "b!kmWK09E7Vk2JD3WiTMr5Ia8LJ7GWEtVCmHGesR5X9zdVYpzUqt8gTYR6DyXZaXcB.01AOFFEU2XHQBGHG6VFVAZ7R7YCVOW5FJE",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Fiestas",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

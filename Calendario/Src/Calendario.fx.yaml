@@ -1,0 +1,951 @@
+Calendario As screen:
+    Fill: =
+    OnVisible: |
+        =Select(BotonCalcularCalendario)
+
+    LabelMes As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =77
+        Size: =40
+        Text: =Text(Date(var_año,var_mes,1),"mmmm")
+        Width: =372
+        X: =498
+        Y: =82
+        ZIndex: =1
+
+    LabelAño As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =41
+        Size: =20
+        Text: =Text(Date(var_año,var_mes,1),"yyyy")
+        Width: =174
+        X: =1192
+        Y: =100
+        ZIndex: =2
+
+    BotonCalcularCalendario As button:
+        Height: =19
+        OnSelect: |-
+            =Set(var_primerdiames,Date(var_año,var_mes,1));
+            Set(var_ultimodiames,Date(var_año,var_mes+1,0));
+            Set(var_ultimodiamesanterior,var_primerdiames-1);
+            Set(var_primerdiasemana,If(Weekday(var_primerdiames)-1=0,7,Weekday(var_primerdiames)-1));
+            Set(var_primerdiamesanterior,Day(var_ultimodiamesanterior-var_primerdiasemana+2));
+            Set(var_ultimodiasemana,If(Weekday(var_ultimodiames)-1=0,7,Weekday(var_ultimodiames-1)));
+            Clear(coll_mes);
+            If(var_primerdiasemana>1,
+            ForAll(Sequence(Day(var_ultimodiamesanterior)-var_primerdiamesanterior+1,
+            var_primerdiamesanterior),
+            Collect(coll_mes,{Value: Value,delmes: false})));
+            ForAll(Sequence(Day(var_ultimodiames)),
+            Collect(coll_mes,{Value: Value,delmes: true}));
+            ForAll(Sequence(7-var_ultimodiasemana),
+            Collect(coll_mes,{Value: Value,delmes: false}));
+        Text: =""
+        Visible: =false
+        Width: =15
+        ZIndex: =10
+
+    IconoIzquierda As icon.ChevronLeft:
+        BorderThickness: =0.5
+        Color: =RGBA(241, 244, 249, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =609
+        Icon: =Icon.ChevronLeft
+        OnSelect: |-
+            =Set(var_mes,var_mes-1);
+            If(var_mes<1,Set(var_mes,12);Set(var_año,var_año-1));
+            Select(BotonCalcularCalendario)
+        Width: =152
+        Y: =159
+        ZIndex: =11
+
+    IconoDerecha As icon.ChevronRight:
+        BorderThickness: =0.5
+        Color: =RGBA(241, 244, 249, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =609
+        Icon: =Icon.ChevronRight
+        OnSelect: |-
+            =Set(var_mes,var_mes+1);
+            If(var_mes>12,Set(var_mes,1);Set(var_año,var_año+1));
+            Select(BotonCalcularCalendario)
+        Width: =150
+        X: =1216
+        Y: =159
+        ZIndex: =12
+
+    GalleryCalendario As gallery.galleryVertical:
+        BorderThickness: =0.5
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =533
+        Items: |-
+            =AddColumns(
+            coll_mes,
+            "tabla_calendario", 
+            LookUp(
+            Fiestas, 
+            Day(Fecha)=coll_mes[@Value] && Month(Fecha)=var_mes
+            ))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =132
+        Width: =1064
+        WrapCount: =7
+        X: =152
+        Y: =235
+        ZIndex: =14
+
+        LabelDiaCal As label:
+            DisabledFill: =RGBA(0, 0, 0, 0.1)
+            DisplayMode: =If(!ThisItem.delmes,DisplayMode.Disabled,DisplayMode.View)
+            FontWeight: =FontWeight.Bold
+            Height: =132
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: |
+                =" "&ThisItem.Value&"
+                
+                
+                
+                "
+            ZIndex: =1
+
+        LabelEventoCal As label:
+            Align: =Align.Center
+            Fill: |-
+                =If(ThisItem.tabla_calendario.Fiesta<>Blank() && ThisItem.tabla_calendario.Departamento=dep_user &&ThisItem.delmes,RGBA(252, 255, 0, 0.2),
+                If(ThisItem.tabla_calendario.Fiesta<>Blank() && IsMatch(ThisItem.tabla_calendario.Departamento,"Todos") &&ThisItem.delmes,RGBA(255, 218, 237, 0.6),RGBA(0,0,0,0)))
+            Height: =132
+            OnSelect: =Select(Parent)
+            Text: =If(ThisItem.delmes && (IsMatch(ThisItem.tabla_calendario.Departamento,"Todos") || ThisItem.tabla_calendario.Departamento=dep_user),ThisItem.tabla_calendario.Fiesta,"")
+            ZIndex: =2
+
+    FondoPopUp As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.25)
+        Height: =768
+        Visible: =puavFondo
+        Width: =1366
+        ZIndex: =23
+
+    TopBar As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        BotonAñadirVacaciones As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(puavvisible,true);Set(puavFondo,true);Set(puavesvalido,false)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Añadir Vacaciones"
+            Width: =152
+            ZIndex: =13
+
+        BotonModificarVacaciones As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Modificar Vacaciones"
+            Width: =152
+            X: =152
+            ZIndex: =15
+
+        BotonAñadirBaja As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Añadir Baja"
+            Width: =152
+            X: =304
+            ZIndex: =16
+
+        BotonAñadirDLE As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: |-
+                ="Añadir
+                Dia LE"
+            Width: =152
+            X: =456
+            ZIndex: =17
+
+        BotonModificarDLE As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: |-
+                ="Modificar
+                Dia LE"
+            Width: =151
+            X: =608
+            ZIndex: =18
+
+        BotonAñadirDAP As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: |-
+                ="Añadir
+                Dia AP"
+            Width: =151
+            X: =759
+            ZIndex: =19
+
+        Button7_5 As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Botón"
+            Width: =152
+            X: =910
+            ZIndex: =20
+
+        Button7_6 As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Botón"
+            Width: =152
+            X: =1062
+            ZIndex: =21
+
+        Button7_7 As button:
+            BorderThickness: =1
+            Fill: =RGBA(99, 139, 44, 1)
+            Height: =61
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Botón"
+            Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
+            Width: =152
+            X: =1214
+            ZIndex: =22
+
+    DiasSemana As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =35
+
+        LabelLunes As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Color: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Lunes"
+            Width: =151
+            X: =152
+            Y: =159
+            ZIndex: =3
+
+        LabelMartes As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Color: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Martes"
+            Width: =151
+            X: =304
+            Y: =159
+            ZIndex: =4
+
+        LabelMiercoles As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Color: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Miercoles"
+            Width: =151
+            X: =456
+            Y: =159
+            ZIndex: =5
+
+        LabelJueves As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Color: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Jueves"
+            Width: =151
+            X: =608
+            Y: =159
+            ZIndex: =6
+
+        LabelViernes As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Color: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Viernes"
+            Width: =151
+            X: =760
+            Y: =159
+            ZIndex: =7
+
+        LabelSabado As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Color: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Sabado"
+            Width: =151
+            X: =912
+            Y: =159
+            ZIndex: =8
+
+        LabelDomingo As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            Color: =RGBA(241, 244, 249, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =76
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Domingo"
+            Width: =151
+            X: =1064
+            Y: =159
+            ZIndex: =9
+
+    VentanaEspera As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =37
+
+        Cuadro_Espera As rectangle:
+            Height: =600
+            Visible: =enespera
+            Width: =773
+            X: =304
+            Y: =19
+            ZIndex: =29
+
+        Label_espera As label:
+            Align: =Align.Center
+            Color: =RGBA(241, 244, 249, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =309
+            Size: =100
+            Text: ="Espera"
+            Visible: =enespera
+            Width: =547
+            X: =411
+            Y: =159
+            ZIndex: =30
+
+    PopUpAñadirVacaciones As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =38
+
+        Cuadro_PUAV As rectangle:
+            Height: =423
+            Visible: =puavvisible
+            Width: =662
+            X: =357
+            Y: =100
+            ZIndex: =24
+
+        Label2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =168
+            Size: =28
+            Text: ="Elige periodo de vacaciones"
+            Visible: =puavvisible
+            Width: =306
+            X: =538
+            Y: =141
+            ZIndex: =25
+
+        Boton_PUAV_Verano As button:
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(255, 191, 0, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =57
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(puavVerano,true);Set(puavvisible,false)
+            Size: =20
+            Text: ="Verano"
+            Visible: =puavvisible
+            Width: =172
+            X: =455
+            Y: =365
+            ZIndex: =26
+
+        Boton_PUAV_Invierno As button:
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(227, 234, 243, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =57
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(puavInvierno,true);Set(puavvisible,false)
+            Size: =20
+            Text: ="Invierno"
+            Visible: =puavvisible
+            X: =765
+            Y: =365
+            ZIndex: =27
+
+        Boton_PUAV_Cancelar As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            FontWeight: =FontWeight.Bold
+            HoverFill: =ColorFade(Self.Fill, 50%)
+            OnSelect: =Set(puavvisible,false);Set(puavFondo,false)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="X"
+            Visible: =puavvisible
+            Width: =40
+            X: =979
+            Y: =101
+            ZIndex: =28
+
+    PUAV_Verano As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Cuadro_PUAV_Verano As rectangle:
+            BorderThickness: =1
+            Height: =600
+            Visible: =puavVerano
+            Width: =774
+            X: =297
+            Y: =49
+            ZIndex: =31
+
+        Boton_PUAV_Aceptar_Verano As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =If(
+                    rb_PUAV_Verano.Selected.Value=1
+                    ,
+                    ClearCollect(coll_num,Sequence(15,1,1));
+                    ForAll(
+                        coll_num, 
+                        If(
+                            true
+                            ,
+                            Collect(
+                                Fiestas,
+                                {
+                                    Fecha: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,Value(ThisRecord.Value),TimeUnit.Days),
+                                    Fiesta: "Vacaciones " & txt_Usuario_Login.Text,
+                                    Departamento: dep_user
+                                }
+                            )
+                            ,
+                            false
+                        )
+                    )
+                    ,
+                    Set(enespera,false)
+                )
+                    
+                
+                    
+            Text: ="Aceptar"
+            Visible: =puavVerano
+            X: =811
+            Y: =546
+            ZIndex: =32
+
+        Boton_PUAV_Cancelar_Verano As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 30%)
+            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(puavVerano,false);Set(puavFondo,false);Set(varcount,1);Reset(rb_PUAV_Verano)
+            Text: ="Cancelar"
+            Visible: =puavVerano
+            X: =411
+            Y: =546
+            ZIndex: =33
+
+        Label8 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =105
+            Size: =20
+            Text: ="Dia de inicio"
+            Visible: =If(puavVerano && rb_PUAV_Verano.Selected.Value=1,true,false)
+            Width: =314
+            X: =525
+            Y: =235
+            ZIndex: =34
+
+        dp_PUAV_Dia_Inicio_Verano_3 As datepicker:
+            DefaultDate: =
+            InputTextPlaceholder: =
+            Reset: =limpiar
+            Visible: =If(puavVerano && rb_PUAV_Verano.Selected.Value=1,true,false)
+            Width: =320
+            X: =530
+            Y: =382
+            ZIndex: =36
+
+        Label9_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =20
+            Text: ="¿En cuántos bloques?"
+            Visible: =puavVerano
+            Width: =342
+            X: =394
+            Y: =75
+            ZIndex: =37
+
+        rb_PUAV_Verano As radio:
+            Color: =RGBA(255, 255, 255, 1)
+            Default: =1
+            FontWeight: =FontWeight.Bold
+            Height: =109
+            Items: =RadioSample
+            OnChange: =Set(limpiar,true);Set(limpiar,false)
+            Size: =20
+            Visible: =puavVerano
+            Width: =105
+            X: =838
+            Y: =66
+            ZIndex: =38
+
+        Label9_3 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =20
+            Text: ="Inicio bloque de 1 semana"
+            Visible: =If(rb_PUAV_Verano.Selected.Value=2,true,false)
+            Width: =204
+            X: =405
+            Y: =211
+            ZIndex: =39
+
+        Label9_4 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =20
+            Text: ="Inicio bloque de 2 semanas"
+            Visible: =If(rb_PUAV_Verano.Selected.Value=2,true,false)
+            Width: =204
+            X: =411
+            Y: =338
+            ZIndex: =40
+
+        dp_PUAV_Dia_Inicio_Verano_1 As datepicker:
+            DefaultDate: =
+            InputTextPlaceholder: =
+            Reset: =limpiar
+            Visible: =If(rb_PUAV_Verano.Selected.Value=2,true,false)
+            Width: =320
+            X: =674
+            Y: =238
+            ZIndex: =41
+
+        dp_PUAV_Dia_Inicio_Verano_2 As datepicker:
+            DefaultDate: =
+            InputTextPlaceholder: =
+            Reset: =limpiar
+            Visible: =If(rb_PUAV_Verano.Selected.Value=2,true,false)
+            Width: =320
+            X: =674
+            Y: =360
+            ZIndex: =42
+
+        Boton_PUAV_Comprobar_Verano As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Clear(hayfestivo);
+                Clear(hayfestivo2);
+                Clear(haypuente);
+                If(
+                    rb_PUAV_Verano.Selected.Value = 1
+                    ,
+                    Clear(hayfestivo);
+                    Set(fechapuav, dp_PUAV_Dia_Inicio_Verano_3.SelectedDate);
+                    ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
+                    ForAll(
+                        collFestivos,
+                        If(DateDiff(ThisRecord.Fecha, fechapuav) = 0, Collect(hayfestivo, true))
+                    )
+                    ;
+                    If(
+                        Text(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Mon"
+                        ,
+                        If(
+                            First(hayfestivo).Value=true
+                            ,
+                            Notify(
+                                "Ese dia es festivo",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        )
+                        ,
+                        If(
+                            Text(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Sat",
+                            Notify(
+                                "Ese dia es fin de semana",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            Clear(haypuente);
+                            Set(fechapuavpuente, DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days));
+                            ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
+                            ForAll(
+                                collFestivos,
+                                If(DateDiff(ThisRecord.Fecha, fechapuavpuente) = 0, Collect(haypuente, true))
+                            );
+                            If(
+                                First(haypuente).Value=true
+                                ,
+                                Clear(lunesfiesta);
+                                Set(lunesesasemana,
+                                    DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                    1-Weekday(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,StartOfWeek.Monday),
+                                    TimeUnit.Days)
+                                );
+                                ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
+                                ForAll(
+                                    collFestivos,
+                                    If(DateDiff(ThisRecord.Fecha, lunesesasemana) = 0, Collect(lunesfiesta, true))
+                                );
+                                If(
+                                    First(lunesfiesta).Value=true
+                                    ,
+                                    If(
+                                        First(hayfestivo).Value=true
+                                        ,
+                                        Notify(
+                                            "Ese dia es festivo",
+                                            NotificationType.Error,
+                                            2000
+                                        )
+                                        ,
+                                        If(
+                                            DateDiff(lunesesasemana,DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days))=
+                                            CountIf(collFestivos,
+                                                    Fecha>=lunesesasemana,
+                                                    Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days)
+                                            )
+                                            ,
+                                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                            ,
+                                            Notify(
+                                                "El dia tiene que ser el siguiente dia laborable después del lunes festivo",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                        )
+                                    )
+                                    ,
+                                    Notify(
+                                        "El dia tiene que ser lunes",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                )
+                                ,
+                                Notify(
+                                    "El dia tiene que ser lunes",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                    )
+                    ,
+                    Clear(hayfestivo);
+                    Clear(hayfestivo2);
+                    Set(fechapuav1,dp_PUAV_Dia_Inicio_Verano_1.SelectedDate);
+                    Set(fechapuav2,dp_PUAV_Dia_Inicio_Verano_2.SelectedDate);
+                    ClearCollect(collFestivos,Filter(Fiestas,Departamento="Todos"));
+                    ForAll(
+                        collFestivos,
+                        If(DateDiff(ThisRecord.Fecha, fechapuav1) = 0,Collect(hayfestivo, true));
+                        If(DateDiff(ThisRecord.Fecha, fechapuav2) = 0,Collect(hayfestivo2, true))
+                    )
+                    ;
+                    If(
+                        Text(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,"ddd","en-GB") = "Mon"
+                        ,
+                        If(
+                            First(hayfestivo).Value=true
+                            ,
+                            Notify(
+                                "El bloque de 1 semana empieza un festivo",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            If(
+                                Text(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,"ddd","en-GB") = "Mon"
+                                ,
+                                If(
+                                    First(hayfestivo2).Value=true
+                                    ,
+                                    Notify(
+                                        "El bloque de 2 semanas empieza un festivo",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                    ,
+                                    Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                )
+                                ,
+                                Notify(
+                                    "El bloque de 2 semanas no empieza un lunes",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                        ,
+                        Notify(
+                            "El bloque de 1 semana no empieza un lunes",
+                            NotificationType.Error,
+                            2000
+                        )
+                    )
+                );
+                Clear(hayfestivo);
+                Clear(hayfestivo2)
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+            Text: ="Comprobar"
+            Visible: =If(puavVerano && puavesvalido=false,true,false)
+            X: =812
+            Y: =546
+            ZIndex: =43
+
+    PUAV_Invierno As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =49
+
+        Cuadro_PUAV_Invierno As rectangle:
+            BorderThickness: =1
+            Height: =375
+            Visible: =puavInvierno
+            Width: =654
+            X: =356
+            Y: =101
+            ZIndex: =44
+
+        Boton_PUAV_Cancelar_Invierno As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 30%)
+            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(puavInvierno,false);Set(puavFondo,false);Set(puavesvalido,false);Set(varcount,1);Reset(rb_PUAV_Invierno)
+            Text: ="Cancelar"
+            Visible: =puavInvierno
+            X: =433
+            Y: =382
+            ZIndex: =45
+
+        Boton_PUAV_Cancelar_Invierno_1 As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 30%)
+            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(puavInvierno,false);Set(puavFondo,false);Set(puavesvalido,false);Set(varcount,1);Reset(rb_PUAV_Invierno)
+            Text: ="Aceptar"
+            Visible: =puavInvierno
+            X: =764
+            Y: =382
+            ZIndex: =46
+
+        Label7 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =82
+            Size: =26
+            Text: ="Elige semana"
+            Visible: =puavInvierno
+            Width: =267
+            X: =557
+            Y: =137
+            ZIndex: =47
+
+        rb_PUAV_Invierno As radio:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =77
+            Items: =["Semana 1","Semana 2"]
+            Layout: =Layout.Horizontal
+            LineHeight: =1.5
+            PaddingLeft: =10
+            PaddingRight: =10
+            Size: =26
+            Visible: =puavInvierno
+            Width: =510
+            X: =436
+            Y: =240
+            ZIndex: =48
+
