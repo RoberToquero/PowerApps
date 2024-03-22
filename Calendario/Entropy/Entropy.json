@@ -76,7 +76,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/22/2024 15:58:03",
+  "HeaderLastSavedDateTimeUTC": "03/22/2024 16:06:21",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "129484a6-239e-431b-a34f-d24fb22b69b7": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/c9cc2931d5ba4d1a80ef2165833840d9\"",
@@ -90,8 +90,8 @@
     "vacaciones": "5ac43027-376c-4347-87e5-e09ed2a12030.png"
   },
   "LocalResourceRootPaths": {
-    "logo": "https://docserverpwaprodweu.blob.core.windows.net/0098c8c1-8b77-434e-aea0-da11f7cc0b97-1/resource/Assets0Images06ff2daed-ee6a-4b5d-a025-f1a143816899.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-22T15%3A56%3A40Z&ske=2024-03-23T16%3A11%3A40Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-23T16%3A11%3A40Z&sr=b&sp=r&sig=1bbtMiEf1mqJ065GINM7sOPdUNVsqthJG%2FO0nJmw1xY%3D",
-    "vacaciones": "https://docserverpwaprodweu.blob.core.windows.net/0098c8c1-8b77-434e-aea0-da11f7cc0b97-1/resource/Assets0Images05ac43027-376c-4347-87e5-e09ed2a12030.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-22T15%3A56%3A40Z&ske=2024-03-23T16%3A11%3A40Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-23T16%3A11%3A40Z&sr=b&sp=r&sig=VQPaJR2ygrqpNgwiD8%2FpMG3xBtQTvO99ebTpxRBxOGw%3D"
+    "logo": "https://docserverpwaprodweu.blob.core.windows.net/36561eb8-c460-4731-9596-c6986ccb9e01-1/resource/Assets0Images06ff2daed-ee6a-4b5d-a025-f1a143816899.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-22T16%3A05%3A33Z&ske=2024-03-23T16%3A20%3A33Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-23T16%3A20%3A33Z&sr=b&sp=r&sig=dJYmqTo1U8%2Fnbp0Kn%2BnWm2a7EOzxCptfdb20W%2FAJO7g%3D",
+    "vacaciones": "https://docserverpwaprodweu.blob.core.windows.net/36561eb8-c460-4731-9596-c6986ccb9e01-1/resource/Assets0Images05ac43027-376c-4347-87e5-e09ed2a12030.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-22T16%3A05%3A33Z&ske=2024-03-23T16%3A20%3A33Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-23T16%3A20%3A33Z&sr=b&sp=r&sig=bwwqplUlEsLGmax9tRlAbb%2BJbSMiheAeWEi3BJMgJgA%3D"
   },
   "OldLogoFileName": "kadnk1xx.jpg",
   "OrderComponentMetadata": {},
@@ -335,7 +335,7 @@
   "RuleScreenIdWithoutScreen": {},
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.4074087,
+    "AnalysisLoadTime": 0.4005209,
     "ControlCount": {
       "button": 19,
       "datepicker": 3,
@@ -350,7 +350,7 @@
       "screen": 2,
       "text": 2
     },
-    "DeserializationLoadTime": 1.3211947
+    "DeserializationLoadTime": 1.1603383
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

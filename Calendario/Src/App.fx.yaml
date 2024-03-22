@@ -30,6 +30,7 @@ App As appinfo:
                 Departamento: "Ventas",
                 Admin: true
             })
+    StartScreen: =Login
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
