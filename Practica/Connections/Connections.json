@@ -1,0 +1,36 @@
+{
+  "f439ef0d-bb79-4fbf-aece-593d231cf06d": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write",
+      "providers/PowerPlatform.Governance/Operations/Delete"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/alexsp/sporelease/1.0.1682.3673/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://educajcyl.sharepoint.com/sites/prueba5712": {
+        "dataSources": {
+          "Empleados": {
+            "tableName": "290fe653-6406-420e-9c48-c9aac6df4543"
+          },
+          "Viajes": {
+            "tableName": "579282d8-32cf-4537-b9d2-15efae2224a7"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Viajes",
+      "Empleados"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f439ef0d-bb79-4fbf-aece-593d231cf06d"
+  }
+}
