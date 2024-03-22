@@ -38,8 +38,10 @@ ScInicial As screen:
 
     Rectangle4 As rectangle:
         Fill: =RGBA(168, 0, 0, 1)
+        Height: =110
         OnSelect: =Navigate(Nuevo); Set(mostrarBotones,false)
-        X: =456
+        Width: =165
+        X: =455
         Y: =312
         ZIndex: =5
 
@@ -47,7 +49,7 @@ ScInicial As screen:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Add
         OnSelect: =Navigate(Nuevo);Set(mostrarBotones,false)
-        X: =499
-        Y: =330
+        X: =506
+        Y: =335
         ZIndex: =6
 
