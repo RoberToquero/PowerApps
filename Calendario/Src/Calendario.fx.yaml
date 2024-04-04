@@ -8,7 +8,7 @@ Calendario As screen:
         FontWeight: =FontWeight.Bold
         Height: =77
         Size: =40
-        Text: =Text(Date(var_año,var_mes,1),"mmmm")
+        Text: =Upper(Text(Date(var_año,var_mes,1),"mmmm"))
         Width: =372
         X: =498
         Y: =82
