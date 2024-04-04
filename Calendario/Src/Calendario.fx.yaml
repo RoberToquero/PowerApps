@@ -1035,6 +1035,13 @@ Calendario As screen:
             Y: =523
             ZIndex: =51
 
+    Rectangle3 As rectangle:
+        Height: =491
+        Width: =664
+        X: =349
+        Y: =103
+        ZIndex: =60
+
     PopUp_AñadirLE As group:
         Height: =5
         Width: =5
@@ -1088,9 +1095,45 @@ Calendario As screen:
         btn_aceptar_PUALE As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Set(pualevisible,false);
+                Set(puavFondo,false)
             Text: ="Aceptar"
             Visible: =pualevisible
             X: =736
             Y: =491
             ZIndex: =59
+
+    Label9 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =98
+        Size: =20
+        Text: ="Indique el día de asuntos propios "
+        Width: =251
+        X: =555
+        Y: =158
+        ZIndex: =61
+
+    DatePicker2 As datepicker:
+        X: =527
+        Y: =325
+        ZIndex: =62
+
+    Button2 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        HoverFill: =ColorFade(Self.Fill, 20%)
+        Text: ="Cancelar"
+        X: =446
+        Y: =461
+        ZIndex: =63
+
+    Button2_1 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        HoverFill: =ColorFade(Self.Fill, 20%)
+        Text: ="Aceptar"
+        X: =737
+        Y: =461
+        ZIndex: =64
 
