@@ -1064,19 +1064,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.DatePicker2.AccessibleLabel"
+                  "fullyQualifiedName": "Calendario.dp_Fecha_PUAAP.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.DatePicker2.AccessibleLabel",
+                  "fullyQualifiedName": "Calendario.dp_Fecha_PUAAP.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Calendario",
-                "type": "Calendario.DatePicker2"
+                "type": "Calendario.dp_Fecha_PUAAP"
               }
             }
           ],

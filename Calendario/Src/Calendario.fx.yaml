@@ -240,6 +240,7 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(puavFondo,true);Set(puaapvisible,true)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -456,7 +457,7 @@ Calendario As screen:
             Width: =773
             X: =304
             Y: =19
-            ZIndex: =52
+            ZIndex: =63
 
         Label_espera As label:
             Align: =Align.Center
@@ -469,7 +470,7 @@ Calendario As screen:
             Width: =547
             X: =411
             Y: =159
-            ZIndex: =53
+            ZIndex: =64
 
     PopUpAñadirVacaciones As group:
         Height: =5
@@ -1035,13 +1036,6 @@ Calendario As screen:
             Y: =523
             ZIndex: =51
 
-    Rectangle3 As rectangle:
-        Height: =491
-        Width: =664
-        X: =349
-        Y: =103
-        ZIndex: =60
-
     PopUp_AñadirLE As group:
         Height: =5
         Width: =5
@@ -1055,7 +1049,7 @@ Calendario As screen:
             Width: =763
             X: =274
             Y: =31
-            ZIndex: =54
+            ZIndex: =52
 
         Label3 As label:
             Align: =Align.Center
@@ -1068,19 +1062,19 @@ Calendario As screen:
             Width: =345
             X: =483
             Y: =102
-            ZIndex: =55
+            ZIndex: =53
 
         dp_ALE2 As datepicker:
             Visible: =pualevisible
             X: =498
             Y: =247
-            ZIndex: =56
+            ZIndex: =54
 
         dp_ALE1 As datepicker:
             Visible: =pualevisible
             X: =498
             Y: =338
-            ZIndex: =57
+            ZIndex: =55
 
         btn_cancelar_PUALE As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -1090,7 +1084,7 @@ Calendario As screen:
             Visible: =pualevisible
             X: =405
             Y: =491
-            ZIndex: =58
+            ZIndex: =56
 
         btn_aceptar_PUALE As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -1102,38 +1096,61 @@ Calendario As screen:
             Visible: =pualevisible
             X: =736
             Y: =491
+            ZIndex: =57
+
+    PopUp_AñadirAP As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =65
+
+        Rectangle3 As rectangle:
+            Height: =491
+            Visible: =puaapvisible
+            Width: =664
+            X: =349
+            Y: =103
+            ZIndex: =58
+
+        Label9 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =98
+            Size: =20
+            Text: ="Indique el día de asuntos propios "
+            Visible: =puaapvisible
+            Width: =251
+            X: =555
+            Y: =158
             ZIndex: =59
 
-    Label9 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =98
-        Size: =20
-        Text: ="Indique el día de asuntos propios "
-        Width: =251
-        X: =555
-        Y: =158
-        ZIndex: =61
+        dp_Fecha_PUAAP As datepicker:
+            Visible: =puaapvisible
+            X: =527
+            Y: =325
+            ZIndex: =60
 
-    DatePicker2 As datepicker:
-        X: =527
-        Y: =325
-        ZIndex: =62
+        btn_cancelar_PUAAP As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(puaapvisible,false);Set(puavFondo,false)
+            Text: ="Cancelar"
+            Visible: =puaapvisible
+            X: =446
+            Y: =461
+            ZIndex: =61
 
-    Button2 As button:
-        Fill: =RGBA(255, 0, 0, 1)
-        HoverFill: =ColorFade(Self.Fill, 20%)
-        Text: ="Cancelar"
-        X: =446
-        Y: =461
-        ZIndex: =63
-
-    Button2_1 As button:
-        Fill: =RGBA(54, 176, 75, 1)
-        HoverFill: =ColorFade(Self.Fill, 20%)
-        Text: ="Aceptar"
-        X: =737
-        Y: =461
-        ZIndex: =64
+        btn_aceptar_PUAAP As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Set(puaapvisible,false);
+                Set(puavFondo,false)
+            Text: ="Aceptar"
+            Visible: =puaapvisible
+            X: =737
+            Y: =461
+            ZIndex: =62
 
