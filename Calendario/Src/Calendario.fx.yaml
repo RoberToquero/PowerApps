@@ -1015,7 +1015,7 @@ Calendario As screen:
                     Collect(
                         Fiestas,
                         {
-                            Fecha: DateAdd(dp_inicio_baja.SelectedDate,Value(ThisRecord.Value)-1,TimeUnit.Days),
+                            Fecha: DateAdd(dp_inicio_baja.SelectedDate,Value(ThisRecord.Value),TimeUnit.Days),
                             Fiesta: "Baja " & txt_Usuario_Login.Text,
                             Departamento: dep_user
                         }
