@@ -199,6 +199,7 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(pualevisible,true);Set(puavFondo,true)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -1033,4 +1034,63 @@ Calendario As screen:
             X: =756
             Y: =523
             ZIndex: =51
+
+    PopUp_AñadirLE As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =60
+
+        Rectangle2 As rectangle:
+            Height: =588
+            Visible: =pualevisible
+            Width: =763
+            X: =274
+            Y: =31
+            ZIndex: =54
+
+        Label3 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =96
+            Size: =20
+            Text: ="Indica las fechas de los días de libre elección"
+            Visible: =pualevisible
+            Width: =345
+            X: =483
+            Y: =102
+            ZIndex: =55
+
+        dp_ALE2 As datepicker:
+            Visible: =pualevisible
+            X: =498
+            Y: =247
+            ZIndex: =56
+
+        dp_ALE1 As datepicker:
+            Visible: =pualevisible
+            X: =498
+            Y: =338
+            ZIndex: =57
+
+        btn_cancelar_PUALE As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(pualevisible,false);Set(puavFondo,false)
+            Text: ="Cancelar"
+            Visible: =pualevisible
+            X: =405
+            Y: =491
+            ZIndex: =58
+
+        btn_aceptar_PUALE As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            Text: ="Aceptar"
+            Visible: =pualevisible
+            X: =736
+            Y: =491
+            ZIndex: =59
 
