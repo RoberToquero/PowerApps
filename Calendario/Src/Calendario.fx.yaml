@@ -1106,13 +1106,6 @@ Calendario As screen:
             Y: =491
             ZIndex: =57
 
-    Rectangle5 As rectangle:
-        Height: =508
-        Width: =670
-        X: =348
-        Y: =75
-        ZIndex: =65
-
     PopUp_AñadirAP As group:
         Height: =5
         Width: =5
@@ -1169,41 +1162,55 @@ Calendario As screen:
             Y: =461
             ZIndex: =62
 
-    Label10 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =141
-        Size: =20
-        Text: ="Indica los nuevos días de libre elección"
-        Width: =321
-        X: =530
-        Y: =108
-        ZIndex: =66
+    PopUp_ModificarLE As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =71
 
-    DatePicker3 As datepicker:
-        X: =527
-        Y: =291
-        ZIndex: =67
+        Rectangle5 As rectangle:
+            Height: =508
+            Width: =670
+            X: =348
+            Y: =75
+            ZIndex: =65
 
-    DatePicker3_1 As datepicker:
-        X: =527
-        Y: =365
-        ZIndex: =68
+        Label10 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =141
+            Size: =20
+            Text: ="Indica los nuevos días de libre elección"
+            Width: =321
+            X: =530
+            Y: =108
+            ZIndex: =66
 
-    Button3 As button:
-        Fill: =RGBA(255, 0, 0, 1)
-        HoverFill: =ColorFade(Self.Fill, 20%)
-        Text: ="Cancelar"
-        X: =440
-        Y: =483
-        ZIndex: =69
+        dp_MLE1 As datepicker:
+            X: =527
+            Y: =291
+            ZIndex: =67
 
-    Button3_1 As button:
-        Fill: =RGBA(54, 176, 75, 1)
-        HoverFill: =ColorFade(Self.Fill, 20%)
-        Text: ="Aceptar"
-        X: =760
-        Y: =483
-        ZIndex: =70
+        dp_MLE2 As datepicker:
+            X: =527
+            Y: =365
+            ZIndex: =68
+
+        btn_cancelar_PUMLE As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            Text: ="Cancelar"
+            X: =440
+            Y: =483
+            ZIndex: =69
+
+        btn_aceptar_PUMLE As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            Text: ="Aceptar"
+            X: =760
+            Y: =483
+            ZIndex: =70
 

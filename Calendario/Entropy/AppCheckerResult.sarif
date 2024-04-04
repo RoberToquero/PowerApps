@@ -1094,19 +1094,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.DatePicker3.AccessibleLabel"
+                  "fullyQualifiedName": "Calendario.dp_MLE1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.DatePicker3.AccessibleLabel",
+                  "fullyQualifiedName": "Calendario.dp_MLE1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Calendario",
-                "type": "Calendario.DatePicker3"
+                "type": "Calendario.dp_MLE1"
               }
             }
           ],
@@ -1124,19 +1124,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.DatePicker3_1.AccessibleLabel"
+                  "fullyQualifiedName": "Calendario.dp_MLE2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.DatePicker3_1.AccessibleLabel",
+                  "fullyQualifiedName": "Calendario.dp_MLE2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Calendario",
-                "type": "Calendario.DatePicker3_1"
+                "type": "Calendario.dp_MLE2"
               }
             }
           ],
