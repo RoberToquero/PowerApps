@@ -1009,19 +1009,19 @@ Calendario As screen:
             OnSelect: |-
                 =ClearCollect(coll_num,Sequence(txt_duracion_baja.Text,1,1));
                 Set(enespera,true);
+                Set(bajavisible,false);
                 ForAll(
                     coll_num, 
                     Collect(
                         Fiestas,
                         {
-                            Fecha: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,Value(ThisRecord.Value)-1,TimeUnit.Days),
+                            Fecha: DateAdd(dp_inicio_baja.SelectedDate,Value(ThisRecord.Value)-1,TimeUnit.Days),
                             Fiesta: "Baja " & txt_Usuario_Login.Text,
                             Departamento: dep_user
                         }
                     )
                 )
                 ;
-                Set(bajavisible,false);
                 Set(enespera,false);
                 Set(puavFondo,false)
             Text: ="Aceptar"
