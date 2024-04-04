@@ -1156,7 +1156,17 @@ Calendario As screen:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: |-
-                =Set(puaapvisible,false);
+                =Set(enespera,true);
+                Collect(
+                    Fiestas,
+                    {
+                        Fecha: dp_Fecha_PUAAP.SelectedDate,
+                        Fiesta: "Asuntos propios " & txt_Usuario_Login.Text,
+                        Departamento: dep_user
+                    }
+                );
+                Set(enespera,false);
+                Set(puaapvisible,false);
                 Set(puavFondo,false)
             Text: ="Aceptar"
             Visible: =puaapvisible
