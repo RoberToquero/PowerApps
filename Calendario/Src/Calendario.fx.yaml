@@ -180,6 +180,7 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(puavFondo,true);Set(bajavisible,true)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -454,7 +455,7 @@ Calendario As screen:
             Width: =773
             X: =304
             Y: =19
-            ZIndex: =29
+            ZIndex: =52
 
         Label_espera As label:
             Align: =Align.Center
@@ -467,7 +468,7 @@ Calendario As screen:
             Width: =547
             X: =411
             Y: =159
-            ZIndex: =30
+            ZIndex: =53
 
     PopUpAñadirVacaciones As group:
         Height: =5
@@ -556,7 +557,7 @@ Calendario As screen:
             Width: =774
             X: =297
             Y: =49
-            ZIndex: =31
+            ZIndex: =29
 
         Boton_PUAV_Aceptar_Verano As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -593,7 +594,7 @@ Calendario As screen:
             Visible: =puavVerano
             X: =811
             Y: =546
-            ZIndex: =32
+            ZIndex: =30
 
         Boton_PUAV_Cancelar_Verano As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -603,7 +604,7 @@ Calendario As screen:
             Visible: =puavVerano
             X: =411
             Y: =546
-            ZIndex: =33
+            ZIndex: =31
 
         Label8 As label:
             Align: =Align.Center
@@ -616,7 +617,7 @@ Calendario As screen:
             Width: =314
             X: =525
             Y: =235
-            ZIndex: =34
+            ZIndex: =32
 
         dp_PUAV_Dia_Inicio_Verano_3 As datepicker:
             DefaultDate: =
@@ -626,7 +627,7 @@ Calendario As screen:
             Width: =320
             X: =530
             Y: =382
-            ZIndex: =36
+            ZIndex: =33
 
         Label9_2 As label:
             Align: =Align.Center
@@ -639,7 +640,7 @@ Calendario As screen:
             Width: =342
             X: =394
             Y: =75
-            ZIndex: =37
+            ZIndex: =34
 
         rb_PUAV_Verano As radio:
             Color: =RGBA(255, 255, 255, 1)
@@ -653,7 +654,7 @@ Calendario As screen:
             Width: =105
             X: =838
             Y: =66
-            ZIndex: =38
+            ZIndex: =35
 
         Label9_3 As label:
             Align: =Align.Center
@@ -666,7 +667,7 @@ Calendario As screen:
             Width: =204
             X: =405
             Y: =211
-            ZIndex: =39
+            ZIndex: =36
 
         Label9_4 As label:
             Align: =Align.Center
@@ -679,7 +680,7 @@ Calendario As screen:
             Width: =204
             X: =411
             Y: =338
-            ZIndex: =40
+            ZIndex: =37
 
         dp_PUAV_Dia_Inicio_Verano_1 As datepicker:
             DefaultDate: =
@@ -689,7 +690,7 @@ Calendario As screen:
             Width: =320
             X: =674
             Y: =238
-            ZIndex: =41
+            ZIndex: =38
 
         dp_PUAV_Dia_Inicio_Verano_2 As datepicker:
             DefaultDate: =
@@ -699,7 +700,7 @@ Calendario As screen:
             Width: =320
             X: =674
             Y: =360
-            ZIndex: =42
+            ZIndex: =39
 
         Boton_PUAV_Comprobar_Verano As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -881,7 +882,7 @@ Calendario As screen:
             Visible: =If(puavVerano && puavesvalido=false,true,false)
             X: =812
             Y: =546
-            ZIndex: =43
+            ZIndex: =40
 
     PUAV_Invierno As group:
         Height: =5
@@ -897,7 +898,7 @@ Calendario As screen:
             Width: =654
             X: =356
             Y: =101
-            ZIndex: =44
+            ZIndex: =41
 
         Boton_PUAV_Cancelar_Invierno As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -907,7 +908,7 @@ Calendario As screen:
             Visible: =puavInvierno
             X: =433
             Y: =382
-            ZIndex: =45
+            ZIndex: =42
 
         Boton_PUAV_Cancelar_Invierno_1 As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -917,7 +918,7 @@ Calendario As screen:
             Visible: =puavInvierno
             X: =764
             Y: =382
-            ZIndex: =46
+            ZIndex: =43
 
         Label7 As label:
             Align: =Align.Center
@@ -930,7 +931,7 @@ Calendario As screen:
             Width: =267
             X: =557
             Y: =137
-            ZIndex: =47
+            ZIndex: =44
 
         rb_PUAV_Invierno As radio:
             Align: =Align.Center
@@ -947,5 +948,85 @@ Calendario As screen:
             Width: =510
             X: =436
             Y: =240
+            ZIndex: =45
+
+    PopUp_Baja As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =55
+
+        Rectangle1 As rectangle:
+            Height: =537
+            Visible: =bajavisible
+            Width: =688
+            X: =338
+            Y: =100
+            ZIndex: =46
+
+        Label1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =132
+            Size: =20
+            Text: ="Indica la fecha de inicio y la duración de la baja"
+            Visible: =bajavisible
+            Width: =333
+            X: =516
+            Y: =141
+            ZIndex: =47
+
+        dp_inicio_baja As datepicker:
+            Visible: =bajavisible
+            X: =518
+            Y: =310
             ZIndex: =48
+
+        txt_duracion_baja As text:
+            Default: =
+            HintText: ="Nº de días"
+            Visible: =bajavisible
+            Width: =331
+            X: =516
+            Y: =400
+            ZIndex: =49
+
+        btn_cancelar_baja As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(bajavisible,false);Set(puavFondo,false)
+            Text: ="Cancelar"
+            Visible: =bajavisible
+            X: =446
+            Y: =523
+            ZIndex: =50
+
+        btn_aceptar_baja As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =ClearCollect(coll_num,Sequence(txt_duracion_baja.Text,1,1));
+                Set(enespera,true);
+                ForAll(
+                    coll_num, 
+                    Collect(
+                        Fiestas,
+                        {
+                            Fecha: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,Value(ThisRecord.Value),TimeUnit.Days),
+                            Fiesta: "Baja " & txt_Usuario_Login.Text,
+                            Departamento: dep_user
+                        }
+                    )
+                )
+                ;
+                Set(bajavisible,false);
+                Set(enespera,false);
+                Set(puavFondo,false)
+            Text: ="Aceptar"
+            Visible: =bajavisible
+            X: =756
+            Y: =523
+            ZIndex: =51
 
