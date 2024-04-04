@@ -1435,7 +1435,7 @@ Calendario As screen:
             Height: =105
             Size: =20
             Text: ="Dia de inicio"
-            Visible: =pumvVerano
+            Visible: =If(rb_PUMV_Verano.Selected.Value=1,true,false)
             Width: =314
             X: =525
             Y: =255
@@ -1445,7 +1445,7 @@ Calendario As screen:
             DefaultDate: =
             InputTextPlaceholder: =
             Reset: =limpiar
-            Visible: =pumvVerano
+            Visible: =If(rb_PUMV_Verano.Selected.Value=1,true,false)
             Width: =320
             X: =530
             Y: =402
@@ -1485,7 +1485,7 @@ Calendario As screen:
             Height: =84
             Size: =20
             Text: ="Inicio bloque de 1 semana"
-            Visible: =pumvVerano
+            Visible: =If(rb_PUMV_Verano.Selected.Value=2,true,false)
             Width: =204
             X: =405
             Y: =231
@@ -1498,7 +1498,7 @@ Calendario As screen:
             Height: =84
             Size: =20
             Text: ="Inicio bloque de 2 semanas"
-            Visible: =pumvVerano
+            Visible: =If(rb_PUMV_Verano.Selected.Value=2,true,false)
             Width: =204
             X: =411
             Y: =358
@@ -1508,7 +1508,7 @@ Calendario As screen:
             DefaultDate: =
             InputTextPlaceholder: =
             Reset: =limpiar
-            Visible: =pumvVerano
+            Visible: =If(rb_PUMV_Verano.Selected.Value=2,true,false)
             Width: =320
             X: =674
             Y: =258
@@ -1518,7 +1518,7 @@ Calendario As screen:
             DefaultDate: =
             InputTextPlaceholder: =
             Reset: =limpiar
-            Visible: =pumvVerano
+            Visible: =If(rb_PUMV_Verano.Selected.Value=2,true,false)
             Width: =320
             X: =674
             Y: =380
