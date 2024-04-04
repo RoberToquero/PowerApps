@@ -154,7 +154,7 @@ Calendario As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Añadir Vacaciones"
-            Width: =152
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             ZIndex: =13
 
         BotonModificarVacaciones As button:
@@ -171,8 +171,8 @@ Calendario As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Modificar Vacaciones"
-            Width: =152
-            X: =152
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             ZIndex: =15
 
         BotonAñadirBaja As button:
@@ -190,8 +190,8 @@ Calendario As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Añadir Baja"
-            Width: =152
-            X: =304
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,304,304)
             ZIndex: =16
 
         BotonAñadirDLE As button:
@@ -211,8 +211,8 @@ Calendario As screen:
             Text: |-
                 ="Añadir
                 Dia LE"
-            Width: =152
-            X: =456
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,456,456)
             ZIndex: =17
 
         BotonModificarDLE As button:
@@ -231,8 +231,8 @@ Calendario As screen:
             Text: |-
                 ="Modificar
                 Dia LE"
-            Width: =151
-            X: =608
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,608,608)
             ZIndex: =18
 
         BotonAñadirDAP As button:
@@ -252,8 +252,8 @@ Calendario As screen:
             Text: |-
                 ="Añadir
                 Dia AP"
-            Width: =151
-            X: =759
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,760,760)
             ZIndex: =19
 
         Button7_5 As button:
@@ -270,8 +270,9 @@ Calendario As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Botón"
-            Width: =152
-            X: =910
+            Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,909,909)
             ZIndex: =20
 
         Button7_6 As button:
@@ -288,8 +289,9 @@ Calendario As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Botón"
-            Width: =152
-            X: =1062
+            Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1062,1062)
             ZIndex: =21
 
         Button7_7 As button:
@@ -307,8 +309,8 @@ Calendario As screen:
             RadiusTopRight: =0
             Text: ="Botón"
             Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
-            Width: =152
-            X: =1214
+            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
+            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1214,1214)
             ZIndex: =22
 
     DiasSemana As group:
