@@ -1435,7 +1435,7 @@ Calendario As screen:
             Height: =105
             Size: =20
             Text: ="Dia de inicio"
-            Visible: =If(rb_PUMV_Verano.Selected.Value=1,true,false)
+            Visible: =If(rb_PUMV_Verano.Selected.Value=1,true,false)&&pumvVerano
             Width: =314
             X: =525
             Y: =255
