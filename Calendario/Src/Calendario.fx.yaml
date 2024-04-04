@@ -1365,3 +1365,344 @@ Calendario As screen:
             Y: =300
             ZIndex: =80
 
+    PUMV_Verano As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =93
+
+        Cuadro_PUAV_Verano_1 As rectangle:
+            BorderThickness: =1
+            Height: =600
+            Visible: =pumvVerano
+            Width: =774
+            X: =297
+            Y: =69
+            ZIndex: =81
+
+        Boton_PUMV_Aceptar_Verano As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =If(
+                    rb_PUMV_Verano.Selected.Value=1
+                    ,
+                    ClearCollect(coll_num,Sequence(15,1,1));
+                    ForAll(
+                        coll_num, 
+                        If(
+                            true
+                            ,
+                            Collect(
+                                Fiestas,
+                                {
+                                    Fecha: DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,Value(ThisRecord.Value),TimeUnit.Days),
+                                    Fiesta: "Vacaciones " & txt_Usuario_Login.Text,
+                                    Departamento: dep_user
+                                }
+                            )
+                            ,
+                            false
+                        )
+                    )
+                    ,
+                    Set(enespera,false)
+                )
+                    
+                
+                    
+            Text: ="Aceptar"
+            Visible: =pumvVerano
+            X: =811
+            Y: =566
+            ZIndex: =82
+
+        Boton_PUMV_Cancelar_Verano As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 30%)
+            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(pumvVerano,false);Set(puavFondo,false);Set(varcount,1);Reset(rb_PUMV_Verano)
+            Text: ="Cancelar"
+            Visible: =pumvVerano
+            X: =411
+            Y: =566
+            ZIndex: =83
+
+        Label8_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =105
+            Size: =20
+            Text: ="Dia de inicio"
+            Visible: =pumvVerano
+            Width: =314
+            X: =525
+            Y: =255
+            ZIndex: =84
+
+        dp_PUMV_Dia_Inicio_Verano_3 As datepicker:
+            DefaultDate: =
+            InputTextPlaceholder: =
+            Reset: =limpiar
+            Visible: =pumvVerano
+            Width: =320
+            X: =530
+            Y: =402
+            ZIndex: =85
+
+        Label9_5 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =20
+            Text: ="¿En cuántos bloques?"
+            Visible: =pumvVerano
+            Width: =342
+            X: =394
+            Y: =95
+            ZIndex: =86
+
+        rb_PUMV_Verano As radio:
+            Color: =RGBA(255, 255, 255, 1)
+            Default: =1
+            FontWeight: =FontWeight.Bold
+            Height: =109
+            Items: =RadioSample
+            OnChange: =Set(limpiar,true);Set(limpiar,false)
+            Size: =20
+            Visible: =pumvVerano
+            Width: =105
+            X: =838
+            Y: =86
+            ZIndex: =87
+
+        Label9_6 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =20
+            Text: ="Inicio bloque de 1 semana"
+            Visible: =pumvVerano
+            Width: =204
+            X: =405
+            Y: =231
+            ZIndex: =88
+
+        Label9_7 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =84
+            Size: =20
+            Text: ="Inicio bloque de 2 semanas"
+            Visible: =pumvVerano
+            Width: =204
+            X: =411
+            Y: =358
+            ZIndex: =89
+
+        dp_PUMV_Dia_Inicio_Verano_1 As datepicker:
+            DefaultDate: =
+            InputTextPlaceholder: =
+            Reset: =limpiar
+            Visible: =pumvVerano
+            Width: =320
+            X: =674
+            Y: =258
+            ZIndex: =90
+
+        dp_PUMV_Dia_Inicio_Verano_2 As datepicker:
+            DefaultDate: =
+            InputTextPlaceholder: =
+            Reset: =limpiar
+            Visible: =pumvVerano
+            Width: =320
+            X: =674
+            Y: =380
+            ZIndex: =91
+
+        Boton_PUMV_Comprobar_Verano As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Clear(hayfestivo);
+                Clear(hayfestivo2);
+                Clear(haypuente);
+                If(
+                    rb_PUMV_Verano.Selected.Value = 1
+                    ,
+                    Clear(hayfestivo);
+                    Set(fechapuav, dp_PUMV_Dia_Inicio_Verano_3.SelectedDate);
+                    ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
+                    ForAll(
+                        collFestivos,
+                        If(DateDiff(ThisRecord.Fecha, fechapuav) = 0, Collect(hayfestivo, true))
+                    )
+                    ;
+                    If(
+                        Text(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Mon"
+                        ,
+                        If(
+                            First(hayfestivo).Value=true
+                            ,
+                            Notify(
+                                "Ese dia es festivo",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        )
+                        ,
+                        If(
+                            Text(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Sat",
+                            Notify(
+                                "Ese dia es fin de semana",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            Clear(haypuente);
+                            Set(fechapuavpuente, DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days));
+                            ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
+                            ForAll(
+                                collFestivos,
+                                If(DateDiff(ThisRecord.Fecha, fechapuavpuente) = 0, Collect(haypuente, true))
+                            );
+                            If(
+                                First(haypuente).Value=true
+                                ,
+                                Clear(lunesfiesta);
+                                Set(lunesesasemana,
+                                    DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,
+                                    1-Weekday(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,StartOfWeek.Monday),
+                                    TimeUnit.Days)
+                                );
+                                ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
+                                ForAll(
+                                    collFestivos,
+                                    If(DateDiff(ThisRecord.Fecha, lunesesasemana) = 0, Collect(lunesfiesta, true))
+                                );
+                                If(
+                                    First(lunesfiesta).Value=true
+                                    ,
+                                    If(
+                                        First(hayfestivo).Value=true
+                                        ,
+                                        Notify(
+                                            "Ese dia es festivo",
+                                            NotificationType.Error,
+                                            2000
+                                        )
+                                        ,
+                                        If(
+                                            DateDiff(lunesesasemana,DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days))=
+                                            CountIf(collFestivos,
+                                                    Fecha>=lunesesasemana,
+                                                    Fecha<=DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days)
+                                            )
+                                            ,
+                                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                            ,
+                                            Notify(
+                                                "El dia tiene que ser el siguiente dia laborable después del lunes festivo",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                        )
+                                    )
+                                    ,
+                                    Notify(
+                                        "El dia tiene que ser lunes",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                )
+                                ,
+                                Notify(
+                                    "El dia tiene que ser lunes",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                    )
+                    ,
+                    Clear(hayfestivo);
+                    Clear(hayfestivo2);
+                    Set(fechapuav1,dp_PUMV_Dia_Inicio_Verano_1.SelectedDate);
+                    Set(fechapuav2,dp_PUMV_Dia_Inicio_Verano_2.SelectedDate);
+                    ClearCollect(collFestivos,Filter(Fiestas,Departamento="Todos"));
+                    ForAll(
+                        collFestivos,
+                        If(DateDiff(ThisRecord.Fecha, fechapuav1) = 0,Collect(hayfestivo, true));
+                        If(DateDiff(ThisRecord.Fecha, fechapuav2) = 0,Collect(hayfestivo2, true))
+                    )
+                    ;
+                    If(
+                        Text(dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,"ddd","en-GB") = "Mon"
+                        ,
+                        If(
+                            First(hayfestivo).Value=true
+                            ,
+                            Notify(
+                                "El bloque de 1 semana empieza un festivo",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            If(
+                                Text(dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,"ddd","en-GB") = "Mon"
+                                ,
+                                If(
+                                    First(hayfestivo2).Value=true
+                                    ,
+                                    Notify(
+                                        "El bloque de 2 semanas empieza un festivo",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                    ,
+                                    Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                )
+                                ,
+                                Notify(
+                                    "El bloque de 2 semanas no empieza un lunes",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                        ,
+                        Notify(
+                            "El bloque de 1 semana no empieza un lunes",
+                            NotificationType.Error,
+                            2000
+                        )
+                    )
+                );
+                Clear(hayfestivo);
+                Clear(hayfestivo2)
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+            Text: ="Comprobar"
+            Visible: =pumvVerano
+            X: =812
+            Y: =566
+            ZIndex: =92
+
