@@ -1445,7 +1445,7 @@ Calendario As screen:
             DefaultDate: =
             InputTextPlaceholder: =
             Reset: =limpiar
-            Visible: =If(rb_PUMV_Verano.Selected.Value=1,true,false)
+            Visible: =If(rb_PUMV_Verano.Selected.Value=1,true,false)&&pumvVerano
             Width: =320
             X: =530
             Y: =402
