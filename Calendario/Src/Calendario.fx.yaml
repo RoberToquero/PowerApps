@@ -979,6 +979,7 @@ Calendario As screen:
             ZIndex: =47
 
         dp_inicio_baja As datepicker:
+            Reset: =limpiar
             Visible: =bajavisible
             X: =518
             Y: =310
@@ -987,6 +988,7 @@ Calendario As screen:
         txt_duracion_baja As text:
             Default: =
             HintText: ="Nº de días"
+            Reset: =limpiar
             Visible: =bajavisible
             Width: =331
             X: =516
@@ -996,7 +998,7 @@ Calendario As screen:
         btn_cancelar_baja As button:
             Fill: =RGBA(255, 0, 0, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(bajavisible,false);Set(puavFondo,false)
+            OnSelect: =Set(bajavisible,false);Set(puavFondo,false);Set(limpiar,true);Set(limpiar,false)
             Text: ="Cancelar"
             Visible: =bajavisible
             X: =446
@@ -1015,7 +1017,7 @@ Calendario As screen:
                     Collect(
                         Fiestas,
                         {
-                            Fecha: DateAdd(dp_inicio_baja.SelectedDate,Value(ThisRecord.Value),TimeUnit.Days),
+                            Fecha: DateAdd(DateValue(dp_inicio_baja.SelectedDate),Value(ThisRecord.Value)-1,TimeUnit.Days),
                             Fiesta: "Baja " & txt_Usuario_Login.Text,
                             Departamento: dep_user
                         }
@@ -1023,7 +1025,9 @@ Calendario As screen:
                 )
                 ;
                 Set(enespera,false);
-                Set(puavFondo,false)
+                Set(puavFondo,false);
+                Set(limpiar,true);
+                Set(limpiar,false)
             Text: ="Aceptar"
             Visible: =bajavisible
             X: =756
