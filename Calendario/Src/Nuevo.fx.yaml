@@ -1,2 +1,70 @@
 Nuevo As screen:
 
+    RectangleSup As rectangle:
+        Fill: =RGBA(195, 219, 11, 1)
+        Width: =1366
+        ZIndex: =1
+
+    tituloNuevoEmpleado As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =51
+        Size: =24
+        Text: |-
+            ="Nuevo Empleado
+            "
+        Width: =391
+        X: =454
+        Y: =30
+        ZIndex: =2
+
+    FormNuevoEmpleado As form:
+        AcceptsFocus: =false
+        DataSource: =Empleados
+        Height: =550
+        NumberOfColumns: =2
+        OnFailure: =
+        OnReset: =true
+        OnSuccess: =ResetForm(FormNuevoEmpleado);
+        Width: =1002
+        X: =212
+        Y: =120
+        ZIndex: =5
+
+    botonNuevo As button:
+        OnSelect: =NewForm(FormNuevoEmpleado); Set(mostrarBotones,true)
+        Text: |-
+            ="Nuevo
+            "
+        X: =14
+        Y: =140
+        ZIndex: =6
+
+    botonEnviar As button:
+        OnSelect: =SubmitForm(FormNuevoEmpleado); 
+        Text: |-
+            ="Enviar
+            "
+        Visible: =mostrarBotones
+        X: =580
+        Y: =688
+        ZIndex: =7
+
+    IconoRetroceso As icon.Undo:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Undo
+        OnSelect: =Back(); ResetForm(FormNuevoEmpleado)
+        X: =264
+        Y: =23
+        ZIndex: =8
+
+    botonReinicio As button:
+        OnSelect: =ResetForm(FormNuevoEmpleado); Set(mostrarBotones,false)
+        Text: ="Reiniciar"
+        Visible: =mostrarBotones
+        X: =14
+        Y: =226
+        ZIndex: =9
+
+
