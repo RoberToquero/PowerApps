@@ -414,19 +414,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Icon4_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Icon4_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.IconRetrocede"
+                "type": "Modificar.Icon4_1"
               }
             }
           ],
@@ -444,19 +444,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.TabIndex"
+                  "fullyQualifiedName": "Modificar.Icon4_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.TabIndex",
+                  "fullyQualifiedName": "Modificar.Icon4_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Modificar",
-                "type": "Modificar.IconRetrocede"
+                "type": "Modificar.Icon4_1"
               }
             }
           ],
@@ -474,19 +474,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Nombre_DataCard3_2.DataCardValue21_2.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Form1_2.Nombre_DataCard3_2.DataCardValue21_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Nombre_DataCard3_2.DataCardValue21_2.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Form1_2.Nombre_DataCard3_2.DataCardValue21_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Nombre_DataCard3_2.DataCardValue21_2"
+                "type": "Modificar.Form1_2.Nombre_DataCard3_2.DataCardValue21_2"
               }
             }
           ],
@@ -504,19 +504,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Apellidos_DataCard3_2.DataCardValue22_2.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Form1_2.Apellidos_DataCard3_2.DataCardValue22_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Apellidos_DataCard3_2.DataCardValue22_2.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Form1_2.Apellidos_DataCard3_2.DataCardValue22_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Apellidos_DataCard3_2.DataCardValue22_2"
+                "type": "Modificar.Form1_2.Apellidos_DataCard3_2.DataCardValue22_2"
               }
             }
           ],
@@ -534,19 +534,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Fecha Nacimiento_DataCard3_2'.DataCardValue23_2.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Form1_2.'Fecha Nacimiento_DataCard3_2'.DataCardValue23_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Fecha Nacimiento_DataCard3_2'.DataCardValue23_2.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Form1_2.'Fecha Nacimiento_DataCard3_2'.DataCardValue23_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.'Fecha Nacimiento_DataCard3_2'.DataCardValue23_2"
+                "type": "Modificar.Form1_2.'Fecha Nacimiento_DataCard3_2'.DataCardValue23_2"
               }
             }
           ],
@@ -564,19 +564,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Departamento_DataCard3_2.DataCardValue24_2.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Form1_2.Departamento_DataCard3_2.DataCardValue24_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Departamento_DataCard3_2.DataCardValue24_2.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Form1_2.Departamento_DataCard3_2.DataCardValue24_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Departamento_DataCard3_2.DataCardValue24_2"
+                "type": "Modificar.Form1_2.Departamento_DataCard3_2.DataCardValue24_2"
               }
             }
           ],
@@ -594,19 +594,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Datos adjuntos_DataCard3_2'.DataCardValue26_2.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Form1_2.'Datos adjuntos_DataCard3_2'.DataCardValue26_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Datos adjuntos_DataCard3_2'.DataCardValue26_2.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Form1_2.'Datos adjuntos_DataCard3_2'.DataCardValue26_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.'Datos adjuntos_DataCard3_2'.DataCardValue26_2"
+                "type": "Modificar.Form1_2.'Datos adjuntos_DataCard3_2'.DataCardValue26_2"
               }
             }
           ],
@@ -624,18 +624,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard1_1.PenInput1_1"
+                  "fullyQualifiedName": "Modificar.Form1_2.Firma_DataCard1_1.PenInput1_1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard1_1.PenInput1_1",
+                  "fullyQualifiedName": "Modificar.Form1_2.Firma_DataCard1_1.PenInput1_1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Firma_DataCard1_1.PenInput1_1"
+                "type": "Modificar.Form1_2.Firma_DataCard1_1.PenInput1_1"
               }
             }
           ],
@@ -653,19 +653,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard1_1.PenInput1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Form1_2.Firma_DataCard1_1.PenInput1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard1_1.PenInput1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Form1_2.Firma_DataCard1_1.PenInput1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Firma_DataCard1_1.PenInput1_1"
+                "type": "Modificar.Form1_2.Firma_DataCard1_1.PenInput1_1"
               }
             }
           ],
@@ -683,19 +683,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard1_1.AddPicture1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Form1_2.Firma_DataCard1_1.AddPicture1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard1_1.AddPicture1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Form1_2.Firma_DataCard1_1.AddPicture1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Firma_DataCard1_1.AddPicture1_1"
+                "type": "Modificar.Form1_2.Firma_DataCard1_1.AddPicture1_1"
               }
             }
           ],
@@ -713,19 +713,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Rectangle7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Rectangle7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.RectanglePopModificado"
+                "type": "Modificar.Rectangle7"
               }
             }
           ],
@@ -743,19 +743,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.TabIndex"
+                  "fullyQualifiedName": "Modificar.Rectangle7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.TabIndex",
+                  "fullyQualifiedName": "Modificar.Rectangle7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Modificar",
-                "type": "Modificar.RectanglePopModificado"
+                "type": "Modificar.Rectangle7"
               }
             }
           ],
@@ -773,19 +773,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconInfo.AccessibleLabel"
+                  "fullyQualifiedName": "Modificar.Icon10.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconInfo.AccessibleLabel",
+                  "fullyQualifiedName": "Modificar.Icon10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Modificar",
-                "type": "Modificar.IconInfo"
+                "type": "Modificar.Icon10"
               }
             }
           ],
@@ -803,19 +803,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconInfo.TabIndex"
+                  "fullyQualifiedName": "Modificar.Icon10.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconInfo.TabIndex",
+                  "fullyQualifiedName": "Modificar.Icon10.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Modificar",
-                "type": "Modificar.IconInfo"
+                "type": "Modificar.Icon10"
               }
             }
           ],
@@ -833,19 +833,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.TextModificado.FocusedBorderThickness"
+                  "fullyQualifiedName": "Modificar.Label4.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.TextModificado.FocusedBorderThickness",
+                  "fullyQualifiedName": "Modificar.Label4.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "Modificar",
-                "type": "Modificar.TextModificado"
+                "type": "Modificar.Label4"
               }
             }
           ],
@@ -863,19 +863,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.TextModificado.TabIndex"
+                  "fullyQualifiedName": "Modificar.Label4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.TextModificado.TabIndex",
+                  "fullyQualifiedName": "Modificar.Label4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Modificar",
-                "type": "Modificar.TextModificado"
+                "type": "Modificar.Label4"
               }
             }
           ],
@@ -893,19 +893,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Icon4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Icon4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.IconoRetroceso"
+                "type": "Nuevo.Icon4"
               }
             }
           ],
@@ -923,19 +923,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.TabIndex"
+                  "fullyQualifiedName": "Nuevo.Icon4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.TabIndex",
+                  "fullyQualifiedName": "Nuevo.Icon4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Nuevo",
-                "type": "Nuevo.IconoRetroceso"
+                "type": "Nuevo.Icon4"
               }
             }
           ],
@@ -953,19 +953,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Nombre_DataCard3.DataCardValue21.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Form1.Nombre_DataCard3.DataCardValue21.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Nombre_DataCard3.DataCardValue21.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Form1.Nombre_DataCard3.DataCardValue21.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Nombre_DataCard3.DataCardValue21"
+                "type": "Nuevo.Form1.Nombre_DataCard3.DataCardValue21"
               }
             }
           ],
@@ -983,19 +983,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Apellidos_DataCard3.DataCardValue22.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Form1.Apellidos_DataCard3.DataCardValue22.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Apellidos_DataCard3.DataCardValue22.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Form1.Apellidos_DataCard3.DataCardValue22.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Apellidos_DataCard3.DataCardValue22"
+                "type": "Nuevo.Form1.Apellidos_DataCard3.DataCardValue22"
               }
             }
           ],
@@ -1013,19 +1013,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Fecha Nacimiento_DataCard3'.DataCardValue23.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Form1.'Fecha Nacimiento_DataCard3'.DataCardValue23.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Fecha Nacimiento_DataCard3'.DataCardValue23.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Form1.'Fecha Nacimiento_DataCard3'.DataCardValue23.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.'Fecha Nacimiento_DataCard3'.DataCardValue23"
+                "type": "Nuevo.Form1.'Fecha Nacimiento_DataCard3'.DataCardValue23"
               }
             }
           ],
@@ -1043,19 +1043,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Departamento_DataCard3.DataCardValue24.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Form1.Departamento_DataCard3.DataCardValue24.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Departamento_DataCard3.DataCardValue24.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Form1.Departamento_DataCard3.DataCardValue24.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Departamento_DataCard3.DataCardValue24"
+                "type": "Nuevo.Form1.Departamento_DataCard3.DataCardValue24"
               }
             }
           ],
@@ -1073,19 +1073,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Datos adjuntos_DataCard3'.DataCardValue26.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Form1.'Datos adjuntos_DataCard3'.DataCardValue26.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Datos adjuntos_DataCard3'.DataCardValue26.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Form1.'Datos adjuntos_DataCard3'.DataCardValue26.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.'Datos adjuntos_DataCard3'.DataCardValue26"
+                "type": "Nuevo.Form1.'Datos adjuntos_DataCard3'.DataCardValue26"
               }
             }
           ],
@@ -1103,18 +1103,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
+                  "fullyQualifiedName": "Nuevo.Form1.Firma_DataCard1.PenInput1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1",
+                  "fullyQualifiedName": "Nuevo.Form1.Firma_DataCard1.PenInput1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
+                "type": "Nuevo.Form1.Firma_DataCard1.PenInput1"
               }
             }
           ],
@@ -1132,19 +1132,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Form1.Firma_DataCard1.PenInput1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Form1.Firma_DataCard1.PenInput1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
+                "type": "Nuevo.Form1.Firma_DataCard1.PenInput1"
               }
             }
           ],
@@ -1162,19 +1162,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.AddPicture1.AccessibleLabel"
+                  "fullyQualifiedName": "Nuevo.Form1.Firma_DataCard1.AddPicture1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.AddPicture1.AccessibleLabel",
+                  "fullyQualifiedName": "Nuevo.Form1.Firma_DataCard1.AddPicture1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.AddPicture1"
+                "type": "Nuevo.Form1.Firma_DataCard1.AddPicture1"
               }
             }
           ],
@@ -1492,19 +1492,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Item"
+                  "fullyQualifiedName": "Modificar.Form1_2.Item"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Item",
+                  "fullyQualifiedName": "Modificar.Form1_2.Item",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Item",
                 "module": "Modificar",
-                "type": "Modificar.FormularioModificar"
+                "type": "Modificar.Form1_2"
               }
             }
           ],
