@@ -443,7 +443,7 @@ Nuevo As screen:
     IconoRetroceso As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Undo
-        OnSelect: =Back(); ResetForm(FormNuevoEmpleado)
+        OnSelect: =Navigate(ScInicial); ResetForm(FormNuevoEmpleado)
         X: =264
         Y: =23
         ZIndex: =8
