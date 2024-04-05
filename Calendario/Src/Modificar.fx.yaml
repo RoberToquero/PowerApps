@@ -1,2 +1,109 @@
 Modificar As screen:
 
+    Rectangle1Sup As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Width: =1366
+        ZIndex: =1
+
+    TituloModificar As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =100
+        Size: =24
+        Text: |-
+            ="Modificar Empleado
+            "
+        Width: =499
+        X: =443
+        ZIndex: =2
+
+    ButtonEnviar As button:
+        OnSelect: =SubmitForm(FormularioModificar); Set(mostrarConfirm,true)
+        Text: |-
+            ="Enviar
+            "
+        X: =580
+        Y: =702
+        ZIndex: =3
+
+    IconRetrocede As icon.Undo:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Undo
+        OnSelect: =Navigate(Consulta)
+        X: =264
+        Y: =23
+        ZIndex: =4
+
+    RectangleModificar As rectangle:
+        Fill: |-
+            =RGBA(56, 96, 178, 0.2
+            )
+        Height: =768
+        Visible: |
+            =mostrarConfirm
+        Width: =1366
+        ZIndex: =5
+
+    FormularioModificar As form:
+        AcceptsFocus: =false
+        DataSource: =Empleados
+        Height: =550
+        Item: =GaleriaNombres.Selected
+        NumberOfColumns: =2
+        OnFailure: =
+        OnReset: =true
+        OnSuccess: =ResetForm(FormularioModificar);
+        Width: =1002
+        X: =182
+        Y: =140
+        ZIndex: =6
+
+    PopupCambio As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        RectanglePopModificado As rectangle:
+            Height: =392
+            OnSelect: =Set(mostrarConfirm,false)
+            Visible: =mostrarConfirm
+            Width: =507
+            X: =406
+            Y: =191
+            ZIndex: =7
+
+        TextModificado As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =80
+            OnSelect: =Navigate(Consulta)
+            Size: =15
+            Text: ="Empleado modificado con éxito"
+            Visible: =mostrarConfirm
+            Width: =350
+            X: =485
+            Y: =294
+            ZIndex: =8
+
+        IconInfo As icon.Information:
+            Fill: =RGBA(255, 255, 0, 1)
+            Icon: =Icon.Information
+            OnSelect: =Navigate(Consulta)
+            Visible: =mostrarConfirm
+            X: =443
+            Y: =215
+            ZIndex: =9
+
+        ButtonAceptar As button:
+            Fill: =RGBA(152, 208, 70, 1)
+            OnSelect: =Set(mostrarConfirm,false)
+            Text: ="Aceptar"
+            Visible: =mostrarConfirm
+            X: =580
+            Y: =452
+            ZIndex: =10
+
+
