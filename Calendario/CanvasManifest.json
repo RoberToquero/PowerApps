@@ -136,6 +136,11 @@
   },
   "ScreenOrder": [
     "Login",
-    "Calendario"
+    "Calendario",
+    "ConfiguracionCalendario",
+    "ScInicial",
+    "Consulta",
+    "Nuevo",
+    "Modificar"
   ]
 }

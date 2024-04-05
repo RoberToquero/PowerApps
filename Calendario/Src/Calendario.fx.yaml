@@ -2,11 +2,7 @@ Calendario As screen:
     Fill: =
     OnVisible: |
         =Select(BotonCalcularCalendario)
-    Width: |-
-        =Max(
-            App.Width,
-            App.MinScreenWidth
-        )
+    Width: =Max(App.Width,App.MinScreenWidth)
 
     LabelMes As label:
         Align: =Align.Center
