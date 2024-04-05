@@ -1,8 +1,8 @@
 Consulta As screen:
 
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    "GaleriaNombres As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
-        Items: =Filter(Search(Empleados,TextInput1.Text,"Nombre","Apellidos"),If(Dropdown1.Selected.Value="Todos",true,Departamento.Value=Dropdown1.Selected.Value))
+        Items: =Filter(Search(Empleados,TextoBusqueda.Text,"Nombre","Apellidos"),If(FiltroDepartamento.Selected.Value="Todos",true,Departamento.Value=FiltroDepartamento.Selected.Value))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Set(mostrarDatos,true)
@@ -12,7 +12,7 @@ Consulta As screen:
         Y: =113
         ZIndex: =1
 
-        Image2 As image:
+        ImagenInvescon As image:
             Height: =72
             Image: =logo
             OnSelect: =Select(Parent)
@@ -25,7 +25,7 @@ Consulta As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
-        Title2 As label:
+        NombreApellido As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -37,10 +37,10 @@ Consulta As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 173
             X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + SubtitleDepartamento.Size * 1.8)) / 2
             ZIndex: =2
 
-        Subtitle2 As label:
+        SubtitleDepartamento As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -51,12 +51,12 @@ Consulta As screen:
             Text: |
                 =LookUp(Choices(Empleados.Departamento), Value = ThisItem.Departamento.Value).Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title2.Width
-            X: =Title2.X
-            Y: =Title2.Y + Title2.Height
+            Width: =NombreApellido.Width
+            X: =NombreApellido.X
+            Y: =NombreApellido.Y + NombreApellido.Height
             ZIndex: =3
 
-        NextArrow2 As icon.ChevronRight:
+        FlechaSiguiente As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Color: =RGBA(166, 166, 166, 1)
             Height: =50
@@ -72,7 +72,7 @@ Consulta As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
-        Separator2 As rectangle:
+        SeparatorEmpleado As rectangle:
             Fill: =RGBA(39, 67, 125, 1)
             Height: =8
             OnSelect: =Select(Parent)
@@ -80,18 +80,18 @@ Consulta As screen:
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =5
 
-        Rectangle9 As rectangle:
-            Height: =Parent.TemplateHeight - Separator2.Height
+        RectanguloEmpleado As rectangle:
+            Height: =Parent.TemplateHeight - SeparatorEmpleado.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =6
 
-    Rectangle1_1 As rectangle:
+    RectangleSuperior As rectangle:
         Width: =1366
         ZIndex: =2
 
-    Label1_1 As label:
+    ConsultaEmpleadosTitle As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
@@ -103,7 +103,7 @@ Consulta As screen:
         Y: =18
         ZIndex: =3
 
-    Icon2 As icon.Undo:
+    IconoVolver As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(56, 96, 178, 1)
         Icon: =Icon.Undo
@@ -112,7 +112,7 @@ Consulta As screen:
         Y: =18
         ZIndex: =4
 
-    Icon5 As icon.Edit:
+    IconoModificar As icon.Edit:
         Height: =47
         Icon: =Icon.Edit
         OnSelect: =Navigate(Modificar);Set(mostrarConfirm,false)
@@ -122,7 +122,7 @@ Consulta As screen:
         Y: =599
         ZIndex: =5
 
-    Icon6 As icon.Erase:
+    IconoBorrar As icon.Erase:
         Height: =47
         Icon: =Icon.Trash
         OnSelect: =Set(mostrarPopUp,true)
@@ -132,14 +132,14 @@ Consulta As screen:
         Y: =599
         ZIndex: =6
 
-    Rectangle6 As rectangle:
+    RectangleGen As rectangle:
         Fill: =RGBA(56, 96, 178, 0.2)
         Height: =768
         Visible: =mostrarPopUp
         Width: =1366
         ZIndex: =7
 
-    Icon7 As icon.Search:
+    IconoBusqueda As icon.Search:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Search
         OnSelect: |-
@@ -148,7 +148,7 @@ Consulta As screen:
         Y: =14
         ZIndex: =8
 
-    TextInput1 As text:
+    TextoBusqueda As text:
         Default: =""
         HintText: ="Qué desea buscar"
         Visible: =SearchVisible
@@ -157,7 +157,7 @@ Consulta As screen:
         Y: =26
         ZIndex: =9
 
-    Dropdown1 As dropdown:
+    FiltroDepartamento As dropdown:
         Default: ="Departamento"
         Items: =["Todos","Administración","Desarrollo","Dirección","Técnico"]
         Visible: =SearchVisible
@@ -166,10 +166,10 @@ Consulta As screen:
         Y: =26
         ZIndex: =10
 
-    FormViewer1 As formViewer:
+    FormularioEmpleados As formViewer:
         DataSource: =Empleados
         Height: =415
-        Item: =Gallery1.Selected
+        Item: =GaleriaNombres.Selected
         NumberOfColumns: =2
         Width: =510
         X: =807
@@ -185,13 +185,13 @@ Consulta As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue7.Attachments
+            Update: =DataCardValueArchivos.Attachments
             Width: =255
             X: =1
             Y: =2
             ZIndex: =1
 
-            DataCardKey8 As label:
+            DataCardKeyDatos As label:
                 AutoHeight: =true
                 FontWeight: =FontWeight.Bold
                 Height: =34
@@ -203,7 +203,7 @@ Consulta As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue7 As attachments:
+            DataCardValueArchivos As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
                 IsInDataCard: =true
@@ -214,7 +214,7 @@ Consulta As screen:
                 PaddingTop: =5
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                Y: =DataCardKeyDatos.Y + DataCardKeyDatos.Height + 5
                 ZIndex: =2
 
             ErrorMessage3 As label:
@@ -228,17 +228,17 @@ Consulta As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
+                Y: =DataCardValueArchivos.Y + DataCardValueArchivos.Height
                 ZIndex: =3
 
             StarVisible3 As label:
                 Align: =Align.Center
-                Height: =DataCardKey8.Height
+                Height: =DataCardKeyDatos.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey8.Y
+                Y: =DataCardKeyDatos.Y
                 ZIndex: =4
 
         Nombre_DataCard1 As typedDataCard.textualViewCard:
@@ -367,13 +367,13 @@ Consulta As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =true
-            Update: =DataCardValue5.Selected
+            Update: =DataCardValueDepartamento.Selected
             Width: =255
             X: =1
             Y: =1
             ZIndex: =18
 
-            DataCardKey6 As label:
+            DataCardKeyNombreDepartamento As label:
                 AutoHeight: =true
                 FontWeight: =FontWeight.Bold
                 Height: =34
@@ -385,7 +385,7 @@ Consulta As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue5 As combobox:
+            DataCardValueDepartamento As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -393,7 +393,7 @@ Consulta As screen:
                 Items: =Choices([@Empleados].Departamento)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(Empleados.Departamento,DataCardValue5.SearchText)
+                SearchItems: =Choices(Empleados.Departamento,DataCardValueDepartamento.SearchText)
                 SelectMultiple: =false
                 Width: =Parent.Width - 60
                 Y: =36
@@ -411,17 +411,17 @@ Consulta As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue5.Y + DataCardValue5.Height
+                Y: =DataCardValueDepartamento.Y + DataCardValueDepartamento.Height
                 ZIndex: =3
 
             StarVisible2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey6.Height
+                Height: =DataCardKeyNombreDepartamento.Height
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey6.Y
+                Y: =DataCardKeyNombreDepartamento.Y
                 ZIndex: =4
 
         Firma_DataCard2 As typedDataCard.largeImageViewCard:
@@ -438,7 +438,7 @@ Consulta As screen:
             Y: =2
             ZIndex: =18
 
-            DataCardKey7 As label:
+            DataCardKeyTituloFirma As label:
                 AutoHeight: =true
                 FontWeight: =FontWeight.Bold
                 Height: =34
@@ -450,23 +450,23 @@ Consulta As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue6 As image:
+            DataCardValueFirma As image:
                 DisplayMode: =Parent.DisplayMode
                 Height: =200
                 Image: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                Y: =DataCardKeyTituloFirma.Y + DataCardKeyTituloFirma.Height + 5
                 ZIndex: =2
 
-    Group1 As group:
+    PopUpEliminar As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =13
 
-        Rectangle5 As rectangle:
+        RectanglePopUpEliminar As rectangle:
             Height: =434
             Visible: =mostrarPopUp
             Width: =533
@@ -474,7 +474,7 @@ Consulta As screen:
             Y: =254
             ZIndex: =12
 
-        IconPopUp As icon.Error:
+        IconoAlerta As icon.Error:
             BorderStyle: =BorderStyle.Dashed
             Color: =RGBA(255, 0, 0, 1)
             Fill: =RGBA(255, 255, 0, 1)
@@ -486,7 +486,7 @@ Consulta As screen:
             Y: =276
             ZIndex: =13
 
-        textPopup As label:
+        TextoPopUpEliminar As label:
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Height: =57
@@ -498,16 +498,16 @@ Consulta As screen:
             Y: =368
             ZIndex: =14
 
-        confirmar As button:
+        Buttonconfirmar As button:
             Fill: =RGBA(152, 208, 70, 1)
-            OnSelect: =Remove(Empleados,Gallery1.Selected);Set(mostrarPopUp,false);Set(mostrarDatos,false)
+            OnSelect: =Remove(Empleados,GaleriaNombres.Selected);Set(mostrarPopUp,false);Set(mostrarDatos,false)
             Text: ="Confirmar"
             Visible: =mostrarPopUp
             X: =713
             Y: =546
             ZIndex: =15
 
-        cancelar As button:
+        Buttoncancelar As button:
             Fill: =RGBA(246, 88, 16, 1)
             OnSelect: =Set(mostrarPopUp,false)
             Text: ="Cancelar"

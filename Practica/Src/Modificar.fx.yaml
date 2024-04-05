@@ -49,7 +49,7 @@ Modificar As screen:
         AcceptsFocus: =false
         DataSource: =Empleados
         Height: =550
-        Item: =Gallery1.Selected
+        Item: =GaleriaNombres.Selected
         NumberOfColumns: =2
         OnFailure: =
         OnReset: =true
