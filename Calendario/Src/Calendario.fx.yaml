@@ -278,7 +278,7 @@ Calendario As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: ="Botón"
+            Text: =""
             Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,909,909)
@@ -297,7 +297,7 @@ Calendario As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: ="Botón"
+            Text: =""
             Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1062,1062)
@@ -308,6 +308,7 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Navigate(ScInicial)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -316,7 +317,9 @@ Calendario As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: ="Botón"
+            Text: |-
+                ="Portal
+                Empleados"
             Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1214,1214)

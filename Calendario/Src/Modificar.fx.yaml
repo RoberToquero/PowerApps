@@ -1,5 +1,5 @@
 Modificar As screen:
-    OnVisible: =
+    OnVisible: =Set(editarfirma,false)
 
     Rectangle1Sup As rectangle:
         Fill: =RGBA(255, 191, 0, 1)
@@ -336,7 +336,7 @@ Modificar As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =PenInput2.Image
+            Update: =If(editarfirma,PenInput2.Image,Image4.Image)
             Width: =501
             X: =0
             Y: =2
@@ -379,10 +379,30 @@ Modificar As screen:
 
             PenInput2 As inkControl:
                 Height: =251
+                Visible: =editarfirma
                 Width: =441
                 X: =30
                 Y: =65
                 ZIndex: =6
+
+            Image4 As image:
+                Height: =223
+                Image: =DataCardValue5.Image
+                Visible: =!editarfirma
+                Width: =363
+                X: =60
+                Y: =74
+                ZIndex: =7
+
+            Button1 As button:
+                Height: =47
+                OnSelect: =Set(editarfirma,true)
+                Text: ="Editar Firma"
+                Visible: =!editarfirma
+                Width: =181
+                X: =151
+                Y: =297
+                ZIndex: =8
 
         "'Datos adjuntos_DataCard3' As typedDataCard.attachmentsEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -489,7 +509,7 @@ Modificar As screen:
 
         ButtonAceptar As button:
             Fill: =RGBA(152, 208, 70, 1)
-            OnSelect: =Set(mostrarConfirm,false)
+            OnSelect: =Set(mostrarConfirm,false);Navigate(Consulta)
             Text: ="Aceptar"
             Visible: =mostrarConfirm
             X: =580

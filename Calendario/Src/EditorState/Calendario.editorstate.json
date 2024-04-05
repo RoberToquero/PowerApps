@@ -4876,7 +4876,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonAñadirBaja",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5243,7 +5243,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonAñadirDAP",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5610,7 +5610,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonAñadirDLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6550,7 +6550,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonModificarDLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6917,7 +6917,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonModificarVacaciones",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9359,7 +9359,14 @@
     "Button7_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderColor",
         "DisabledBorderColor",
         "PressedBorderColor",
@@ -9509,7 +9516,7 @@
       "MetaDataIDKey": "",
       "Name": "Button7_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9719,7 +9726,14 @@
     "Button7_6": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderColor",
         "DisabledBorderColor",
         "PressedBorderColor",
@@ -9869,7 +9883,7 @@
       "MetaDataIDKey": "",
       "Name": "Button7_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10079,7 +10093,14 @@
     "Button7_7": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderColor",
         "DisabledBorderColor",
         "PressedBorderColor",
@@ -10216,6 +10237,14 @@
           "InvariantPropertyName": "Visible",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -10229,7 +10258,7 @@
       "MetaDataIDKey": "",
       "Name": "Button7_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10431,6 +10460,11 @@
           "Category": "Design",
           "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnSelect",
+          "RuleProviderType": "User"
         }
       ],
       "StyleName": "defaultButtonStyle",
@@ -11535,7 +11569,7 @@
       "MetaDataIDKey": "",
       "Name": "DiasSemana",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 95,
+      "ParentIndex": 103,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15544,7 +15578,7 @@
       "MetaDataIDKey": "",
       "Name": "FondoPopUp",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25253,7 +25287,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_AñadirAP",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 102,
+      "ParentIndex": 101,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25305,7 +25339,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_AñadirLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 101,
+      "ParentIndex": 94,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25357,7 +25391,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_Baja",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 100,
+      "ParentIndex": 98,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25409,7 +25443,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_ModificarLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 103,
+      "ParentIndex": 97,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25461,7 +25495,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUpAñadirVacaciones",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 97,
+      "ParentIndex": 99,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25513,7 +25547,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUpModificarVacaciones",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 92,
+      "ParentIndex": 102,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25565,7 +25599,7 @@
       "MetaDataIDKey": "",
       "Name": "PUAV_Invierno",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 99,
+      "ParentIndex": 100,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25617,7 +25651,7 @@
       "MetaDataIDKey": "",
       "Name": "PUAV_Verano",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 98,
+      "ParentIndex": 95,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25721,7 +25755,7 @@
       "MetaDataIDKey": "",
       "Name": "PUMV_Verano",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 93,
+      "ParentIndex": 96,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27565,7 +27599,7 @@
       "MetaDataIDKey": "",
       "Name": "TopBar",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 94,
+      "ParentIndex": 92,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27913,7 +27947,7 @@
       "MetaDataIDKey": "",
       "Name": "VentanaEspera",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 96,
+      "ParentIndex": 93,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
