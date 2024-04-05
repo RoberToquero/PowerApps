@@ -1,11 +1,11 @@
 Nuevo As screen:
 
-    Rectangle1_2 As rectangle:
+    RectangleSup As rectangle:
         Fill: =RGBA(195, 219, 11, 1)
         Width: =1366
         ZIndex: =1
 
-    Label1_2 As label:
+    tituloNuevoEmpleado As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
@@ -19,14 +19,14 @@ Nuevo As screen:
         Y: =30
         ZIndex: =2
 
-    Form1 As form:
+    FormNuevoEmpleado As form:
         AcceptsFocus: =false
         DataSource: =Empleados
         Height: =550
         NumberOfColumns: =2
         OnFailure: =
         OnReset: =true
-        OnSuccess: =ResetForm(Form1);
+        OnSuccess: =ResetForm(FormNuevoEmpleado);
         Width: =1002
         X: =212
         Y: =120
@@ -438,8 +438,8 @@ Nuevo As screen:
                 Y: =DataCardKey27.Y
                 ZIndex: =4
 
-    Button1 As button:
-        OnSelect: =NewForm(Form1); Set(mostrarBotones,true)
+    botonNuevo As button:
+        OnSelect: =NewForm(FormNuevoEmpleado); Set(mostrarBotones,true)
         Text: |-
             ="Nuevo
             "
@@ -447,8 +447,8 @@ Nuevo As screen:
         Y: =140
         ZIndex: =6
 
-    Button1_1 As button:
-        OnSelect: =SubmitForm(Form1); 
+    botonEnviar As button:
+        OnSelect: =SubmitForm(FormNuevoEmpleado); 
         Text: |-
             ="Enviar
             "
@@ -457,16 +457,16 @@ Nuevo As screen:
         Y: =688
         ZIndex: =7
 
-    Icon4 As icon.Undo:
+    IconoRetroceso As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Undo
-        OnSelect: =Back(); ResetForm(Form1)
+        OnSelect: =Back(); ResetForm(FormNuevoEmpleado)
         X: =264
         Y: =23
         ZIndex: =8
 
-    Button3 As button:
-        OnSelect: =ResetForm(Form1); Set(mostrarBotones,false)
+    botonReinicio As button:
+        OnSelect: =ResetForm(FormNuevoEmpleado); Set(mostrarBotones,false)
         Text: ="Reiniciar"
         Visible: =mostrarBotones
         X: =14
