@@ -3,7 +3,7 @@ Login As screen:
     Label4 As label:
         Size: =20
         Text: |-
-            ="Usuario:"
+            ="DNI:"
         X: =121
         Y: =210
         ZIndex: =1
@@ -44,8 +44,8 @@ Login As screen:
                 IsBlank(
                     First(
                         Filter(
-                            Coll_usuarios,
-                            Nombre=txt_Usuario_Login.Text
+                            Empleados,
+                            DNI=txt_Usuario_Login.Text
                         )
                     )
                 ),
@@ -56,16 +56,16 @@ Login As screen:
                 ),
                 If(
                     LookUp(
-                        Coll_usuarios,
-                        Nombre = txt_Usuario_Login.Text,
-                        Pw
+                        Empleados,
+                        DNI = txt_Usuario_Login.Text,
+                        Contraseña
                     ) <> txt_Contraseña_Login.Text,
                     Notify(
                         "Contraseña incorrecta",
                         NotificationType.Error,
                         2000
                     ),
-                    Set(dep_user,First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Departamento);
+                    Set(dep_user,First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).Departamento.Value);
                     Set(var_mes,Month(Today()));
                     Set(var_año,Year(Today()));
                     Navigate(Calendario)

@@ -157,7 +157,7 @@ Calendario As screen:
             Text: |-
                 ="Añadir
                 Vacaciones"
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,228)
+            Width: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,152,228)
             ZIndex: =13
 
         BotonModificarVacaciones As button:
@@ -177,8 +177,8 @@ Calendario As screen:
             Text: |-
                 ="Modificar
                 Vacaciones"
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,228)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,228)
+            Width: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,152,228)
+            X: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,152,228)
             ZIndex: =15
 
         BotonAñadirBaja As button:
@@ -198,8 +198,8 @@ Calendario As screen:
             Text: |-
                 ="Añadir
                 Baja"
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,228)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,304,456)
+            Width: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,152,228)
+            X: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,304,456)
             ZIndex: =16
 
         BotonAñadirDLE As button:
@@ -219,8 +219,8 @@ Calendario As screen:
             Text: |-
                 ="Añadir
                 Dia LE"
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,228)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,456,684)
+            Width: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,152,228)
+            X: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,456,684)
             ZIndex: =17
 
         BotonModificarDLE As button:
@@ -240,8 +240,8 @@ Calendario As screen:
             Text: |-
                 ="Modificar
                 Dia LE"
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,228)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,608,912)
+            Width: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,152,228)
+            X: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,608,912)
             ZIndex: =18
 
         BotonAñadirDAP As button:
@@ -261,8 +261,8 @@ Calendario As screen:
             Text: |-
                 ="Añadir
                 Dia AP"
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,228)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,760,1140)
+            Width: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,152,228)
+            X: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,760,1140)
             ZIndex: =19
 
         Button7_5 As button:
@@ -279,7 +279,7 @@ Calendario As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: =""
-            Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
+            Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,909,909)
             ZIndex: =20
@@ -299,7 +299,7 @@ Calendario As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Text: ="Configuración Calendario"
-            Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
+            Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1062,1062)
             ZIndex: =21
@@ -321,7 +321,7 @@ Calendario As screen:
             Text: |-
                 ="Portal
                 Empleados"
-            Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
+            Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1214,1214)
             ZIndex: =22
