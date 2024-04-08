@@ -396,9 +396,9 @@ Nuevo As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
-                FalseText: =
+                FalseText: ="No"
                 Tooltip: =Parent.DisplayName
-                TrueText: =
+                TrueText: ="Si"
                 X: =30
                 Y: =DataCardKey20.Y + DataCardKey20.Height + 5
                 ZIndex: =2
