@@ -376,7 +376,7 @@ Nuevo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, "DNI")
-            Required: =false
+            Required: =true
             Update: =DataCardValue19.Text
             Width: =501
             X: =1
