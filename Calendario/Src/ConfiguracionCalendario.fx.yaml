@@ -1,2 +1,8 @@
 ConfiguracionCalendario As screen:
 
+    Rectangle6 As rectangle:
+        BorderColor: =RGBA(255, 191, 0, 1)
+        Fill: =RGBA(255, 191, 0, 1)
+        Width: =1366
+        ZIndex: =1
+

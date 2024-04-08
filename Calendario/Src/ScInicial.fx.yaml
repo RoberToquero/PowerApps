@@ -53,3 +53,14 @@ ScInicial As screen:
         Y: =335
         ZIndex: =6
 
+    Icon1 As icon.Undo:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =69
+        Icon: =Icon.Undo
+        OnSelect: =Back()
+        Width: =71
+        X: =109
+        Y: =13
+        ZIndex: =7
+

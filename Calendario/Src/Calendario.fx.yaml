@@ -284,11 +284,12 @@ Calendario As screen:
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,909,909)
             ZIndex: =20
 
-        Button7_6 As button:
+        BotonConfigurarCalendario As button:
             BorderThickness: =1
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Navigate(ConfiguracionCalendario)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -297,13 +298,13 @@ Calendario As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: =""
+            Text: ="Configuración Calendario"
             Visible: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1062,1062)
             ZIndex: =21
 
-        Button7_7 As button:
+        BotonPortalEmpleados As button:
             BorderThickness: =1
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
