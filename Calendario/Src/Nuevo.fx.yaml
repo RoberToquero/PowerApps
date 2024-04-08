@@ -22,7 +22,7 @@ Nuevo As screen:
     FormNuevoEmpleado As form:
         AcceptsFocus: =false
         DataSource: =Empleados
-        Height: =550
+        Height: =641
         NumberOfColumns: =2
         OnFailure: =
         OnReset: =true
@@ -240,12 +240,12 @@ Nuevo As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Departamento")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =151
             Required: =true
             Update: =DataCardValue10.Selected
             Width: =501
-            X: =1
-            Y: =1
+            X: =0
+            Y: =2
             ZIndex: =1
 
             DataCardKey10 As label:
@@ -299,6 +299,74 @@ Nuevo As screen:
                 Y: =DataCardKey10.Y
                 ZIndex: =4
 
+        Contraseña_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Contrase_x00f1_a"
+            Default: =ThisItem.Contraseña
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Contrase_x00f1_a")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, "Contrase_x00f1_a")
+            Required: =false
+            Update: =DataCardValue12.Text
+            Width: =501
+            X: =1
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey13 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue12 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey13.Y + DataCardKey13.Height + 5
+                ZIndex: =2
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue12.Y + DataCardValue12.Height
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey13.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey13.Y
+                ZIndex: =4
+
         Firma_DataCard1 As typedDataCard.addLargePictureCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Firma"
@@ -310,7 +378,7 @@ Nuevo As screen:
             Required: =false
             Update: =PenInput1.Image
             Width: =501
-            X: =0
+            X: =1
             Y: =2
             ZIndex: =1
 
@@ -363,12 +431,12 @@ Nuevo As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"{Attachments}")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =375
             Required: =false
             Update: =DataCardValue11.Attachments
             Width: =501
-            X: =1
-            Y: =2
+            X: =0
+            Y: =3
             ZIndex: =1
 
             DataCardKey12 As label:
@@ -393,7 +461,7 @@ Nuevo As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                Y: =54
                 ZIndex: =2
 
             ErrorMessage8 As label:
