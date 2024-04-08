@@ -580,31 +580,49 @@ Calendario As screen:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: |-
-                =If(
+                =Set(enespera,true)
+                ;  
+                If(
                     rb_PUAV_Verano.Selected.Value=1
                     ,
-                    ClearCollect(coll_num,Sequence(15,1,1));
-                    ForAll(
-                        coll_num, 
-                        If(
-                            true
-                            ,
-                            Collect(
-                                Fiestas,
-                                {
-                                    Fecha: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,Value(ThisRecord.Value),TimeUnit.Days),
-                                    Fiesta: "Vacaciones " & txt_Usuario_Login.Text,
-                                    Departamento: dep_user
-                                }
-                            )
-                            ,
-                            false
-                        )
+                    Collect(
+                        Vacaciones,
+                        {
+                            DNI: txt_Usuario_Login.Text,
+                            FechaInicio: dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            DuracionSemanas: 3
+                        }
                     )
                     ,
-                    Set(enespera,false)
+                    Collect(
+                        Vacaciones,
+                        {
+                            DNI: txt_Usuario_Login.Text,
+                            FechaInicio: dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,
+                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            DuracionSemanas: 1
+                        }
+                        ,
+                        {
+                            DNI: txt_Usuario_Login.Text,
+                            FechaInicio: dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,
+                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            DuracionSemanas: 2
+                        }
+                    )
                 )
-                    
+                ;
+                Set(enespera,false);
+                Set(limpiar,true);
+                Set(limpiar,false);
+                Set(puavVerano,false);
+                Set(puavFondo,false);
+                Set(varcount,1);
+                Reset(rb_PUAV_Verano)
                 
                     
             Text: ="Aceptar"
@@ -665,7 +683,7 @@ Calendario As screen:
             FontWeight: =FontWeight.Bold
             Height: =109
             Items: =RadioSample
-            OnChange: =Set(limpiar,true);Set(limpiar,false)
+            OnChange: =Set(limpiar,true);Set(limpiar,false);Set(puavesvalido,false)
             Size: =20
             Visible: =puavVerano
             Width: =105
