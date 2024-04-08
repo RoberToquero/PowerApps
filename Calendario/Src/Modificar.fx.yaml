@@ -20,7 +20,12 @@ Modificar As screen:
         ZIndex: =2
 
     ButtonEnviar As button:
-        OnSelect: =SubmitForm(FormularioModificar); Set(mostrarConfirm,true)
+        OnSelect: |-
+            =If(
+                SubmitForm(FormularioModificar),
+                Set(mostrarConfirm, true),
+                Notify("Error al actualizar el formulario", NotificationType.Error)
+            )
         Text: |-
             ="Enviar
             "
