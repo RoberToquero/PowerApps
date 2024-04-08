@@ -28,7 +28,7 @@
       "MetaDataIDKey": "",
       "Name": "Apellidos_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6078,7 +6078,7 @@
       "MetaDataIDKey": "",
       "Name": "Departamento_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6218,7 +6218,7 @@
       "MetaDataIDKey": "",
       "Name": "DNI_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7009,7 +7009,7 @@
       "MetaDataIDKey": "",
       "Name": "EsAdmin_DataCard3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7109,7 +7109,7 @@
       "MetaDataIDKey": "",
       "Name": "Fecha Nacimiento_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9857,7 +9857,7 @@
       "MetaDataIDKey": "",
       "Name": "Nombre_DataCard1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

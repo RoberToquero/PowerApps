@@ -168,86 +168,13 @@ Consulta As screen:
 
     FormularioEmpleados As formViewer:
         DataSource: =Empleados
-        Height: =415
+        Height: =465
         Item: =GaleriaNombres.Selected
         NumberOfColumns: =2
         Width: =510
         X: =807
         Y: =146
         ZIndex: =11
-
-        DNI_DataCard3 As typedDataCard.textualViewCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="DNI"
-            Default: =ThisItem.DNI
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"DNI")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =false
-            Width: =255
-            X: =0
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey25 As label:
-                AutoHeight: =true
-                FontWeight: =FontWeight.Bold
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue23 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =27
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey25.Y + DataCardKey25.Height + 5
-                ZIndex: =2
-
-        EsAdmin_DataCard3 As typedDataCard.toggleViewCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="EsAdmin"
-            Default: =ThisItem.EsAdmin
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"EsAdmin")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Width: =255
-            X: =1
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey26 As label:
-                AutoHeight: =true
-                FontWeight: =FontWeight.Bold
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue24 As toggleSwitch:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
-                FalseText: ="No"
-                TrueText: ="Si"
-                X: =30
-                Y: =DataCardKey26.Y + DataCardKey26.Height + 5
-                ZIndex: =2
 
         Nombre_DataCard1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
@@ -427,6 +354,79 @@ Consulta As screen:
                 Width: =Parent.Width - 60
                 X: =30
                 Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+        DNI_DataCard3 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DNI"
+            Default: =ThisItem.DNI
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"DNI")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =255
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey25 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue23 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey25.Y + DataCardKey25.Height + 5
+                ZIndex: =2
+
+        EsAdmin_DataCard3 As typedDataCard.toggleViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="EsAdmin"
+            Default: =ThisItem.EsAdmin
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"EsAdmin")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Width: =255
+            X: =1
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey26 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Bold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue24 As toggleSwitch:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                FalseText: ="No"
+                TrueText: ="Si"
+                X: =30
+                Y: =DataCardKey26.Y + DataCardKey26.Height + 5
                 ZIndex: =2
 
         Firma_DataCard2 As typedDataCard.largeImageViewCard:

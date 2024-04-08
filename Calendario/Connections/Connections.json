@@ -68,14 +68,22 @@
     "datasets": {
       "https://educajcyl.sharepoint.com/sites/prueba5712": {
         "dataSources": {
+          "ConfiguracionCalendario_1": {
+            "tableName": "c29b0a7e-a541-4dc5-8208-5cdcc7edcf44"
+          },
           "Empleados": {
             "tableName": "290fe653-6406-420e-9c48-c9aac6df4543"
+          },
+          "Vacaciones": {
+            "tableName": "4becfd83-0190-44dc-a3f6-919c904aa02a"
           }
         }
       }
     },
     "dataSources": [
-      "Empleados"
+      "Empleados",
+      "Vacaciones",
+      "ConfiguracionCalendario_1"
     ],
     "dependencies": {},
     "dependents": [],

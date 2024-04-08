@@ -1734,19 +1734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_4.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioInvierno.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_4.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioInvierno.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1_4"
+                "type": "ConfiguracionCalendario.dp_InicioInvierno"
               }
             }
           ],
@@ -1764,19 +1764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioPeticion.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioPeticion.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1"
+                "type": "ConfiguracionCalendario.dp_InicioPeticion"
               }
             }
           ],
@@ -1794,19 +1794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_2.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioVerano.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_2.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioVerano.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1_2"
+                "type": "ConfiguracionCalendario.dp_InicioVerano"
               }
             }
           ],
@@ -1824,19 +1824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_5.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_FinInvierno.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_5.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_FinInvierno.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1_5"
+                "type": "ConfiguracionCalendario.dp_FinInvierno"
               }
             }
           ],
@@ -1854,19 +1854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_6.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioInvierno2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_6.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_InicioInvierno2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1_6"
+                "type": "ConfiguracionCalendario.dp_InicioInvierno2"
               }
             }
           ],
@@ -1884,19 +1884,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_1.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_FinPeticion.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_1.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_FinPeticion.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1_1"
+                "type": "ConfiguracionCalendario.dp_FinPeticion"
               }
             }
           ],
@@ -1914,19 +1914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_3.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_Fin_Verano.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_3.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_Fin_Verano.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1_3"
+                "type": "ConfiguracionCalendario.dp_Fin_Verano"
               }
             }
           ],
@@ -1944,19 +1944,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_7.AccessibleLabel"
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_FinInvierno2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConfiguracionCalendario.DatePicker1_7.AccessibleLabel",
+                  "fullyQualifiedName": "ConfiguracionCalendario.dp_FinInvierno2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConfiguracionCalendario",
-                "type": "ConfiguracionCalendario.DatePicker1_7"
+                "type": "ConfiguracionCalendario.dp_FinInvierno2"
               }
             }
           ],

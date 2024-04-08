@@ -142,68 +142,87 @@ ConfiguracionCalendario As screen:
         Y: =147
         ZIndex: =15
 
-    DatePicker1 As datepicker:
+    dp_InicioPeticion As datepicker:
         Width: =250
         X: =103
         Y: =337
         ZIndex: =16
 
-    DatePicker1_1 As datepicker:
+    dp_FinPeticion As datepicker:
         Width: =250
         X: =103
         Y: =542
         ZIndex: =17
 
-    DatePicker1_2 As datepicker:
+    dp_InicioVerano As datepicker:
         Width: =250
         X: =558
         Y: =337
         ZIndex: =18
 
-    DatePicker1_3 As datepicker:
+    dp_Fin_Verano As datepicker:
         Height: =44
         Width: =250
         X: =558
         Y: =542
         ZIndex: =19
 
-    DatePicker1_4 As datepicker:
+    dp_InicioInvierno As datepicker:
         Width: =250
         X: =1018
         Y: =307
         ZIndex: =20
 
-    DatePicker1_5 As datepicker:
+    dp_FinInvierno As datepicker:
         Width: =250
         X: =1018
         Y: =380
         ZIndex: =21
 
-    DatePicker1_6 As datepicker:
+    dp_InicioInvierno2 As datepicker:
         Width: =250
         X: =1018
         Y: =520
         ZIndex: =22
 
-    DatePicker1_7 As datepicker:
+    dp_FinInvierno2 As datepicker:
         Width: =250
         X: =1018
         Y: =586
         ZIndex: =23
 
-    Button2 As button:
-        Text: ="Confirmar"
-        X: =143
-        Y: =676
-        ZIndex: =24
-
-    Button2_1 As button:
-        Text: ="Confirmar"
-        X: =1063
-        Y: =676
-        ZIndex: =25
-
     Button2_2 As button:
+        OnSelect: |-
+            =If(IsEmpty(Filter(ConfiguracionCalendario_1,Año=Text(Today(),"yyyy"))),
+                Collect(
+                    ConfiguracionCalendario_1,
+                    {
+                        Año: Text(Today(),"yyyy"),
+                        InicioPeticion: dp_InicioPeticion.SelectedDate,
+                        FinPeticion: dp_FinPeticion.SelectedDate,
+                        InicioVerano: dp_InicioVerano.SelectedDate,
+                        FinVerano: dp_Fin_Verano.SelectedDate,
+                        InicioInvierno: dp_InicioInvierno.SelectedDate,
+                        FinInvierno: dp_FinInvierno.SelectedDate,
+                        InicioInvierno2: dp_InicioInvierno2.SelectedDate,
+                        FinInvierno2: dp_FinInvierno2.SelectedDate
+                    }
+                ),
+                Patch(
+                    ConfiguracionCalendario_1,
+                    LookUp(ConfiguracionCalendario_1,Año=Text(Today(),"yyyy")),
+                    {
+                       InicioPeticion: dp_InicioPeticion.SelectedDate,
+                        FinPeticion: dp_FinPeticion.SelectedDate,
+                        InicioVerano: dp_InicioVerano.SelectedDate,
+                        FinVerano: dp_Fin_Verano.SelectedDate,
+                        InicioInvierno: dp_InicioInvierno.SelectedDate,
+                        FinInvierno: dp_FinInvierno.SelectedDate,
+                        InicioInvierno2: dp_InicioInvierno2.SelectedDate,
+                        FinInvierno2: dp_FinInvierno2.SelectedDate 
+                    }
+                )
+            )
         Text: ="Confirmar"
         X: =603
         Y: =676
