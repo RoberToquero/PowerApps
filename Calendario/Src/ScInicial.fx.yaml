@@ -58,7 +58,7 @@ ScInicial As screen:
         Color: =RGBA(255, 255, 255, 1)
         Height: =69
         Icon: =Icon.Undo
-        OnSelect: =Back()
+        OnSelect: =Navigate(Calendario)
         Width: =71
         X: =109
         Y: =13
