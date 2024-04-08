@@ -1,10 +1,33 @@
 ConfiguracionCalendario As screen:
 
+    Rectangle7_2 As rectangle:
+        Fill: =RGBA(255, 234, 224, 1)
+        Height: =667
+        Width: =455
+        X: =455
+        Y: =100
+        ZIndex: =1
+
+    Rectangle7_1 As rectangle:
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =667
+        Width: =455
+        X: =911
+        Y: =101
+        ZIndex: =2
+
+    Rectangle7 As rectangle:
+        Fill: =RGBA(232, 244, 217, 1)
+        Height: =667
+        Width: =455
+        Y: =101
+        ZIndex: =3
+
     Rectangle6 As rectangle:
         BorderColor: =RGBA(235, 176, 0, 1)
         Fill: =RGBA(255, 191, 0, 1)
         Width: =1366
-        ZIndex: =1
+        ZIndex: =4
 
     Label11 As label:
         Align: =Align.Center
@@ -15,7 +38,7 @@ ConfiguracionCalendario As screen:
         Text: ="Configuración Calendario"
         Width: =729
         X: =318
-        ZIndex: =2
+        ZIndex: =5
 
     Icon2 As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
@@ -23,16 +46,16 @@ ConfiguracionCalendario As screen:
         OnSelect: =Back()
         X: =122
         Y: =18
-        ZIndex: =3
+        ZIndex: =6
 
     Label12 As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Size: =16
         Text: ="Fecha Inicio"
-        X: =227
+        X: =145
         Y: =283
-        ZIndex: =4
+        ZIndex: =7
 
     Label12_1 As label:
         Align: =Align.Center
@@ -41,16 +64,16 @@ ConfiguracionCalendario As screen:
         Text: ="Fecha Inicio"
         X: =608
         Y: =283
-        ZIndex: =5
+        ZIndex: =8
 
     Label12_2 As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Size: =16
         Text: ="Semana1"
-        X: =989
+        X: =1068
         Y: =259
-        ZIndex: =6
+        ZIndex: =9
 
     Label12_3 As label:
         Align: =Align.Center
@@ -58,9 +81,9 @@ ConfiguracionCalendario As screen:
         Height: =44
         Size: =16
         Text: ="Fecha Fin"
-        X: =227
+        X: =145
         Y: =490
-        ZIndex: =7
+        ZIndex: =10
 
     Label12_4 As label:
         Align: =Align.Center
@@ -69,16 +92,16 @@ ConfiguracionCalendario As screen:
         Text: ="Fecha Fin"
         X: =608
         Y: =492
-        ZIndex: =8
+        ZIndex: =11
 
     Label12_5 As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Size: =16
         Text: ="Semana2"
-        X: =989
+        X: =1068
         Y: =468
-        ZIndex: =9
+        ZIndex: =12
 
     Label12_6 As label:
         Align: =Align.Center
@@ -91,7 +114,7 @@ ConfiguracionCalendario As screen:
         Width: =169
         X: =598
         Y: =147
-        ZIndex: =10
+        ZIndex: =13
 
     Label12_7 As label:
         Align: =Align.Center
@@ -102,9 +125,9 @@ ConfiguracionCalendario As screen:
             ="Vacaciones
             Invierno"
         Width: =165
-        X: =981
+        X: =1060
         Y: =147
-        ZIndex: =11
+        ZIndex: =14
 
     Label12_8 As label:
         Align: =Align.Center
@@ -115,74 +138,74 @@ ConfiguracionCalendario As screen:
             ="Petición
             Vacaciones"
         Width: =175
-        X: =214
+        X: =132
         Y: =147
-        ZIndex: =12
+        ZIndex: =15
 
     DatePicker1 As datepicker:
         Width: =250
-        X: =177
+        X: =95
         Y: =337
-        ZIndex: =13
+        ZIndex: =16
 
     DatePicker1_1 As datepicker:
         Width: =250
-        X: =177
+        X: =95
         Y: =542
-        ZIndex: =14
+        ZIndex: =17
 
     DatePicker1_2 As datepicker:
         Width: =250
         X: =558
         Y: =337
-        ZIndex: =15
+        ZIndex: =18
 
     DatePicker1_3 As datepicker:
         Height: =44
         Width: =250
         X: =558
         Y: =542
-        ZIndex: =16
+        ZIndex: =19
 
     DatePicker1_4 As datepicker:
         Width: =250
-        X: =939
+        X: =1018
         Y: =307
-        ZIndex: =17
+        ZIndex: =20
 
     DatePicker1_5 As datepicker:
         Width: =250
-        X: =939
+        X: =1018
         Y: =380
-        ZIndex: =18
+        ZIndex: =21
 
     DatePicker1_6 As datepicker:
         Width: =250
-        X: =939
+        X: =1018
         Y: =520
-        ZIndex: =19
+        ZIndex: =22
 
     DatePicker1_7 As datepicker:
         Width: =250
-        X: =939
+        X: =1018
         Y: =586
-        ZIndex: =20
+        ZIndex: =23
 
     Button2 As button:
         Text: ="Confirmar"
-        X: =217
+        X: =135
         Y: =676
-        ZIndex: =21
+        ZIndex: =24
 
     Button2_1 As button:
         Text: ="Confirmar"
-        X: =984
+        X: =1063
         Y: =676
-        ZIndex: =22
+        ZIndex: =25
 
     Button2_2 As button:
         Text: ="Confirmar"
         X: =603
         Y: =676
-        ZIndex: =23
+        ZIndex: =26
 
