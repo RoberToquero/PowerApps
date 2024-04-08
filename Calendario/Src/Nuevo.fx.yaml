@@ -242,7 +242,7 @@ Nuevo As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, "Contrase_x00f1_a")
-            Required: =false
+            Required: =true
             Update: =DataCardValue12.Text
             Width: =501
             X: =1
