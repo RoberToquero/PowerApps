@@ -308,7 +308,7 @@ Nuevo As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Departamento")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =151
+            Height: =102
             Required: =true
             Update: =DataCardValue10.Selected
             Width: =501
@@ -513,6 +513,7 @@ Nuevo As screen:
             DataCardValue11 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
+                Height: =262
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5
@@ -565,8 +566,8 @@ Nuevo As screen:
             ="Enviar
             "
         Visible: =mostrarBotones
-        X: =580
-        Y: =688
+        X: =14
+        Y: =640
         ZIndex: =7
 
     IconoRetroceso As icon.Undo:
