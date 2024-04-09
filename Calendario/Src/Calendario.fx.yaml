@@ -592,7 +592,7 @@ Calendario As screen:
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
-                            DuracionSemanas: 3
+                            Duracion: 3
                         }
                     )
                     ,
@@ -603,7 +603,7 @@ Calendario As screen:
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
-                            DuracionSemanas: 1
+                            Duracion: 1
                         }
                         ,
                         {
@@ -611,7 +611,7 @@ Calendario As screen:
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
-                            DuracionSemanas: 2
+                            Duracion: 2
                         }
                     )
                 )
