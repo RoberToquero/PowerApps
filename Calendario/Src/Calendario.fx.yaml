@@ -586,7 +586,7 @@ Calendario As screen:
                     Collect(
                         Vacaciones,
                         {
-                            DNI: txt_Usuario_Login.Text,
+                            dniEmpleado: txt_Usuario_Login.Text,
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
@@ -597,7 +597,7 @@ Calendario As screen:
                     Collect(
                         Vacaciones,
                         {
-                            DNI: txt_Usuario_Login.Text,
+                            dniEmpleado: txt_Usuario_Login.Text,
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
@@ -605,7 +605,7 @@ Calendario As screen:
                         }
                         ,
                         {
-                            DNI: txt_Usuario_Login.Text,
+                            dniEmpleado: txt_Usuario_Login.Text,
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
@@ -936,7 +936,7 @@ Calendario As screen:
         Boton_PUAV_Cancelar_Invierno As button:
             Fill: =RGBA(255, 0, 0, 1)
             HoverFill: =ColorFade(Self.Fill, 30%)
-            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(puavInvierno,false);Set(puavFondo,false);Set(puavesvalido,false);Set(varcount,1);Reset(rb_PUAV_Invierno)
+            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(puavInvierno,false);Set(puavFondo,false);Reset(rb_PUAV_Invierno)
             Text: ="Cancelar"
             Visible: =puavInvierno
             X: =433
@@ -946,7 +946,54 @@ Calendario As screen:
         Boton_PUAV_Aceptar_Invierno As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 30%)
-            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(puavInvierno,false);Set(puavFondo,false);Set(puavesvalido,false);Set(varcount,1);Reset(rb_PUAV_Invierno)
+            OnSelect: |-
+                =If(
+                    IsBlank(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
+                    ,
+                    If(
+                        IsBlank(Filter(Vacaciones, dniEmpleado = txt_Usuario_Login.Text && Opciones.Value = "Invierno"))
+                        ,
+                
+                        If(
+                            rb_PUAV_Invierno.Selected.Value="Semana 1"
+                            ,
+                            
+                            If(
+                                true
+                                ,
+                                true
+                                ,
+                                false
+                            )
+                
+                
+                
+                            ,
+                            false
+                        )
+                        
+                        ,
+                        Notify(
+                            "Ya has pedido vacaciones de invierno previamente",
+                            NotificationType.Error,
+                            2000
+                        )
+                    )
+                    ,
+                    Notify(
+                        "Estás fuera del periodo de petición",
+                        NotificationType.Error,
+                        2000
+                    )
+                );
+                
+                
+                
+                
+                
+                
+                
+                Set(limpiar,true);Set(limpiar,false);Set(puavInvierno,false);Set(puavFondo,false);Reset(rb_PUAV_Invierno)
             Text: ="Aceptar"
             Visible: =puavInvierno
             X: =764
@@ -969,6 +1016,7 @@ Calendario As screen:
         rb_PUAV_Invierno As radio:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
+            Default: ="Semana 1"
             FontWeight: =FontWeight.Bold
             Height: =77
             Items: =["Semana 1","Semana 2"]
@@ -1071,7 +1119,7 @@ Calendario As screen:
                         Collect(
                             Vacaciones,
                             {
-                                DNI: txt_Usuario_Login.Text,
+                                dniEmpleado: txt_Usuario_Login.Text,
                                 FechaInicio: dp_inicio_baja.SelectedDate,
                                 FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text,TimeUnit.Days),
                                 Opciones: {Value: "Baja",Label: "Baja"},
@@ -1229,7 +1277,7 @@ Calendario As screen:
                         Collect(
                             Vacaciones,
                             {
-                                DNI: txt_Usuario_Login.Text,
+                                dniEmpleado: txt_Usuario_Login.Text,
                                 FechaInicio: dp_Fecha_PUAAP.SelectedDate,
                                 FechaFin: dp_Fecha_PUAAP.SelectedDate,
                                 Opciones: {Value: "Asuntos Propios",Label: "Asuntos Propios"},
