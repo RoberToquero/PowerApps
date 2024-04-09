@@ -122,7 +122,7 @@ Calendario As screen:
 
         LabelEventoCal As label:
             Align: =Align.Center
-            Fill: =If(ThisItem.tabla_calendario.Motivo<>Blank() ,RGBA(255, 0, 20, 0.2),RGBA(0,0,0,0))
+            Fill: =If(ThisItem.delmes && ThisItem.tabla_calendario.Motivo<>Blank() ,RGBA(255, 0, 20, 0.2),RGBA(0,0,0,0))
             Height: =132
             OnSelect: =Select(Parent)
             Text: =If(ThisItem.delmes,ThisItem.tabla_calendario.Motivo,"")
