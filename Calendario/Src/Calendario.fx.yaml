@@ -1227,11 +1227,13 @@ Calendario As screen:
                         ,    
                         Set(enespera,true);
                         Collect(
-                            Fiestas,
+                            Vacaciones,
                             {
-                                Fecha: dp_Fecha_PUAAP.SelectedDate,
-                                Fiesta: "Asuntos propios " & txt_Usuario_Login.Text,
-                                Departamento: dep_user
+                                DNI: txt_Usuario_Login.Text,
+                                FechaInicio: dp_Fecha_PUAAP.SelectedDate,
+                                FechaFin: dp_Fecha_PUAAP.SelectedDate,
+                                Opciones: {Value: "Asuntos Propios",Label: "Asuntos Propios"},
+                                Duracion: 1
                             }
                         );
                         Set(enespera,false);
