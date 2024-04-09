@@ -88,7 +88,7 @@ Calendario As screen:
             coll_mes,
             "tabla_calendario", 
             LookUp(
-            Fiestas, 
+            DiasFestivos, 
             Day(Fecha)=coll_mes[@Value] && Month(Fecha)=var_mes
             ))
         Layout: =Layout.Vertical
@@ -122,12 +122,10 @@ Calendario As screen:
 
         LabelEventoCal As label:
             Align: =Align.Center
-            Fill: |-
-                =If(ThisItem.tabla_calendario.Fiesta<>Blank() && ThisItem.tabla_calendario.Departamento=dep_user &&ThisItem.delmes,RGBA(252, 255, 0, 0.2),
-                If(ThisItem.tabla_calendario.Fiesta<>Blank() && IsMatch(ThisItem.tabla_calendario.Departamento,"Todos") &&ThisItem.delmes,RGBA(255, 218, 237, 0.6),RGBA(0,0,0,0)))
+            Fill: =If(ThisItem.tabla_calendario.Motivo<>Blank() ,RGBA(255, 0, 20, 0.2),RGBA(0,0,0,0))
             Height: =132
             OnSelect: =Select(Parent)
-            Text: =If(ThisItem.delmes && (IsMatch(ThisItem.tabla_calendario.Departamento,"Todos") || ThisItem.tabla_calendario.Departamento=dep_user),ThisItem.tabla_calendario.Fiesta,"")
+            Text: =If(ThisItem.delmes,ThisItem.tabla_calendario.Motivo,"")
             ZIndex: =2
 
     FondoPopUp As rectangle:
@@ -1068,19 +1066,17 @@ Calendario As screen:
                             2000
                         )
                         ,    
-                        ClearCollect(coll_num,Sequence(txt_duracion_baja.Text,1,1));
                         Set(enespera,true);
                         Set(bajavisible,false);
-                        ForAll(
-                            coll_num, 
-                            Collect(
-                                Fiestas,
-                                {
-                                    Fecha: DateAdd(DateValue(dp_inicio_baja.SelectedDate),Value(ThisRecord.Value)-1,TimeUnit.Days),
-                                    Fiesta: "Baja " & txt_Usuario_Login.Text,
-                                    Departamento: dep_user
-                                }
-                            )
+                        Collect(
+                            Vacaciones,
+                            {
+                                DNI: txt_Usuario_Login.Text,
+                                FechaInicio: dp_inicio_baja.SelectedDate,
+                                FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text,TimeUnit.Days),
+                                Opciones: {Value: "Baja",Label: "Baja"},
+                                Duracion: Int(txt_duracion_baja.Text)
+                            }
                         )
                         ;
                         Set(enespera,false);
