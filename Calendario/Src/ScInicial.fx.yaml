@@ -73,3 +73,10 @@ ScInicial As screen:
         Y: =312
         ZIndex: =8
 
+    Icon3 As icon.People:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.People
+        X: =806
+        Y: =335
+        ZIndex: =9
+
