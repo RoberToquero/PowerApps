@@ -71,6 +71,12 @@
           "ConfiguracionCalendario_1": {
             "tableName": "c29b0a7e-a541-4dc5-8208-5cdcc7edcf44"
           },
+          "Departamentos_1": {
+            "tableName": "faee9d74-dac1-40ea-ab18-51bd9ea45911"
+          },
+          "DiasFestivos": {
+            "tableName": "b6819c61-2f6b-42b6-9cd2-7547507f1824"
+          },
           "Empleados": {
             "tableName": "290fe653-6406-420e-9c48-c9aac6df4543"
           },
@@ -83,7 +89,9 @@
     "dataSources": [
       "Empleados",
       "Vacaciones",
-      "ConfiguracionCalendario_1"
+      "ConfiguracionCalendario_1",
+      "Departamentos_1",
+      "DiasFestivos"
     ],
     "dependencies": {},
     "dependents": [],
