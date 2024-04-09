@@ -67,7 +67,7 @@ ScInicial As screen:
     Rectangle223_1 As rectangle:
         Fill: =RGBA(168, 0, 0, 1)
         Height: =110
-        OnSelect: =Navigate(Consulta)
+        OnSelect: =Navigate(Departamentos)
         Width: =165
         X: =745
         Y: =312
@@ -76,6 +76,7 @@ ScInicial As screen:
     Icon3 As icon.People:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.People
+        OnSelect: =Navigate(Departamentos)
         X: =806
         Y: =335
         ZIndex: =9
