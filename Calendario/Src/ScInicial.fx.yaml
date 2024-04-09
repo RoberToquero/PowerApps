@@ -24,7 +24,7 @@ ScInicial As screen:
         OnSelect: =Navigate(Consulta)
         Width: =165
         X: =180
-        Y: =312
+        Y: =335
         ZIndex: =3
 
     Icon221 As icon.Search:
@@ -33,7 +33,7 @@ ScInicial As screen:
         Icon: =Icon.Search
         OnSelect: =Navigate(Consulta)
         X: =230
-        Y: =335
+        Y: =358
         ZIndex: =4
 
     Rectangle224 As rectangle:
@@ -41,16 +41,16 @@ ScInicial As screen:
         Height: =110
         OnSelect: =Navigate(Nuevo); Set(mostrarBotones,false)
         Width: =165
-        X: =455
-        Y: =312
+        X: =580
+        Y: =335
         ZIndex: =5
 
     Icon223 As icon.Add:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Add
         OnSelect: =Navigate(Nuevo);Set(mostrarBotones,false)
-        X: =506
-        Y: =335
+        X: =631
+        Y: =358
         ZIndex: =6
 
     Icon1 As icon.Undo:
@@ -69,15 +69,15 @@ ScInicial As screen:
         Height: =110
         OnSelect: =Navigate(Departamentos)
         Width: =165
-        X: =745
-        Y: =312
+        X: =982
+        Y: =335
         ZIndex: =8
 
     Icon3 As icon.People:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.People
         OnSelect: =Navigate(Departamentos)
-        X: =806
-        Y: =335
+        X: =1032
+        Y: =358
         ZIndex: =9
 
