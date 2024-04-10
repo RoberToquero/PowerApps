@@ -946,7 +946,7 @@ Calendario As screen:
         Boton_PUAV_Aceptar_Invierno As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 30%)
-            OnSelect: |-
+            OnSelect: |
                 =If(
                     IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
                     ,
@@ -957,21 +957,19 @@ Calendario As screen:
                             rb_PUAV_Invierno.Selected.Value="Semana 1"
                             ,
                             If(
-                                CountRows(
+                                CountRows(                    
                                     Filter(
-                                        Filter(
-                                            AddColumns(
-                                                Vacaciones
-                                                ,
-                                                "Empleados",
-                                                LookUp(
-                                                    Empleados,
-                                                    DNI = dniEmpleado
-                                                )
-                                            ),
-                                            Opciones.Value="Invierno"
-                                        )
-                                        ,
+                                        AddColumns(
+                                            Vacaciones
+                                            ,
+                                            "Empleados",
+                                            LookUp(
+                                                Empleados,
+                                                DNI = dniEmpleado
+                                            )
+                                        ),
+                                        Opciones.Value="Invierno"
+                                        &&
                                         FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno
                                         &&
                                         Empleados.Departamento.Value=dep_user
@@ -990,6 +988,8 @@ Calendario As screen:
                                             LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno)
                                     }
                                 )
+                                ;
+                                Set(puavInvierno,false);Set(puavFondo,false);Reset(rb_PUAV_Invierno)
                                 ,
                                 Notify(
                                     "Ya están de vacaciones el máximo de personas del departamento en esa fecha",
@@ -1032,6 +1032,8 @@ Calendario As screen:
                                             LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno2)
                                     }
                                 )
+                                ;
+                                Set(puavInvierno,false);Set(puavFondo,false);Reset(rb_PUAV_Invierno)
                                 ,
                                 Notify(
                                     "Ya están de vacaciones el máximo de personas del departamento en esa fecha",
@@ -1053,15 +1055,7 @@ Calendario As screen:
                         NotificationType.Error,
                         2000
                     )
-                );
-                
-                
-                
-                
-                
-                
-                
-                Set(limpiar,true);Set(limpiar,false);Set(puavInvierno,false);Set(puavFondo,false);Reset(rb_PUAV_Invierno)
+                )
             Text: ="Aceptar"
             Visible: =puavInvierno
             X: =764
