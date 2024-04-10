@@ -438,7 +438,7 @@ Consulta As screen:
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Firma")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =219
             Required: =false
             Width: =255
             X: =0
@@ -462,7 +462,7 @@ Consulta As screen:
                 Image: =Parent.Default
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                Y: =27
                 ZIndex: =2
 
         "'Datos adjuntos_DataCard1' As typedDataCard.attachmentsViewCard":
@@ -494,6 +494,7 @@ Consulta As screen:
             DataCardValue6 As attachments:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
+                Height: =158
                 IsInDataCard: =true
                 Items: =Parent.Default
                 PaddingBottom: =5

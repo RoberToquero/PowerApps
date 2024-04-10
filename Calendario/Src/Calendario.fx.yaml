@@ -951,7 +951,18 @@ Calendario As screen:
                     IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
                     ,
                     If(
-                        IsEmpty(Filter(Vacaciones, dniEmpleado = txt_Usuario_Login.Text && Opciones.Value = "Invierno"))
+                        IsEmpty(                    
+                            Filter(
+                                Vacaciones,
+                                dniEmpleado=txt_Usuario_Login.Text 
+                                &&
+                                Opciones.Value="Invierno" 
+                                &&
+                                (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
+                                || 
+                                FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                            )
+                        )
                         ,
                         If(
                             rb_PUAV_Invierno.Selected.Value="Semana 1"
@@ -1521,7 +1532,121 @@ Calendario As screen:
         Boton_PUMV_Aceptar_Invierno As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 30%)
-            OnSelect: =Set(limpiar,true);Set(limpiar,false);Set(pumvInvierno,false);Set(puavFondo,false);Set(puavesvalido,false);Set(varcount,1);Reset(rb_PUMV_Invierno)
+            OnSelect: |
+                =If(
+                    IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
+                    ,
+                    If(
+                        rb_PUAV_Invierno.Selected.Value="Semana 1"
+                        ,
+                        If(
+                            !IsEmpty(                    
+                                Filter(
+                                    Vacaciones,
+                                    dniEmpleado=txt_Usuario_Login.Text 
+                                    &&
+                                    Opciones.Value="Invierno" 
+                                    &&
+                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
+                                    || 
+                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                )
+                            )
+                            ,
+                            Remove(
+                                Vacaciones,
+                                Filter(
+                                    Vacaciones,
+                                    dniEmpleado=txt_Usuario_Login.Text 
+                                    &&
+                                    Opciones.Value="Invierno" 
+                                    &&
+                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
+                                    || 
+                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                )
+                            )
+                            ;
+                            Collect(
+                                Vacaciones,
+                                {
+                                    dniEmpleado: txt_Usuario_Login.Text,
+                                    FechaInicio: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno,
+                                    FechaFin: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno,
+                                    Opciones: {Value: "Invierno", Label: "Invierno"},
+                                    Duracion: DateDiff(
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno,
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno)
+                                }
+                            )
+                            ;
+                            Set(pumvInvierno,false);Set(pumvFondo,false);Reset(rb_PUMV_Invierno)
+                            ,
+                            Notify(
+                                "Aún no has pedido vacaciones de invierno",
+                                NotificationType.Error,
+                                2000
+                            )
+                        )
+                        ,
+                        If(
+                            !IsEmpty(                    
+                                Filter(
+                                    Vacaciones,
+                                    dniEmpleado=txt_Usuario_Login.Text 
+                                    &&
+                                    Opciones.Value="Invierno" 
+                                    &&
+                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
+                                    || 
+                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                )
+                            )
+                            ,
+                            Remove(
+                                Vacaciones,
+                                Filter(
+                                    Vacaciones,
+                                    dniEmpleado=txt_Usuario_Login.Text 
+                                    &&
+                                    Opciones.Value="Invierno" 
+                                    &&
+                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
+                                    || 
+                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                )
+                            )
+                            ;
+                            Collect(
+                                Vacaciones,
+                                {
+                                    dniEmpleado: txt_Usuario_Login.Text,
+                                    FechaInicio: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2,
+                                    FechaFin: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno2,
+                                    Opciones: {Value: "Invierno", Label: "Invierno"},
+                                    Duracion: DateDiff(
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2,
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno2
+                                    )
+                                }
+                            )
+                            ;
+                            Set(pumvInvierno,false);Set(pumvFondo,false);Reset(rb_PUMV_Invierno)
+                            ,
+                            Notify(
+                                "Aún no has pedido vacaciones de invierno",
+                                NotificationType.Error,
+                                2000
+                            )
+                        )     
+                    )
+                    ,
+                    Notify(
+                        "Estás fuera del periodo de petición",
+                        NotificationType.Error,
+                        2000
+                    )
+                )
             Text: ="Aceptar"
             Visible: =pumvInvierno
             X: =769
@@ -1544,6 +1669,7 @@ Calendario As screen:
         rb_PUMV_Invierno As radio:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
+            Default: ="Semana 1"
             FontWeight: =FontWeight.Bold
             Height: =77
             Items: =["Semana 1","Semana 2"]
