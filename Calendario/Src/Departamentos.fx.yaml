@@ -175,33 +175,3 @@ Departamentos As screen:
         Y: =570
         ZIndex: =11
 
-    Label15 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Bold
-        Height: =101
-        Size: =40
-        Text: |-
-            =CountRows(
-                Filter(
-                    Filter(
-                        AddColumns(
-                            Vacaciones
-                            ,
-                            "Empleados",
-                            LookUp(
-                                Empleados,
-                                DNI = dniEmpleado
-                            )
-                        ),
-                        Opciones.Value="Invierno"
-                    )
-                    ,
-                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno
-                    &&
-                    Empleados.Departamento.Value=dep_user
-                )
-            )
-        X: =1030
-        Y: =667
-        ZIndex: =12
-

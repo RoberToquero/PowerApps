@@ -953,7 +953,6 @@ Calendario As screen:
                     If(
                         IsEmpty(Filter(Vacaciones, dniEmpleado = txt_Usuario_Login.Text && Opciones.Value = "Invierno"))
                         ,
-                
                         If(
                             rb_PUAV_Invierno.Selected.Value="Semana 1"
                             ,
@@ -992,15 +991,55 @@ Calendario As screen:
                                     }
                                 )
                                 ,
-                                false
+                                Notify(
+                                    "Ya están de vacaciones el máximo de personas del departamento en esa fecha",
+                                    NotificationType.Error,
+                                    2000
+                                )
                             )
-                
-                
-                
                             ,
-                            false
+                            If(
+                                CountRows(
+                                    Filter(
+                                        Filter(
+                                            AddColumns(
+                                                Vacaciones
+                                                ,
+                                                "Empleados",
+                                                LookUp(
+                                                    Empleados,
+                                                    DNI = dniEmpleado
+                                                )
+                                            ),
+                                            Opciones.Value="Invierno"
+                                        )
+                                        ,
+                                        FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2
+                                        &&
+                                        Empleados.Departamento.Value=dep_user
+                                    )
+                                )<(LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados-LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados)
+                                ,
+                                Collect(
+                                    Vacaciones,
+                                    {
+                                        dniEmpleado: txt_Usuario_Login.Text,
+                                        FechaInicio: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2,
+                                        FechaFin: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno2,
+                                        Opciones: {Value: "Invierno", Label: "Invierno"},
+                                        Duracion: DateDiff(
+                                            LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2,
+                                            LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno2)
+                                    }
+                                )
+                                ,
+                                Notify(
+                                    "Ya están de vacaciones el máximo de personas del departamento en esa fecha",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )     
                         )
-                        
                         ,
                         Notify(
                             "Ya has pedido vacaciones de invierno previamente",
