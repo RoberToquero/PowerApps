@@ -948,20 +948,49 @@ Calendario As screen:
             HoverFill: =ColorFade(Self.Fill, 30%)
             OnSelect: |-
                 =If(
-                    IsBlank(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
+                    IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
                     ,
                     If(
-                        IsBlank(Filter(Vacaciones, dniEmpleado = txt_Usuario_Login.Text && Opciones.Value = "Invierno"))
+                        IsEmpty(Filter(Vacaciones, dniEmpleado = txt_Usuario_Login.Text && Opciones.Value = "Invierno"))
                         ,
                 
                         If(
                             rb_PUAV_Invierno.Selected.Value="Semana 1"
                             ,
-                            
                             If(
-                                true
+                                CountRows(
+                                    Filter(
+                                        Filter(
+                                            AddColumns(
+                                                Vacaciones
+                                                ,
+                                                "Empleados",
+                                                LookUp(
+                                                    Empleados,
+                                                    DNI = dniEmpleado
+                                                )
+                                            ),
+                                            Opciones.Value="Invierno"
+                                        )
+                                        ,
+                                        FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno
+                                        &&
+                                        Empleados.Departamento.Value=dep_user
+                                    )
+                                )<(LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados-LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados)
                                 ,
-                                true
+                                Collect(
+                                    Vacaciones,
+                                    {
+                                        dniEmpleado: txt_Usuario_Login.Text,
+                                        FechaInicio: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno,
+                                        FechaFin: LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno,
+                                        Opciones: {Value: "Invierno", Label: "Invierno"},
+                                        Duracion: DateDiff(
+                                            LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno,
+                                            LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno)
+                                    }
+                                )
                                 ,
                                 false
                             )
