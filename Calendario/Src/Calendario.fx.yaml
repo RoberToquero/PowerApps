@@ -28,7 +28,7 @@ Calendario As screen:
 
     BotonCalcularCalendario As button:
         Height: =19
-        OnSelect: |-
+        OnSelect: |+
             =Set(var_primerdiames,Date(var_año,var_mes,1));
             Set(var_ultimodiames,Date(var_año,var_mes+1,0));
             Set(var_ultimodiamesanterior,var_primerdiames-1);
@@ -44,6 +44,32 @@ Calendario As screen:
             Collect(coll_mes,{Value: Value,delmes: true}));
             ForAll(Sequence(7-var_ultimodiasemana),
             Collect(coll_mes,{Value: Value,delmes: false}));
+            Clear(Coll_vacaciones);
+            Collect(
+                Coll_vacaciones,
+                Filter(
+                    Vacaciones,
+                    dniEmpleado=txt_Usuario_Login.Text
+            	&&
+            	(Month(FechaInicio)=var_mes || Month(FechaFin)=var_mes)
+                )
+            )
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         Text: =""
         Visible: =false
         Width: =15
