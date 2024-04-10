@@ -85,12 +85,13 @@ Calendario As screen:
         Height: =533
         Items: |-
             =AddColumns(
-            coll_mes,
-            "tabla_calendario", 
-            LookUp(
-            DiasFestivos, 
-            Day(Fecha)=coll_mes[@Value] && Month(Fecha)=var_mes
-            ))
+                coll_mes,
+                "tabla_calendario", 
+                LookUp(
+                    DiasFestivos, 
+                    Day(Fecha)=coll_mes[@Value] && Month(Fecha)=var_mes
+                )
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0

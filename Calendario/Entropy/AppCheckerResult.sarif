@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 10,
-                  "charOffset": 66,
+                  "charOffset": 94,
                   "snippet": {
                     "text": "Day(Fecha)"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 76,
+                  "charOffset": 104,
                   "snippet": {
                     "text": "="
                   }
@@ -104,7 +104,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 94,
+                  "charOffset": 122,
                   "snippet": {
                     "text": "&&"
                   }
