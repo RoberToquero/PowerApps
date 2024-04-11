@@ -6042,36 +6042,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.pumvFondo"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.pumvFondo",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "pumvFondo",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Calendario.BotonAñadirVacaciones.Width"
                 }
               ],

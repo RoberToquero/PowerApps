@@ -1643,7 +1643,7 @@ Calendario As screen:
                                 }
                             )
                             ;
-                            Set(pumvInvierno,false);Set(pumvFondo,false);Reset(rb_PUMV_Invierno)
+                            Set(pumvInvierno,false);Set(puavFondo,false);Reset(rb_PUMV_Invierno)
                             ,
                             Notify(
                                 "Aún no has pedido vacaciones de invierno",
@@ -1694,7 +1694,7 @@ Calendario As screen:
                                 }
                             )
                             ;
-                            Set(pumvInvierno,false);Set(pumvFondo,false);Reset(rb_PUMV_Invierno)
+                            Set(pumvInvierno,false);Set(puavFondo,false);Reset(rb_PUMV_Invierno)
                             ,
                             Notify(
                                 "Aún no has pedido vacaciones de invierno",
