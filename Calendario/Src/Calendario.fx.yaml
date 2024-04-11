@@ -847,15 +847,47 @@ Calendario As screen:
                                     DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,var_verano,TimeUnit.Days)>LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                 )
                                 ,
-                                true
+                
+                
+                
+                                CountRows(
+                                    Filter(
+                                        Filter(
+                                            AddColumns(
+                                                Vacaciones
+                                                ,
+                                                "Empleados",
+                                                LookUp(
+                                                    Empleados,
+                                                    DNI = dniEmpleado
+                                                )
+                                            )
+                                            ,
+                                            Opciones.Value="Verano"
+                                        )
+                                        ,
+                                        Empleados.Departamento.Value=dep_user
+                                        &&
+                                        (
+                                            (
+                                                FechaInicio>=FechaInicio
+                                                &&
+                                                FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2
+                                            )
+                                        )
+                                        
+                                    )
+                                )<(LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados-LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados)
+                
+                
+                                
                                 ,
-                                false
+                                Notify(
+                                    "Está fuera del periodo de vacaciones",
+                                    NotificationType.Error,
+                                    2000
+                                )
                             )
-                
-                
-                
-                
-                            ;true
                         )
                         ,
                         If(
