@@ -1595,37 +1595,38 @@ Calendario As screen:
         Boton_PUMV_Aceptar_Invierno As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 30%)
-            OnSelect: |
-                =If(
+            OnSelect: |-
+                =
+                If(
                     IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
                     ,
-                    If(
-                        rb_PUAV_Invierno.Selected.Value="Semana 1"
-                        ,
-                        If(
-                            !IsEmpty(                    
-                                Filter(
-                                    Vacaciones,
-                                    dniEmpleado=txt_Usuario_Login.Text 
-                                    &&
-                                    Opciones.Value="Invierno" 
-                                    &&
-                                    (Year(FechaInicio)=Year(Today()))
-                                )
-                            )
-                            ,
-                            Remove(
+                    If(        
+                        !IsEmpty(                    
+                            Filter(
                                 Vacaciones,
-                                Filter(
-                                    Vacaciones,
-                                    dniEmpleado=txt_Usuario_Login.Text 
-                                    &&
-                                    Opciones.Value="Invierno" 
-                                    &&
-                                    (Year(FechaInicio)=Year(Today()))
-                                )
+                                dniEmpleado=txt_Usuario_Login.Text 
+                                &&
+                                Opciones.Value="Invierno" 
+                                &&
+                                (Year(FechaInicio)=Year(Today()))
                             )
-                            ;
+                        )
+                        ,
+                        Remove(
+                            Vacaciones,
+                            Filter(
+                                Vacaciones,
+                                dniEmpleado=txt_Usuario_Login.Text 
+                                &&
+                                Opciones.Value="Invierno" 
+                                &&
+                                (Year(FechaInicio)=Year(Today()))
+                            )
+                        )
+                        ;
+                        If(
+                            rb_PUMV_Invierno.Selected.Value="Semana 1"
+                            ,
                             Collect(
                                 Vacaciones,
                                 {
@@ -1635,43 +1636,11 @@ Calendario As screen:
                                     Opciones: {Value: "Invierno", Label: "Invierno"},
                                     Duracion: DateDiff(
                                         LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno,
-                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno)
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinInvierno
+                                    )
                                 }
                             )
-                            ;
-                            Set(pumvInvierno,false);Set(puavFondo,false);Reset(rb_PUMV_Invierno)
                             ,
-                            Notify(
-                                "Aún no has pedido vacaciones de invierno",
-                                NotificationType.Error,
-                                2000
-                            )
-                        )
-                        ,
-                        If(
-                            !IsEmpty(                    
-                                Filter(
-                                    Vacaciones,
-                                    dniEmpleado=txt_Usuario_Login.Text 
-                                    &&
-                                    Opciones.Value="Invierno" 
-                                    &&
-                                    (Year(FechaInicio)=Year(Today()))
-                                )
-                            )
-                            ,
-                            Remove(
-                                Vacaciones,
-                                Filter(
-                                    Vacaciones,
-                                    dniEmpleado=txt_Usuario_Login.Text 
-                                    &&
-                                    Opciones.Value="Invierno" 
-                                    &&
-                                    (Year(FechaInicio)=Year(Today()))
-                                )
-                            )
-                            ;
                             Collect(
                                 Vacaciones,
                                 {
@@ -1685,14 +1654,15 @@ Calendario As screen:
                                     )
                                 }
                             )
-                            ;
-                            Set(pumvInvierno,false);Set(puavFondo,false);Reset(rb_PUMV_Invierno)
-                            ,
-                            Notify(
-                                "Aún no has pedido vacaciones de invierno",
-                                NotificationType.Error,
-                                2000
-                            )
+                            
+                        )
+                        ;
+                        Set(pumvInvierno,false);Set(puavFondo,false);Reset(rb_PUMV_Invierno)
+                        ,
+                        Notify(
+                            "Aún no has pedido vacaciones de invierno",
+                            NotificationType.Error,
+                            2000
                         )     
                     )
                     ,
