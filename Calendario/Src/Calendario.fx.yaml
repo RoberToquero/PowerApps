@@ -803,7 +803,6 @@ Calendario As screen:
             HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: |-
                 =Clear(hayfestivo);
-                Clear(hayfestivo2);
                 Clear(haypuente);
                 ClearCollect(collFestivos,DiasFestivos);
                 If(
@@ -1469,7 +1468,7 @@ Calendario As screen:
                                     First(lunesfiesta).Value=true
                                     ,
                                     If(
-                                        First(hayfestivo).Value=true
+                                        First(hayfestivo2).Value=true
                                         ,
                                         Notify(
                                             "El día del bloque de 2 semanas es festivo",
