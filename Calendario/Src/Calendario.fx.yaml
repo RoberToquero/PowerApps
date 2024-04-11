@@ -1595,6 +1595,12 @@ Calendario As screen:
                                 )
                             )
                         )
+                        ,
+                        Notify(
+                            "El el bloque de 1 semana y el bloque de 2 semanas no pueden coincidir",
+                            NotificationType.Error,
+                            2000
+                        )
                     )
                 )
                 
