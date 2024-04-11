@@ -828,7 +828,34 @@ Calendario As screen:
                                 2000
                             )
                             ,
-                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                            
+                            //COMPROBAR LA DURACION EN CASO DE FESTIVO
+                            If(
+                                false
+                                ,
+                                Set(var_verano,22)
+                                ,
+                                Set(var_verano,21)
+                            )
+                            ;
+                
+                            
+                            If(
+                                (
+                                    dp_PUAV_Dia_Inicio_Verano_3.SelectedDate<LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                    ||
+                                    DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,var_verano,TimeUnit.Days)>LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                )
+                                ,
+                                true
+                                ,
+                                false
+                            )
+                
+                
+                
+                
+                            ;true
                         )
                         ,
                         If(
