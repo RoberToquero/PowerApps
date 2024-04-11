@@ -324,7 +324,14 @@
     "dp_Fin_Verano": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -418,7 +425,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -617,7 +624,14 @@
     "dp_FinInvierno": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -711,7 +725,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -910,7 +924,14 @@
     "dp_FinInvierno2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -1004,7 +1025,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -1203,7 +1224,14 @@
     "dp_FinPeticion": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -1304,7 +1332,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -1503,7 +1531,14 @@
     "dp_InicioInvierno": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -1597,7 +1632,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -1796,7 +1831,14 @@
     "dp_InicioInvierno2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -1890,7 +1932,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -2089,7 +2131,14 @@
     "dp_InicioPeticion": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -2190,7 +2239,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
@@ -2389,7 +2438,14 @@
     "dp_InicioVerano": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultDate",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Today()",
+          "InvariantPropertyName": "DefaultDate",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DateTimeZone",
         "Format",
         "InputTextPlaceholder",
@@ -2483,7 +2539,7 @@
         {
           "Category": "Data",
           "PropertyName": "DefaultDate",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",

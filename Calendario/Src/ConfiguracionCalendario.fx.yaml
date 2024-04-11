@@ -143,24 +143,52 @@ ConfiguracionCalendario As screen:
         ZIndex: =15
 
     dp_InicioPeticion As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).InicioPeticion
         Width: =250
         X: =103
         Y: =337
         ZIndex: =16
 
     dp_FinPeticion As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).FinPeticion
         Width: =250
         X: =103
         Y: =542
         ZIndex: =17
 
     dp_InicioVerano As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).InicioVerano
         Width: =250
         X: =558
         Y: =337
         ZIndex: =18
 
     dp_Fin_Verano As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).FinVerano
         Height: =44
         Width: =250
         X: =558
@@ -168,24 +196,52 @@ ConfiguracionCalendario As screen:
         ZIndex: =19
 
     dp_InicioInvierno As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).InicioInvierno
         Width: =250
         X: =1018
         Y: =307
         ZIndex: =20
 
     dp_FinInvierno As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).FinInvierno
         Width: =250
         X: =1018
         Y: =380
         ZIndex: =21
 
     dp_InicioInvierno2 As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).InicioInvierno2
         Width: =250
         X: =1018
         Y: =520
         ZIndex: =22
 
     dp_FinInvierno2 As datepicker:
+        DefaultDate: |-
+            =First(
+                Filter(
+                    ConfiguracionCalendario_1,
+                    Año=Text(Year(Today()))
+                )
+            ).FinInvierno2
         Width: =250
         X: =1018
         Y: =586
