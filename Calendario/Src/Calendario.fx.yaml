@@ -112,10 +112,10 @@ Calendario As screen:
         Items: |-
             =AddColumns(
                 coll_mes,
-                "tabla_calendario", 
+                "tabla_calendario",
                 LookUp(
-                    DiasFestivos, 
-                    Day(Fecha)=coll_mes[@Value] && Month(Fecha)=var_mes
+                    DiasFestivos,
+                    Day(Fecha) = coll_mes[@Value] && Month(Fecha) = var_mes
                 )
             )
         Layout: =Layout.Vertical
@@ -1305,6 +1305,8 @@ Calendario As screen:
                                                     )
                                                     ,
                                                     Set(bloque1,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                    ;
+                                                    Set(finbloque1,DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days))
                                                     ,
                                                     Notify(
                                                         "El bloque de 1 semana entra en conflicto con demasiados compañeros de departamento",
@@ -1345,7 +1347,14 @@ Calendario As screen:
                     )
                     ;
                     If(
-                        bloque1,
+                        bloque1
+                        &&
+                        (
+                            dp_PUAV_Dia_Inicio_Verano_2.SelectedDate>finbloque1
+                            ||
+                            dp_PUAV_Dia_Inicio_Verano_1.SelectedDate>DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                        )
+                        ,
                         If(
                             Text(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,"ddd","en-GB") = "Mon"
                             ,
