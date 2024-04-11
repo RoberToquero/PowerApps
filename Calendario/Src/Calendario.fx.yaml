@@ -828,20 +828,24 @@ Calendario As screen:
                                 2000
                             )
                             ,
-                            //COMPROBAR LA DURACION EN CASO DE FESTIVO  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                            If(
-                                false
-                                ,
-                                Set(var_verano,22)
-                                ,
-                                Set(var_verano,21)
-                            )
-                            ;
                             If(
                                 (
                                     dp_PUAV_Dia_Inicio_Verano_3.SelectedDate<LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
                                     ||
-                                    DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,var_verano,TimeUnit.Days)>LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                    DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                    21 +        
+                                                CountRows(
+                                                    Filter(
+                                                        DiasFestivos,
+                                                        Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                        &&
+                                                        Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                    )
+                                                )
+                                        ,TimeUnit.Days
+                                    )
+                                    >
+                                    LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                 )
                                 ,
                                 If(
@@ -892,13 +896,7 @@ Calendario As screen:
                                         LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                     )
                                     ,
-                
-                
-                
-                
-                
-                
-                                    true
+                                    Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                     ,
                                     Notify(
                                         "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
@@ -916,7 +914,7 @@ Calendario As screen:
                         )
                         ,
                         If(
-                            Text(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Sat",
+                            Text(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,"ddd","en-GB") = "Sun"||"Sat",
                             Notify(
                                 "Ese dia es fin de semana",
                                 NotificationType.Error,
@@ -963,7 +961,89 @@ Calendario As screen:
                                                     Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days)
                                             )
                                             ,
-                                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                            If(
+                                                (
+                                                    dp_PUAV_Dia_Inicio_Verano_3.SelectedDate<LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                    ||
+                                                    DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                                    21 +        
+                                                                CountRows(
+                                                                    Filter(
+                                                                        DiasFestivos,
+                                                                        Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                                        &&
+                                                                        Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                                    )
+                                                                )
+                                                        ,TimeUnit.Days
+                                                    )
+                                                    >
+                                                    LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                )
+                                                ,
+                                                If(
+                                                    CountRows(
+                                                        Filter(
+                                                            AddColumns(
+                                                                Vacaciones
+                                                                ,
+                                                                "Empleados",
+                                                                LookUp(
+                                                                    Empleados,
+                                                                    DNI = dniEmpleado
+                                                                )
+                                                            )
+                                                            ,
+                                                            dniEmpleado<>txt_Usuario_Login.Text
+                                                            &&
+                                                            Opciones.Value="Verano"
+                                                            &&
+                                                            Empleados.Departamento.Value=dep_user
+                                                            &&
+                                                            (
+                                                                (
+                                                                    FechaInicio<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                                    &&
+                                                                    FechaFin>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                                )
+                                                                ||
+                                                                (
+                                                                    FechaInicio<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                                    &&
+                                                                    FechaFin>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                                )
+                                                                ||
+                                                                (
+                                                                    FechaInicio>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                                    &&
+                                                                    FechaFin<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                                )
+                                                            )
+                                                            
+                                                        )
+                                                    )
+                                                    <
+                                                    (
+                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                        -
+                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                    )
+                                                    ,
+                                                    Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                    ,
+                                                    Notify(
+                                                        "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
+                                                        NotificationType.Error,
+                                                        2000
+                                                    )
+                                                )
+                                                ,
+                                                Notify(
+                                                    "Está fuera del periodo de vacaciones",
+                                                    NotificationType.Error,
+                                                    2000
+                                                )
+                                            )
                                             ,
                                             Notify(
                                                 "El dia tiene que ser el siguiente dia laborable después del lunes festivo",
