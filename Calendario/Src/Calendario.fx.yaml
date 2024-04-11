@@ -734,8 +734,8 @@ Calendario As screen:
             Text: ="¿En cuántos bloques?"
             Visible: =puavVerano
             Width: =342
-            X: =394
-            Y: =75
+            X: =392
+            Y: =99
             ZIndex: =34
 
         rb_PUAV_Verano As radio:
@@ -748,8 +748,8 @@ Calendario As screen:
             Size: =20
             Visible: =puavVerano
             Width: =105
-            X: =838
-            Y: =66
+            X: =826
+            Y: =93
             ZIndex: =35
 
         Label9_3 As label:
