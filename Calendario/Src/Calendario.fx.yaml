@@ -869,21 +869,54 @@ Calendario As screen:
                                             &&
                                             (
                                                 (
-                                                    FechaInicio<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                    FechaInicio<=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                     &&
-                                                    FechaFin>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                    FechaFin>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                 )
                                                 ||
                                                 (
-                                                    FechaInicio<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                                        21 +        
+                                                        CountRows(
+                                                            Filter(
+                                                                DiasFestivos,
+                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                                &&
+                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                            )
+                                                        )
+                                                        ,TimeUnit.Days
+                                                    )
                                                     &&
-                                                    FechaFin>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                                        21 +        
+                                                        CountRows(
+                                                            Filter(
+                                                                DiasFestivos,
+                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                                &&
+                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                            )
+                                                        )
+                                                        ,TimeUnit.Days
+                                                    )
                                                 )
                                                 ||
                                                 (
-                                                    FechaInicio>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                    FechaInicio>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                     &&
-                                                    FechaFin<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                                        21 +        
+                                                        CountRows(
+                                                            Filter(
+                                                                DiasFestivos,
+                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                                &&
+                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                            )
+                                                        )
+                                                        ,TimeUnit.Days
+                                                    )
                                                 )
                                             )
                                             
@@ -1002,21 +1035,54 @@ Calendario As screen:
                                                             &&
                                                             (
                                                                 (
-                                                                    FechaInicio<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                                    FechaInicio<=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                                     &&
-                                                                    FechaFin>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                                    FechaFin>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                                 )
                                                                 ||
                                                                 (
-                                                                    FechaInicio<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                                                        21 +        
+                                                                        CountRows(
+                                                                            Filter(
+                                                                                DiasFestivos,
+                                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                                                &&
+                                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                                            )
+                                                                        )
+                                                                        ,TimeUnit.Days
+                                                                    )
                                                                     &&
-                                                                    FechaFin>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                                                        21 +        
+                                                                        CountRows(
+                                                                            Filter(
+                                                                                DiasFestivos,
+                                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                                                &&
+                                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                                            )
+                                                                        )
+                                                                        ,TimeUnit.Days
+                                                                    )
                                                                 )
                                                                 ||
                                                                 (
-                                                                    FechaInicio>=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaInicio
+                                                                    FechaInicio>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                                     &&
-                                                                    FechaFin<=LookUp(Vacaciones,dniEmpleado=txt_Usuario_Login.Text).FechaFin
+                                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
+                                                                        21 +        
+                                                                        CountRows(
+                                                                            Filter(
+                                                                                DiasFestivos,
+                                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                                                &&
+                                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                                                            )
+                                                                        )
+                                                                        ,TimeUnit.Days
+                                                                    )
                                                                 )
                                                             )
                                                             
