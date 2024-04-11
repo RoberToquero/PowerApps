@@ -808,6 +808,18 @@ Calendario As screen:
                 If(
                     rb_PUAV_Verano.Selected.Value = 1
                     ,
+                    Set(
+                        var_verano3,
+                        CountRows(
+                            Filter(
+                                DiasFestivos,
+                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                &&
+                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                            )
+                        )
+                    )
+                    ;
                     Clear(hayfestivo);
                     Set(fechapuav, dp_PUAV_Dia_Inicio_Verano_3.SelectedDate);
                     ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
@@ -830,22 +842,17 @@ Calendario As screen:
                             ,
                             If(
                                 (
-                                    dp_PUAV_Dia_Inicio_Verano_3.SelectedDate<LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
-                                    ||
-                                    DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                    21 +        
-                                                CountRows(
-                                                    Filter(
-                                                        DiasFestivos,
-                                                        Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                        &&
-                                                        Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                    )
-                                                )
-                                        ,TimeUnit.Days
+                                    (
+                                        dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                        <
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
                                     )
-                                    >
-                                    LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                    ||
+                                    (
+                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                        >
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                    )
                                 )
                                 ,
                                 If(
@@ -875,48 +882,15 @@ Calendario As screen:
                                                 )
                                                 ||
                                                 (
-                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                                        21 +        
-                                                        CountRows(
-                                                            Filter(
-                                                                DiasFestivos,
-                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                                &&
-                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                            )
-                                                        )
-                                                        ,TimeUnit.Days
-                                                    )
+                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
                                                     &&
-                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                                        21 +        
-                                                        CountRows(
-                                                            Filter(
-                                                                DiasFestivos,
-                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                                &&
-                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                            )
-                                                        )
-                                                        ,TimeUnit.Days
-                                                    )
+                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
                                                 )
                                                 ||
                                                 (
                                                     FechaInicio>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                     &&
-                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                                        21 +        
-                                                        CountRows(
-                                                            Filter(
-                                                                DiasFestivos,
-                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                                &&
-                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                            )
-                                                        )
-                                                        ,TimeUnit.Days
-                                                    )
+                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
                                                 )
                                             )
                                             
@@ -996,22 +970,17 @@ Calendario As screen:
                                             ,
                                             If(
                                                 (
-                                                    dp_PUAV_Dia_Inicio_Verano_3.SelectedDate<LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
-                                                    ||
-                                                    DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                                    21 +        
-                                                                CountRows(
-                                                                    Filter(
-                                                                        DiasFestivos,
-                                                                        Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                                        &&
-                                                                        Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                                    )
-                                                                )
-                                                        ,TimeUnit.Days
+                                                    (
+                                                        dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                                        <
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
                                                     )
-                                                    >
-                                                    LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                    ||
+                                                    (
+                                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                        >
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                    )
                                                 )
                                                 ,
                                                 If(
@@ -1041,48 +1010,15 @@ Calendario As screen:
                                                                 )
                                                                 ||
                                                                 (
-                                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                                                        21 +        
-                                                                        CountRows(
-                                                                            Filter(
-                                                                                DiasFestivos,
-                                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                                                &&
-                                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                                            )
-                                                                        )
-                                                                        ,TimeUnit.Days
-                                                                    )
+                                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
                                                                     &&
-                                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                                                        21 +        
-                                                                        CountRows(
-                                                                            Filter(
-                                                                                DiasFestivos,
-                                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                                                &&
-                                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                                            )
-                                                                        )
-                                                                        ,TimeUnit.Days
-                                                                    )
+                                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
                                                                 )
                                                                 ||
                                                                 (
                                                                     FechaInicio>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                                     &&
-                                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                                                                        21 +        
-                                                                        CountRows(
-                                                                            Filter(
-                                                                                DiasFestivos,
-                                                                                Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
-                                                                                &&
-                                                                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
-                                                                            )
-                                                                        )
-                                                                        ,TimeUnit.Days
-                                                                    )
+                                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
                                                                 )
                                                             )
                                                             
@@ -1135,6 +1071,30 @@ Calendario As screen:
                         )
                     )
                     ,
+                    Set(
+                        var_verano1,
+                        CountRows(
+                            Filter(
+                                DiasFestivos,
+                                Fecha>=dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
+                                &&
+                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,21,TimeUnit.Days)
+                            )
+                        )
+                    )
+                    ;
+                    Set(
+                        var_verano2,
+                        CountRows(
+                            Filter(
+                                DiasFestivos,
+                                Fecha>=dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
+                                &&
+                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,21,TimeUnit.Days)
+                            )
+                        )
+                    )
+                    ;
                     Clear(hayfestivo);
                     Clear(hayfestivo2);
                     Set(fechapuav1,dp_PUAV_Dia_Inicio_Verano_1.SelectedDate);
