@@ -128,25 +128,6 @@ Calendario As screen:
         Y: =235
         ZIndex: =14
 
-        LabelDiaCal As label:
-            DisabledFill: =RGBA(0, 0, 0, 0.1)
-            DisplayMode: =If(!ThisItem.delmes,DisplayMode.Disabled,DisplayMode.View)
-            FontWeight: =FontWeight.Bold
-            Height: =132
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =15
-            Text: |
-                =" "&ThisItem.Value&"
-                
-                
-                
-                "
-            ZIndex: =1
-
         LabelEventoCal As label:
             Align: =Align.Center
             Fill: |
@@ -189,6 +170,25 @@ Calendario As screen:
             Height: =132
             OnSelect: =Select(Parent)
             Text: =If(ThisItem.delmes,ThisItem.tabla_calendario.Motivo,"")
+            ZIndex: =1
+
+        LabelDiaCal As label:
+            DisabledFill: =RGBA(0, 0, 0, 0.1)
+            DisplayMode: =If(!ThisItem.delmes,DisplayMode.Disabled,DisplayMode.View)
+            FontWeight: =FontWeight.Bold
+            Height: =132
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: |
+                =" "&ThisItem.Value&"
+                
+                
+                
+                "
             ZIndex: =2
 
     FondoPopUp As rectangle:
@@ -1610,9 +1610,7 @@ Calendario As screen:
                                     &&
                                     Opciones.Value="Invierno" 
                                     &&
-                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
-                                    || 
-                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                    (Year(FechaInicio)=Year(Today()))
                                 )
                             )
                             ,
@@ -1624,9 +1622,7 @@ Calendario As screen:
                                     &&
                                     Opciones.Value="Invierno" 
                                     &&
-                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
-                                    || 
-                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                    (Year(FechaInicio)=Year(Today()))
                                 )
                             )
                             ;
@@ -1660,9 +1656,7 @@ Calendario As screen:
                                     &&
                                     Opciones.Value="Invierno" 
                                     &&
-                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
-                                    || 
-                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                    (Year(FechaInicio)=Year(Today()))
                                 )
                             )
                             ,
@@ -1674,9 +1668,7 @@ Calendario As screen:
                                     &&
                                     Opciones.Value="Invierno" 
                                     &&
-                                    (FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno 
-                                    || 
-                                    FechaInicio=LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioInvierno2)
+                                    (Year(FechaInicio)=Year(Today()))
                                 )
                             )
                             ;
