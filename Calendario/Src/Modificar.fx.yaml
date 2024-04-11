@@ -204,7 +204,7 @@ Modificar As screen:
         "'Fecha Nacimiento_DataCard3' As typedDataCard.dateEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="FechaNacimiento"
-            Default: =ThisItem.'Fecha Nacimiento'
+            Default: =ThisItem.FechaNacimiento
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"FechaNacimiento")
             Fill: =RGBA(0, 0, 0, 0)

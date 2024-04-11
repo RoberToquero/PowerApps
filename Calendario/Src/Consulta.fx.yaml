@@ -321,7 +321,7 @@ Consulta As screen:
         "'Fecha Nacimiento_DataCard1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="FechaNacimiento"
-            Default: =ThisItem.'Fecha Nacimiento'
+            Default: =ThisItem.FechaNacimiento
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"FechaNacimiento")
             Fill: =RGBA(0, 0, 0, 0)
