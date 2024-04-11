@@ -840,7 +840,7 @@ Calendario As screen:
                             )
                             ,
                             If(
-                                (
+                                !(
                                     (
                                         dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                         <
@@ -959,14 +959,15 @@ Calendario As screen:
                                         )
                                         ,
                                         If(
-                                            DateDiff(lunesesasemana,DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days))=
+                                            DateDiff(lunesesasemana,DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days))
+                                            =
                                             CountIf(collFestivos,
                                                     Fecha>=lunesesasemana,
                                                     Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,-1,TimeUnit.Days)
                                             )
                                             ,
                                             If(
-                                                (
+                                                !(
                                                     (
                                                         dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                         <
@@ -1115,7 +1116,7 @@ Calendario As screen:
                             )
                             ,
                             If(
-                                (
+                                !(
                                     (
                                         dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
                                         <
@@ -1241,7 +1242,7 @@ Calendario As screen:
                                             )
                                             ,
                                             If(
-                                                (
+                                                !(
                                                     (
                                                         dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
                                                         <
@@ -1358,7 +1359,7 @@ Calendario As screen:
                                 )
                                 ,
                                 If(
-                                    (
+                                    !(
                                         (
                                             dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
                                             <
@@ -1484,7 +1485,7 @@ Calendario As screen:
                                                 )
                                                 ,
                                                 If(
-                                                    (
+                                                    !(
                                                         (
                                                             dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
                                                             <
