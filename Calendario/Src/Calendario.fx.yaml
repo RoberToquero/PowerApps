@@ -2198,49 +2198,61 @@ Calendario As screen:
                                 )
                                 ,
                                 If(
-                                    dp_ALE1<>dp_ALE2
+                                    dp_ALE1.SelectedDate<>dp_ALE2.SelectedDate
                                     ,
-                                    Set(
-                                        enespera,
-                                        true
-                                    );
-                                    Collect(
-                                        Vacaciones,
-                                        {
-                                            dniEmpleado: txt_Usuario_Login.Text,
-                                            FechaInicio: dp_ALE1.SelectedDate,
-                                            FechaFin: dp_ALE1.SelectedDate,
-                                            Opciones: {
-                                                Value: "Libre Elección",
-                                                Label: "Libre Elección"
-                                            },
-                                            Duracion: 1
-                                        }
-                                    );
-                                    Collect(
-                                        Vacaciones,
-                                        {
-                                            dniEmpleado: txt_Usuario_Login.Text,
-                                            FechaInicio: dp_ALE2.SelectedDate,
-                                            FechaFin: dp_ALE2.SelectedDate,
-                                            Opciones: {
-                                                Value: "Libre Elección",
-                                                Label: "Libre Elección"
-                                            },
-                                            Duracion: 1
-                                        }
-                                    );
-                                    Set(
-                                        enespera,
-                                        false
-                                    );
-                                    Set(
-                                        pualevisible,
-                                        false
-                                    );
-                                    Set(
-                                        puavFondo,
-                                        false
+                                    If(
+                                        dp_ALE1.SelectedDate>Today()
+                                        &&
+                                        dp_ALE2.SelectedDate>Today()
+                                        ,
+                                        Set(
+                                            enespera,
+                                            true
+                                        );
+                                        Collect(
+                                            Vacaciones,
+                                            {
+                                                dniEmpleado: txt_Usuario_Login.Text,
+                                                FechaInicio: dp_ALE1.SelectedDate,
+                                                FechaFin: dp_ALE1.SelectedDate,
+                                                Opciones: {
+                                                    Value: "Libre Elección",
+                                                    Label: "Libre Elección"
+                                                },
+                                                Duracion: 1
+                                            }
+                                        );
+                                        Collect(
+                                            Vacaciones,
+                                            {
+                                                dniEmpleado: txt_Usuario_Login.Text,
+                                                FechaInicio: dp_ALE2.SelectedDate,
+                                                FechaFin: dp_ALE2.SelectedDate,
+                                                Opciones: {
+                                                    Value: "Libre Elección",
+                                                    Label: "Libre Elección"
+                                                },
+                                                Duracion: 1
+                                            }
+                                        );
+                                        Set(
+                                            enespera,
+                                            false
+                                        );
+                                        Set(
+                                            pualevisible,
+                                            false
+                                        );
+                                        Set(
+                                            puavFondo,
+                                            false
+                                        )
+                                        ,
+                                        Notify(
+                                            "Los días deben ser posteriores a hoy",
+                                            NotificationType.Error,
+                                            2000
+                                        )
                                     )
                                     ,
                                     Notify(
