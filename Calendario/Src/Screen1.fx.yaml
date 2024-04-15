@@ -167,11 +167,10 @@ Screen1 As screen:
         Y: =583
         ZIndex: =8
 
-    TextInput2_1 As text:
+    Dropdown4 As dropdown:
         Default: =
-        Height: =41
-        Width: =328
+        Items: =Sequence(50, Year(Today())-50, 1)
         X: =176
-        Y: =633
+        Y: =644
         ZIndex: =9
 
