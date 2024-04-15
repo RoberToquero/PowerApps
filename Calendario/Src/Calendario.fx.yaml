@@ -760,7 +760,7 @@ Calendario As screen:
                         {
                             dniEmpleado: txt_Usuario_Login.Text,
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
-                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days),
+                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
                             Duracion: 21+var_verano3
                         }
@@ -771,7 +771,7 @@ Calendario As screen:
                         {
                             dniEmpleado: txt_Usuario_Login.Text,
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,
-                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days),
+                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
                             Duracion: 7+var_verano1
                         }
@@ -779,7 +779,7 @@ Calendario As screen:
                         {
                             dniEmpleado: txt_Usuario_Login.Text,
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,
-                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days),
+                            FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
                             Duracion: 14+var_verano2
                         }
