@@ -4835,7 +4835,14 @@
         "Items",
         "PaddingLeft",
         "SearchFields",
-        "SearchItems",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "SearchItems",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "SelectMultiple",
         "Width",
         "X",
