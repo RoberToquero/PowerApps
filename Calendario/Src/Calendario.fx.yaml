@@ -2909,35 +2909,66 @@ Calendario As screen:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: |-
-                =If(
+                =Set(enespera,true)
+                ;
+                Remove(
+                    Vacaciones,
+                    Filter(
+                        Vacaciones,
+                        Opciones.Value="Verano"
+                        &&
+                        Year(FechaInicio)=Year(Today())
+                        &&
+                        dniEmpleado=txt_Usuario_Login.Text
+                    )
+                ) 
+                ;
+                If(
                     rb_PUMV_Verano.Selected.Value=1
                     ,
-                    ClearCollect(coll_num,Sequence(15,1,1));
-                    ForAll(
-                        coll_num, 
-                        If(
-                            true
-                            ,
-                            Collect(
-                                Fiestas,
-                                {
-                                    Fecha: DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,Value(ThisRecord.Value),TimeUnit.Days),
-                                    Fiesta: "Vacaciones " & txt_Usuario_Login.Text,
-                                    Departamento: dep_user
-                                }
-                            )
-                            ,
-                            false
-                        )
+                    Collect(
+                        Vacaciones,
+                        {
+                            dniEmpleado: txt_Usuario_Login.Text,
+                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,
+                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            Duracion: 21+var_verano3
+                        }
                     )
                     ,
-                    Set(enespera,false)
+                    Collect(
+                        Vacaciones,
+                        {
+                            dniEmpleado: txt_Usuario_Login.Text,
+                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,
+                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            Duracion: 7+var_verano1
+                        }
+                        ,
+                        {
+                            dniEmpleado: txt_Usuario_Login.Text,
+                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,
+                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            Duracion: 14+var_verano2
+                        }
+                    )
                 )
-                    
+                ;
+                Set(enespera,false);
+                Set(limpiar,true);
+                Set(limpiar,false);
+                Set(pumvVerano,false);
+                Set(puavFondo,false);
+                Set(varcount,1);
+                Reset(rb_PUMV_Verano)
                 
                     
+                    
             Text: ="Aceptar"
-            Visible: =pumvVerano
+            Visible: =pumvesvalido
             X: =811
             Y: =566
             ZIndex: =82
@@ -3152,7 +3183,7 @@ Calendario As screen:
                                         LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                     )
                                     ,
-                                    Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                    Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                     ,
                                     Notify(
                                         "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
@@ -3279,7 +3310,7 @@ Calendario As screen:
                                                         LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                                     )
                                                     ,
-                                                    Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                    Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                                     ,
                                                     Notify(
                                                         "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
@@ -3678,7 +3709,7 @@ Calendario As screen:
                                             LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                         )
                                         ,
-                                        Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                        Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                         ,
                                         Notify(
                                             "El bloque de 2 semanas entra en conflicto con demasiados compañeros de departamento",
@@ -3804,7 +3835,7 @@ Calendario As screen:
                                                             LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                                         )
                                                         ,
-                                                        Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                        Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                                         ,
                                                         Notify(
                                                             "El bloque de 2 semanas entra en conflicto con demasiados compañeros de departamento",
@@ -3865,7 +3896,7 @@ Calendario As screen:
                 
                     
             Text: ="Comprobar"
-            Visible: =pumvVerano
+            Visible: =!pumvesvalido && pumvVerano
             X: =812
             Y: =566
             ZIndex: =92
