@@ -6822,6 +6822,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUALE.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUALE.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Calendario",
+                "type": "Calendario.btn_aceptar_PUALE"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Modificar.FormularioModificar.Item"
                 }
               ],
