@@ -332,7 +332,25 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(puavFondo,true);Set(puaapvisible,true)
+            OnSelect: |
+                =If(
+                    CountRows(
+                        Filter(
+                            Vacaciones,
+                            Opciones.Value="Asuntos Propios"
+                            &&
+                            Year(FechaInicio)=Year(Today())
+                        )
+                    )<2
+                    ,
+                    Set(puavFondo,true);Set(puaapvisible,true)
+                    ,
+                    Notify(
+                        "No puedes pedir más de 2 días de asuntos propios al año",
+                        NotificationType.Error,
+                        2000
+                    )
+                )
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -353,6 +371,7 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Navigate(Screen1)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
