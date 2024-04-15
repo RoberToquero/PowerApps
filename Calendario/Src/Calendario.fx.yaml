@@ -924,7 +924,7 @@ Calendario As screen:
                                 collFestivos,
                                 Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                 &&
-                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21,TimeUnit.Days)
+                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20,TimeUnit.Days)
                             )
                         )
                     )
@@ -957,7 +957,7 @@ Calendario As screen:
                                     )
                                     ||
                                     (
-                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                         >
                                         LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                     )
@@ -990,15 +990,15 @@ Calendario As screen:
                                                 )
                                                 ||
                                                 (
-                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                     &&
-                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                 )
                                                 ||
                                                 (
                                                     FechaInicio>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                     &&
-                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                 )
                                             )
                                             
@@ -1084,7 +1084,7 @@ Calendario As screen:
                                                     )
                                                     ||
                                                     (
-                                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                         >
                                                         LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                                     )
@@ -1117,15 +1117,15 @@ Calendario As screen:
                                                                 )
                                                                 ||
                                                                 (
-                                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                                     &&
-                                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                                 )
                                                                 ||
                                                                 (
                                                                     FechaInicio>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
                                                                     &&
-                                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days)
+                                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                                 )
                                                             )
                                                             
@@ -1185,7 +1185,7 @@ Calendario As screen:
                                 collFestivos,
                                 Fecha>=dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
                                 &&
-                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,21,TimeUnit.Days)
+                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6,TimeUnit.Days)
                             )
                         )
                     )
@@ -1197,7 +1197,7 @@ Calendario As screen:
                                 collFestivos,
                                 Fecha>=dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
                                 &&
-                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,21,TimeUnit.Days)
+                                Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13,TimeUnit.Days)
                             )
                         )
                     )
@@ -1233,7 +1233,7 @@ Calendario As screen:
                                     )
                                     ||
                                     (
-                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                         >
                                         LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                     )
@@ -1266,15 +1266,15 @@ Calendario As screen:
                                                 )
                                                 ||
                                                 (
-                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                     &&
-                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                 )
                                                 ||
                                                 (
                                                     FechaInicio>=dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
                                                     &&
-                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                 )
                                             )
                                             
@@ -1359,7 +1359,7 @@ Calendario As screen:
                                                     )
                                                     ||
                                                     (
-                                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                                        DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                         >
                                                         LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                                     )
@@ -1392,15 +1392,15 @@ Calendario As screen:
                                                                 )
                                                                 ||
                                                                 (
-                                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                                                    FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                                     &&
-                                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                                                    FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                                 )
                                                                 ||
                                                                 (
                                                                     FechaInicio>=dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
                                                                     &&
-                                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                                                                    FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                                 )
                                                             )
                                                             
@@ -1457,9 +1457,9 @@ Calendario As screen:
                         bloque1
                         &&
                         !(
-                            dp_PUAV_Dia_Inicio_Verano_2.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days)
+                            dp_PUAV_Dia_Inicio_Verano_2.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
                             &&
-                            dp_PUAV_Dia_Inicio_Verano_1.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                            dp_PUAV_Dia_Inicio_Verano_1.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                         )
                         ,
                         If(
@@ -1483,7 +1483,7 @@ Calendario As screen:
                                         )
                                         ||
                                         (
-                                            DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano1,TimeUnit.Days)
+                                            DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano1,TimeUnit.Days)
                                             >
                                             LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                         )
@@ -1516,15 +1516,15 @@ Calendario As screen:
                                                     )
                                                     ||
                                                     (
-                                                        FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                                                        FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                         &&
-                                                        FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                                                        FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                     )
                                                     ||
                                                     (
                                                         FechaInicio>=dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
                                                         &&
-                                                        FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                                                        FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                     )
                                                 )
                                                 
@@ -1609,7 +1609,7 @@ Calendario As screen:
                                                         )
                                                         ||
                                                         (
-                                                            DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                                                            DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                             >
                                                             LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
                                                         )
@@ -1642,15 +1642,15 @@ Calendario As screen:
                                                                     )
                                                                     ||
                                                                     (
-                                                                        FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                                                                        FechaInicio<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                                         &&
-                                                                        FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                                                                        FechaFin>=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                                     )
                                                                     ||
                                                                     (
                                                                         FechaInicio>=dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
                                                                         &&
-                                                                        FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                                                                        FechaFin<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                                     )
                                                                 )
                                                                 
