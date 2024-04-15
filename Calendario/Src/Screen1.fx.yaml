@@ -123,7 +123,7 @@ Screen1 As screen:
     Dropdown2 As dropdown:
         Items: =["Todos","Verano","Invierno","Baja","Libre Elección","Asuntos Propios"]
         X: =176
-        Y: =273
+        Y: =453
         ZIndex: =4
 
     Label21 As label:
@@ -134,7 +134,7 @@ Screen1 As screen:
         Text: ="Motivo"
         Width: =328
         X: =176
-        Y: =217
+        Y: =388
         ZIndex: =5
 
     Label22 As label:
@@ -145,7 +145,7 @@ Screen1 As screen:
         Text: ="Nombre o Apellidos"
         Width: =328
         X: =176
-        Y: =403
+        Y: =582
         ZIndex: =6
 
     TextInput2 As text:
@@ -153,7 +153,7 @@ Screen1 As screen:
         Height: =41
         Width: =328
         X: =176
-        Y: =457
+        Y: =636
         ZIndex: =7
 
     Label22_1 As label:
@@ -164,13 +164,13 @@ Screen1 As screen:
         Text: ="Año"
         Width: =328
         X: =176
-        Y: =583
+        Y: =198
         ZIndex: =8
 
     Dropdown4 As dropdown:
         Default: =
         Items: =Sequence(50, Year(Today())-50, 1)
         X: =176
-        Y: =644
+        Y: =259
         ZIndex: =9
 
