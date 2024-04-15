@@ -7252,6 +7252,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.pumvesvalido"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.pumvesvalido",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "pumvesvalido",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Calendario.Boton_PUAV_Comprobar_Verano.OnSelect"
                 }
               ],
