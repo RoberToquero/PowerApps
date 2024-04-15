@@ -3974,7 +3974,9 @@ Calendario As screen:
 
     Label19 As label:
         Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
         Height: =57
+        Size: =16
         Text: ="Vacaciones de verano"
         Width: =228
         X: =228
@@ -3983,7 +3985,9 @@ Calendario As screen:
 
     Label19_1 As label:
         Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
         Height: =57
+        Size: =16
         Text: ="Vacaciones de invierno"
         Width: =228
         X: =456
@@ -3992,7 +3996,9 @@ Calendario As screen:
 
     Label19_2 As label:
         Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
         Height: =57
+        Size: =16
         Text: ="Día festivo"
         Width: =228
         Y: =711
@@ -4000,7 +4006,9 @@ Calendario As screen:
 
     Label19_3 As label:
         Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
         Height: =57
+        Size: =16
         Text: ="Asuntos Propios"
         Width: =228
         X: =1138
@@ -4009,7 +4017,9 @@ Calendario As screen:
 
     Label19_4 As label:
         Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
         Height: =57
+        Size: =16
         Text: ="Baja"
         Width: =228
         X: =684
@@ -4026,7 +4036,9 @@ Calendario As screen:
 
     Label19_5 As label:
         Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
         Height: =57
+        Size: =16
         Text: ="Libre Elección"
         Width: =228
         X: =910
