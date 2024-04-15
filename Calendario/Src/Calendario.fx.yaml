@@ -2960,6 +2960,7 @@ Calendario As screen:
                 Set(enespera,false);
                 Set(limpiar,true);
                 Set(limpiar,false);
+                Set(pumvesvalido,false);
                 Set(pumvVerano,false);
                 Set(puavFondo,false);
                 Set(varcount,1);
@@ -2968,7 +2969,7 @@ Calendario As screen:
                     
                     
             Text: ="Aceptar"
-            Visible: =pumvesvalido
+            Visible: =pumvesvalido && pumvVerano
             X: =811
             Y: =566
             ZIndex: =82
