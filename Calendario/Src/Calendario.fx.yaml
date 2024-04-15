@@ -3152,7 +3152,7 @@ Calendario As screen:
                                         LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                     )
                                     ,
-                                    Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                    Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                     ,
                                     Notify(
                                         "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
@@ -3279,7 +3279,7 @@ Calendario As screen:
                                                         LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                                     )
                                                     ,
-                                                    Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                    Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                                     ,
                                                     Notify(
                                                         "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
@@ -3678,7 +3678,7 @@ Calendario As screen:
                                             LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                         )
                                         ,
-                                        Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                        Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                         ,
                                         Notify(
                                             "El bloque de 2 semanas entra en conflicto con demasiados compañeros de departamento",
@@ -3804,7 +3804,7 @@ Calendario As screen:
                                                             LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
                                                         )
                                                         ,
-                                                        Set(pumvesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                        Set(pumvVerano,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                                         ,
                                                         Notify(
                                                             "El bloque de 2 semanas entra en conflicto con demasiados compañeros de departamento",
