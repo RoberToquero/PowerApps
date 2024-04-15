@@ -10,12 +10,29 @@ Screen1 As screen:
         DelayItemLoading: =true
         Height: =640
         Items: |-
-            =AddColumns(
-                Vacaciones,
-                "Empleados",
-                LookUp(
-                    Empleados,
-                    DNI=dniEmpleado
+            =Filter(
+                Search(
+                    AddColumns(
+                        Vacaciones,
+                        "NombreEmpleado",
+                        LookUp(
+                            Empleados,
+                            DNI = dniEmpleado
+                        ).Nombre,
+                        "ApellidosEmpleado",
+                        LookUp(
+                            Empleados,
+                            DNI = dniEmpleado
+                        ).Apellidos
+                    ),
+                    TextInput2.Text,
+                    "NombreEmpleado",
+                    "ApellidosEmpleado"
+                ),
+                If(
+                    Dropdown2.Selected.Value = "Todos",
+                    true,
+                    Opciones.Value = Dropdown2.Selected.Value
                 )
             )
         Layout: =Layout.Vertical
@@ -60,7 +77,7 @@ Screen1 As screen:
             Height: =33
             OnSelect: =Select(Parent)
             Size: =16
-            Text: =ThisItem.Empleados.Nombre & "  " & ThisItem.Empleados.Apellidos
+            Text: =ThisItem.NombreEmpleado & "  " & ThisItem.ApellidosEmpleado
             Width: =218
             X: =36
             Y: =21
@@ -155,6 +172,6 @@ Screen1 As screen:
         Height: =41
         Width: =328
         X: =176
-        Y: =637
+        Y: =633
         ZIndex: =9
 
