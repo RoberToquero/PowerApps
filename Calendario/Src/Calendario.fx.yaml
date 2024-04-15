@@ -1458,10 +1458,10 @@ Calendario As screen:
                     If(
                         bloque1
                         &&
-                        (
-                            dp_PUAV_Dia_Inicio_Verano_2.SelectedDate>finbloque1
-                            ||
-                            dp_PUAV_Dia_Inicio_Verano_1.SelectedDate>DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
+                        !(
+                            dp_PUAV_Dia_Inicio_Verano_2.SelectedDate <= finbloque1
+                            &&
+                            dp_PUAV_Dia_Inicio_Verano_1.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days)
                         )
                         ,
                         If(
