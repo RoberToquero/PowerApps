@@ -395,7 +395,7 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Navigate(Screen1)
+            OnSelect: =Navigate(ConsultarVacaciones)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -404,7 +404,7 @@ Calendario As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: =""
+            Text: ="Consultar"
             Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
             Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
             X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,909,909)
@@ -762,7 +762,7 @@ Calendario As screen:
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,21+var_verano3,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
-                            Duracion: 3
+                            Duracion: 21+var_verano3
                         }
                     )
                     ,
@@ -773,7 +773,7 @@ Calendario As screen:
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,7+var_verano1,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
-                            Duracion: 1
+                            Duracion: 7+var_verano1
                         }
                         ,
                         {
@@ -781,7 +781,7 @@ Calendario As screen:
                             FechaInicio: dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,
                             FechaFin: DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,14+var_verano2,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
-                            Duracion: 2
+                            Duracion: 14+var_verano2
                         }
                     )
                 )

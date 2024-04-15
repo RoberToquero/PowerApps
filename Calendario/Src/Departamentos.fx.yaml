@@ -9,6 +9,7 @@ Departamentos As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
+        Height: =509
         Items: =Departamentos_1
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -16,8 +17,8 @@ Departamentos As screen:
         TemplatePadding: =0
         TemplateSize: =116
         Width: =424
-        X: =832
-        Y: =144
+        X: =834
+        Y: =177
         ZIndex: =1
 
         Title2 As label:
@@ -85,8 +86,8 @@ Departamentos As screen:
         Icon: =Icon.Undo
         OnSelect: =Navigate(ScInicial)
         Width: =71
-        X: =109
-        Y: =13
+        X: =100
+        Y: =17
         ZIndex: =3
 
     Dropdown1 As dropdown:

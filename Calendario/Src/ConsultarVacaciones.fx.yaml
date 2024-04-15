@@ -1,4 +1,4 @@
-Screen1 As screen:
+ConsultarVacaciones As screen:
 
     Rectangle8 As rectangle:
         Fill: =RGBA(255, 191, 0, 1)
@@ -106,10 +106,11 @@ Screen1 As screen:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
+        Height: =128
         Size: =30
-        Text: ="Texto"
-        X: =608
-        Y: =44
+        Text: ="Consultar"
+        Width: =634
+        X: =366
         ZIndex: =2
 
     Icon4 As icon.Undo:
