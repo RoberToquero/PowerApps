@@ -2336,27 +2336,38 @@ Calendario As screen:
                     )
                     ,
                     If(
-                        Text(dp_Fecha_PUAAP.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_Fecha_PUAAP.SelectedDate,"ddd","en-GB") = "Sat",
+                        Text(dp_Fecha_PUAAP.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_Fecha_PUAAP.SelectedDate,"ddd","en-GB") = "Sat"
+                        ,
                         Notify(
                             "Ese dia es fin de semana",
                             NotificationType.Error,
                             2000
                         )
-                        ,    
-                        Set(enespera,true);
-                        Collect(
-                            Vacaciones,
-                            {
-                                dniEmpleado: txt_Usuario_Login.Text,
-                                FechaInicio: dp_Fecha_PUAAP.SelectedDate,
-                                FechaFin: dp_Fecha_PUAAP.SelectedDate,
-                                Opciones: {Value: "Asuntos Propios",Label: "Asuntos Propios"},
-                                Duracion: 1
-                            }
-                        );
-                        Set(enespera,false);
-                        Set(puaapvisible,false);
-                        Set(puavFondo,false);
+                        , 
+                        If(  
+                            dp_Fecha_PUAAP.SelectedDate>Today()
+                            ,
+                            Set(enespera,true);
+                            Collect(
+                                Vacaciones,
+                                {
+                                    dniEmpleado: txt_Usuario_Login.Text,
+                                    FechaInicio: dp_Fecha_PUAAP.SelectedDate,
+                                    FechaFin: dp_Fecha_PUAAP.SelectedDate,
+                                    Opciones: {Value: "Asuntos Propios",Label: "Asuntos Propios"},
+                                    Duracion: 1
+                                }
+                            );
+                            Set(enespera,false);
+                            Set(puaapvisible,false);
+                            Set(puavFondo,false)
+                            ,
+                            Notify(
+                                "El día debe ser posterior a hoy",
+                                NotificationType.Error,
+                                2000
+                            )
+                        )
                     )
                 )
             Text: ="Aceptar"
