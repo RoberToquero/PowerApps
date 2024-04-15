@@ -598,7 +598,7 @@ Calendario As screen:
             Width: =773
             X: =304
             Y: =19
-            ZIndex: =63
+            ZIndex: =91
 
         Label_espera As label:
             Align: =Align.Center
@@ -611,7 +611,7 @@ Calendario As screen:
             Width: =547
             X: =411
             Y: =159
-            ZIndex: =64
+            ZIndex: =92
 
     PopUpAñadirVacaciones As group:
         Height: =5
@@ -2366,7 +2366,7 @@ Calendario As screen:
             Width: =670
             X: =348
             Y: =75
-            ZIndex: =65
+            ZIndex: =63
 
         Label10 As label:
             Align: =Align.Center
@@ -2379,19 +2379,19 @@ Calendario As screen:
             Width: =321
             X: =530
             Y: =108
-            ZIndex: =66
+            ZIndex: =64
 
         dp_MLE1 As datepicker:
             Visible: =pumlevisible
             X: =527
             Y: =291
-            ZIndex: =67
+            ZIndex: =65
 
         dp_MLE2 As datepicker:
             Visible: =pumlevisible
             X: =527
             Y: =365
-            ZIndex: =68
+            ZIndex: =66
 
         btn_cancelar_PUMLE As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -2401,7 +2401,7 @@ Calendario As screen:
             Visible: =pumlevisible
             X: =440
             Y: =483
-            ZIndex: =69
+            ZIndex: =67
 
         btn_aceptar_PUMLE As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -2556,7 +2556,7 @@ Calendario As screen:
             Visible: =pumlevisible
             X: =760
             Y: =483
-            ZIndex: =70
+            ZIndex: =68
 
     PopUpModificarVacaciones As group:
         Height: =5
@@ -2571,7 +2571,7 @@ Calendario As screen:
             Width: =662
             X: =353
             Y: =120
-            ZIndex: =71
+            ZIndex: =69
 
         Label2_1 As label:
             Align: =Align.Center
@@ -2584,7 +2584,7 @@ Calendario As screen:
             Width: =306
             X: =534
             Y: =161
-            ZIndex: =72
+            ZIndex: =70
 
         Boton_PUMV_Verano As button:
             Color: =RGBA(0, 0, 0, 1)
@@ -2622,7 +2622,7 @@ Calendario As screen:
             Width: =172
             X: =451
             Y: =385
-            ZIndex: =73
+            ZIndex: =71
 
         Boton_PUMV_Invierno As button:
             Color: =RGBA(0, 0, 0, 1)
@@ -2658,7 +2658,7 @@ Calendario As screen:
             Visible: =pumvvisible
             X: =761
             Y: =385
-            ZIndex: =74
+            ZIndex: =72
 
         Boton_PUMV_Cancelar As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -2674,7 +2674,7 @@ Calendario As screen:
             Width: =40
             X: =975
             Y: =121
-            ZIndex: =75
+            ZIndex: =73
 
     PUMV_Invierno As group:
         Height: =5
@@ -2690,7 +2690,7 @@ Calendario As screen:
             Width: =654
             X: =361
             Y: =161
-            ZIndex: =76
+            ZIndex: =74
 
         Boton_PUMV_Cancelar_Invierno As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -2700,7 +2700,7 @@ Calendario As screen:
             Visible: =pumvInvierno
             X: =438
             Y: =442
-            ZIndex: =77
+            ZIndex: =75
 
         Boton_PUMV_Aceptar_Invierno As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -2856,7 +2856,7 @@ Calendario As screen:
             Visible: =pumvInvierno
             X: =769
             Y: =442
-            ZIndex: =78
+            ZIndex: =76
 
         Label7_1 As label:
             Align: =Align.Center
@@ -2869,7 +2869,7 @@ Calendario As screen:
             Width: =267
             X: =562
             Y: =197
-            ZIndex: =79
+            ZIndex: =77
 
         rb_PUMV_Invierno As radio:
             Align: =Align.Center
@@ -2887,7 +2887,7 @@ Calendario As screen:
             Width: =510
             X: =441
             Y: =300
-            ZIndex: =80
+            ZIndex: =78
 
     PUMV_Verano As group:
         Height: =5
@@ -2903,7 +2903,7 @@ Calendario As screen:
             Width: =774
             X: =297
             Y: =69
-            ZIndex: =81
+            ZIndex: =79
 
         Boton_PUMV_Aceptar_Verano As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -2972,7 +2972,7 @@ Calendario As screen:
             Visible: =pumvesvalido && pumvVerano
             X: =811
             Y: =566
-            ZIndex: =82
+            ZIndex: =80
 
         Boton_PUMV_Cancelar_Verano As button:
             Fill: =RGBA(255, 0, 0, 1)
@@ -2982,7 +2982,7 @@ Calendario As screen:
             Visible: =pumvVerano
             X: =411
             Y: =566
-            ZIndex: =83
+            ZIndex: =81
 
         Label8_1 As label:
             Align: =Align.Center
@@ -2995,7 +2995,7 @@ Calendario As screen:
             Width: =314
             X: =525
             Y: =255
-            ZIndex: =84
+            ZIndex: =82
 
         dp_PUMV_Dia_Inicio_Verano_3 As datepicker:
             DefaultDate: =
@@ -3005,7 +3005,7 @@ Calendario As screen:
             Width: =320
             X: =530
             Y: =402
-            ZIndex: =85
+            ZIndex: =83
 
         Label9_5 As label:
             Align: =Align.Center
@@ -3018,7 +3018,7 @@ Calendario As screen:
             Width: =342
             X: =394
             Y: =95
-            ZIndex: =86
+            ZIndex: =84
 
         rb_PUMV_Verano As radio:
             Color: =RGBA(255, 255, 255, 1)
@@ -3026,13 +3026,13 @@ Calendario As screen:
             FontWeight: =FontWeight.Bold
             Height: =109
             Items: =RadioSample
-            OnChange: =Set(limpiar,true);Set(limpiar,false)
+            OnChange: =Set(limpiar,true);Set(limpiar,false);Set(pumvesvalido,false)
             Size: =20
             Visible: =pumvVerano
             Width: =105
             X: =838
             Y: =86
-            ZIndex: =87
+            ZIndex: =85
 
         Label9_6 As label:
             Align: =Align.Center
@@ -3045,7 +3045,7 @@ Calendario As screen:
             Width: =204
             X: =405
             Y: =231
-            ZIndex: =88
+            ZIndex: =86
 
         Label9_7 As label:
             Align: =Align.Center
@@ -3058,7 +3058,7 @@ Calendario As screen:
             Width: =204
             X: =411
             Y: =358
-            ZIndex: =89
+            ZIndex: =87
 
         dp_PUMV_Dia_Inicio_Verano_1 As datepicker:
             DefaultDate: =
@@ -3068,7 +3068,7 @@ Calendario As screen:
             Width: =320
             X: =674
             Y: =258
-            ZIndex: =90
+            ZIndex: =88
 
         dp_PUMV_Dia_Inicio_Verano_2 As datepicker:
             DefaultDate: =
@@ -3078,7 +3078,7 @@ Calendario As screen:
             Width: =320
             X: =674
             Y: =380
-            ZIndex: =91
+            ZIndex: =89
 
         Boton_PUMV_Comprobar_Verano As button:
             Fill: =RGBA(54, 176, 75, 1)
@@ -3900,5 +3900,5 @@ Calendario As screen:
             Visible: =!pumvesvalido && pumvVerano
             X: =812
             Y: =566
-            ZIndex: =92
+            ZIndex: =90
 
