@@ -290,7 +290,19 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(pualevisible,true);Set(puavFondo,true)
+            OnSelect: |+
+                =If(
+                    IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
+                    ,
+                    Set(pualevisible,true);Set(puavFondo,true)
+                    ,
+                    Notify(
+                        "Estás fuera del periodo de petición",
+                        NotificationType.Error,
+                        2000
+                    )  
+                )
+                
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -311,7 +323,19 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(pumlevisible,true);Set(puavFondo,true)
+            OnSelect: |+
+                =If(
+                    IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
+                    ,
+                    Set(pumlevisible,true);Set(puavFondo,true)
+                    ,
+                    Notify(
+                        "Estás fuera del periodo de petición",
+                        NotificationType.Error,
+                        2000
+                    )  
+                )
+                
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
