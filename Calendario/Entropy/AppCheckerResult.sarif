@@ -6432,6 +6432,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Calendario.Boton_PUMV_Comprobar_Verano.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendario.Boton_PUMV_Comprobar_Verano.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Calendario",
+                "type": "Calendario.Boton_PUMV_Comprobar_Verano"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Modificar.FormularioModificar.Item"
                 }
               ],
