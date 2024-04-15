@@ -34,6 +34,8 @@ Screen1 As screen:
                     true,
                     Opciones.Value = Dropdown2.Selected.Value
                 )
+                &&
+                Dropdown4.Selected.Value = Year(FechaInicio)
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -168,8 +170,8 @@ Screen1 As screen:
         ZIndex: =8
 
     Dropdown4 As dropdown:
-        Default: =
-        Items: =Sequence(50, Year(Today())-50, 1)
+        Default: =Year(Today())
+        Items: =Sequence(50, Year(Today())-49, 1)
         X: =176
         Y: =259
         ZIndex: =9
