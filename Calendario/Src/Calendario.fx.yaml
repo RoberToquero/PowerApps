@@ -604,7 +604,29 @@ Calendario As screen:
             FontWeight: =FontWeight.Bold
             Height: =57
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(puavVerano,true);Set(puavvisible,false)
+            OnSelect: |
+                =If(
+                    IsEmpty(
+                        Filter(
+                            Vacaciones,
+                            dniEmpleado = txt_Usuario_Login.Text 
+                            &&
+                            Opciones.Value = "Verano" 
+                            && 
+                            (Year(FechaInicio) = Year(Today()))
+                        )
+                    )
+                    ,
+                    Set(puavVerano,true)
+                    ;
+                    Set(puavvisible,false)
+                    ,
+                    Notify(
+                        "Ya has pedido vacaciones de verano",
+                        NotificationType.Error,
+                        2000
+                    )
+                )
             Size: =20
             Text: ="Verano"
             Visible: =puavvisible
@@ -2250,7 +2272,30 @@ Calendario As screen:
             FontWeight: =FontWeight.Bold
             Height: =57
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(pumvVerano,true);Set(pumvvisible,false)
+            OnSelect: |+
+                =If(
+                    !IsEmpty(
+                        Filter(
+                            Vacaciones,
+                            dniEmpleado = txt_Usuario_Login.Text 
+                            &&
+                            Opciones.Value = "Verano" 
+                            && 
+                            (Year(FechaInicio) = Year(Today()))
+                        )
+                    )
+                    ,
+                    Set(pumvVerano,true)
+                    ;
+                    Set(pumvvisible,false)
+                    ,
+                    Notify(
+                        "Aún no has pedido vacaciones de verano",
+                        NotificationType.Error,
+                        2000
+                    )
+                )
+                
             Size: =20
             Text: ="Verano"
             Visible: =pumvvisible
