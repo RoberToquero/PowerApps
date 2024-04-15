@@ -2913,13 +2913,6 @@ Calendario As screen:
             Y: =300
             ZIndex: =78
 
-    Rectangle9 As rectangle:
-        Fill: =RGBA(255, 0, 20, 0.2)
-        Height: =58
-        Width: =228
-        Y: =710
-        ZIndex: =93
-
     PUMV_Verano As group:
         Height: =5
         Width: =5
@@ -3933,115 +3926,129 @@ Calendario As screen:
             Y: =566
             ZIndex: =90
 
-    Rectangle9_1 As rectangle:
-        Fill: |+
-            =RGBA(37, 244, 73, 0.2)
-            
-            
-        Height: =58
-        Width: =228
-        X: =684
-        Y: =710
-        ZIndex: =94
+    Leyenda As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =105
 
-    Rectangle9_2 As rectangle:
-        Fill: |+
-            =RGBA(37, 244, 229, 0.2)
-            
-        Height: =58
-        Width: =228
-        X: =456
-        Y: =710
-        ZIndex: =95
+        Rectangle9 As rectangle:
+            Fill: =RGBA(255, 0, 20, 0.2)
+            Height: =58
+            Width: =228
+            Y: =710
+            ZIndex: =93
 
-    Rectangle9_3 As rectangle:
-        Fill: =RGBA(244, 213, 37, 0.2)
-        Height: =58
-        Width: =228
-        X: =228
-        Y: =710
-        ZIndex: =96
+        Rectangle9_1 As rectangle:
+            Fill: |+
+                =RGBA(37, 244, 73, 0.2)
+                
+                
+            Height: =58
+            Width: =228
+            X: =684
+            Y: =710
+            ZIndex: =94
 
-    Rectangle9_4 As rectangle:
-        Fill: |+
-            =RGBA(112, 37, 244, 0.2)
-            
-        Height: =58
-        Width: =228
-        X: =1138
-        Y: =710
-        ZIndex: =97
+        Rectangle9_2 As rectangle:
+            Fill: |+
+                =RGBA(37, 244, 229, 0.2)
+                
+            Height: =58
+            Width: =228
+            X: =456
+            Y: =710
+            ZIndex: =95
 
-    Label19 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Semibold
-        Height: =57
-        Size: =16
-        Text: ="Vacaciones de verano"
-        Width: =228
-        X: =228
-        Y: =711
-        ZIndex: =98
+        Rectangle9_3 As rectangle:
+            Fill: =RGBA(244, 213, 37, 0.2)
+            Height: =58
+            Width: =228
+            X: =228
+            Y: =710
+            ZIndex: =96
 
-    Label19_1 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Semibold
-        Height: =57
-        Size: =16
-        Text: ="Vacaciones de invierno"
-        Width: =228
-        X: =456
-        Y: =711
-        ZIndex: =99
+        Rectangle9_4 As rectangle:
+            Fill: |+
+                =RGBA(112, 37, 244, 0.2)
+                
+            Height: =58
+            Width: =228
+            X: =1138
+            Y: =710
+            ZIndex: =97
 
-    Label19_2 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Semibold
-        Height: =57
-        Size: =16
-        Text: ="Día festivo"
-        Width: =228
-        Y: =711
-        ZIndex: =100
+        Label19 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            Size: =16
+            Text: ="Vacaciones de verano"
+            Width: =228
+            X: =228
+            Y: =711
+            ZIndex: =98
 
-    Label19_3 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Semibold
-        Height: =57
-        Size: =16
-        Text: ="Asuntos Propios"
-        Width: =228
-        X: =1138
-        Y: =711
-        ZIndex: =101
+        Label19_1 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            Size: =16
+            Text: ="Vacaciones de invierno"
+            Width: =228
+            X: =456
+            Y: =711
+            ZIndex: =99
 
-    Label19_4 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Semibold
-        Height: =57
-        Size: =16
-        Text: ="Baja"
-        Width: =228
-        X: =684
-        Y: =710
-        ZIndex: =102
+        Label19_2 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            Size: =16
+            Text: ="Día festivo"
+            Width: =228
+            Y: =711
+            ZIndex: =100
 
-    Rectangle11 As rectangle:
-        Fill: =RGBA(100, 100, 100, 0.2)
-        Height: =57
-        Width: =228
-        X: =910
-        Y: =711
-        ZIndex: =103
+        Label19_3 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            Size: =16
+            Text: ="Asuntos Propios"
+            Width: =228
+            X: =1138
+            Y: =711
+            ZIndex: =101
 
-    Label19_5 As label:
-        Align: =Align.Center
-        FontWeight: =FontWeight.Semibold
-        Height: =57
-        Size: =16
-        Text: ="Libre Elección"
-        Width: =228
-        X: =910
-        Y: =710
-        ZIndex: =104
+        Label19_4 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            Size: =16
+            Text: ="Baja"
+            Width: =228
+            X: =684
+            Y: =710
+            ZIndex: =102
+
+        Rectangle11 As rectangle:
+            Fill: =RGBA(100, 100, 100, 0.2)
+            Height: =57
+            Width: =228
+            X: =910
+            Y: =711
+            ZIndex: =103
+
+        Label19_5 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            Size: =16
+            Text: ="Libre Elección"
+            Width: =228
+            X: =910
+            Y: =710
+            ZIndex: =104
 
