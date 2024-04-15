@@ -2365,9 +2365,152 @@ Calendario As screen:
         btn_aceptar_PUMLE As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: |-
-                =Set(pumlevisible,false);
-                Set(puavFondo,false)
+            OnSelect: |+
+                =Clear(hayfestivo);
+                Clear(hayfestivo2);
+                Set(
+                    fechapuale,
+                    dp_ALE1.SelectedDate
+                );
+                Set(
+                    fechapuale2,
+                    dp_ALE2.SelectedDate
+                );
+                ClearCollect(
+                    collFestivos,
+                    DiasFestivos
+                );
+                ForAll(
+                    collFestivos,
+                    If(
+                        DateDiff(
+                            ThisRecord.Fecha,
+                            fechapuale
+                        ) = 0,
+                        Collect(
+                            hayfestivo,
+                            true
+                        )
+                    );
+                    If(
+                        DateDiff(
+                            ThisRecord.Fecha,
+                            fechapuale2
+                        ) = 0,
+                        Collect(
+                            hayfestivo2,
+                            true
+                        )
+                    )
+                );
+                If(
+                    First(hayfestivo).Value = true,
+                    Notify(
+                        "El primer día es festivo",
+                        NotificationType.Error,
+                        2000
+                    ),
+                    If(
+                        First(hayfestivo2).Value = true,
+                        Notify(
+                            "El segundo día es festivo",
+                            NotificationType.Error,
+                            2000
+                        ),
+                        If(
+                            Text(
+                                dp_Fecha_PUAAP.SelectedDate,
+                                "ddd",
+                                "en-GB"
+                            ) = "Sun" || Text(
+                                dp_Fecha_PUAAP.SelectedDate,
+                                "ddd",
+                                "en-GB"
+                            ) = "Sat",
+                            Notify(
+                                "El primer día es fin de semana",
+                                NotificationType.Error,
+                                2000
+                            ),
+                            If(
+                                Text(
+                                    dp_Fecha_PUAAP.SelectedDate,
+                                    "ddd",
+                                    "en-GB"
+                                ) = "Sun" || Text(
+                                    dp_Fecha_PUAAP.SelectedDate,
+                                    "ddd",
+                                    "en-GB"
+                                ) = "Sat",
+                                Notify(
+                                    "El segundo día es fin de semana",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                                ,
+                                If(
+                                    dp_ALE1<>dp_ALE2
+                                    ,
+                                    Set(
+                                        enespera,
+                                        true
+                                    );
+                                    Remove(
+                                        Vacaciones,
+                                        Filter(
+                                            Vacaciones,
+                                            dniEmpleado = txt_Usuario_Login.Text
+                                            &&
+                                            Year(FechaInicio)=Year(Today())
+                                            &&
+                                            Opciones.Value="Libre Elección"
+                                        )
+                                    )
+                                    ;
+                                    Collect(
+                                        Vacaciones,
+                                        {
+                                            dniEmpleado: txt_Usuario_Login.Text,
+                                            FechaInicio: dp_ALE1.SelectedDate,
+                                            FechaFin: dp_ALE1.SelectedDate,
+                                            Opciones: {
+                                                Value: "Libre Elección",
+                                                Label: "Libre Elección"
+                                            },
+                                            Duracion: 1
+                                        }
+                                    );
+                                    Collect(
+                                        Vacaciones,
+                                        {
+                                            dniEmpleado: txt_Usuario_Login.Text,
+                                            FechaInicio: dp_ALE2.SelectedDate,
+                                            FechaFin: dp_ALE2.SelectedDate,
+                                            Opciones: {
+                                                Value: "Libre Elección",
+                                                Label: "Libre Elección"
+                                            },
+                                            Duracion: 1
+                                        }
+                                    );
+                                    Set(
+                                        enespera,
+                                        false
+                                    );
+                                    Set(pumlevisible,false);
+                                    Set(puavFondo,false)
+                                    ,
+                                    Notify(
+                                        "Los días deben ser distintos",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+                
             Text: ="Aceptar"
             Visible: =pumlevisible
             X: =760
