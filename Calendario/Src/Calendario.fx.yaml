@@ -2756,7 +2756,8 @@ Calendario As screen:
             HoverFill: =ColorFade(Self.Fill, 30%)
             OnSelect: |-
                 =If(
-                    rb_PUMV_Invierno.Selected.Value = "Semana 1",
+                    rb_PUMV_Invierno.Selected.Value = "Semana 1"
+                    ,
                     If(
                         CountRows(
                             Filter(
@@ -2817,13 +2818,15 @@ Calendario As screen:
                                     ).FinInvierno
                                 )
                             }
-                        ),
+                        )
+                        ,
                         Notify(
                             "Esa semana ya está ocupada",
                             NotificationType.Error,
                             2000
                         )
-                    ),
+                    )
+                    ,
                     If(
                         CountRows(
                             Filter(
@@ -2884,7 +2887,8 @@ Calendario As screen:
                                     ).FinInvierno2
                                 )
                             }
-                        ),
+                        )
+                        ,
                         Notify(
                             "Esa semana ya está ocupada",
                             NotificationType.Error,
@@ -2900,7 +2904,8 @@ Calendario As screen:
                     puavFondo,
                     false
                 );
-                Reset(rb_PUMV_Invierno)
+                Reset(rb_PUMV_Invierno);
+                Select(BotonCalcularCalendario)
             Text: ="Aceptar"
             Visible: =pumvInvierno
             X: =769

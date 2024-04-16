@@ -904,7 +904,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 1074,
+                  "charOffset": 1079,
                   "snippet": {
                     "text": "Year(FechaInicio)"
                   }
@@ -944,7 +944,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1092,
+                  "charOffset": 1097,
                   "snippet": {
                     "text": "="
                   }
@@ -984,7 +984,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1070,
+                  "charOffset": 1075,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1024,7 +1024,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 3247,
+                  "charOffset": 3266,
                   "snippet": {
                     "text": "Year(FechaInicio)"
                   }
@@ -1064,7 +1064,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3265,
+                  "charOffset": 3284,
                   "snippet": {
                     "text": "="
                   }
@@ -1104,7 +1104,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3243,
+                  "charOffset": 3262,
                   "snippet": {
                     "text": "&&"
                   }
