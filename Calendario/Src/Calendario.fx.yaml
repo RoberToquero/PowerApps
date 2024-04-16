@@ -2041,7 +2041,7 @@ Calendario As screen:
         btn_aceptar_baja As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: |-
+            OnSelect: |
                 =Clear(hayfestivo);
                 Set(fechabaja, dp_inicio_baja.SelectedDate);
                 ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
@@ -2050,40 +2050,50 @@ Calendario As screen:
                     If(DateDiff(ThisRecord.Fecha, fechabaja) = 0, Collect(hayfestivo, true))
                 );
                 If(
-                    First(hayfestivo).Value=true
+                    IsBlank(txt_duracion_baja.Text)
                     ,
                     Notify(
-                        "Ese dia es festivo",
+                        "Indica la duración",
                         NotificationType.Error,
                         2000
                     )
                     ,
                     If(
-                        Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sat",
+                        First(hayfestivo).Value=true
+                        ,
                         Notify(
-                            "Ese dia es fin de semana",
+                            "Ese dia es festivo",
                             NotificationType.Error,
                             2000
                         )
-                        ,    
-                        Set(enespera,true);
-                        Set(bajavisible,false);
-                        Collect(
-                            Vacaciones,
-                            {
-                                dniEmpleado: txt_Usuario_Login.Text,
-                                FechaInicio: dp_inicio_baja.SelectedDate,
-                                FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text-1,TimeUnit.Days),
-                                Opciones: {Value: "Baja",Label: "Baja"},
-                                Duracion: Int(txt_duracion_baja.Text)
-                            }
+                        ,
+                        If(
+                            Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sat",
+                            Notify(
+                                "Ese dia es fin de semana",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,    
+                            Set(enespera,true);
+                            Set(bajavisible,false);
+                            Collect(
+                                Vacaciones,
+                                {
+                                    dniEmpleado: txt_Usuario_Login.Text,
+                                    FechaInicio: dp_inicio_baja.SelectedDate,
+                                    FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text-1,TimeUnit.Days),
+                                    Opciones: {Value: "Baja",Label: "Baja"},
+                                    Duracion: Int(txt_duracion_baja.Text)
+                                }
+                            )
+                            ;
+                            Set(enespera,false);
+                            Set(puavFondo,false);
+                            Set(limpiar,true);
+                            Set(limpiar,false);
+                            Select(BotonCalcularCalendario)
                         )
-                        ;
-                        Set(enespera,false);
-                        Set(puavFondo,false);
-                        Set(limpiar,true);
-                        Set(limpiar,false);
-                        Select(BotonCalcularCalendario)
                     )
                 )
             Text: ="Aceptar"
