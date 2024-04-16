@@ -157,7 +157,7 @@ Calendario As screen:
                                 "Verano", RGBA(244, 213, 37, 0.3),
                                 "Invierno", RGBA(37, 244, 229, 0.3),
                                 "Baja", RGBA(37, 244, 73, 0.3),
-                                "Libre Elección", RGBA(100, 100, 100, 0.3),
+                                "Libre Elección", RGBA(255, 50, 190, 0.3),
                                 "Asuntos Propios", RGBA(112, 37, 244, 0.3),
                                 RGBA(0, 0, 0, 0)  
                             )
@@ -4138,7 +4138,7 @@ Calendario As screen:
             ZIndex: =102
 
         Rectangle11 As rectangle:
-            Fill: =RGBA(100, 100, 100, 0.3)
+            Fill: =RGBA(255, 50, 190, 0.3)
             Height: =57
             Width: =228
             X: =912
