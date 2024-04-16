@@ -125,8 +125,8 @@ ConsultarVacaciones As screen:
 
     Dropdown2 As dropdown:
         Items: =["Todos","Verano","Invierno","Baja","Libre Elección","Asuntos Propios"]
-        X: =176
-        Y: =453
+        X: =180
+        Y: =439
         ZIndex: =4
 
     Label21 As label:
@@ -136,8 +136,8 @@ ConsultarVacaciones As screen:
         Size: =17
         Text: ="Motivo"
         Width: =328
-        X: =176
-        Y: =388
+        X: =180
+        Y: =374
         ZIndex: =5
 
     Label22 As label:
@@ -147,16 +147,16 @@ ConsultarVacaciones As screen:
         Size: =17
         Text: ="Nombre o Apellidos"
         Width: =328
-        X: =176
-        Y: =582
+        X: =180
+        Y: =559
         ZIndex: =6
 
     TextInput2 As text:
         Default: =
         Height: =41
         Width: =328
-        X: =176
-        Y: =636
+        X: =180
+        Y: =622
         ZIndex: =7
 
     Label22_1 As label:
@@ -166,14 +166,14 @@ ConsultarVacaciones As screen:
         Size: =17
         Text: ="Año"
         Width: =328
-        X: =176
-        Y: =198
+        X: =180
+        Y: =184
         ZIndex: =8
 
     Dropdown4 As dropdown:
         Default: =Year(Today())
         Items: =Sequence(50, Year(Today())-49, 1)
-        X: =176
-        Y: =259
+        X: =180
+        Y: =245
         ZIndex: =9
 
