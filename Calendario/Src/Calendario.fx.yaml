@@ -2482,7 +2482,7 @@ Calendario As screen:
         btn_cancelar_PUMLE As button:
             Fill: =RGBA(255, 0, 0, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(pumlevisible,false);Set(puavFondo,false)
+            OnSelect: =Set(pumlevisible,false);Set(puavFondo,false);Reset(dp_MLE1);Reset(dp_MLE2)
             Text: ="Cancelar"
             Visible: =pumlevisible
             X: =440
@@ -2626,7 +2626,9 @@ Calendario As screen:
                                     );
                                     Set(pumlevisible,false);
                                     Set(puavFondo,false);
-                                    Select(BotonCalcularCalendario)
+                                    Select(BotonCalcularCalendario);
+                                    Reset(dp_MLE1);
+                                    Reset(dp_MLE2)
                                     ,
                                     Notify(
                                         "Los días deben ser distintos",
