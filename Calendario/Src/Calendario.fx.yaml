@@ -302,7 +302,7 @@ Calendario As screen:
                         Set(pualevisible,true);Set(puavFondo,true)
                         ,
                         Notify(
-                            "Ya has pedido los días libres",
+                            "Ya has pedido los días de libre elección",
                             NotificationType.Error,
                             2000
                         ) 
