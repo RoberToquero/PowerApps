@@ -4047,7 +4047,7 @@ Calendario As screen:
                 
             Height: =58
             Width: =228
-            X: =1138
+            X: =1140
             Y: =710
             ZIndex: =97
 
@@ -4109,7 +4109,7 @@ Calendario As screen:
             Fill: =RGBA(100, 100, 100, 0.3)
             Height: =57
             Width: =228
-            X: =910
+            X: =912
             Y: =711
             ZIndex: =103
 
