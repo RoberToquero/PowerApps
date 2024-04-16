@@ -2068,7 +2068,7 @@ Calendario As screen:
                             {
                                 dniEmpleado: txt_Usuario_Login.Text,
                                 FechaInicio: dp_inicio_baja.SelectedDate,
-                                FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text,TimeUnit.Days),
+                                FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text-1,TimeUnit.Days),
                                 Opciones: {Value: "Baja",Label: "Baja"},
                                 Duracion: Int(txt_duracion_baja.Text)
                             }
@@ -2077,7 +2077,8 @@ Calendario As screen:
                         Set(enespera,false);
                         Set(puavFondo,false);
                         Set(limpiar,true);
-                        Set(limpiar,false)
+                        Set(limpiar,false);
+                        Select(BotonCalcularCalendario)
                     )
                 )
             Text: ="Aceptar"
@@ -3012,7 +3013,8 @@ Calendario As screen:
                 Set(pumvVerano,false);
                 Set(puavFondo,false);
                 Set(varcount,1);
-                Reset(rb_PUMV_Verano)
+                Reset(rb_PUMV_Verano);
+                Select(BotonCalcularCalendario)
                 
                     
                     
