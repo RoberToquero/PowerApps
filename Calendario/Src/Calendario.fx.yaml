@@ -2156,7 +2156,7 @@ Calendario As screen:
         btn_cancelar_PUALE As button:
             Fill: =RGBA(255, 0, 0, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(pualevisible,false);Set(puavFondo,false)
+            OnSelect: =Set(pualevisible,false);Set(puavFondo,false);Reset(dp_ALE1);Reset(dp_ALE2)
             Text: ="Cancelar"
             Visible: =pualevisible
             X: =405
@@ -2273,7 +2273,8 @@ Calendario As screen:
                                                 },
                                                 Duracion: 1
                                             }
-                                        );
+                                        )
+                                        ;
                                         Collect(
                                             Vacaciones,
                                             {
@@ -2286,15 +2287,22 @@ Calendario As screen:
                                                 },
                                                 Duracion: 1
                                             }
-                                        );
+                                        )
+                                        ;
                                         Set(
                                             enespera,
                                             false
-                                        );
+                                        )
+                                        ;
                                         Set(
                                             pualevisible,
                                             false
-                                        );
+                                        )
+                                        ;
+                                        Reset(dp_ALE1)
+                                        ;
+                                        Reset(dp_ALE2)
+                                        ;
                                         Select(BotonCalcularCalendario)
                                         ;
                                         Set(
