@@ -297,7 +297,7 @@ Calendario As screen:
                     IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
                     ,
                     If(
-                        IsEmpty(Filter(Vacaciones, Year(FechaInicio)=Year(Today()) && Opciones.Value="Libre Elección"))
+                        IsEmpty(Filter(Vacaciones, Year(FechaInicio)=Year(Today()) && Opciones.Value="Libre Elección" && dniEmpleado=txt_Usuario_Login.Text))
                         ,
                         Set(pualevisible,true);Set(puavFondo,true)
                         ,
