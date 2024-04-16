@@ -2609,8 +2609,8 @@ Calendario As screen:
                                         Vacaciones,
                                         {
                                             dniEmpleado: txt_Usuario_Login.Text,
-                                            FechaInicio: dp_ALE1.SelectedDate,
-                                            FechaFin: dp_ALE1.SelectedDate,
+                                            FechaInicio: dp_MLE1.SelectedDate,
+                                            FechaFin: dp_MLE1.SelectedDate,
                                             Opciones: {
                                                 Value: "Libre Elección",
                                                 Label: "Libre Elección"
@@ -2622,8 +2622,8 @@ Calendario As screen:
                                         Vacaciones,
                                         {
                                             dniEmpleado: txt_Usuario_Login.Text,
-                                            FechaInicio: dp_ALE2.SelectedDate,
-                                            FechaFin: dp_ALE2.SelectedDate,
+                                            FechaInicio: dp_MLE2.SelectedDate,
+                                            FechaFin: dp_MLE2.SelectedDate,
                                             Opciones: {
                                                 Value: "Libre Elección",
                                                 Label: "Libre Elección"
