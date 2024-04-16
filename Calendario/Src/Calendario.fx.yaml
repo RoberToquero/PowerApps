@@ -1459,9 +1459,25 @@ Calendario As screen:
                         bloque1
                         &&
                         !(
-                            dp_PUAV_Dia_Inicio_Verano_2.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
-                            &&
-                            dp_PUAV_Dia_Inicio_Verano_1.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
+                            (
+                                dp_PUAV_Dia_Inicio_Verano_2.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                &&
+                                dp_PUAV_Dia_Inicio_Verano_1.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
+                            )
+                            ||
+                            (
+                                dp_PUAV_Dia_Inicio_Verano_2.SelectedDate <= dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
+                                &&
+                                dp_PUAV_Dia_Inicio_Verano_1.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
+                            )
+                            ||
+                            (
+                                dp_PUAV_Dia_Inicio_Verano_2.SelectedDate <= DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                &&
+                                DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                <= 
+                                DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days)
+                            )
                         )
                         ,
                         If(
