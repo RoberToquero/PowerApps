@@ -2388,7 +2388,8 @@ Calendario As screen:
                             );
                             Set(enespera,false);
                             Set(puaapvisible,false);
-                            Set(puavFondo,false)
+                            Set(puavFondo,false);
+                            Select(BotonCalcularCalendario)
                             ,
                             Notify(
                                 "El día debe ser posterior a hoy",
