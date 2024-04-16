@@ -2273,10 +2273,7 @@ Calendario As screen:
                                                 },
                                                 Duracion: 1
                                             }
-                                        )
-                                        ;
-                                        Collect(
-                                            Vacaciones,
+                                            ;
                                             {
                                                 dniEmpleado: txt_Usuario_Login.Text,
                                                 FechaInicio: dp_ALE2.SelectedDate,
