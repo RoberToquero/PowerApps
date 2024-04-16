@@ -2059,40 +2059,51 @@ Calendario As screen:
                     )
                     ,
                     If(
-                        First(hayfestivo).Value=true
-                        ,
-                        Notify(
-                            "Ese dia es festivo",
-                            NotificationType.Error,
-                            2000
-                        )
+                        IsNumeric(txt_duracion_baja.Text) && Round(Value(txt_duracion_baja.Text),0) = Value(txt_duracion_baja.Text)
                         ,
                         If(
-                            Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sat",
+                            First(hayfestivo).Value=true
+                            ,
                             Notify(
-                                "Ese dia es fin de semana",
+                                "Ese dia es festivo",
                                 NotificationType.Error,
                                 2000
                             )
-                            ,    
-                            Set(enespera,true);
-                            Set(bajavisible,false);
-                            Collect(
-                                Vacaciones,
-                                {
-                                    dniEmpleado: txt_Usuario_Login.Text,
-                                    FechaInicio: dp_inicio_baja.SelectedDate,
-                                    FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text-1,TimeUnit.Days),
-                                    Opciones: {Value: "Baja",Label: "Baja"},
-                                    Duracion: Int(txt_duracion_baja.Text)
-                                }
+                            ,
+                            If(
+                                Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sun" || Text(dp_inicio_baja.SelectedDate,"ddd","en-GB") = "Sat"
+                                ,
+                                Notify(
+                                    "Ese dia es fin de semana",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                                ,    
+                                Set(enespera,true);
+                                Set(bajavisible,false);
+                                Collect(
+                                    Vacaciones,
+                                    {
+                                        dniEmpleado: txt_Usuario_Login.Text,
+                                        FechaInicio: dp_inicio_baja.SelectedDate,
+                                        FechaFin: DateAdd(DateValue(dp_inicio_baja.SelectedDate),txt_duracion_baja.Text-1,TimeUnit.Days),
+                                        Opciones: {Value: "Baja",Label: "Baja"},
+                                        Duracion: Int(txt_duracion_baja.Text)
+                                    }
+                                )
+                                ;
+                                Set(enespera,false);
+                                Set(puavFondo,false);
+                                Set(limpiar,true);
+                                Set(limpiar,false);
+                                Select(BotonCalcularCalendario)
                             )
-                            ;
-                            Set(enespera,false);
-                            Set(puavFondo,false);
-                            Set(limpiar,true);
-                            Set(limpiar,false);
-                            Select(BotonCalcularCalendario)
+                        )
+                        ,
+                        Notify(
+                            "La duración debe ser un número entero",
+                            NotificationType.Error,
+                            2000
                         )
                     )
                 )
