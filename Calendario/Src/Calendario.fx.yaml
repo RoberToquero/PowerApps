@@ -2269,6 +2269,8 @@ Calendario As screen:
                                             pualevisible,
                                             false
                                         );
+                                        Select(BotonCalcularCalendario)
+                                        ;
                                         Set(
                                             puavFondo,
                                             false
@@ -2588,7 +2590,8 @@ Calendario As screen:
                                         false
                                     );
                                     Set(pumlevisible,false);
-                                    Set(puavFondo,false)
+                                    Set(puavFondo,false);
+                                    Select(BotonCalcularCalendario)
                                     ,
                                     Notify(
                                         "Los días deben ser distintos",
