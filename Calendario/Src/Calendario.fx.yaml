@@ -376,6 +376,8 @@ Calendario As screen:
                             Opciones.Value="Asuntos Propios"
                             &&
                             Year(FechaInicio)=Year(Today())
+                            &&
+                            dniEmpleado=txt_Usuario_Login.Text
                         )
                     )<2
                     ,
