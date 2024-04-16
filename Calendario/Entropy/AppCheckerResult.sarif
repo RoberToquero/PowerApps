@@ -7532,6 +7532,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUAAP.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUAAP.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Calendario",
+                "type": "Calendario.btn_aceptar_PUAAP"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Calendario.BotonAñadirVacaciones.Width"
                 }
               ],

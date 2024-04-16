@@ -2383,7 +2383,7 @@ Calendario As screen:
             OnSelect: |-
                 =Clear(hayfestivo);
                 Set(fechapuaap, dp_Fecha_PUAAP.SelectedDate);
-                ClearCollect(collFestivos, Filter(Fiestas, Departamento = "Todos"));
+                ClearCollect(collFestivos, DiasFestivos);
                 ForAll(
                     collFestivos,
                     If(DateDiff(ThisRecord.Fecha, fechapuaap) = 0, Collect(hayfestivo, true))
