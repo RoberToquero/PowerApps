@@ -296,7 +296,17 @@ Calendario As screen:
                 =If(
                     IsEmpty(Filter(ConfiguracionCalendario_1, Año=Text(Year(Today())) && (Today()<InicioPeticion || Today()>FinPeticion)))
                     ,
-                    Set(pualevisible,true);Set(puavFondo,true)
+                    If(
+                        IsEmpty(Filter(Vacaciones, Year(FechaInicio)=Year(Today()) && Opciones.Value="Libre Elección"))
+                        ,
+                        Set(pualevisible,true);Set(puavFondo,true)
+                        ,
+                        Notify(
+                            "Ya has pedido los días libres",
+                            NotificationType.Error,
+                            2000
+                        ) 
+                    )    
                     ,
                     Notify(
                         "Estás fuera del periodo de petición",
