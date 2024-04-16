@@ -794,7 +794,8 @@ Calendario As screen:
                 Set(puavVerano,false);
                 Set(puavFondo,false);
                 Set(varcount,1);
-                Reset(rb_PUAV_Verano)
+                Reset(rb_PUAV_Verano);
+                Select(BotonCalcularCalendario)
                 
                     
             Text: ="Aceptar"
@@ -1850,6 +1851,8 @@ Calendario As screen:
                                     )
                                 }
                             );
+                            Select(BotonCalcularCalendario)
+                            ;
                             Set(
                                 puavInvierno,
                                 false
@@ -1919,6 +1922,8 @@ Calendario As screen:
                                     )
                                 }
                             );
+                            Select(BotonCalcularCalendario)
+                            ;
                             Set(
                                 puavInvierno,
                                 false
