@@ -7562,6 +7562,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_baja.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_baja.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Calendario",
+                "type": "Calendario.btn_aceptar_baja"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Calendario.BotonAñadirVacaciones.Width"
                 }
               ],
