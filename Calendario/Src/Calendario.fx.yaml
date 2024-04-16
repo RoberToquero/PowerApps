@@ -2370,7 +2370,7 @@ Calendario As screen:
         btn_cancelar_PUAAP As button:
             Fill: =RGBA(255, 0, 0, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Set(puaapvisible,false);Set(puavFondo,false)
+            OnSelect: =Set(puaapvisible,false);Set(puavFondo,false);Reset(dp_Fecha_PUAAP)
             Text: ="Cancelar"
             Visible: =puaapvisible
             X: =446
@@ -2423,7 +2423,8 @@ Calendario As screen:
                             Set(enespera,false);
                             Set(puaapvisible,false);
                             Set(puavFondo,false);
-                            Select(BotonCalcularCalendario)
+                            Select(BotonCalcularCalendario);
+                            Reset(dp_Fecha_PUAAP)
                             ,
                             Notify(
                                 "El día debe ser posterior a hoy",
