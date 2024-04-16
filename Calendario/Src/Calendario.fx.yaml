@@ -136,7 +136,7 @@ Calendario As screen:
                     ,
                     If(
                         !IsBlank(ThisItem.tabla_calendario.Motivo),
-                        RGBA(255, 0, 20, 0.2),
+                        RGBA(255, 0, 20, 0.3),
                         If(
                             CountRows(
                                 Filter(
@@ -154,11 +154,11 @@ Calendario As screen:
                                         FechaFin >= Date(var_año, var_mes, ThisItem.Value)
                                     )
                                 ).Opciones.Value,
-                                "Verano", RGBA(244, 213, 37, 0.2),
-                                "Invierno", RGBA(37, 244, 229, 0.2),
-                                "Baja", RGBA(37, 244, 73, 0.2),
-                                "Libre Elección", RGBA(100, 100, 100, 0.2),
-                                "Asuntos Propios", RGBA(112, 37, 244, 0.2),
+                                "Verano", RGBA(244, 213, 37, 0.3),
+                                "Invierno", RGBA(37, 244, 229, 0.3),
+                                "Baja", RGBA(37, 244, 73, 0.3),
+                                "Libre Elección", RGBA(100, 100, 100, 0.3),
+                                "Asuntos Propios", RGBA(112, 37, 244, 0.3),
                                 RGBA(0, 0, 0, 0)  
                             )
                             ,
@@ -168,6 +168,7 @@ Calendario As screen:
                     ,
                     RGBA(0, 0, 0, 0)
                 )
+            FontWeight: =FontWeight.Semibold
             Height: =116
             OnSelect: =Select(Parent)
             Text: =If(ThisItem.delmes,ThisItem.tabla_calendario.Motivo,"")
