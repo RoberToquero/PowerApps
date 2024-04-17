@@ -4876,7 +4876,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonAñadirBaja",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5243,7 +5243,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonAñadirDAP",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5610,7 +5610,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonAñadirDLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6647,7 +6647,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -6657,7 +6657,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -6923,7 +6923,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonModificarDLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7290,7 +7290,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonModificarVacaciones",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7699,7 +7699,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -7709,7 +7709,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -10376,7 +10376,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -10386,7 +10386,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -11581,7 +11581,7 @@
       "MetaDataIDKey": "",
       "Name": "DiasSemana",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 115,
+      "ParentIndex": 107,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15590,7 +15590,7 @@
       "MetaDataIDKey": "",
       "Name": "FondoPopUp",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27073,7 +27073,7 @@
       "MetaDataIDKey": "",
       "Name": "Leyenda",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 117,
+      "ParentIndex": 116,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27125,7 +27125,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_AñadirAP",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 113,
+      "ParentIndex": 114,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27177,7 +27177,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_AñadirLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 106,
+      "ParentIndex": 113,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27229,7 +27229,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_Baja",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 110,
+      "ParentIndex": 112,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27281,7 +27281,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUp_ModificarLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 109,
+      "ParentIndex": 115,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27333,7 +27333,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUpAñadirVacaciones",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 111,
+      "ParentIndex": 109,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27385,7 +27385,7 @@
       "MetaDataIDKey": "",
       "Name": "PopUpModificarVacaciones",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 114,
+      "ParentIndex": 104,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27437,7 +27437,7 @@
       "MetaDataIDKey": "",
       "Name": "PUAV_Invierno",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 112,
+      "ParentIndex": 111,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27489,7 +27489,7 @@
       "MetaDataIDKey": "",
       "Name": "PUAV_Verano",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 107,
+      "ParentIndex": 110,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27541,7 +27541,7 @@
       "MetaDataIDKey": "",
       "Name": "PUMV_Invierno",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 116,
+      "ParentIndex": 117,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27593,7 +27593,7 @@
       "MetaDataIDKey": "",
       "Name": "PUMV_Verano",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 108,
+      "ParentIndex": 105,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30214,7 +30214,7 @@
       "MetaDataIDKey": "",
       "Name": "TopBar",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 104,
+      "ParentIndex": 106,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30562,7 +30562,7 @@
       "MetaDataIDKey": "",
       "Name": "VentanaEspera",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 105,
+      "ParentIndex": 108,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
