@@ -2303,10 +2303,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 75,
+                  "charLength": 97,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "CountRows(Filter(Empleados; Departamento.Value = Dropdown1.Selected.Value))"
+                    "text": "CountRows(Filter(Empleados; Departamento.Value = DropdownConfigurarDepartamentos.Selected.Value))"
                   }
                 }
               },
@@ -6114,19 +6114,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Icon1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Departamentos.IconVolverDepartamentos.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Icon1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Departamentos.IconVolverDepartamentos.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Departamentos",
-                "type": "Departamentos.Icon1_1"
+                "type": "Departamentos.IconVolverDepartamentos"
               }
             }
           ],
@@ -6144,19 +6144,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Icon1_1.TabIndex"
+                  "fullyQualifiedName": "Departamentos.IconVolverDepartamentos.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Icon1_1.TabIndex",
+                  "fullyQualifiedName": "Departamentos.IconVolverDepartamentos.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Departamentos",
-                "type": "Departamentos.Icon1_1"
+                "type": "Departamentos.IconVolverDepartamentos"
               }
             }
           ],
@@ -6234,19 +6234,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Dropdown1.AccessibleLabel"
+                  "fullyQualifiedName": "Departamentos.DropdownConfigurarDepartamentos.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Dropdown1.AccessibleLabel",
+                  "fullyQualifiedName": "Departamentos.DropdownConfigurarDepartamentos.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Departamentos",
-                "type": "Departamentos.Dropdown1"
+                "type": "Departamentos.DropdownConfigurarDepartamentos"
               }
             }
           ],
@@ -6264,19 +6264,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.TextInput1.AccessibleLabel"
+                  "fullyQualifiedName": "Departamentos.TextInputNMinimoDepartamentos.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.TextInput1.AccessibleLabel",
+                  "fullyQualifiedName": "Departamentos.TextInputNMinimoDepartamentos.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Departamentos",
-                "type": "Departamentos.TextInput1"
+                "type": "Departamentos.TextInputNMinimoDepartamentos"
               }
             }
           ],
