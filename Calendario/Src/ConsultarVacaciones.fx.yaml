@@ -23,11 +23,17 @@ ConsultarVacaciones As screen:
                         LookUp(
                             Empleados,
                             DNI = dniEmpleado
-                        ).Apellidos
+                        ).Apellidos,
+                        "DepartamentoEmpleado",
+                        LookUp(
+                            Empleados,
+                            DNI = dniEmpleado
+                        ).Departamento.Value
                     ),
                     TextInputNombreConsultarVAcaciones.Text,
                     "NombreEmpleado",
-                    "ApellidosEmpleado"
+                    "ApellidosEmpleado",
+                    "DepartamentoEmpleado"
                 ),
                 If(
                     DropdownMotivoConsultarVacaciones.Selected.Value = "Todos",
@@ -143,12 +149,12 @@ ConsultarVacaciones As screen:
     LabelNombreApellidosConsultarVacaciones As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
-        Height: =42
+        Height: =66
         Size: =17
-        Text: ="Nombre o Apellidos"
+        Text: ="Nombre, Apellidos o Departamento"
         Width: =328
         X: =180
-        Y: =559
+        Y: =542
         ZIndex: =6
 
     TextInputNombreConsultarVAcaciones As text:
