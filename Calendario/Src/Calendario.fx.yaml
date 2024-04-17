@@ -2776,9 +2776,30 @@ Calendario As screen:
                         )
                     )
                     ,
-                    Set(pumvInvierno,true)
-                    ;
-                    Set(pumvvisible,false)
+                    If(
+                        IsEmpty(
+                            Filter(
+                                Vacaciones,
+                                dniEmpleado = txt_Usuario_Login.Text 
+                                &&
+                                Modificada=true
+                                &&
+                                Opciones.Value = "Invierno" 
+                                && 
+                                (Year(FechaInicio) = Year(Today()))
+                            )
+                        )
+                        ,
+                        Set(pumvInvierno,true)
+                        ;
+                        Set(pumvvisible,false)
+                        ,
+                        Notify(
+                            "No puedes modificar las vacaciones más de una vez",
+                            NotificationType.Error,
+                            2000
+                        )
+                    )
                     ,
                     Notify(
                         "Aún no has pedido vacaciones de invierno",
