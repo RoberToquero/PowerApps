@@ -2921,7 +2921,8 @@ Calendario As screen:
                                         ConfiguracionCalendario_1,
                                         Año = Text(Year(Today()))
                                     ).FinInvierno
-                                )
+                                ),
+                                Modificada: true
                             }
                         )
                         ,
@@ -2990,7 +2991,8 @@ Calendario As screen:
                                         ConfiguracionCalendario_1,
                                         Año = Text(Year(Today()))
                                     ).FinInvierno2
-                                )
+                                ),
+                                Modificada: true
                             }
                         )
                         ,

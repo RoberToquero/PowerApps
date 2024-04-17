@@ -1704,7 +1704,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 3266,
+                  "charOffset": 3300,
                   "snippet": {
                     "text": "Year(FechaInicio)"
                   }
@@ -1744,7 +1744,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3284,
+                  "charOffset": 3318,
                   "snippet": {
                     "text": "="
                   }
@@ -1784,7 +1784,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3262,
+                  "charOffset": 3296,
                   "snippet": {
                     "text": "&&"
                   }
