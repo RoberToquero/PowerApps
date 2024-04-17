@@ -2887,7 +2887,8 @@ Calendario As screen:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 30%)
             OnSelect: |-
-                =If(
+                =Set(enespera,true);
+                If(
                     rb_PUMV_Invierno.Selected.Value = "Semana 1"
                     ,
                     If(
@@ -2915,7 +2916,8 @@ Calendario As screen:
                         ).TotalEmpleados - LookUp(
                             Departamentos_1,
                             Nombre.Value = dep_user
-                        ).MinimoEmpleados),
+                        ).MinimoEmpleados)
+                        ,
                         Remove(
                             Vacaciones,
                             Filter(
@@ -3039,6 +3041,7 @@ Calendario As screen:
                     false
                 );
                 Reset(rb_PUMV_Invierno);
+                Set(enespera,false);
                 Select(BotonCalcularCalendario)
             Text: ="Aceptar"
             Visible: =pumvInvierno
