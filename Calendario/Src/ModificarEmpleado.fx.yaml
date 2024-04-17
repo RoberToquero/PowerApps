@@ -41,16 +41,6 @@ ModificarEmpleado As screen:
         Y: =23
         ZIndex: =4
 
-    RectangleModificar As rectangle:
-        Fill: |-
-            =RGBA(56, 96, 178, 0.2
-            )
-        Height: =768
-        Visible: |
-            =mostrarConfirm
-        Width: =1366
-        ZIndex: =5
-
     FormularioModificar As form:
         AcceptsFocus: =false
         DataSource: =Empleados
@@ -63,7 +53,7 @@ ModificarEmpleado As screen:
         Width: =1002
         X: =182
         Y: =140
-        ZIndex: =6
+        ZIndex: =5
 
         Nombre_DataCard4 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -671,6 +661,14 @@ ModificarEmpleado As screen:
                 Y: =DataCardKey19.Y
                 ZIndex: =4
 
+    RectangleModificar As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.2)
+        Height: =768
+        Visible: |
+            =mostrarConfirm
+        Width: =1366
+        ZIndex: =6
+
     PopupCambio As group:
         Height: =5
         Width: =5
@@ -679,7 +677,7 @@ ModificarEmpleado As screen:
         ZIndex: =10
 
         RectanglePopModificado As rectangle:
-            Height: =392
+            Height: =357
             OnSelect: =Set(mostrarConfirm,false)
             Visible: =mostrarConfirm
             Width: =507
@@ -688,25 +686,29 @@ ModificarEmpleado As screen:
             ZIndex: =7
 
         TextModificado As label:
+            Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
             Height: =80
             OnSelect: =Navigate(ConsultarEmpleados)
-            Size: =15
+            Size: =20
             Text: ="Empleado modificado con éxito"
             Visible: =mostrarConfirm
             Width: =350
-            X: =485
-            Y: =294
+            X: =484
+            Y: =314
             ZIndex: =8
 
         IconInfo As icon.Information:
+            Color: =RGBA(255, 0, 0, 1)
             Fill: =RGBA(255, 255, 0, 1)
+            Height: =75
             Icon: =Icon.Information
             OnSelect: =Navigate(ConsultarEmpleados)
             Visible: =mostrarConfirm
-            X: =443
-            Y: =215
+            Width: =75
+            X: =422
+            Y: =208
             ZIndex: =9
 
         ButtonAceptar As button:
