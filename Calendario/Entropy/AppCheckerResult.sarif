@@ -5994,19 +5994,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Rectangle221_1.AccessibleLabel"
+                  "fullyQualifiedName": "Departamentos.RectangleDepartamentos.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Rectangle221_1.AccessibleLabel",
+                  "fullyQualifiedName": "Departamentos.RectangleDepartamentos.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Departamentos",
-                "type": "Departamentos.Rectangle221_1"
+                "type": "Departamentos.RectangleDepartamentos"
               }
             }
           ],
@@ -6024,19 +6024,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Rectangle221_1.TabIndex"
+                  "fullyQualifiedName": "Departamentos.RectangleDepartamentos.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Rectangle221_1.TabIndex",
+                  "fullyQualifiedName": "Departamentos.RectangleDepartamentos.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Departamentos",
-                "type": "Departamentos.Rectangle221_1"
+                "type": "Departamentos.RectangleDepartamentos"
               }
             }
           ],
@@ -6174,19 +6174,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "Departamentos.GalleryDepartamentos.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "Departamentos.GalleryDepartamentos.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Departamentos",
-                "type": "Departamentos.Gallery1"
+                "type": "Departamentos.GalleryDepartamentos"
               }
             }
           ],
@@ -6204,19 +6204,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Gallery1.TabIndex"
+                  "fullyQualifiedName": "Departamentos.GalleryDepartamentos.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Gallery1.TabIndex",
+                  "fullyQualifiedName": "Departamentos.GalleryDepartamentos.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Departamentos",
-                "type": "Departamentos.Gallery1"
+                "type": "Departamentos.GalleryDepartamentos"
               }
             }
           ],
@@ -7253,19 +7253,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.Icon4.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.Icon4.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.Icon4"
+                "type": "ConsultarVacaciones.IconVolverConsultarVacaciones"
               }
             }
           ],
@@ -7283,19 +7283,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.Icon4.TabIndex"
+                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.Icon4.TabIndex",
+                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.Icon4"
+                "type": "ConsultarVacaciones.IconVolverConsultarVacaciones"
               }
             }
           ],
@@ -7313,19 +7313,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarVacaciones.GalleryConsultarVacaciones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarVacaciones.GalleryConsultarVacaciones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.Gallery2"
+                "type": "ConsultarVacaciones.GalleryConsultarVacaciones"
               }
             }
           ],
@@ -7343,19 +7343,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.Gallery2.TabIndex"
+                  "fullyQualifiedName": "ConsultarVacaciones.GalleryConsultarVacaciones.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.Gallery2.TabIndex",
+                  "fullyQualifiedName": "ConsultarVacaciones.GalleryConsultarVacaciones.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.Gallery2"
+                "type": "ConsultarVacaciones.GalleryConsultarVacaciones"
               }
             }
           ],
@@ -7373,19 +7373,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.Dropdown4.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarVacaciones.DropdownAñoConsultarVacaciones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.Dropdown4.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarVacaciones.DropdownAñoConsultarVacaciones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.Dropdown4"
+                "type": "ConsultarVacaciones.DropdownAñoConsultarVacaciones"
               }
             }
           ],
@@ -7403,19 +7403,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.Dropdown2.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarVacaciones.DropdownMotivoConsultarVacaciones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.Dropdown2.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarVacaciones.DropdownMotivoConsultarVacaciones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.Dropdown2"
+                "type": "ConsultarVacaciones.DropdownMotivoConsultarVacaciones"
               }
             }
           ],
@@ -7433,19 +7433,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.TextInput2.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarVacaciones.TextInputNombreConsultarVAcaciones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.TextInput2.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarVacaciones.TextInputNombreConsultarVAcaciones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.TextInput2"
+                "type": "ConsultarVacaciones.TextInputNombreConsultarVAcaciones"
               }
             }
           ],

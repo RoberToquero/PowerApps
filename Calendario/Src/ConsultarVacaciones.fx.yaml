@@ -1,12 +1,12 @@
 ConsultarVacaciones As screen:
 
-    Rectangle8 As rectangle:
+    RectangleConsultarVacaciones As rectangle:
         Fill: =RGBA(255, 191, 0, 1)
         Height: =128
         Width: =1366
         ZIndex: =1
 
-    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+    "GalleryConsultarVacaciones As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =640
         Items: |-
@@ -25,17 +25,17 @@ ConsultarVacaciones As screen:
                             DNI = dniEmpleado
                         ).Apellidos
                     ),
-                    TextInput2.Text,
+                    TextInputNombreConsultarVAcaciones.Text,
                     "NombreEmpleado",
                     "ApellidosEmpleado"
                 ),
                 If(
-                    Dropdown2.Selected.Value = "Todos",
+                    DropdownMotivoConsultarVacaciones.Selected.Value = "Todos",
                     true,
-                    Opciones.Value = Dropdown2.Selected.Value
+                    Opciones.Value = DropdownMotivoConsultarVacaciones.Selected.Value
                 )
                 &&
-                Dropdown4.Selected.Value = Year(FechaInicio)
+                DropdownAñoConsultarVacaciones.Selected.Value = Year(FechaInicio)
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -102,18 +102,18 @@ ConsultarVacaciones As screen:
             Y: =113
             ZIndex: =10
 
-    Label15 As label:
+    LabelTituloConsultarVacaciones As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
         Height: =128
         Size: =30
-        Text: ="Consultar"
+        Text: ="Consultar permisos"
         Width: =634
         X: =366
         ZIndex: =2
 
-    Icon4 As icon.Undo:
+    IconVolverConsultarVacaciones As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
         Height: =90
         Icon: =Icon.Undo
@@ -123,13 +123,13 @@ ConsultarVacaciones As screen:
         Y: =19
         ZIndex: =3
 
-    Dropdown2 As dropdown:
+    DropdownMotivoConsultarVacaciones As dropdown:
         Items: =["Todos","Verano","Invierno","Baja","Libre Elección","Asuntos Propios"]
         X: =180
         Y: =439
         ZIndex: =4
 
-    Label21 As label:
+    LabelMotivoConsultarVacaciones As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =45
@@ -140,7 +140,7 @@ ConsultarVacaciones As screen:
         Y: =374
         ZIndex: =5
 
-    Label22 As label:
+    LabelNombreApellidosConsultarVacaciones As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =42
@@ -151,7 +151,7 @@ ConsultarVacaciones As screen:
         Y: =559
         ZIndex: =6
 
-    TextInput2 As text:
+    TextInputNombreConsultarVAcaciones As text:
         Default: =
         Height: =41
         Width: =328
@@ -159,7 +159,7 @@ ConsultarVacaciones As screen:
         Y: =622
         ZIndex: =7
 
-    Label22_1 As label:
+    LabelAñoConsultarVacaciones As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =42
@@ -170,7 +170,7 @@ ConsultarVacaciones As screen:
         Y: =184
         ZIndex: =8
 
-    Dropdown4 As dropdown:
+    DropdownAñoConsultarVacaciones As dropdown:
         Default: =Year(Today())
         Items: =Sequence(50, Year(Today())-49, 1)
         X: =180

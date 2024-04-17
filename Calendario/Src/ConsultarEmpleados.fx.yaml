@@ -132,13 +132,6 @@ ConsultarEmpleados As screen:
         Y: =630
         ZIndex: =6
 
-    RectangleGen As rectangle:
-        Fill: =RGBA(56, 96, 178, 0.2)
-        Height: =768
-        Visible: =mostrarPopUp
-        Width: =1366
-        ZIndex: =7
-
     IconoBusqueda As icon.Search:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Search
@@ -146,7 +139,7 @@ ConsultarEmpleados As screen:
             =UpdateContext({SearchVisible:!SearchVisible})
         X: =1253
         Y: =14
-        ZIndex: =8
+        ZIndex: =7
 
     TextoBusqueda As text:
         Default: =""
@@ -155,7 +148,7 @@ ConsultarEmpleados As screen:
         Width: =238
         X: =984
         Y: =26
-        ZIndex: =9
+        ZIndex: =8
 
     FiltroDepartamento As dropdown:
         Default: ="Departamento"
@@ -164,7 +157,7 @@ ConsultarEmpleados As screen:
         Width: =200
         X: =758
         Y: =26
-        ZIndex: =10
+        ZIndex: =9
 
     FormularioEmpleados As formViewer:
         DataSource: =Empleados
@@ -174,7 +167,7 @@ ConsultarEmpleados As screen:
         Width: =510
         X: =807
         Y: =146
-        ZIndex: =11
+        ZIndex: =10
 
         Nombre_DataCard1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
@@ -530,6 +523,13 @@ ConsultarEmpleados As screen:
                 Y: =DataCardKey7.Y
                 ZIndex: =4
 
+    RectangleGen As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.2)
+        Height: =768
+        Visible: =mostrarPopUp
+        Width: =1366
+        ZIndex: =11
+
     PopUpEliminar As group:
         Height: =5
         Width: =5
@@ -542,7 +542,7 @@ ConsultarEmpleados As screen:
             Visible: =mostrarPopUp
             Width: =533
             X: =410
-            Y: =254
+            Y: =183
             ZIndex: =12
 
         IconoAlerta As icon.Error:
@@ -553,8 +553,8 @@ ConsultarEmpleados As screen:
             Icon: =Icon.Error
             Visible: =mostrarPopUp
             Width: =72
-            X: =444
-            Y: =276
+            X: =432
+            Y: =205
             ZIndex: =13
 
         TextoPopUpEliminar As label:
@@ -566,24 +566,26 @@ ConsultarEmpleados As screen:
             Visible: =mostrarPopUp
             Width: =399
             X: =504
-            Y: =368
+            Y: =336
             ZIndex: =14
 
         Buttonconfirmar As button:
             Fill: =RGBA(152, 208, 70, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: =Remove(Empleados,GaleriaNombres.Selected);Set(mostrarPopUp,false);Set(mostrarDatos,false)
             Text: ="Confirmar"
             Visible: =mostrarPopUp
             X: =713
-            Y: =546
+            Y: =475
             ZIndex: =15
 
         Buttoncancelar As button:
             Fill: =RGBA(246, 88, 16, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: =Set(mostrarPopUp,false)
             Text: ="Cancelar"
             Visible: =mostrarPopUp
             X: =482
-            Y: =546
+            Y: =475
             ZIndex: =16
 
