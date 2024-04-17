@@ -2254,12 +2254,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.GaleriaNombres.Items"
+                  "fullyQualifiedName": "ConsultarEmpleados.GaleriaNombres.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.GaleriaNombres.Items",
+                  "fullyQualifiedName": "ConsultarEmpleados.GaleriaNombres.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -2272,8 +2272,8 @@
               },
               "properties": {
                 "member": "Items",
-                "module": "Consulta",
-                "type": "Consulta.GaleriaNombres"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.GaleriaNombres"
               }
             }
           ],
@@ -2334,19 +2334,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.RectangleSup.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.RectangleSup.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.RectangleSup.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.RectangleSup.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.RectangleSup"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.RectangleSup"
               }
             }
           ],
@@ -2364,19 +2364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.RectangleSup.TabIndex"
+                  "fullyQualifiedName": "NuevoEmpleado.RectangleSup.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.RectangleSup.TabIndex",
+                  "fullyQualifiedName": "NuevoEmpleado.RectangleSup.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Nuevo",
-                "type": "Nuevo.RectangleSup"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.RectangleSup"
               }
             }
           ],
@@ -2394,19 +2394,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.IconoRetroceso.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.IconoRetroceso.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.IconoRetroceso"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.IconoRetroceso"
               }
             }
           ],
@@ -2424,19 +2424,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.TabIndex"
+                  "fullyQualifiedName": "NuevoEmpleado.IconoRetroceso.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.IconoRetroceso.TabIndex",
+                  "fullyQualifiedName": "NuevoEmpleado.IconoRetroceso.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Nuevo",
-                "type": "Nuevo.IconoRetroceso"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.IconoRetroceso"
               }
             }
           ],
@@ -2454,19 +2454,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.tituloNuevoEmpleado.FocusedBorderThickness"
+                  "fullyQualifiedName": "NuevoEmpleado.tituloNuevoEmpleado.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.tituloNuevoEmpleado.FocusedBorderThickness",
+                  "fullyQualifiedName": "NuevoEmpleado.tituloNuevoEmpleado.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Nuevo",
-                "type": "Nuevo.tituloNuevoEmpleado"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.tituloNuevoEmpleado"
               }
             }
           ],
@@ -2484,19 +2484,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.tituloNuevoEmpleado.TabIndex"
+                  "fullyQualifiedName": "NuevoEmpleado.tituloNuevoEmpleado.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.tituloNuevoEmpleado.TabIndex",
+                  "fullyQualifiedName": "NuevoEmpleado.tituloNuevoEmpleado.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Nuevo",
-                "type": "Nuevo.tituloNuevoEmpleado"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.tituloNuevoEmpleado"
               }
             }
           ],
@@ -2514,19 +2514,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Nombre_DataCard2.DataCardValue7.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Nombre_DataCard2.DataCardValue7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Nombre_DataCard2.DataCardValue7.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Nombre_DataCard2.DataCardValue7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Nombre_DataCard2.DataCardValue7"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.Nombre_DataCard2.DataCardValue7"
               }
             }
           ],
@@ -2544,19 +2544,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Apellidos_DataCard2.DataCardValue8.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Apellidos_DataCard2.DataCardValue8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Apellidos_DataCard2.DataCardValue8.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Apellidos_DataCard2.DataCardValue8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Apellidos_DataCard2.DataCardValue8"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.Apellidos_DataCard2.DataCardValue8"
               }
             }
           ],
@@ -2574,19 +2574,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Fecha Nacimiento_DataCard2'.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.'Fecha Nacimiento_DataCard2'.DataCardValue9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Fecha Nacimiento_DataCard2'.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.'Fecha Nacimiento_DataCard2'.DataCardValue9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.'Fecha Nacimiento_DataCard2'.DataCardValue9"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.'Fecha Nacimiento_DataCard2'.DataCardValue9"
               }
             }
           ],
@@ -2604,19 +2604,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Contraseña_DataCard1.DataCardValue12.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Contraseña_DataCard1.DataCardValue12.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Contraseña_DataCard1.DataCardValue12.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Contraseña_DataCard1.DataCardValue12.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Contraseña_DataCard1.DataCardValue12"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.Contraseña_DataCard1.DataCardValue12"
               }
             }
           ],
@@ -2634,19 +2634,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Departamento_DataCard2.DataCardValue10.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Departamento_DataCard2.DataCardValue10.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Departamento_DataCard2.DataCardValue10.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Departamento_DataCard2.DataCardValue10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Departamento_DataCard2.DataCardValue10"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.Departamento_DataCard2.DataCardValue10"
               }
             }
           ],
@@ -2664,19 +2664,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.DNI_DataCard1.DataCardValue19.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.DNI_DataCard1.DataCardValue19.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.DNI_DataCard1.DataCardValue19.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.DNI_DataCard1.DataCardValue19.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.DNI_DataCard1.DataCardValue19"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.DNI_DataCard1.DataCardValue19"
               }
             }
           ],
@@ -2694,19 +2694,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.EsAdmin_DataCard1.DataCardValue18.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.EsAdmin_DataCard1.DataCardValue18.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.EsAdmin_DataCard1.DataCardValue18.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.EsAdmin_DataCard1.DataCardValue18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.EsAdmin_DataCard1.DataCardValue18"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.EsAdmin_DataCard1.DataCardValue18"
               }
             }
           ],
@@ -2724,18 +2724,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Firma_DataCard1.PenInput1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
               }
             }
           ],
@@ -2753,19 +2753,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Firma_DataCard1.PenInput1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.Firma_DataCard1.PenInput1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.Firma_DataCard1.PenInput1"
               }
             }
           ],
@@ -2783,19 +2783,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Datos adjuntos_DataCard2'.DataCardValue11.AccessibleLabel"
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.'Datos adjuntos_DataCard2'.DataCardValue11.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Nuevo.FormNuevoEmpleado.'Datos adjuntos_DataCard2'.DataCardValue11.AccessibleLabel",
+                  "fullyQualifiedName": "NuevoEmpleado.FormNuevoEmpleado.'Datos adjuntos_DataCard2'.DataCardValue11.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Nuevo",
-                "type": "Nuevo.FormNuevoEmpleado.'Datos adjuntos_DataCard2'.DataCardValue11"
+                "module": "NuevoEmpleado",
+                "type": "NuevoEmpleado.FormNuevoEmpleado.'Datos adjuntos_DataCard2'.DataCardValue11"
               }
             }
           ],
@@ -3023,19 +3023,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.Rectangle1Sup.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.Rectangle1Sup.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.Rectangle1Sup.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.Rectangle1Sup.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.Rectangle1Sup"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.Rectangle1Sup"
               }
             }
           ],
@@ -3053,19 +3053,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.Rectangle1Sup.TabIndex"
+                  "fullyQualifiedName": "ModificarEmpleado.Rectangle1Sup.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.Rectangle1Sup.TabIndex",
+                  "fullyQualifiedName": "ModificarEmpleado.Rectangle1Sup.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Modificar",
-                "type": "Modificar.Rectangle1Sup"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.Rectangle1Sup"
               }
             }
           ],
@@ -3083,19 +3083,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.RectangleModificar.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.RectangleModificar.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.RectangleModificar.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.RectangleModificar.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.RectangleModificar"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.RectangleModificar"
               }
             }
           ],
@@ -3113,19 +3113,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.RectangleModificar.TabIndex"
+                  "fullyQualifiedName": "ModificarEmpleado.RectangleModificar.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.RectangleModificar.TabIndex",
+                  "fullyQualifiedName": "ModificarEmpleado.RectangleModificar.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Modificar",
-                "type": "Modificar.RectangleModificar"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.RectangleModificar"
               }
             }
           ],
@@ -3143,19 +3143,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.TituloModificar.FocusedBorderThickness"
+                  "fullyQualifiedName": "ModificarEmpleado.TituloModificar.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.TituloModificar.FocusedBorderThickness",
+                  "fullyQualifiedName": "ModificarEmpleado.TituloModificar.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Modificar",
-                "type": "Modificar.TituloModificar"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.TituloModificar"
               }
             }
           ],
@@ -3173,19 +3173,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.TituloModificar.TabIndex"
+                  "fullyQualifiedName": "ModificarEmpleado.TituloModificar.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.TituloModificar.TabIndex",
+                  "fullyQualifiedName": "ModificarEmpleado.TituloModificar.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Modificar",
-                "type": "Modificar.TituloModificar"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.TituloModificar"
               }
             }
           ],
@@ -3203,19 +3203,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.IconRetrocede.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.IconRetrocede.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.IconRetrocede"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.IconRetrocede"
               }
             }
           ],
@@ -3233,19 +3233,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.TabIndex"
+                  "fullyQualifiedName": "ModificarEmpleado.IconRetrocede.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconRetrocede.TabIndex",
+                  "fullyQualifiedName": "ModificarEmpleado.IconRetrocede.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Modificar",
-                "type": "Modificar.IconRetrocede"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.IconRetrocede"
               }
             }
           ],
@@ -3263,19 +3263,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Nombre_DataCard4.DataCardValue14.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Nombre_DataCard4.DataCardValue14.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Nombre_DataCard4.DataCardValue14.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Nombre_DataCard4.DataCardValue14.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Nombre_DataCard4.DataCardValue14"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.Nombre_DataCard4.DataCardValue14"
               }
             }
           ],
@@ -3293,19 +3293,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Apellidos_DataCard3.DataCardValue13.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Apellidos_DataCard3.DataCardValue13.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Apellidos_DataCard3.DataCardValue13.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Apellidos_DataCard3.DataCardValue13.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Apellidos_DataCard3.DataCardValue13"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.Apellidos_DataCard3.DataCardValue13"
               }
             }
           ],
@@ -3323,19 +3323,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Fecha Nacimiento_DataCard3'.DataCardValue15.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.'Fecha Nacimiento_DataCard3'.DataCardValue15.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Fecha Nacimiento_DataCard3'.DataCardValue15.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.'Fecha Nacimiento_DataCard3'.DataCardValue15.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.'Fecha Nacimiento_DataCard3'.DataCardValue15"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.'Fecha Nacimiento_DataCard3'.DataCardValue15"
               }
             }
           ],
@@ -3353,19 +3353,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Contraseña_DataCard2.DataCardValue20.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Contraseña_DataCard2.DataCardValue20.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Contraseña_DataCard2.DataCardValue20.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Contraseña_DataCard2.DataCardValue20.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Contraseña_DataCard2.DataCardValue20"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.Contraseña_DataCard2.DataCardValue20"
               }
             }
           ],
@@ -3383,19 +3383,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Departamento_DataCard3.DataCardValue16.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Departamento_DataCard3.DataCardValue16.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Departamento_DataCard3.DataCardValue16.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Departamento_DataCard3.DataCardValue16.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Departamento_DataCard3.DataCardValue16"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.Departamento_DataCard3.DataCardValue16"
               }
             }
           ],
@@ -3413,19 +3413,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.DNI_DataCard2.DataCardValue21.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.DNI_DataCard2.DataCardValue21.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.DNI_DataCard2.DataCardValue21.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.DNI_DataCard2.DataCardValue21.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.DNI_DataCard2.DataCardValue21"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.DNI_DataCard2.DataCardValue21"
               }
             }
           ],
@@ -3443,19 +3443,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.EsAdmin_DataCard2.DataCardValue22.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.EsAdmin_DataCard2.DataCardValue22.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.EsAdmin_DataCard2.DataCardValue22.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.EsAdmin_DataCard2.DataCardValue22.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.EsAdmin_DataCard2.DataCardValue22"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.EsAdmin_DataCard2.DataCardValue22"
               }
             }
           ],
@@ -3473,18 +3473,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard3.PenInput2"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.PenInput2"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard3.PenInput2",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.PenInput2",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Firma_DataCard3.PenInput2"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.PenInput2"
               }
             }
           ],
@@ -3502,19 +3502,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard3.PenInput2.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.PenInput2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard3.PenInput2.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.PenInput2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Firma_DataCard3.PenInput2"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.PenInput2"
               }
             }
           ],
@@ -3532,19 +3532,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Datos adjuntos_DataCard3'.DataCardValue17.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.'Datos adjuntos_DataCard3'.DataCardValue17.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.'Datos adjuntos_DataCard3'.DataCardValue17.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.'Datos adjuntos_DataCard3'.DataCardValue17.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.'Datos adjuntos_DataCard3'.DataCardValue17"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.'Datos adjuntos_DataCard3'.DataCardValue17"
               }
             }
           ],
@@ -3562,19 +3562,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.RectanglePopModificado.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.RectanglePopModificado.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.RectanglePopModificado"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.RectanglePopModificado"
               }
             }
           ],
@@ -3592,19 +3592,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.TabIndex"
+                  "fullyQualifiedName": "ModificarEmpleado.RectanglePopModificado.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.RectanglePopModificado.TabIndex",
+                  "fullyQualifiedName": "ModificarEmpleado.RectanglePopModificado.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Modificar",
-                "type": "Modificar.RectanglePopModificado"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.RectanglePopModificado"
               }
             }
           ],
@@ -3622,19 +3622,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconInfo.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarEmpleado.IconInfo.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconInfo.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarEmpleado.IconInfo.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Modificar",
-                "type": "Modificar.IconInfo"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.IconInfo"
               }
             }
           ],
@@ -3652,19 +3652,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.IconInfo.TabIndex"
+                  "fullyQualifiedName": "ModificarEmpleado.IconInfo.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.IconInfo.TabIndex",
+                  "fullyQualifiedName": "ModificarEmpleado.IconInfo.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Modificar",
-                "type": "Modificar.IconInfo"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.IconInfo"
               }
             }
           ],
@@ -3682,19 +3682,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.TextModificado.FocusedBorderThickness"
+                  "fullyQualifiedName": "ModificarEmpleado.TextModificado.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.TextModificado.FocusedBorderThickness",
+                  "fullyQualifiedName": "ModificarEmpleado.TextModificado.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Modificar",
-                "type": "Modificar.TextModificado"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.TextModificado"
               }
             }
           ],
@@ -3712,19 +3712,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.TextModificado.TabIndex"
+                  "fullyQualifiedName": "ModificarEmpleado.TextModificado.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.TextModificado.TabIndex",
+                  "fullyQualifiedName": "ModificarEmpleado.TextModificado.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Modificar",
-                "type": "Modificar.TextModificado"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.TextModificado"
               }
             }
           ],
@@ -5212,19 +5212,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.RectangleSuperior.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleSuperior.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.RectangleSuperior.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleSuperior.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.RectangleSuperior"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.RectangleSuperior"
               }
             }
           ],
@@ -5242,19 +5242,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.RectangleSuperior.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleSuperior.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.RectangleSuperior.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleSuperior.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.RectangleSuperior"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.RectangleSuperior"
               }
             }
           ],
@@ -5272,19 +5272,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.RectangleGen.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleGen.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.RectangleGen.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleGen.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.RectangleGen"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.RectangleGen"
               }
             }
           ],
@@ -5302,19 +5302,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.RectangleGen.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleGen.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.RectangleGen.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.RectangleGen.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.RectangleGen"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.RectangleGen"
               }
             }
           ],
@@ -5332,19 +5332,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoBusqueda.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBusqueda.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoBusqueda.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBusqueda.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.IconoBusqueda"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoBusqueda"
               }
             }
           ],
@@ -5362,19 +5362,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoBusqueda.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBusqueda.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoBusqueda.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBusqueda.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.IconoBusqueda"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoBusqueda"
               }
             }
           ],
@@ -5392,19 +5392,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoVolver.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoVolver.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoVolver.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoVolver.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.IconoVolver"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoVolver"
               }
             }
           ],
@@ -5422,19 +5422,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoVolver.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoVolver.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoVolver.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoVolver.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.IconoVolver"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoVolver"
               }
             }
           ],
@@ -5452,19 +5452,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.ConsultaEmpleadosTitle.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.ConsultaEmpleadosTitle.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.ConsultaEmpleadosTitle.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.ConsultaEmpleadosTitle.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.ConsultaEmpleadosTitle"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.ConsultaEmpleadosTitle"
               }
             }
           ],
@@ -5482,19 +5482,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.ConsultaEmpleadosTitle.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.ConsultaEmpleadosTitle.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.ConsultaEmpleadosTitle.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.ConsultaEmpleadosTitle.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.ConsultaEmpleadosTitle"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.ConsultaEmpleadosTitle"
               }
             }
           ],
@@ -5512,19 +5512,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FiltroDepartamento.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.FiltroDepartamento.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FiltroDepartamento.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.FiltroDepartamento.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.FiltroDepartamento"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FiltroDepartamento"
               }
             }
           ],
@@ -5542,19 +5542,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.TextoBusqueda.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.TextoBusqueda.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.TextoBusqueda.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.TextoBusqueda.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.TextoBusqueda"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.TextoBusqueda"
               }
             }
           ],
@@ -5572,19 +5572,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.GaleriaNombres.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.GaleriaNombres.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.GaleriaNombres.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.GaleriaNombres.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.GaleriaNombres"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.GaleriaNombres"
               }
             }
           ],
@@ -5602,19 +5602,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.GaleriaNombres.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.GaleriaNombres.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.GaleriaNombres.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.GaleriaNombres.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.GaleriaNombres"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.GaleriaNombres"
               }
             }
           ],
@@ -5632,19 +5632,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardKey2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardKey2"
               }
             }
           ],
@@ -5662,19 +5662,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardKey2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardKey2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardKey2"
               }
             }
           ],
@@ -5692,19 +5692,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardValue1"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardValue1"
               }
             }
           ],
@@ -5722,19 +5722,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardValue1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Nombre_DataCard1.DataCardValue1"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Nombre_DataCard1.DataCardValue1"
               }
             }
           ],
@@ -5752,19 +5752,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3"
               }
             }
           ],
@@ -5782,19 +5782,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardKey3"
               }
             }
           ],
@@ -5812,19 +5812,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2"
               }
             }
           ],
@@ -5842,19 +5842,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Apellidos_DataCard1.DataCardValue2"
               }
             }
           ],
@@ -5872,19 +5872,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.StarVisible2.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.StarVisible2.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.StarVisible2.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.StarVisible2.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Departamento_DataCard1.StarVisible2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.StarVisible2"
               }
             }
           ],
@@ -5902,19 +5902,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.StarVisible2.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.StarVisible2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.StarVisible2.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.StarVisible2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Departamento_DataCard1.StarVisible2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.StarVisible2"
               }
             }
           ],
@@ -5932,19 +5932,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardKey4"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardKey4"
               }
             }
           ],
@@ -5962,19 +5962,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardKey4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardKey4"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardKey4"
               }
             }
           ],
@@ -5992,19 +5992,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Departamento_DataCard1.DataCardValue3"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.DataCardValue3"
               }
             }
           ],
@@ -6022,19 +6022,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2"
               }
             }
           ],
@@ -6052,19 +6052,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Departamento_DataCard1.ErrorMessage2"
               }
             }
           ],
@@ -6082,19 +6082,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5"
               }
             }
           ],
@@ -6112,19 +6112,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardKey5"
               }
             }
           ],
@@ -6142,19 +6142,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4"
               }
             }
           ],
@@ -6172,19 +6172,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Fecha Nacimiento_DataCard1'.DataCardValue4"
               }
             }
           ],
@@ -6202,19 +6202,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.EsAdmin_DataCard3.DataCardValue24.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.EsAdmin_DataCard3.DataCardValue24.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.EsAdmin_DataCard3.DataCardValue24.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.EsAdmin_DataCard3.DataCardValue24.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.EsAdmin_DataCard3.DataCardValue24"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.EsAdmin_DataCard3.DataCardValue24"
               }
             }
           ],
@@ -6232,19 +6232,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardKey6.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardKey6.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardKey6.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardKey6.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardKey6"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardKey6"
               }
             }
           ],
@@ -6262,19 +6262,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardKey6.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardKey6.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardKey6.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardKey6.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardKey6"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardKey6"
               }
             }
           ],
@@ -6292,19 +6292,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardValue5.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardValue5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardValue5.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardValue5"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardValue5"
               }
             }
           ],
@@ -6322,19 +6322,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardValue5.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardValue5.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardValue5.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardValue5.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.Firma_DataCard2.DataCardValue5"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.Firma_DataCard2.DataCardValue5"
               }
             }
           ],
@@ -6352,19 +6352,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3"
               }
             }
           ],
@@ -6382,19 +6382,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.StarVisible3"
               }
             }
           ],
@@ -6412,19 +6412,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7"
               }
             }
           ],
@@ -6442,19 +6442,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardKey7"
               }
             }
           ],
@@ -6472,19 +6472,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardValue6.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardValue6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardValue6.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardValue6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardValue6"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.DataCardValue6"
               }
             }
           ],
@@ -6502,19 +6502,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3"
               }
             }
           ],
@@ -6532,19 +6532,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.FormularioEmpleados.'Datos adjuntos_DataCard1'.ErrorMessage3"
               }
             }
           ],
@@ -6562,19 +6562,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.RectanglePopUpEliminar.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.RectanglePopUpEliminar.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.RectanglePopUpEliminar.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.RectanglePopUpEliminar.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.RectanglePopUpEliminar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.RectanglePopUpEliminar"
               }
             }
           ],
@@ -6592,19 +6592,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.RectanglePopUpEliminar.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.RectanglePopUpEliminar.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.RectanglePopUpEliminar.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.RectanglePopUpEliminar.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.RectanglePopUpEliminar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.RectanglePopUpEliminar"
               }
             }
           ],
@@ -6622,19 +6622,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoAlerta.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoAlerta.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoAlerta.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoAlerta.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.IconoAlerta"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoAlerta"
               }
             }
           ],
@@ -6652,19 +6652,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoAlerta.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoAlerta.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoAlerta.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoAlerta.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.IconoAlerta"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoAlerta"
               }
             }
           ],
@@ -6682,19 +6682,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.TextoPopUpEliminar.FocusedBorderThickness"
+                  "fullyQualifiedName": "ConsultarEmpleados.TextoPopUpEliminar.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.TextoPopUpEliminar.FocusedBorderThickness",
+                  "fullyQualifiedName": "ConsultarEmpleados.TextoPopUpEliminar.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "Consulta",
-                "type": "Consulta.TextoPopUpEliminar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.TextoPopUpEliminar"
               }
             }
           ],
@@ -6712,19 +6712,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.TextoPopUpEliminar.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.TextoPopUpEliminar.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.TextoPopUpEliminar.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.TextoPopUpEliminar.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.TextoPopUpEliminar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.TextoPopUpEliminar"
               }
             }
           ],
@@ -6742,19 +6742,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoModificar.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoModificar.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoModificar.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoModificar.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.IconoModificar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoModificar"
               }
             }
           ],
@@ -6772,19 +6772,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoModificar.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoModificar.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoModificar.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoModificar.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.IconoModificar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoModificar"
               }
             }
           ],
@@ -6802,19 +6802,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoBorrar.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBorrar.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoBorrar.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBorrar.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Consulta",
-                "type": "Consulta.IconoBorrar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoBorrar"
               }
             }
           ],
@@ -6832,19 +6832,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Consulta.IconoBorrar.TabIndex"
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBorrar.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Consulta.IconoBorrar.TabIndex",
+                  "fullyQualifiedName": "ConsultarEmpleados.IconoBorrar.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Consulta",
-                "type": "Consulta.IconoBorrar"
+                "module": "ConsultarEmpleados",
+                "type": "ConsultarEmpleados.IconoBorrar"
               }
             }
           ],
@@ -6862,19 +6862,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle221.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle221.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle221.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle221.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle221"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle221"
               }
             }
           ],
@@ -6892,19 +6892,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle221.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle221.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle221.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle221.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle221"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle221"
               }
             }
           ],
@@ -6922,19 +6922,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon1.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Icon1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon1.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Icon1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon1"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon1"
               }
             }
           ],
@@ -6952,19 +6952,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon1.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Icon1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon1.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Icon1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon1"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon1"
               }
             }
           ],
@@ -6982,19 +6982,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Label221.FocusedBorderThickness"
+                  "fullyQualifiedName": "PortalEmpleados.Label221.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Label221.FocusedBorderThickness",
+                  "fullyQualifiedName": "PortalEmpleados.Label221.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
-                "module": "ScInicial",
-                "type": "ScInicial.Label221"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Label221"
               }
             }
           ],
@@ -7012,19 +7012,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Label221.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Label221.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Label221.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Label221.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Label221"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Label221"
               }
             }
           ],
@@ -7042,19 +7042,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle223.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle223.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle223"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle223"
               }
             }
           ],
@@ -7072,19 +7072,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle223.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle223.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle223"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle223"
               }
             }
           ],
@@ -7102,19 +7102,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle224.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle224.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle224.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle224.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle224"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle224"
               }
             }
           ],
@@ -7132,19 +7132,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle224.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle224.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle224.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle224.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle224"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle224"
               }
             }
           ],
@@ -7162,19 +7162,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle223_1.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle223_1.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle223_1"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle223_1"
               }
             }
           ],
@@ -7192,19 +7192,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Rectangle223_1.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Rectangle223_1.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Rectangle223_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Rectangle223_1"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Rectangle223_1"
               }
             }
           ],
@@ -7222,19 +7222,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon221.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Icon221.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon221.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Icon221.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon221"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon221"
               }
             }
           ],
@@ -7252,19 +7252,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon221.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Icon221.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon221.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Icon221.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon221"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon221"
               }
             }
           ],
@@ -7282,19 +7282,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon223.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Icon223.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon223.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Icon223.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon223"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon223"
               }
             }
           ],
@@ -7312,19 +7312,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon223.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Icon223.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon223.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Icon223.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon223"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon223"
               }
             }
           ],
@@ -7342,19 +7342,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon3.AccessibleLabel"
+                  "fullyQualifiedName": "PortalEmpleados.Icon3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon3.AccessibleLabel",
+                  "fullyQualifiedName": "PortalEmpleados.Icon3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon3"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon3"
               }
             }
           ],
@@ -7372,19 +7372,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ScInicial.Icon3.TabIndex"
+                  "fullyQualifiedName": "PortalEmpleados.Icon3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ScInicial.Icon3.TabIndex",
+                  "fullyQualifiedName": "PortalEmpleados.Icon3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ScInicial",
-                "type": "ScInicial.Icon3"
+                "module": "PortalEmpleados",
+                "type": "PortalEmpleados.Icon3"
               }
             }
           ],
@@ -8392,19 +8392,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Item"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Item"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Item",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Item",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Item",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar"
               }
             }
           ],
@@ -8422,19 +8422,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard3.Image4.Image"
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.Image4.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Modificar.FormularioModificar.Firma_DataCard3.Image4.Image",
+                  "fullyQualifiedName": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.Image4.Image",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Image",
-                "module": "Modificar",
-                "type": "Modificar.FormularioModificar.Firma_DataCard3.Image4"
+                "module": "ModificarEmpleado",
+                "type": "ModificarEmpleado.FormularioModificar.Firma_DataCard3.Image4"
               }
             }
           ],

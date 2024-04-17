@@ -1,4 +1,4 @@
-Consulta As screen:
+ConsultarEmpleados As screen:
 
     "GaleriaNombres As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
@@ -107,7 +107,7 @@ Consulta As screen:
         Color: =RGBA(255, 255, 255, 1)
         Fill: =RGBA(56, 96, 178, 1)
         Icon: =Icon.Undo
-        OnSelect: =Navigate(ScInicial); Set(mostrarDatos,false)
+        OnSelect: =Navigate(PortalEmpleados); Set(mostrarDatos,false)
         X: =52
         Y: =18
         ZIndex: =4
@@ -115,7 +115,7 @@ Consulta As screen:
     IconoModificar As icon.Edit:
         Height: =47
         Icon: =Icon.Edit
-        OnSelect: =Navigate(Modificar);Set(mostrarConfirm,false)
+        OnSelect: =Navigate(ModificarEmpleado);Set(mostrarConfirm,false)
         Visible: =mostrarDatos
         Width: =57
         X: =886

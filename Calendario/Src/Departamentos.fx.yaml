@@ -84,7 +84,7 @@ Departamentos As screen:
         Color: =RGBA(255, 255, 255, 1)
         Height: =69
         Icon: =Icon.Undo
-        OnSelect: =Navigate(ScInicial)
+        OnSelect: =Navigate(PortalEmpleados)
         Width: =71
         X: =100
         Y: =17

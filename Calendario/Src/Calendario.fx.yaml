@@ -484,7 +484,7 @@ Calendario As screen:
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: =Navigate(ScInicial)
+            OnSelect: =Navigate(PortalEmpleados)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0

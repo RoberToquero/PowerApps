@@ -138,10 +138,10 @@
     "Login",
     "Calendario",
     "ConfiguracionCalendario",
-    "ScInicial",
-    "Consulta",
-    "Nuevo",
-    "Modificar",
+    "PortalEmpleados",
+    "ConsultarEmpleados",
+    "NuevoEmpleado",
+    "ModificarEmpleado",
     "Departamentos",
     "ConsultarVacaciones"
   ]
