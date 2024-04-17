@@ -1,35 +1,9 @@
 App As appinfo:
     BackEnabled: =true
-    OnStart: |-
+    OnStart: |
         =Set(var_mes,Month(Today()));
         Set(var_año,Year(Today()));
         Set(pw_visible,false);
-        ClearCollect(
-            Coll_usuarios,
-            {
-                Nombre: "Juan",
-                Pw: "1234",
-                Departamento: "Desarroyo",
-                Admin: true
-            },
-            {
-                Nombre: "Fran",
-                Pw: "Fran",
-                Departamento: "Ventas",
-                Admin: false
-            },
-            {
-                Nombre: "Alberto",
-                Pw: "Mierda",
-                Departamento: "Desarroyo",
-                Admin: false
-            },
-            {
-                Nombre: "Fernando",
-                Pw: "33",
-                Departamento: "Ventas",
-                Admin: true
-            })
     StartScreen: =Login
     Theme: =PowerAppsTheme
 

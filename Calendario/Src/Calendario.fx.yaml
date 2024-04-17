@@ -455,8 +455,8 @@ Calendario As screen:
             RadiusTopRight: =0
             Text: ="Consultar"
             Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,909,909)
+            Width: =152
+            X: =909
             ZIndex: =20
 
         BotonConfigurarCalendario As button:
@@ -475,8 +475,8 @@ Calendario As screen:
             RadiusTopRight: =0
             Text: ="Configuración Calendario"
             Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1062,1062)
+            Width: =152
+            X: =1062
             ZIndex: =21
 
         BotonPortalEmpleados As button:
@@ -497,8 +497,8 @@ Calendario As screen:
                 ="Portal
                 Empleados"
             Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
-            Width: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,152,152)
-            X: =If(First(Filter(Coll_usuarios,Nombre=txt_Usuario_Login.Text)).Admin,1214,1214)
+            Width: =152
+            X: =1214
             ZIndex: =22
 
     DiasSemana As group:
