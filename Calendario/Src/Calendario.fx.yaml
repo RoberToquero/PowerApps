@@ -2652,7 +2652,8 @@ Calendario As screen:
                                                 Value: "Libre Elección",
                                                 Label: "Libre Elección"
                                             },
-                                            Duracion: 1
+                                            Duracion: 1,
+                                            Modificada: true
                                         }
                                     );
                                     Collect(
@@ -2665,7 +2666,8 @@ Calendario As screen:
                                                 Value: "Libre Elección",
                                                 Label: "Libre Elección"
                                             },
-                                            Duracion: 1
+                                            Duracion: 1,
+                                            Modificada: true
                                         }
                                     );
                                     Set(
