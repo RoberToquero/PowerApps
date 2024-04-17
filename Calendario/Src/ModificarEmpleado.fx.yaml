@@ -713,6 +713,7 @@ ModificarEmpleado As screen:
 
         ButtonAceptar As button:
             Fill: =RGBA(152, 208, 70, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: =Set(mostrarConfirm,false);Navigate(ConsultarEmpleados)
             Text: ="Aceptar"
             Visible: =mostrarConfirm
