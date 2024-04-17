@@ -116,7 +116,7 @@ Login As screen:
         ZIndex: =10
 
     Image1 As image:
-        Fill: =RGBA(0, 16, 96, 1)
+        Fill: =RGBA(0, 18, 107, 1)
         Height: =768
         Image: =vacaciones
         Width: =746

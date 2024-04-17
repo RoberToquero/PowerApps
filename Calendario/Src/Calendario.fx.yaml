@@ -4126,14 +4126,14 @@ Calendario As screen:
         Y: =40
         ZIndex: =105
 
-        Rectangle9 As rectangle:
+        RectangleLeyendaFestivo As rectangle:
             Fill: =RGBA(255, 0, 0, 0.5)
             Height: =58
             Width: =228
             Y: =710
             ZIndex: =93
 
-        Rectangle9_1 As rectangle:
+        RectangleLeyendaBaja As rectangle:
             Fill: |+
                 =RGBA(37, 244, 73, 0.5)
                 
@@ -4144,7 +4144,7 @@ Calendario As screen:
             Y: =710
             ZIndex: =94
 
-        Rectangle9_2 As rectangle:
+        RectangleLeyendaInvierno As rectangle:
             Fill: |+
                 =RGBA(37, 244, 229, 0.5)
                 
@@ -4154,7 +4154,7 @@ Calendario As screen:
             Y: =710
             ZIndex: =95
 
-        Rectangle9_3 As rectangle:
+        RectangleLeyendaVerano As rectangle:
             Fill: =RGBA(244, 213, 37, 0.5)
             Height: =58
             Width: =228
@@ -4162,7 +4162,7 @@ Calendario As screen:
             Y: =710
             ZIndex: =96
 
-        Rectangle9_4 As rectangle:
+        RectangleLeyendaAP As rectangle:
             Fill: |+
                 =RGBA(112, 37, 244, 0.5)
                 
@@ -4226,7 +4226,7 @@ Calendario As screen:
             Y: =710
             ZIndex: =102
 
-        Rectangle11 As rectangle:
+        RectangleLeyendaLE As rectangle:
             Fill: =RGBA(255, 50, 190, 0.4)
             Height: =57
             Width: =228
