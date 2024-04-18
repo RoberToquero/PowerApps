@@ -629,7 +629,7 @@ NuevoEmpleado As screen:
         ZIndex: =6
 
     botonEnviar As button:
-        OnSelect: =SubmitForm(FormNuevoEmpleado); 
+        OnSelect: =SubmitForm(FormNuevoEmpleado)
         Text: |-
             ="Enviar
             "
