@@ -21,7 +21,7 @@ Departamentos As screen:
         Y: =177
         ZIndex: =1
 
-        Title2 As label:
+        NombreDepartamentoGalleryDep As label:
             FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -34,10 +34,10 @@ Departamentos As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle2.Size*1.8 + 2 + Body1.Size*1.8)) / 2
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + NumeroTotalGalleryDep.Size*1.8 + 2 + NumeroMinimoGalleryDep.Size*1.8)) / 2
             ZIndex: =1
 
-        Subtitle2 As label:
+        NumeroTotalGalleryDep As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -47,12 +47,12 @@ Departamentos As screen:
             Text: |-
                 ="Numero Total:  "&ThisItem.TotalEmpleados
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title2.Width
-            X: =Title2.X
-            Y: =Title2.Y + Title2.Height
+            Width: =NombreDepartamentoGalleryDep.Width
+            X: =NombreDepartamentoGalleryDep.X
+            Y: =NombreDepartamentoGalleryDep.Y + NombreDepartamentoGalleryDep.Height
             ZIndex: =2
 
-        Body1 As label:
+        NumeroMinimoGalleryDep As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -62,12 +62,12 @@ Departamentos As screen:
             Text: |-
                 ="Numero Mínimo:  "&ThisItem.MinimoEmpleados
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title2.Width
-            X: =Title2.X
-            Y: =Subtitle2.Y + Subtitle2.Height
+            Width: =NombreDepartamentoGalleryDep.Width
+            X: =NombreDepartamentoGalleryDep.X
+            Y: =NumeroTotalGalleryDep.Y + NumeroTotalGalleryDep.Height
             ZIndex: =3
 
-    Label221_1 As label:
+    LabelTitulo_Departamentos As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
@@ -106,7 +106,7 @@ Departamentos As screen:
         Y: =412
         ZIndex: =5
 
-    Label13 As label:
+    LabelTextoSeleccion_Departamentos As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =44
@@ -117,7 +117,7 @@ Departamentos As screen:
         Y: =164
         ZIndex: =7
 
-    Label13_1 As label:
+    LabelTextoNumeroActual_Departamentos As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =76
@@ -128,7 +128,7 @@ Departamentos As screen:
         Y: =494
         ZIndex: =8
 
-    Label13_2 As label:
+    "'LabelTextoNumeroMinimo:Departamentos' As label":
         Align: =Align.Center
         FontWeight: =FontWeight.Semibold
         Height: =66
@@ -148,7 +148,7 @@ Departamentos As screen:
                     {
                         Nombre: DropdownConfigurarDepartamentos.Selected,
                         MinimoEmpleados: Int(TextInputNMinimoDepartamentos.Text),
-                        TotalEmpleados: Int(Label14.Text)
+                        TotalEmpleados: Int(NumeroActualEmpleados_Departamentos.Text)
                     }
                 ),
                 Patch(
@@ -156,7 +156,7 @@ Departamentos As screen:
                     LookUp(Departamentos_1,Nombre.Value=DropdownConfigurarDepartamentos.Selected.Value),
                     {
                         MinimoEmpleados: Int(TextInputNMinimoDepartamentos.Text),
-                        TotalEmpleados: Int(Label14.Text)
+                        TotalEmpleados: Int(NumeroActualEmpleados_Departamentos.Text)
                     }
                 )
             )
@@ -165,7 +165,7 @@ Departamentos As screen:
         Y: =679
         ZIndex: =10
 
-    Label14 As label:
+    NumeroActualEmpleados_Departamentos As label:
         Align: =Align.Center
         Color: =RGBA(56, 96, 178, 1)
         FontWeight: =FontWeight.Bold

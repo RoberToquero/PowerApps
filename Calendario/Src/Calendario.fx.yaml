@@ -679,7 +679,7 @@ Calendario As screen:
             Y: =100
             ZIndex: =24
 
-        Label2 As label:
+        LabelPUAV As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -864,7 +864,7 @@ Calendario As screen:
             Y: =546
             ZIndex: =31
 
-        Label8 As label:
+        Label_PUAV_Bloque3_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -887,7 +887,7 @@ Calendario As screen:
             Y: =382
             ZIndex: =33
 
-        Label9_2 As label:
+        LabelRB_PUAV_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -914,7 +914,7 @@ Calendario As screen:
             Y: =93
             ZIndex: =35
 
-        Label9_3 As label:
+        LabelPUAV_Bloque1_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -927,7 +927,7 @@ Calendario As screen:
             Y: =211
             ZIndex: =36
 
-        Label9_4 As label:
+        LabelPUAV_Bloque2_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -2004,7 +2004,7 @@ Calendario As screen:
             Y: =382
             ZIndex: =43
 
-        Label7 As label:
+        LabelPUAV_Invierno As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -2042,7 +2042,7 @@ Calendario As screen:
         Y: =40
         ZIndex: =55
 
-        Rectangle1 As rectangle:
+        CuadroBaja As rectangle:
             Height: =537
             Visible: =bajavisible
             Width: =688
@@ -2050,7 +2050,7 @@ Calendario As screen:
             Y: =100
             ZIndex: =46
 
-        Label1 As label:
+        LabelBaja As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -2172,7 +2172,7 @@ Calendario As screen:
         Y: =40
         ZIndex: =60
 
-        Rectangle2 As rectangle:
+        CuadroPUALE As rectangle:
             Height: =588
             Visible: =pualevisible
             Width: =763
@@ -2180,7 +2180,7 @@ Calendario As screen:
             Y: =31
             ZIndex: =52
 
-        Label3 As label:
+        LabelPUALE As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold

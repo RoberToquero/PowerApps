@@ -2294,12 +2294,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Label14.Text"
+                  "fullyQualifiedName": "Departamentos.NumeroActualEmpleados_Departamentos.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Label14.Text",
+                  "fullyQualifiedName": "Departamentos.NumeroActualEmpleados_Departamentos.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -2313,7 +2313,7 @@
               "properties": {
                 "member": "Text",
                 "module": "Departamentos",
-                "type": "Departamentos.Label14"
+                "type": "Departamentos.NumeroActualEmpleados_Departamentos"
               }
             }
           ],
@@ -2634,19 +2634,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label9_2.FocusedBorderThickness"
+                  "fullyQualifiedName": "Calendario.LabelRB_PUAV_Verano.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label9_2.FocusedBorderThickness",
+                  "fullyQualifiedName": "Calendario.LabelRB_PUAV_Verano.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "Calendario",
-                "type": "Calendario.Label9_2"
+                "type": "Calendario.LabelRB_PUAV_Verano"
               }
             }
           ],
@@ -2664,19 +2664,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label9_2.TabIndex"
+                  "fullyQualifiedName": "Calendario.LabelRB_PUAV_Verano.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label9_2.TabIndex",
+                  "fullyQualifiedName": "Calendario.LabelRB_PUAV_Verano.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Calendario",
-                "type": "Calendario.Label9_2"
+                "type": "Calendario.LabelRB_PUAV_Verano"
               }
             }
           ],
@@ -2934,19 +2934,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label9_3.FocusedBorderThickness"
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque1_Verano.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label9_3.FocusedBorderThickness",
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque1_Verano.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "Calendario",
-                "type": "Calendario.Label9_3"
+                "type": "Calendario.LabelPUAV_Bloque1_Verano"
               }
             }
           ],
@@ -2964,19 +2964,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label9_3.TabIndex"
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque1_Verano.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label9_3.TabIndex",
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque1_Verano.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Calendario",
-                "type": "Calendario.Label9_3"
+                "type": "Calendario.LabelPUAV_Bloque1_Verano"
               }
             }
           ],
@@ -3114,19 +3114,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label8.FocusedBorderThickness"
+                  "fullyQualifiedName": "Calendario.Label_PUAV_Bloque3_Verano.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label8.FocusedBorderThickness",
+                  "fullyQualifiedName": "Calendario.Label_PUAV_Bloque3_Verano.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "Calendario",
-                "type": "Calendario.Label8"
+                "type": "Calendario.Label_PUAV_Bloque3_Verano"
               }
             }
           ],
@@ -3144,19 +3144,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label8.TabIndex"
+                  "fullyQualifiedName": "Calendario.Label_PUAV_Bloque3_Verano.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label8.TabIndex",
+                  "fullyQualifiedName": "Calendario.Label_PUAV_Bloque3_Verano.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Calendario",
-                "type": "Calendario.Label8"
+                "type": "Calendario.Label_PUAV_Bloque3_Verano"
               }
             }
           ],
@@ -3474,19 +3474,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label9_4.FocusedBorderThickness"
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque2_Verano.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label9_4.FocusedBorderThickness",
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque2_Verano.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "Calendario",
-                "type": "Calendario.Label9_4"
+                "type": "Calendario.LabelPUAV_Bloque2_Verano"
               }
             }
           ],
@@ -3504,19 +3504,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Calendario.Label9_4.TabIndex"
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque2_Verano.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Calendario.Label9_4.TabIndex",
+                  "fullyQualifiedName": "Calendario.LabelPUAV_Bloque2_Verano.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Calendario",
-                "type": "Calendario.Label9_4"
+                "type": "Calendario.LabelPUAV_Bloque2_Verano"
               }
             }
           ],
@@ -6054,19 +6054,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Label221_1.FocusedBorderThickness"
+                  "fullyQualifiedName": "Departamentos.LabelTitulo_Departamentos.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Label221_1.FocusedBorderThickness",
+                  "fullyQualifiedName": "Departamentos.LabelTitulo_Departamentos.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "Departamentos",
-                "type": "Departamentos.Label221_1"
+                "type": "Departamentos.LabelTitulo_Departamentos"
               }
             }
           ],
@@ -6084,19 +6084,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Departamentos.Label221_1.TabIndex"
+                  "fullyQualifiedName": "Departamentos.LabelTitulo_Departamentos.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Departamentos.Label221_1.TabIndex",
+                  "fullyQualifiedName": "Departamentos.LabelTitulo_Departamentos.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Departamentos",
-                "type": "Departamentos.Label221_1"
+                "type": "Departamentos.LabelTitulo_Departamentos"
               }
             }
           ],
