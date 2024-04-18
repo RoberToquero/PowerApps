@@ -3058,6 +3058,7 @@ Calendario As screen:
                 Reset(rb_PUMV_Invierno);
                 Set(enespera,false);
                 Set(var_mes,12);
+                Set(var_año,Year(Today()));
                 Select(BotonCalcularCalendario)
             Text: ="Aceptar"
             Visible: =pumvInvierno
