@@ -3171,7 +3171,7 @@ Calendario As screen:
                         }
                     )
                     ;
-                    Set(var_mes,Min(Month(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate),Month(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate)))
+                    Set(var_mes,Min(Month(dp_PUMV_Dia_Inicio_Verano_1.SelectedDate),Month(dp_PUMV_Dia_Inicio_Verano_2.SelectedDate)))
                     ;
                     Set(var_año,Year(Today()))
                 )
