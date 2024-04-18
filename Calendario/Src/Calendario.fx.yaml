@@ -818,6 +818,7 @@ Calendario As screen:
                     )
                     ;
                     Set(var_mes,Month(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate));
+                    Set(var_año,Year(Today()))
                     ,
                     Collect(
                         Vacaciones,
@@ -838,7 +839,8 @@ Calendario As screen:
                         }
                     )
                     ;
-                    Set(var_mes,Month(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate))
+                    Set(var_mes,Month(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate));
+                    Set(var_año,Year(Today()))
                 )
                 ;
                 Set(enespera,false);
