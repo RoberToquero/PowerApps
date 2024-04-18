@@ -4196,7 +4196,7 @@ Calendario As screen:
                 
             Height: =58
             Width: =228
-            X: =1140
+            X: =1138
             Y: =710
             ZIndex: =97
 
@@ -4256,10 +4256,10 @@ Calendario As screen:
 
         RectangleLeyendaLE As rectangle:
             Fill: =RGBA(255, 50, 190, 0.4)
-            Height: =57
-            Width: =228
-            X: =912
-            Y: =711
+            Height: =58
+            Width: =227
+            X: =911
+            Y: =710
             ZIndex: =103
 
         LabelLeyendaLE As label:
@@ -4269,7 +4269,7 @@ Calendario As screen:
             Size: =16
             Text: ="Libre Elección"
             Width: =228
-            X: =910
-            Y: =710
+            X: =911
+            Y: =711
             ZIndex: =104
 

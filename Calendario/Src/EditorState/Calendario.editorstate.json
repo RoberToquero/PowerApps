@@ -5243,7 +5243,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonAñadirDAP",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6551,7 +6551,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonConfigurarCalendario",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6923,7 +6923,7 @@
       "MetaDataIDKey": "",
       "Name": "BotonModificarDLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10270,7 +10270,7 @@
       "MetaDataIDKey": "",
       "Name": "ButtonConsultarVacaciones",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22310,7 +22310,7 @@
       "MetaDataIDKey": "",
       "Name": "LabelLeyendaLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 97,
+      "ParentIndex": 102,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30064,7 +30064,7 @@
       "MetaDataIDKey": "",
       "Name": "RectangleLeyendaLE",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 102,
+      "ParentIndex": 97,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
