@@ -3144,6 +3144,10 @@ Calendario As screen:
                             Modificada: true
                         }
                     )
+                    ;
+                    Set(var_mes,Month(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate))
+                    ;
+                    Set(var_año,Year(Today()))
                     ,
                     Collect(
                         Vacaciones,
@@ -3165,6 +3169,10 @@ Calendario As screen:
                             Modificada: true
                         }
                     )
+                    ;
+                    Set(var_mes,Month(dp_PUMV_Dia_Inicio_Verano_1.SelectedDate))
+                    ;
+                    Set(var_año,Year(Today()))
                 )
                 ;
                 Set(enespera,false);
@@ -3175,7 +3183,6 @@ Calendario As screen:
                 Set(puavFondo,false);
                 Set(varcount,1);
                 Reset(rb_PUMV_Verano);
-                Set(var_mes,7);
                 Select(BotonCalcularCalendario)
                 
                     
