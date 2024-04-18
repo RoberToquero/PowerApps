@@ -1,6 +1,6 @@
 Login As screen:
 
-    Label4 As label:
+    LabelDNILogin As label:
         Size: =20
         Text: |-
             ="DNI:"
@@ -8,7 +8,7 @@ Login As screen:
         Y: =210
         ZIndex: =1
 
-    Label5 As label:
+    LabelContraseñaLogin As label:
         Height: =38
         Size: =20
         Text: |-
@@ -76,13 +76,13 @@ Login As screen:
         Y: =589
         ZIndex: =5
 
-    Rectangle4 As rectangle:
+    RectangleLogin As rectangle:
         Fill: =RGBA(39, 113, 194, 1)
         Height: =95
         Width: =620
         ZIndex: =7
 
-    Label6 As label:
+    LabelLogin As label:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Bold
         Height: =58

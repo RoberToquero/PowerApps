@@ -439,7 +439,7 @@ Calendario As screen:
             X: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,760,1140)
             ZIndex: =19
 
-        Button7_5 As button:
+        ButtonConsultarVacaciones As button:
             BorderThickness: =1
             Fill: =RGBA(99, 139, 44, 1)
             Height: =61
@@ -453,7 +453,9 @@ Calendario As screen:
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Text: ="Consultar"
+            Text: |-
+                ="Consultar
+                Permisos"
             Visible: =If(First(Filter(Empleados,DNI=txt_Usuario_Login.Text)).EsAdmin,true,false)
             Width: =152
             X: =909
@@ -2390,7 +2392,7 @@ Calendario As screen:
         Y: =40
         ZIndex: =65
 
-        Rectangle3 As rectangle:
+        CuadroPUAAP As rectangle:
             Height: =491
             Visible: =puaapvisible
             Width: =664
@@ -2398,7 +2400,7 @@ Calendario As screen:
             Y: =103
             ZIndex: =58
 
-        Label9 As label:
+        LabelPUAAP As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -2497,7 +2499,7 @@ Calendario As screen:
         Y: =40
         ZIndex: =71
 
-        Rectangle5 As rectangle:
+        Cuadro_PUMLE As rectangle:
             Height: =508
             Visible: =pumlevisible
             Width: =670
@@ -2505,7 +2507,7 @@ Calendario As screen:
             Y: =75
             ZIndex: =63
 
-        Label10 As label:
+        Label_PUMLE As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -2715,7 +2717,7 @@ Calendario As screen:
             Y: =120
             ZIndex: =69
 
-        Label2_1 As label:
+        Label_PUMV As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -3053,7 +3055,7 @@ Calendario As screen:
             Y: =442
             ZIndex: =76
 
-        Label7_1 As label:
+        LabelPUMV_Invierno As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -3184,7 +3186,7 @@ Calendario As screen:
             Y: =566
             ZIndex: =81
 
-        Label8_1 As label:
+        LabelBloque3PUMV_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -3207,7 +3209,7 @@ Calendario As screen:
             Y: =402
             ZIndex: =83
 
-        Label9_5 As label:
+        LabelRB_PUMV_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -3234,7 +3236,7 @@ Calendario As screen:
             Y: =86
             ZIndex: =85
 
-        Label9_6 As label:
+        LabelBloque1PUMV_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -3247,7 +3249,7 @@ Calendario As screen:
             Y: =231
             ZIndex: =86
 
-        Label9_7 As label:
+        LabelBloque2PUMV_Verano As label:
             Align: =Align.Center
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Bold
@@ -4177,7 +4179,7 @@ Calendario As screen:
             Y: =710
             ZIndex: =97
 
-        Label19 As label:
+        LabelLeyendaVerano As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Semibold
             Height: =57
@@ -4188,7 +4190,7 @@ Calendario As screen:
             Y: =711
             ZIndex: =98
 
-        Label19_1 As label:
+        LabelLeyendaInvierno As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Semibold
             Height: =57
@@ -4199,7 +4201,7 @@ Calendario As screen:
             Y: =711
             ZIndex: =99
 
-        Label19_2 As label:
+        LabelLeyendaFestivo As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Semibold
             Height: =57
@@ -4209,18 +4211,18 @@ Calendario As screen:
             Y: =711
             ZIndex: =100
 
-        Label19_3 As label:
+        LabelLeyendaAP As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Semibold
             Height: =57
             Size: =16
             Text: ="Asuntos Propios"
-            Width: =228
-            X: =1138
+            Width: =226
+            X: =1140
             Y: =711
             ZIndex: =101
 
-        Label19_4 As label:
+        LabelLeyendaBaja As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Semibold
             Height: =57
@@ -4239,7 +4241,7 @@ Calendario As screen:
             Y: =711
             ZIndex: =103
 
-        Label19_5 As label:
+        LabelLeyendaLE As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Semibold
             Height: =57
