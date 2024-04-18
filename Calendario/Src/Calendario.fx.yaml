@@ -842,6 +842,7 @@ Calendario As screen:
                 Set(puavFondo,false);
                 Set(varcount,1);
                 Reset(rb_PUAV_Verano);
+                Set(var_mes,7);
                 Select(BotonCalcularCalendario)
                 
                     
@@ -3160,6 +3161,7 @@ Calendario As screen:
                 Set(puavFondo,false);
                 Set(varcount,1);
                 Reset(rb_PUMV_Verano);
+                Set(var_mes,7);
                 Select(BotonCalcularCalendario)
                 
                     
