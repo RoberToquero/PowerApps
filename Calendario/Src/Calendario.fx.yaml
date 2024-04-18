@@ -816,6 +816,8 @@ Calendario As screen:
                             Duracion: 21+var_verano3
                         }
                     )
+                    ;
+                    Set(var_mes,Month(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate));
                     ,
                     Collect(
                         Vacaciones,
@@ -835,6 +837,8 @@ Calendario As screen:
                             Duracion: 14+var_verano2
                         }
                     )
+                    ;
+                    Set(var_mes,Month(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate))
                 )
                 ;
                 Set(enespera,false);
@@ -844,7 +848,6 @@ Calendario As screen:
                 Set(puavFondo,false);
                 Set(varcount,1);
                 Reset(rb_PUAV_Verano);
-                Set(var_mes,7);
                 Select(BotonCalcularCalendario)
                 
                     
@@ -880,6 +883,7 @@ Calendario As screen:
         dp_PUAV_Dia_Inicio_Verano_3 As datepicker:
             DefaultDate: =
             InputTextPlaceholder: =
+            OnChange: =Set(puavesvalido,false)
             Reset: =limpiar
             Visible: =If(puavVerano && rb_PUAV_Verano.Selected.Value=1,true,false)
             Width: =320
@@ -943,6 +947,7 @@ Calendario As screen:
         dp_PUAV_Dia_Inicio_Verano_1 As datepicker:
             DefaultDate: =
             InputTextPlaceholder: =
+            OnChange: =Set(puavesvalido,false)
             Reset: =limpiar
             Visible: =If(rb_PUAV_Verano.Selected.Value=2,true,false)
             Width: =320
@@ -953,6 +958,7 @@ Calendario As screen:
         dp_PUAV_Dia_Inicio_Verano_2 As datepicker:
             DefaultDate: =
             InputTextPlaceholder: =
+            OnChange: =Set(puavesvalido,false)
             Reset: =limpiar
             Visible: =If(rb_PUAV_Verano.Selected.Value=2,true,false)
             Width: =320
@@ -3202,6 +3208,7 @@ Calendario As screen:
         dp_PUMV_Dia_Inicio_Verano_3 As datepicker:
             DefaultDate: =
             InputTextPlaceholder: =
+            OnChange: =Set(pumvesvalido,false)
             Reset: =limpiar
             Visible: =If(rb_PUMV_Verano.Selected.Value=1,true,false)&&pumvVerano
             Width: =320
@@ -3265,6 +3272,7 @@ Calendario As screen:
         dp_PUMV_Dia_Inicio_Verano_1 As datepicker:
             DefaultDate: =
             InputTextPlaceholder: =
+            OnChange: =Set(pumvesvalido,false)
             Reset: =limpiar
             Visible: =If(rb_PUMV_Verano.Selected.Value=2,true,false)
             Width: =320
@@ -3275,6 +3283,7 @@ Calendario As screen:
         dp_PUMV_Dia_Inicio_Verano_2 As datepicker:
             DefaultDate: =
             InputTextPlaceholder: =
+            OnChange: =Set(pumvesvalido,false)
             Reset: =limpiar
             Visible: =If(rb_PUMV_Verano.Selected.Value=2,true,false)
             Width: =320
