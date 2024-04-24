@@ -43,7 +43,7 @@ ConfiguracionCalendario As screen:
     Icon2 As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Undo
-        OnSelect: =Back()
+        OnSelect: =Navigate(Calendario)
         X: =122
         Y: =18
         ZIndex: =6
@@ -283,4 +283,11 @@ ConfiguracionCalendario As screen:
         X: =603
         Y: =676
         ZIndex: =26
+
+    Button2 As button:
+        Fill: =RGBA(149, 149, 149, 1)
+        Text: ="Festivos"
+        X: =1161
+        Y: =30
+        ZIndex: =27
 
