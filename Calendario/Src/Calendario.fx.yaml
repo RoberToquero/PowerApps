@@ -2675,59 +2675,93 @@ Calendario As screen:
                                 If(
                                     dp_ALE1<>dp_ALE2
                                     ,
-                                    Set(
-                                        enespera,
-                                        true
-                                    );
-                                    Remove(
-                                        Vacaciones,
-                                        Filter(
-                                            Vacaciones,
-                                            dniEmpleado = txt_Usuario_Login.Text
-                                            &&
-                                            Year(FechaInicio)=Year(Today())
-                                            &&
-                                            Opciones.Value="Libre Elección"
+                                    If(
+                                        CountRows(
+                                            Filter(
+                                                Vacaciones,
+                                                dniEmpleado=txt_Usuario_Login.Text
+                                                &&
+                                                FechaInicio=dp_ALE1.SelectedDate
+                                            )
+                                        )>0
+                                        ,
+                                        Notify(
+                                            "El primer día coincide con otro permiso",
+                                            NotificationType.Error,
+                                            2000
                                         )
-                                    )
-                                    ;
-                                    Collect(
-                                        Vacaciones,
-                                        {
-                                            dniEmpleado: txt_Usuario_Login.Text,
-                                            FechaInicio: dp_MLE1.SelectedDate,
-                                            FechaFin: dp_MLE1.SelectedDate,
-                                            Opciones: {
-                                                Value: "Libre Elección",
-                                                Label: "Libre Elección"
-                                            },
-                                            Duracion: 1,
-                                            Modificada: true
-                                        }
-                                    );
-                                    Collect(
-                                        Vacaciones,
-                                        {
-                                            dniEmpleado: txt_Usuario_Login.Text,
-                                            FechaInicio: dp_MLE2.SelectedDate,
-                                            FechaFin: dp_MLE2.SelectedDate,
-                                            Opciones: {
-                                                Value: "Libre Elección",
-                                                Label: "Libre Elección"
-                                            },
-                                            Duracion: 1,
-                                            Modificada: true
-                                        }
-                                    );
-                                    Set(
-                                        enespera,
-                                        false
-                                    );
-                                    Set(pumlevisible,false);
-                                    Set(puavFondo,false);
-                                    Select(BotonCalcularCalendario);
-                                    Reset(dp_MLE1);
-                                    Reset(dp_MLE2)
+                                        ,
+                                        If(
+                                            CountRows(
+                                                Filter(
+                                                    Vacaciones,
+                                                    dniEmpleado=txt_Usuario_Login.Text
+                                                    &&
+                                                    FechaInicio=dp_ALE2.SelectedDate
+                                                )
+                                            )>0
+                                            ,
+                                            Notify(
+                                                "El segundo día coincide con otro permiso",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                            ,
+                                            Set(
+                                                enespera,
+                                                true
+                                            );
+                                            Remove(
+                                                Vacaciones,
+                                                Filter(
+                                                    Vacaciones,
+                                                    dniEmpleado = txt_Usuario_Login.Text
+                                                    &&
+                                                    Year(FechaInicio)=Year(Today())
+                                                    &&
+                                                    Opciones.Value="Libre Elección"
+                                                )
+                                            )
+                                            ;
+                                            Collect(
+                                                Vacaciones,
+                                                {
+                                                    dniEmpleado: txt_Usuario_Login.Text,
+                                                    FechaInicio: dp_MLE1.SelectedDate,
+                                                    FechaFin: dp_MLE1.SelectedDate,
+                                                    Opciones: {
+                                                        Value: "Libre Elección",
+                                                        Label: "Libre Elección"
+                                                    },
+                                                    Duracion: 1,
+                                                    Modificada: true
+                                                }
+                                            );
+                                            Collect(
+                                                Vacaciones,
+                                                {
+                                                    dniEmpleado: txt_Usuario_Login.Text,
+                                                    FechaInicio: dp_MLE2.SelectedDate,
+                                                    FechaFin: dp_MLE2.SelectedDate,
+                                                    Opciones: {
+                                                        Value: "Libre Elección",
+                                                        Label: "Libre Elección"
+                                                    },
+                                                    Duracion: 1,
+                                                    Modificada: true
+                                                }
+                                            );
+                                            Set(
+                                                enespera,
+                                                false
+                                            );
+                                            Set(pumlevisible,false);
+                                            Set(puavFondo,false);
+                                            Select(BotonCalcularCalendario);
+                                            Reset(dp_MLE1);
+                                            Reset(dp_MLE2)
+                                        )
+                                    )    
                                     ,
                                     Notify(
                                         "Los días deben ser distintos",

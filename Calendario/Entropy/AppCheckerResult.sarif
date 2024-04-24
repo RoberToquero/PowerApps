@@ -1943,8 +1943,88 @@
                   "relativeAddress": 0
                 },
                 "region": {
+                  "charLength": 313,
+                  "charOffset": 1908,
+                  "snippet": {
+                    "text": "CountRows(\n                            Filter(\n                                Vacaciones;\n                                dniEmpleado=txt_Usuario_Login.Text\n                                &&\n                                FechaInicio=dp_ALE1.SelectedDate\n                            )\n                        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Calendario",
+                "type": "Calendario.btn_aceptar_PUMLE"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CountRows"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUMLE.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUMLE.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 341,
+                  "charOffset": 2546,
+                  "snippet": {
+                    "text": "CountRows(\n                                Filter(\n                                    Vacaciones;\n                                    dniEmpleado=txt_Usuario_Login.Text\n                                    &&\n                                    FechaInicio=dp_ALE2.SelectedDate\n                                )\n                            )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Calendario",
+                "type": "Calendario.btn_aceptar_PUMLE"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CountRows"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUMLE.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Calendario.btn_aceptar_PUMLE.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
                   "charLength": 17,
-                  "charOffset": 2232,
+                  "charOffset": 3645,
                   "snippet": {
                     "text": "Year(FechaInicio)"
                   }
@@ -1984,7 +2064,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2249,
+                  "charOffset": 3662,
                   "snippet": {
                     "text": "="
                   }
@@ -2024,7 +2104,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2201,
+                  "charOffset": 3606,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2064,7 +2144,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2292,
+                  "charOffset": 3713,
                   "snippet": {
                     "text": "&&"
                   }
