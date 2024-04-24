@@ -112,7 +112,7 @@ Calendario As screen:
         Items: |-
             =AddColumns(
                 coll_mes,
-                "tabla_calendario",
+                tabla_calendario,
                 LookUp(
                     DiasFestivos,
                     Day(Fecha) = coll_mes[@Value] && Month(Fecha) = var_mes
@@ -1030,7 +1030,7 @@ Calendario As screen:
                                             AddColumns(
                                                 Vacaciones
                                                 ,
-                                                "Empleados",
+                                                Empleados,
                                                 LookUp(
                                                     Empleados,
                                                     DNI = dniEmpleado
@@ -1157,7 +1157,7 @@ Calendario As screen:
                                                             AddColumns(
                                                                 Vacaciones
                                                                 ,
-                                                                "Empleados",
+                                                                Empleados,
                                                                 LookUp(
                                                                     Empleados,
                                                                     DNI = dniEmpleado
@@ -1311,7 +1311,7 @@ Calendario As screen:
                                             AddColumns(
                                                 Vacaciones
                                                 ,
-                                                "Empleados",
+                                                Empleados,
                                                 LookUp(
                                                     Empleados,
                                                     DNI = dniEmpleado
@@ -1437,7 +1437,7 @@ Calendario As screen:
                                                             AddColumns(
                                                                 Vacaciones
                                                                 ,
-                                                                "Empleados",
+                                                                Empleados,
                                                                 LookUp(
                                                                     Empleados,
                                                                     DNI = dniEmpleado
@@ -1578,7 +1578,7 @@ Calendario As screen:
                                                     AddColumns(
                                                         Vacaciones
                                                         ,
-                                                        "Empleados",
+                                                        Empleados,
                                                         LookUp(
                                                             Empleados,
                                                             DNI = dniEmpleado
@@ -1704,7 +1704,7 @@ Calendario As screen:
                                                                     AddColumns(
                                                                         Vacaciones
                                                                         ,
-                                                                        "Empleados",
+                                                                        Empleados,
                                                                         LookUp(
                                                                             Empleados,
                                                                             DNI = dniEmpleado
@@ -1863,7 +1863,7 @@ Calendario As screen:
                                 Filter(
                                     AddColumns(
                                         Vacaciones,
-                                        "Empleados",
+                                        Empleados,
                                         LookUp(
                                             Empleados,
                                             DNI = dniEmpleado
@@ -1934,7 +1934,7 @@ Calendario As screen:
                                     Filter(
                                         AddColumns(
                                             Vacaciones,
-                                            "Empleados",
+                                            Empleados,
                                             LookUp(
                                                 Empleados,
                                                 DNI = dniEmpleado
@@ -2319,57 +2319,91 @@ Calendario As screen:
                                         &&
                                         dp_ALE2.SelectedDate>Today()
                                         ,
-                                        Set(
-                                            enespera,
-                                            true
-                                        );
-                                        Collect(
-                                            Vacaciones,
-                                            {
-                                                dniEmpleado: txt_Usuario_Login.Text,
-                                                FechaInicio: dp_ALE1.SelectedDate,
-                                                FechaFin: dp_ALE1.SelectedDate,
-                                                Opciones: {
-                                                    Value: "Libre Elección",
-                                                    Label: "Libre Elección"
-                                                },
-                                                Duracion: 1
-                                            }
-                                        )
-                                        ;
-                                        Collect(
-                                            Vacaciones,
-                                            {
-                                                dniEmpleado: txt_Usuario_Login.Text,
-                                                FechaInicio: dp_ALE2.SelectedDate,
-                                                FechaFin: dp_ALE2.SelectedDate,
-                                                Opciones: {
-                                                    Value: "Libre Elección",
-                                                    Label: "Libre Elección"
-                                                },
-                                                Duracion: 1
-                                            }
-                                        )
-                                        ;
-                                        Set(
-                                            enespera,
-                                            false
-                                        )
-                                        ;
-                                        Set(
-                                            pualevisible,
-                                            false
-                                        )
-                                        ;
-                                        Reset(dp_ALE1)
-                                        ;
-                                        Reset(dp_ALE2)
-                                        ;
-                                        Select(BotonCalcularCalendario)
-                                        ;
-                                        Set(
-                                            puavFondo,
-                                            false
+                                        If(
+                                            CountRows(
+                                                Filter(
+                                                    Vacaciones,
+                                                    dniEmpleado=txt_Usuario_Login.Text
+                                                    &&
+                                                    FechaInicio=dp_ALE1.SelectedDate
+                                                )
+                                            )>0
+                                            ,
+                                            Notify(
+                                                "El primer día coincide con otro permiso",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                            ,
+                                            If(
+                                                CountRows(
+                                                    Filter(
+                                                        Vacaciones,
+                                                        dniEmpleado=txt_Usuario_Login.Text
+                                                        &&
+                                                        FechaInicio=dp_ALE2.SelectedDate
+                                                    )
+                                                )>0
+                                                ,
+                                                Notify(
+                                                    "El segundo día coincide con otro permiso",
+                                                    NotificationType.Error,
+                                                    2000
+                                                )
+                                                ,
+                                                Set(
+                                                    enespera,
+                                                    true
+                                                );
+                                                Collect(
+                                                    Vacaciones,
+                                                    {
+                                                        dniEmpleado: txt_Usuario_Login.Text,
+                                                        FechaInicio: dp_ALE1.SelectedDate,
+                                                        FechaFin: dp_ALE1.SelectedDate,
+                                                        Opciones: {
+                                                            Value: "Libre Elección",
+                                                            Label: "Libre Elección"
+                                                        },
+                                                        Duracion: 1
+                                                    }
+                                                )
+                                                ;
+                                                Collect(
+                                                    Vacaciones,
+                                                    {
+                                                        dniEmpleado: txt_Usuario_Login.Text,
+                                                        FechaInicio: dp_ALE2.SelectedDate,
+                                                        FechaFin: dp_ALE2.SelectedDate,
+                                                        Opciones: {
+                                                            Value: "Libre Elección",
+                                                            Label: "Libre Elección"
+                                                        },
+                                                        Duracion: 1
+                                                    }
+                                                )
+                                                ;
+                                                Set(
+                                                    enespera,
+                                                    false
+                                                )
+                                                ;
+                                                Set(
+                                                    pualevisible,
+                                                    false
+                                                )
+                                                ;
+                                                Reset(dp_ALE1)
+                                                ;
+                                                Reset(dp_ALE2)
+                                                ;
+                                                Select(BotonCalcularCalendario)
+                                                ;
+                                                Set(
+                                                    puavFondo,
+                                                    false
+                                                )
+                                            )
                                         )
                                         ,
                                         Notify(
@@ -2912,7 +2946,7 @@ Calendario As screen:
                                 Filter(
                                     AddColumns(
                                         Vacaciones,
-                                        "Empleados",
+                                        Empleados,
                                         LookUp(
                                             Empleados,
                                             DNI = dniEmpleado
@@ -2983,7 +3017,7 @@ Calendario As screen:
                                 Filter(
                                     AddColumns(
                                         Vacaciones,
-                                        "Empleados",
+                                        Empleados,
                                         LookUp(
                                             Empleados,
                                             DNI = dniEmpleado
@@ -3365,7 +3399,7 @@ Calendario As screen:
                                             AddColumns(
                                                 Vacaciones
                                                 ,
-                                                "Empleados",
+                                                Empleados,
                                                 LookUp(
                                                     Empleados,
                                                     DNI = dniEmpleado
@@ -3492,7 +3526,7 @@ Calendario As screen:
                                                             AddColumns(
                                                                 Vacaciones
                                                                 ,
-                                                                "Empleados",
+                                                                Empleados,
                                                                 LookUp(
                                                                     Empleados,
                                                                     DNI = dniEmpleado
@@ -3646,7 +3680,7 @@ Calendario As screen:
                                             AddColumns(
                                                 Vacaciones
                                                 ,
-                                                "Empleados",
+                                                Empleados,
                                                 LookUp(
                                                     Empleados,
                                                     DNI = dniEmpleado
@@ -3772,7 +3806,7 @@ Calendario As screen:
                                                             AddColumns(
                                                                 Vacaciones
                                                                 ,
-                                                                "Empleados",
+                                                                Empleados,
                                                                 LookUp(
                                                                     Empleados,
                                                                     DNI = dniEmpleado
@@ -3912,7 +3946,7 @@ Calendario As screen:
                                                     AddColumns(
                                                         Vacaciones
                                                         ,
-                                                        "Empleados",
+                                                        Empleados,
                                                         LookUp(
                                                             Empleados,
                                                             DNI = dniEmpleado
@@ -4038,7 +4072,7 @@ Calendario As screen:
                                                                     AddColumns(
                                                                         Vacaciones
                                                                         ,
-                                                                        "Empleados",
+                                                                        Empleados,
                                                                         LookUp(
                                                                             Empleados,
                                                                             DNI = dniEmpleado

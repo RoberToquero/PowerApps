@@ -37,10 +37,10 @@ NuevoEmpleado As screen:
             DataField: ="Nombre"
             Default: =ThisItem.Nombre
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Nombre")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Nombre)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, "Nombre")
+            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, Nombre)
             Required: =true
             Update: =DataCardValue7.Text
             Width: =501
@@ -105,10 +105,10 @@ NuevoEmpleado As screen:
             DataField: ="Apellidos"
             Default: =ThisItem.Apellidos
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Apellidos")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Apellidos)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, "Apellidos")
+            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, Apellidos)
             Required: =true
             Update: =DataCardValue8.Text
             Width: =501
@@ -173,7 +173,7 @@ NuevoEmpleado As screen:
             DataField: ="FechaNacimiento"
             Default: =ThisItem.FechaNacimiento
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"FechaNacimiento")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,FechaNacimiento)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =true
@@ -238,10 +238,10 @@ NuevoEmpleado As screen:
             DataField: ="Contrase_x00f1_a"
             Default: =ThisItem.Contraseña
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Contrase_x00f1_a")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Contraseña)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, "Contrase_x00f1_a")
+            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, Contraseña)
             Required: =true
             Update: =DataCardValue12.Text
             Width: =501
@@ -306,7 +306,7 @@ NuevoEmpleado As screen:
             DataField: ="Departamento"
             Default: =ThisItem.Departamento
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Departamento")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Departamento)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =102
             Required: =true
@@ -372,10 +372,10 @@ NuevoEmpleado As screen:
             DataField: ="DNI"
             Default: =ThisItem.DNI
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"DNI")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,DNI)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, "DNI")
+            MaxLength: =DataSourceInfo([@Empleados], DataSourceInfo.MaxLength, DNI)
             Required: =true
             Update: =DataCardValue19.Text
             Width: =501
@@ -440,7 +440,7 @@ NuevoEmpleado As screen:
             DataField: ="EsAdmin"
             Default: =ThisItem.EsAdmin
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"EsAdmin")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,EsAdmin)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -501,7 +501,7 @@ NuevoEmpleado As screen:
             DataField: ="Firma"
             Default: =ThisItem.Firma
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Firma")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Firma)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -558,7 +558,7 @@ NuevoEmpleado As screen:
             DataField: ="{Attachments}"
             Default: =ThisItem.'Datos adjuntos'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"{Attachments}")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,'Datos adjuntos')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =375
             Required: =false

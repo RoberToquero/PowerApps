@@ -2,7 +2,7 @@ ConsultarEmpleados As screen:
 
     "GaleriaNombres As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
-        Items: =Filter(Search(Empleados,TextoBusqueda.Text,"Nombre","Apellidos"),If(FiltroDepartamento.Selected.Value="Todos",true,Departamento.Value=FiltroDepartamento.Selected.Value))
+        Items: =Filter(Search(Empleados,TextoBusqueda.Text,Nombre,Apellidos),If(FiltroDepartamento.Selected.Value="Todos",true,Departamento.Value=FiltroDepartamento.Selected.Value))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Set(mostrarDatos,true)
@@ -174,7 +174,7 @@ ConsultarEmpleados As screen:
             DataField: ="{Name}"
             Default: =ThisItem.Nombre
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"{Name}")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,'Nombre ({Name})')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -212,7 +212,7 @@ ConsultarEmpleados As screen:
             DataField: ="Apellidos"
             Default: =ThisItem.Apellidos
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Apellidos")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Apellidos)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
@@ -250,7 +250,7 @@ ConsultarEmpleados As screen:
             DataField: ="Departamento"
             Default: =ThisItem.Departamento
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Departamento")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Departamento)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =true
@@ -316,7 +316,7 @@ ConsultarEmpleados As screen:
             DataField: ="FechaNacimiento"
             Default: =ThisItem.FechaNacimiento
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"FechaNacimiento")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,FechaNacimiento)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
@@ -354,7 +354,7 @@ ConsultarEmpleados As screen:
             DataField: ="DNI"
             Default: =ThisItem.DNI
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"DNI")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,DNI)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -393,7 +393,7 @@ ConsultarEmpleados As screen:
             DataField: ="EsAdmin"
             Default: =ThisItem.EsAdmin
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"EsAdmin")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,EsAdmin)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -429,7 +429,7 @@ ConsultarEmpleados As screen:
             DataField: ="Firma"
             Default: =ThisItem.Firma
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"Firma")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,Firma)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =219
             Required: =false
@@ -463,7 +463,7 @@ ConsultarEmpleados As screen:
             DataField: ="{Attachments}"
             Default: =ThisItem.'Datos adjuntos'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,"{Attachments}")
+            DisplayName: =DataSourceInfo([@Empleados],DataSourceInfo.DisplayName,'Datos adjuntos')
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
