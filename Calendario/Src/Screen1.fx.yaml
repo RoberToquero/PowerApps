@@ -81,6 +81,25 @@ Screen1 As screen:
         Button7 As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Patch(
+                    Vacaciones
+                    ,
+                    First(
+                        Filter(
+                        Vacaciones,
+                        dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
+                        &&
+                        Opciones.Value=GalleryConsultarVacaciones.Selected.Opciones.Value
+                        &&
+                        FechaInicio=GalleryConsultarVacaciones.Selected.FechaInicio
+                        )
+                    )
+                    ,
+                    {
+                        FechaInicio: DatePicker4.SelectedDate
+                    }
+                )
             Text: ="Confirmar"
             X: =339
             Y: =472
