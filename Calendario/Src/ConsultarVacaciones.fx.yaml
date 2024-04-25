@@ -71,12 +71,12 @@ ConsultarVacaciones As screen:
 
         Label16 As label:
             FontWeight: =FontWeight.Semibold
-            Height: =52
+            Height: =48
             OnSelect: =Select(Parent)
             Size: =14
             Text: |-
                 ="Motivo: "&ThisItem.Opciones.Value
-            Width: =172
+            Width: =266
             X: =59
             Y: =107
             ZIndex: =6
@@ -102,10 +102,12 @@ ConsultarVacaciones As screen:
             ZIndex: =8
 
         Label20 As label:
+            Height: =35
             OnSelect: =Select(Parent)
             Text: |-
                 ="Duración: "&ThisItem.Duracion & If(ThisItem.Duracion=1," día"," días")
-            X: =271
+            Width: =207
+            X: =325
             Y: =113
             ZIndex: =10
 

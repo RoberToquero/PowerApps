@@ -286,6 +286,7 @@ ConfiguracionCalendario As screen:
 
     Button2 As button:
         Fill: =RGBA(255, 166, 230, 1)
+        HoverFill: =ColorFade(Self.Fill, 20%)
         OnSelect: =Navigate(ConfiguracionFestivos)
         Text: ="Festivos"
         X: =1161
