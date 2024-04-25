@@ -2703,11 +2703,11 @@ Calendario As screen:
                         ),
                         If(
                             Text(
-                                dp_Fecha_PUAAP.SelectedDate,
+                                dp_ALE1.SelectedDate,
                                 "ddd",
                                 "en-GB"
                             ) = "Sun" || Text(
-                                dp_Fecha_PUAAP.SelectedDate,
+                                dp_ALE1.SelectedDate,
                                 "ddd",
                                 "en-GB"
                             ) = "Sat",
@@ -2718,11 +2718,11 @@ Calendario As screen:
                             ),
                             If(
                                 Text(
-                                    dp_Fecha_PUAAP.SelectedDate,
+                                    dp_ALE2.SelectedDate,
                                     "ddd",
                                     "en-GB"
                                 ) = "Sun" || Text(
-                                    dp_Fecha_PUAAP.SelectedDate,
+                                    dp_ALE2.SelectedDate,
                                     "ddd",
                                     "en-GB"
                                 ) = "Sat",

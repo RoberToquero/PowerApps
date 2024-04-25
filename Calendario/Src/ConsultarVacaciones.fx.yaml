@@ -31,7 +31,7 @@ ConsultarVacaciones As screen:
                             DNI = dniEmpleado
                         ).Departamento.Value
                     ),
-                    TextInputNombreConsultarVAcaciones.Text,
+                    TextInputNombreConsultarVacaciones.Text,
                     NombreEmpleado,
                     ApellidosEmpleado,
                     DepartamentoEmpleado
@@ -176,7 +176,7 @@ ConsultarVacaciones As screen:
         Y: =542
         ZIndex: =6
 
-    TextInputNombreConsultarVAcaciones As text:
+    TextInputNombreConsultarVacaciones As text:
         Default: =
         Height: =41
         Width: =328

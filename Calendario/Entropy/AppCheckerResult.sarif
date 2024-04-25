@@ -144,7 +144,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 137,
+                  "charOffset": 113,
                   "snippet": {
                     "text": "Year(FechaInicio)"
                   }
@@ -184,7 +184,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 154,
+                  "charOffset": 130,
                   "snippet": {
                     "text": "="
                   }
@@ -224,7 +224,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 125,
+                  "charOffset": 101,
                   "snippet": {
                     "text": "&&"
                   }
@@ -264,7 +264,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 218,
+                  "charOffset": 194,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2144,7 +2144,7 @@
                 },
                 "region": {
                   "charLength": 313,
-                  "charOffset": 1908,
+                  "charOffset": 1880,
                   "snippet": {
                     "text": "CountRows(\n                            Filter(\n                                Vacaciones;\n                                dniEmpleado=txt_Usuario_Login.Text\n                                &&\n                                FechaInicio=dp_ALE1.SelectedDate\n                            )\n                        )"
                   }
@@ -2184,7 +2184,7 @@
                 },
                 "region": {
                   "charLength": 341,
-                  "charOffset": 2546,
+                  "charOffset": 2518,
                   "snippet": {
                     "text": "CountRows(\n                                Filter(\n                                    Vacaciones;\n                                    dniEmpleado=txt_Usuario_Login.Text\n                                    &&\n                                    FechaInicio=dp_ALE2.SelectedDate\n                                )\n                            )"
                   }
@@ -2224,7 +2224,7 @@
                 },
                 "region": {
                   "charLength": 17,
-                  "charOffset": 3645,
+                  "charOffset": 3617,
                   "snippet": {
                     "text": "Year(FechaInicio)"
                   }
@@ -2264,7 +2264,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3662,
+                  "charOffset": 3634,
                   "snippet": {
                     "text": "="
                   }
@@ -2304,7 +2304,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3606,
+                  "charOffset": 3578,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2344,7 +2344,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3713,
+                  "charOffset": 3685,
                   "snippet": {
                     "text": "&&"
                   }
@@ -6543,19 +6543,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.TextInputNombreConsultarVAcaciones.AccessibleLabel"
+                  "fullyQualifiedName": "ConsultarVacaciones.TextInputNombreConsultarVacaciones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.TextInputNombreConsultarVAcaciones.AccessibleLabel",
+                  "fullyQualifiedName": "ConsultarVacaciones.TextInputNombreConsultarVacaciones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.TextInputNombreConsultarVAcaciones"
+                "type": "ConsultarVacaciones.TextInputNombreConsultarVacaciones"
               }
             }
           ],
