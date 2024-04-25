@@ -7333,18 +7333,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1"
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.DatePicker5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1",
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.DatePicker5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "Screen1",
-                "type": "Screen1"
+                "member": "AccessibleLabel",
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerVerano.DatePicker5"
               }
             }
           ],
@@ -7352,10 +7353,10 @@
             "id": "issue"
           },
           "properties": {
-            "level": "Low"
+            "level": "Medium"
           },
-          "ruleId": "acc-ReadableScreenNameNeeded",
-          "ruleIndex": 6
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -8531,19 +8532,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.IconVolverConsultarVacaciones_1.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarPermisos.IconVolverConsultarVacaciones_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.IconVolverConsultarVacaciones_1.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarPermisos.IconVolverConsultarVacaciones_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.IconVolverConsultarVacaciones_1"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.IconVolverConsultarVacaciones_1"
               }
             }
           ],
@@ -8561,19 +8562,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.IconVolverConsultarVacaciones_1.TabIndex"
+                  "fullyQualifiedName": "ModificarPermisos.IconVolverConsultarVacaciones_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.IconVolverConsultarVacaciones_1.TabIndex",
+                  "fullyQualifiedName": "ModificarPermisos.IconVolverConsultarVacaciones_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Screen1",
-                "type": "Screen1.IconVolverConsultarVacaciones_1"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.IconVolverConsultarVacaciones_1"
               }
             }
           ],
@@ -8591,19 +8592,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.ContainerAsuntosPropios.DatePicker4.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarPermisos.ContainerAsuntosPropios.DatePicker4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.ContainerAsuntosPropios.DatePicker4.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarPermisos.ContainerAsuntosPropios.DatePicker4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.ContainerAsuntosPropios.DatePicker4"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerAsuntosPropios.DatePicker4"
               }
             }
           ],
@@ -8681,19 +8682,109 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.ContainerInvierno.Radio1.AccessibleLabel"
+                  "fullyQualifiedName": "ModificarPermisos.ContainerInvierno.Radio1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.ContainerInvierno.Radio1.AccessibleLabel",
+                  "fullyQualifiedName": "ModificarPermisos.ContainerInvierno.Radio1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.ContainerInvierno.Radio1"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerInvierno.Radio1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.Radio2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.Radio2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerVerano.Radio2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.DatePicker6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.DatePicker6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerVerano.DatePicker6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.DatePicker7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ModificarPermisos.ContainerVerano.DatePicker7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerVerano.DatePicker7"
               }
             }
           ],
@@ -8734,7 +8825,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -8764,7 +8855,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8794,7 +8885,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8824,7 +8915,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8854,7 +8945,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8884,7 +8975,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8914,7 +9005,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 8
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8944,7 +9035,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -8974,7 +9065,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9004,7 +9095,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9034,7 +9125,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9064,7 +9155,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9094,7 +9185,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9124,7 +9215,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9154,7 +9245,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9184,7 +9275,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9214,7 +9305,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9244,7 +9335,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9274,7 +9365,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9304,7 +9395,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9334,7 +9425,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9364,7 +9455,7 @@
             "level": "Medium"
           },
           "ruleId": "app-TextInputIsNotDelayOutput",
-          "ruleIndex": 10
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -9394,7 +9485,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -9424,26 +9515,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Label3.Text"
+                  "fullyQualifiedName": "ModificarPermisos.Label3.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Label3.Text",
+                  "fullyQualifiedName": "ModificarPermisos.Label3.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Text",
-                "module": "Screen1",
-                "type": "Screen1.Label3"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.Label3"
               }
             }
           ],
@@ -9454,26 +9545,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Label4.Text"
+                  "fullyQualifiedName": "ModificarPermisos.Label4.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Label4.Text",
+                  "fullyQualifiedName": "ModificarPermisos.Label4.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Text",
-                "module": "Screen1",
-                "type": "Screen1.Label4"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.Label4"
               }
             }
           ],
@@ -9484,26 +9575,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.ContainerAsuntosPropios.Visible"
+                  "fullyQualifiedName": "ModificarPermisos.ContainerAsuntosPropios.Visible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.ContainerAsuntosPropios.Visible",
+                  "fullyQualifiedName": "ModificarPermisos.ContainerAsuntosPropios.Visible",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Visible",
-                "module": "Screen1",
-                "type": "Screen1.ContainerAsuntosPropios"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerAsuntosPropios"
               }
             }
           ],
@@ -9514,26 +9605,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.ContainerAsuntosPropios.DatePicker4.DefaultDate"
+                  "fullyQualifiedName": "ModificarPermisos.ContainerAsuntosPropios.DatePicker4.DefaultDate"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.ContainerAsuntosPropios.DatePicker4.DefaultDate",
+                  "fullyQualifiedName": "ModificarPermisos.ContainerAsuntosPropios.DatePicker4.DefaultDate",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "DefaultDate",
-                "module": "Screen1",
-                "type": "Screen1.ContainerAsuntosPropios.DatePicker4"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerAsuntosPropios.DatePicker4"
               }
             }
           ],
@@ -9544,26 +9635,26 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.ContainerInvierno.Visible"
+                  "fullyQualifiedName": "ModificarPermisos.ContainerInvierno.Visible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.ContainerInvierno.Visible",
+                  "fullyQualifiedName": "ModificarPermisos.ContainerInvierno.Visible",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Visible",
-                "module": "Screen1",
-                "type": "Screen1.ContainerInvierno"
+                "module": "ModificarPermisos",
+                "type": "ModificarPermisos.ContainerInvierno"
               }
             }
           ],
@@ -9574,7 +9665,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 9
+          "ruleIndex": 8
         }
       ],
       "tool": {
@@ -9686,23 +9777,6 @@
                 "level": "Low",
                 "primaryCategory": "accessibility",
                 "whyFix": "Some users can't use a pen and require another way to input information. Example: Typing in a signature."
-              }
-            },
-            {
-              "id": "acc-ReadableScreenNameNeeded",
-              "messageStrings": {
-                "issue": {
-                  "text": "Revise screen name"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Give the screen  a title that describes what's on the screen or what it's used for."
-                ],
-                "level": "Low",
-                "primaryCategory": "accessibility",
-                "whyFix": "People who are blind, have low vision, or a reading disability rely on screen titles to navigate using the screen reader. "
               }
             },
             {

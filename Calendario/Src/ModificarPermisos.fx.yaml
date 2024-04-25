@@ -1,4 +1,4 @@
-Screen1 As screen:
+ModificarPermisos As screen:
 
     RectangleConsultarVacaciones_1 As rectangle:
         Fill: =RGBA(255, 191, 0, 1)
@@ -202,4 +202,125 @@ Screen1 As screen:
             X: =326
             Y: =470
             ZIndex: =3
+
+    ContainerVerano As groupContainer.manualLayoutContainer:
+        Height: =640
+        Width: =822
+        X: =544
+        Y: =128
+        ZIndex: =9
+
+        Label8 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =100
+            Size: =20
+            Text: ="Selecciona en cuantos bloques"
+            Width: =274
+            X: =156
+            Y: =44
+            ZIndex: =1
+
+        Radio2 As radio:
+            Default: ="1"
+            Items: =RadioSample
+            X: =508
+            Y: =44
+            ZIndex: =2
+
+        Group2 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =8
+
+            DatePicker6 As datepicker:
+                Visible: |-
+                    =If(
+                        Radio2.Selected.Value=2,
+                        true,
+                        false
+                    )
+                X: =449
+                Y: =384
+                ZIndex: =4
+
+            DatePicker7 As datepicker:
+                Visible: |-
+                    =If(
+                        Radio2.Selected.Value=2,
+                        true,
+                        false
+                    )
+                X: =449
+                Y: =244
+                ZIndex: =5
+
+            Label9 As label:
+                Text: ="Texto"
+                Visible: |-
+                    =If(
+                        Radio2.Selected.Value=2,
+                        true,
+                        false
+                    )
+                X: =178
+                Y: =244
+                ZIndex: =6
+
+            Label10 As label:
+                Text: ="Texto"
+                Visible: |-
+                    =If(
+                        Radio2.Selected.Value=2,
+                        true,
+                        false
+                    )
+                X: =178
+                Y: =384
+                ZIndex: =7
+
+        Button9 As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            Text: ="Confirmar"
+            X: =340
+            Y: =527
+            ZIndex: =9
+
+        Group3 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =10
+
+            DatePicker5 As datepicker:
+                Visible: |-
+                    =If(
+                        Radio2.Selected.Value=1,
+                        true,
+                        false
+                    )
+                X: =256
+                Y: =384
+                ZIndex: =3
+
+            Label13 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                Size: =18
+                Text: ="Fecha Inicio"
+                Visible: |-
+                    =If(
+                        Radio2.Selected.Value=1,
+                        true,
+                        false
+                    )
+                Width: =178
+                X: =331
+                Y: =284
+                ZIndex: =8
 
