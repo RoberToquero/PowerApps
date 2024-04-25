@@ -3446,9 +3446,20 @@ Calendario As screen:
                         CountRows(
                             Filter(
                                 collFestivos,
-                                Fecha>=dp_PUMV_Dia_Inicio_Verano_3.SelectedDate
-                                &&
-                                Fecha<=DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,20,TimeUnit.Days)
+                                If(
+                                    Text(Fecha,"ddd","en-GB") = "Sun"
+                                    ,
+                                    DateAdd(Fecha,1,TimeUnit.Days)>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                    &&
+                                    DateAdd(Fecha,1,TimeUnit.Days)<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20,TimeUnit.Days)
+                                    ,
+                                    If(
+                                        Text(Fecha,"ddd","en-GB") <> "Sat",
+                                        Fecha>=dp_PUAV_Dia_Inicio_Verano_3.SelectedDate
+                                        &&
+                                        Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_3.SelectedDate,20,TimeUnit.Days)
+                                    )   
+                                )
                             )
                         )
                     )
@@ -3718,9 +3729,20 @@ Calendario As screen:
                         CountRows(
                             Filter(
                                 collFestivos,
-                                Fecha>=dp_PUMV_Dia_Inicio_Verano_1.SelectedDate
-                                &&
-                                Fecha<=DateAdd(dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,6,TimeUnit.Days)
+                                If(
+                                    Text(Fecha,"ddd","en-GB") = "Sun"
+                                    ,
+                                    DateAdd(Fecha,1,TimeUnit.Days)>=dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
+                                    &&
+                                    DateAdd(Fecha,1,TimeUnit.Days)<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6,TimeUnit.Days)
+                                    ,
+                                    If(
+                                        Text(Fecha,"ddd","en-GB") <> "Sat",
+                                        Fecha>=dp_PUAV_Dia_Inicio_Verano_1.SelectedDate
+                                        &&
+                                        Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_1.SelectedDate,6,TimeUnit.Days)
+                                    )   
+                                )
                             )
                         )
                     )
@@ -3730,9 +3752,20 @@ Calendario As screen:
                         CountRows(
                             Filter(
                                 collFestivos,
-                                Fecha>=dp_PUMV_Dia_Inicio_Verano_2.SelectedDate
-                                &&
-                                Fecha<=DateAdd(dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,14,TimeUnit.Days)
+                                If(
+                                    Text(Fecha,"ddd","en-GB") = "Sun"
+                                    ,
+                                    DateAdd(Fecha,1,TimeUnit.Days)>=dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
+                                    &&
+                                    DateAdd(Fecha,1,TimeUnit.Days)<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13,TimeUnit.Days)
+                                    ,
+                                    If(
+                                        Text(Fecha,"ddd","en-GB") <> "Sat",
+                                        Fecha>=dp_PUAV_Dia_Inicio_Verano_2.SelectedDate
+                                        &&
+                                        Fecha<=DateAdd(dp_PUAV_Dia_Inicio_Verano_2.SelectedDate,13,TimeUnit.Days)
+                                    )   
+                                )
                             )
                         )
                     )
