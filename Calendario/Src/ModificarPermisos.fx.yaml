@@ -33,8 +33,8 @@ ModificarPermisos As screen:
         Size: =18
         Text: |-
             ="Empleado: "&GalleryConsultarVacaciones.Selected.NombreEmpleado&" "&GalleryConsultarVacaciones.Selected.ApellidosEmpleado
-        Width: =290
-        X: =124
+        Width: =442
+        X: =68
         Y: =204
         ZIndex: =4
 
@@ -45,8 +45,8 @@ ModificarPermisos As screen:
         Text: |-
             ="Tipo: "&GalleryConsultarVacaciones.Selected.Opciones.Value
         Width: =269
-        X: =124
-        Y: =294
+        X: =97
+        Y: =288
         ZIndex: =5
 
     ContainerLibreEleccion As groupContainer.manualLayoutContainer:
@@ -339,4 +339,91 @@ ModificarPermisos As screen:
                 X: =331
                 Y: =284
                 ZIndex: =8
+
+    Button10 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        HoverFill: =ColorFade(Self.Fill, 20%)
+        OnSelect: =Set(popUpEliminarModificarPermisos,true)
+        Text: ="Eliminar"
+        X: =189
+        Y: =557
+        ZIndex: =10
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Rectangle8 As rectangle:
+            Fill: =RGBA(0, 0, 0, 0.2)
+            Height: =768
+            Visible: =popUpEliminarModificarPermisos
+            Width: =1366
+            ZIndex: =11
+
+        Rectangle9 As rectangle:
+            Height: =316
+            Visible: =popUpEliminarModificarPermisos
+            Width: =565
+            X: =400
+            Y: =256
+            ZIndex: =12
+
+        Label14 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =87
+            Size: =18
+            Text: ="¿Seguro que quieres eliminar este registro?"
+            Visible: =popUpEliminarModificarPermisos
+            Width: =285
+            X: =540
+            Y: =321
+            ZIndex: =13
+
+        Icon7 As icon.Information:
+            Color: =RGBA(255, 0, 0, 1)
+            Fill: =RGBA(255, 255, 0, 1)
+            Icon: =Icon.Information
+            Visible: =popUpEliminarModificarPermisos
+            X: =416
+            Y: =272
+            ZIndex: =14
+
+        Button11 As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: =Set(popUpEliminarModificarPermisos,false)
+            Text: ="Cancelar"
+            Visible: =popUpEliminarModificarPermisos
+            X: =490
+            Y: =473
+            ZIndex: =15
+
+        Button12 As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Remove(
+                    Vacaciones,
+                    First(
+                        Filter(
+                            Vacaciones,
+                            dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
+                            &&
+                            FechaInicio=GalleryConsultarVacaciones.Selected.FechaInicio
+                            &&
+                            Opciones.Value=GalleryConsultarVacaciones.Selected.Opciones.Value
+                        )
+                    )
+                )
+                ;
+                Set(popUpEliminarModificarPermisos,false)
+            Text: ="Aceptar"
+            Visible: =popUpEliminarModificarPermisos
+            X: =715
+            Y: =473
+            ZIndex: =16
 
