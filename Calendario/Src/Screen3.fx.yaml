@@ -1,12 +1,14 @@
 Screen3 As screen:
 
-    Rectangle6_1 As rectangle:
-        BorderColor: =RGBA(235, 176, 0, 1)
-        Fill: =RGBA(255, 191, 0, 1)
-        Width: =1366
+    Rectangle1 As rectangle:
+        Fill: =RGBA(241, 244, 249, 0.7)
+        Height: =668
+        Width: =468
+        Y: =100
         ZIndex: =1
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        '#CopilotOverlayLabel': ="Filtrada"
         DelayItemLoading: =true
         Height: =668
         Items: |-
@@ -20,35 +22,37 @@ Screen3 As screen:
         TemplateSize: =90
         Width: =468
         Y: =100
-        ZIndex: =1
+        ZIndex: =2
 
         Title2 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+            Height: =38
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =20
             Text: =ThisItem.Motivo
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            Y: =15
             ZIndex: =1
 
         Subtitle2 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+            Height: =28
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =16
             Text: =ThisItem.Fecha
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title2.Width
-            X: =Title2.X
+            Width: =382
+            X: =16
             Y: =Title2.Y + Title2.Height
             ZIndex: =2
 
@@ -66,6 +70,22 @@ Screen3 As screen:
             Width: =4
             ZIndex: =5
 
+        Icon4 As icon.Trash:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =52
+            Icon: =Icon.Trash
+            OnSelect: =Select(Parent)
+            Width: =51
+            X: =398
+            Y: =15
+            ZIndex: =6
+
+    Rectangle6_1 As rectangle:
+        BorderColor: =RGBA(235, 176, 0, 1)
+        Fill: =RGBA(255, 191, 0, 1)
+        Width: =1366
+        ZIndex: =3
+
     Label11_1 As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
@@ -75,7 +95,7 @@ Screen3 As screen:
         Text: ="Configuración Festivos"
         Width: =729
         X: =318
-        ZIndex: =2
+        ZIndex: =4
 
     Icon2_1 As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
@@ -83,5 +103,109 @@ Screen3 As screen:
         OnSelect: =Back()
         X: =122
         Y: =18
-        ZIndex: =3
+        ZIndex: =5
+
+    DatePicker1 As datepicker:
+        X: =764
+        Y: =240
+        ZIndex: =6
+
+    TextInput1 As text:
+        Default: ="Entrada de texto"
+        Height: =49
+        Width: =328
+        X: =764
+        Y: =365
+        ZIndex: =7
+
+    Button3 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: |-
+            =If(
+                IsBlank(DatePicker1)||IsBlank(TextInput1),
+                Collect(
+                    DiasFestivos,
+                    {
+                        Fecha: DatePicker1.SelectedDate,
+                        Motivo: TextInput1.Text
+                    }
+                )
+                ,
+                Notify(
+                    "Los campos no pueden estar en blanco",
+                    NotificationType.Error,
+                    2000
+                )
+            )
+        Text: ="Añadir"
+        X: =848
+        Y: =548
+        ZIndex: =8
+
+    Rectangle3 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.2)
+        Height: =768
+        Width: =1366
+        ZIndex: =9
+
+    Rectangle4 As rectangle:
+        Height: =362
+        Width: =575
+        X: =395
+        Y: =203
+        ZIndex: =10
+
+    Icon5 As icon.Information:
+        Color: =RGBA(255, 0, 0, 1)
+        Fill: =RGBA(255, 255, 0, 1)
+        Icon: =Icon.Information
+        X: =407
+        Y: =216
+        ZIndex: =11
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =101
+        Size: =18
+        Text: ="¿Quieres eliminar este día festivo?"
+        Width: =259
+        X: =553
+        Y: =251
+        ZIndex: =12
+
+    Button4 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        OnSelect: =Set(popupeliminarfestivo,false)
+        Text: ="Cancelar"
+        X: =491
+        Y: =461
+        ZIndex: =13
+
+    Button5 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        OnSelect: |-
+            =Remove(
+                DiasFestivos,
+                Gallery1.Selected
+            )
+            ;
+            Set(popupeliminarfestivo,false)
+        Text: ="Aceptar"
+        X: =721
+        Y: =461
+        ZIndex: =14
+
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =54
+        Size: =14
+        Text: =Gallery1.Selected.Motivo&"     "&Gallery1.Selected.Fecha
+        Width: =432
+        X: =466
+        Y: =365
+        ZIndex: =15
 

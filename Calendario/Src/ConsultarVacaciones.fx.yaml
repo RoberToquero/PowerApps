@@ -7,6 +7,7 @@ ConsultarVacaciones As screen:
         ZIndex: =1
 
     "GalleryConsultarVacaciones As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        '#CopilotOverlayLabel': ="Filtrada"
         DelayItemLoading: =true
         Height: =640
         Items: |-

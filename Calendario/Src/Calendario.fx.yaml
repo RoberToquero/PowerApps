@@ -105,6 +105,7 @@ Calendario As screen:
         ZIndex: =12
 
     GalleryCalendario As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtrada"
         BorderThickness: =0.5
         DelayItemLoading: =true
         Fill: =RGBA(255, 255, 255, 1)

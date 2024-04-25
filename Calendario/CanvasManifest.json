@@ -22,6 +22,7 @@
       "blockmovingcontrol": true,
       "cdsdataformatting": false,
       "classiccontrols": false,
+      "commentgeneratedformulas": true,
       "consistentreturnschemafortabularfunctions": true,
       "copyandmerge": true,
       "dataflowanalysisenabled": false,
@@ -124,7 +125,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "746a867b-ae95-459e-a0e5-ea15293895eb",
+    "AppName": "AppCalendario",
     "BackgroundColor": "rgba(0, 255, 247, 1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "",

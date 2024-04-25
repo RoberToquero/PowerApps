@@ -8,6 +8,7 @@ Departamentos As screen:
         ZIndex: =1
 
     "GalleryDepartamentos As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        '#CopilotOverlayLabel': ="Filtrada"
         DelayItemLoading: =true
         Height: =509
         Items: =Departamentos_1

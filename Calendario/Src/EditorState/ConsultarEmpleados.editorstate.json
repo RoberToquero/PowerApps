@@ -7982,7 +7982,9 @@
         "minimumWidth",
         "minimumHeight",
         "maximumWidth",
-        "maximumHeight"
+        "maximumHeight",
+        "#CopilotOverlayLabel",
+        "#CopilotOverlayVisible"
       ],
       "GalleryTemplateChildName": "GaleriaNombrestemplate1",
       "HasDynamicProperties": false,
@@ -8222,6 +8224,16 @@
         {
           "Category": "Design",
           "PropertyName": "maximumHeight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayVisible",
           "RuleProviderType": "Unknown"
         }
       ],
