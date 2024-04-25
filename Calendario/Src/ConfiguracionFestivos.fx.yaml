@@ -112,7 +112,7 @@ ConfiguracionFestivos As screen:
         Fill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
             =If(
-                IsBlank(txtMotivoFestivo),
+                !IsBlank(txtMotivoFestivo),
                 Collect(
                     DiasFestivos,
                     {
