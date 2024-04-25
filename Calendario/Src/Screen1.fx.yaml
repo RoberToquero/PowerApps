@@ -168,14 +168,14 @@ Screen1 As screen:
                                          First(
                                             Filter(
                                                 ConfiguracionCalendario_1,
-                                                Año=Year(Today())
+                                                Año=Text(Year(Today()))
                                             )
                                          ).InicioInvierno
                                          ,
                                          First(
                                             Filter(
                                                 ConfiguracionCalendario_1,
-                                                Año=Year(Today())
+                                                Año=Text(Year(Today()))
                                             )
                                          ).InicioInvierno2
                                      ),
@@ -185,14 +185,14 @@ Screen1 As screen:
                                          First(
                                             Filter(
                                                 ConfiguracionCalendario_1,
-                                                Año=Year(Today())
+                                                Año=Text(Year(Today()))
                                             )
                                          ).FinInvierno
                                          ,
                                          First(
                                             Filter(
                                                 ConfiguracionCalendario_1,
-                                                Año=Year(Today())
+                                                Año=Text(Year(Today()))
                                             )
                                          ).FinInvierno2
                                      )
