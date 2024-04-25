@@ -242,7 +242,7 @@ ModificarPermisos As screen:
                         true,
                         false
                     )
-                X: =449
+                X: =430
                 Y: =384
                 ZIndex: =4
 
@@ -253,32 +253,42 @@ ModificarPermisos As screen:
                         true,
                         false
                     )
-                X: =449
+                X: =430
                 Y: =244
                 ZIndex: =5
 
             Label9 As label:
-                Text: ="Texto"
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =64
+                Size: =16
+                Text: ="Inicio bloque de 1 semana"
                 Visible: |-
                     =If(
                         Radio2.Selected.Value=2,
                         true,
                         false
                     )
-                X: =178
-                Y: =244
+                Width: =154
+                X: =186
+                Y: =223
                 ZIndex: =6
 
             Label10 As label:
-                Text: ="Texto"
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =57
+                Size: =16
+                Text: ="Inicio bloque de 2 semanas"
                 Visible: |-
                     =If(
                         Radio2.Selected.Value=2,
                         true,
                         false
                     )
-                X: =178
-                Y: =384
+                Width: =153
+                X: =186
+                Y: =367
                 ZIndex: =7
 
         Button9 As button:
