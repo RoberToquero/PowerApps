@@ -110,6 +110,7 @@ ConfiguracionFestivos As screen:
 
     BtnAñadirFestivos As button:
         Fill: =RGBA(54, 176, 75, 1)
+        HoverFill: =ColorFade(Self.Fill, 20%)
         OnSelect: |-
             =If(
                 !IsBlank(txtMotivoFestivo),
