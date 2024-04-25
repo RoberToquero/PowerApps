@@ -205,6 +205,12 @@ ModificarPermisos As screen:
 
     ContainerVerano As groupContainer.manualLayoutContainer:
         Height: =640
+        Visible: |-
+            =If(
+                GalleryConsultarVacaciones.Selected.Opciones.Value="Verano",
+                true,
+                false
+            )
         Width: =822
         X: =544
         Y: =128
