@@ -349,18 +349,6 @@ ModificarPermisos As screen:
         Y: =557
         ZIndex: =10
 
-    Label15 As label:
-        Color: =RGBA(255, 255, 255, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =85
-        Text: |-
-            ="¿Quieres eliminar solo este registro, o todos los registros de vacaciones de verano de este año del empleado: Manolo Ruiz?"
-        Visible: =popUpEliminarModificarPermisos&&GalleryConsultarVacaciones.Selected.Opciones.Value="Verano"
-        Width: =427
-        X: =490
-        Y: =290
-        ZIndex: =17
-
     Group4 As group:
         Height: =5
         Width: =5
@@ -386,13 +374,23 @@ ModificarPermisos As screen:
         Label14 As label:
             Color: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =87
+            Height: =123
             Size: =18
-            Text: ="¿Seguro que quieres eliminar este registro?"
-            Visible: =popUpEliminarModificarPermisos && GalleryConsultarVacaciones.Selected.Opciones.Value<>"Verano"
-            Width: =285
-            X: =540
-            Y: =321
+            Text: |-
+                =If(
+                    GalleryConsultarVacaciones.Selected.Opciones.Value="Verano",
+                    "¿Seguro que quieres eliminar los registros de las vacaciones de verano de este año del empleado: "
+                     &GalleryConsultarVacaciones.Selected.NombreEmpleado
+                     &" "
+                     &GalleryConsultarVacaciones.Selected.ApellidosEmpleado
+                     &"?"
+                    ,
+                    "¿Seguro que quieres eliminar este registro?"
+                )
+            Visible: =popUpEliminarModificarPermisos
+            Width: =417
+            X: =490
+            Y: =309
             ZIndex: =13
 
         Icon7 As icon.Information:
@@ -455,18 +453,4 @@ ModificarPermisos As screen:
             X: =715
             Y: =486
             ZIndex: =16
-
-    Radio3 As radio:
-        Color: =RGBA(255, 255, 255, 1)
-        Default: ="Solo este"
-        FontWeight: =FontWeight.Bold
-        Height: =62
-        Items: =["Solo este","Todos"]
-        Layout: =Layout.Horizontal
-        Size: =18
-        Visible: =popUpEliminarModificarPermisos&&GalleryConsultarVacaciones.Selected.Opciones.Value="Verano"
-        Width: =365
-        X: =500
-        Y: =393
-        ZIndex: =18
 
