@@ -103,10 +103,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 342,
-                  "charOffset": 931,
+                  "charLength": 222,
+                  "charOffset": 823,
                   "snippet": {
-                    "text": "CountRows(\n                            Filter(\n                                Vacaciones;\n                                dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado\n                                &&\n                                FechaInicio=DatePicker4.SelectedDate\n                            )\n                        )"
+                    "text": "CountRows(\n                Filter(\n                    Vacaciones;\n                    dniEmpleado = GalleryConsultarVacaciones.Selected.dniEmpleado && FechaInicio = DatePicker4.SelectedDate\n                )\n            )"
                   }
                 }
               },

@@ -83,15 +83,12 @@ ModificarPermisos As screen:
             Fill: =RGBA(54, 176, 75, 1)
             Height: =39
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: |+
-                =
-                Clear(hayfestivo);
-                
+            OnSelect: |-
+                =Clear(hayfestivo);
                 Set(
                     fechapuale,
                     DatePicker4.SelectedDate
                 );
-                
                 ClearCollect(
                     collFestivos,
                     DiasFestivos
@@ -108,7 +105,6 @@ ModificarPermisos As screen:
                             true
                         )
                     )
-                
                 );
                 If(
                     First(hayfestivo).Value = true,
@@ -116,68 +112,50 @@ ModificarPermisos As screen:
                         "El día es festivo",
                         NotificationType.Error,
                         2000
-                    )
-                    ,
-                
+                    ),
+                    If(
+                        Text(
+                            DatePicker4.SelectedDate,
+                            "ddd",
+                            "en-GB"
+                        ) = "Sun" || Text(
+                            DatePicker4.SelectedDate,
+                            "ddd",
+                            "en-GB"
+                        ) = "Sat",
+                        Notify(
+                            "El día es fin de semana",
+                            NotificationType.Error,
+                            2000
+                        ),
                         If(
-                            Text(
-                                DatePicker4.SelectedDate,
-                                "ddd",
-                                "en-GB"
-                            ) = "Sun" || Text(
-                                DatePicker4.SelectedDate,
-                                "ddd",
-                                "en-GB"
-                            ) = "Sat",
+                            CountRows(
+                                Filter(
+                                    Vacaciones,
+                                    dniEmpleado = GalleryConsultarVacaciones.Selected.dniEmpleado && FechaInicio = DatePicker4.SelectedDate
+                                )
+                            ) > 0,
                             Notify(
-                                "El día es fin de semana",
+                                "El día coincide con otro permiso",
                                 NotificationType.Error,
                                 2000
+                            ),
+                            Patch(
+                                Vacaciones,
+                                First(
+                                    Filter(
+                                        Vacaciones,
+                                        dniEmpleado = GalleryConsultarVacaciones.Selected.dniEmpleado && FechaInicio = GalleryConsultarVacaciones.Selected.FechaInicio && Opciones.Value = "Libre Elección"
+                                    )
+                                ),
+                                {
+                                    FechaInicio: DatePicker4.SelectedDate,
+                                    FechaFin: DatePicker4.SelectedDate
+                                }
                             )
-                            , 
-                                    If(
-                                        CountRows(
-                                            Filter(
-                                                Vacaciones,
-                                                dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
-                                                &&
-                                                FechaInicio=DatePicker4.SelectedDate
-                                            )
-                                        )>0
-                                        ,
-                                        Notify(
-                                            "El día coincide con otro permiso",
-                                            NotificationType.Error,
-                                            2000
-                                        )
-                                        ,
-                                            Patch(
-                                                Vacaciones,
-                                                First(
-                                                    Filter(
-                                                        Vacaciones,
-                                                        dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
-                                                        &&
-                                                        FechaInicio=GalleryConsultarVacaciones.Selected.FechaInicio
-                                                        &&
-                                                        Opciones.Value="Libre Elección"
-                                                    )
-                                                )
-                                                ,
-                                                {
-                                                    FechaInicio: DatePicker4.SelectedDate,
-                                                    FechaFin: DatePicker4.SelectedDate
-                                                }
-                                            )                    
-                                        )
-                                    )    
-                
-                                )
-                            
-                        
-                    
-                
-                
+                        )
+                    )
+                )
             Text: ="Confirmar"
             Width: =155
             X: =334
