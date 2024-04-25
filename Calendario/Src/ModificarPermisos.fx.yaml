@@ -49,11 +49,11 @@ ModificarPermisos As screen:
         Y: =294
         ZIndex: =5
 
-    ContainerAsuntosPropios As groupContainer.manualLayoutContainer:
+    ContainerLibreEleccion As groupContainer.manualLayoutContainer:
         Height: =640
         Visible: |-
             =If(
-                GalleryConsultarVacaciones.Selected.Opciones.Value="Asuntos Propios",
+                GalleryConsultarVacaciones.Selected.Opciones.Value="Libre Elección",
                 true,
                 false
             )
