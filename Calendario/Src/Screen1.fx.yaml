@@ -81,6 +81,7 @@ Screen1 As screen:
 
         Button7 As button:
             Fill: =RGBA(54, 176, 75, 1)
+            Height: =39
             HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: |-
                 =Patch(
@@ -103,7 +104,96 @@ Screen1 As screen:
                     }
                 )
             Text: ="Confirmar"
-            X: =339
+            Width: =155
+            X: =328
             Y: =472
+            ZIndex: =3
+
+    ContainerInvierno As groupContainer.manualLayoutContainer:
+        Height: =638
+        Width: =822
+        X: =544
+        Y: =130
+        ZIndex: =8
+
+        Radio1 As radio:
+            Default: ="Semana 1"
+            Height: =72
+            Items: =["Semana 1","Semana 2"]
+            Layout: =Layout.Horizontal
+            Size: =16
+            Width: =380
+            X: =216
+            Y: =248
+            ZIndex: =1
+
+        Label7 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =112
+            Size: =20
+            Text: ="Indique la nueva semana "
+            Width: =254
+            X: =279
+            Y: =57
+            ZIndex: =2
+
+        Button8 As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Patch(
+                    Vacaciones
+                    ,
+                    First(
+                        Filter(
+                        Vacaciones,
+                        dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
+                        &&
+                        Opciones.Value=GalleryConsultarVacaciones.Selected.Opciones.Value
+                        &&
+                        FechaInicio=GalleryConsultarVacaciones.Selected.FechaInicio
+                        )
+                    )
+                    ,
+                    {
+                        FechaInicio: If(
+                                         Radio1.Selected.Value="Semana 1",
+                                         First(
+                                            Filter(
+                                                ConfiguracionCalendario_1,
+                                                Año=Year(Today())
+                                            )
+                                         ).InicioInvierno
+                                         ,
+                                         First(
+                                            Filter(
+                                                ConfiguracionCalendario_1,
+                                                Año=Year(Today())
+                                            )
+                                         ).InicioInvierno2
+                                     ),
+                
+                        FechaFin: If(
+                                         Radio1.Selected.Value="Semana 1",
+                                         First(
+                                            Filter(
+                                                ConfiguracionCalendario_1,
+                                                Año=Year(Today())
+                                            )
+                                         ).FinInvierno
+                                         ,
+                                         First(
+                                            Filter(
+                                                ConfiguracionCalendario_1,
+                                                Año=Year(Today())
+                                            )
+                                         ).FinInvierno2
+                                     )
+                    }
+                )
+            Text: ="Confirmar"
+            X: =326
+            Y: =470
             ZIndex: =3
 
