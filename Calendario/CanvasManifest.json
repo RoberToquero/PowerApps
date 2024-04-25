@@ -145,6 +145,7 @@
     "ModificarEmpleado",
     "Departamentos",
     "ConsultarVacaciones",
-    "ConfiguracionFestivos"
+    "ConfiguracionFestivos",
+    "Screen1"
   ]
 }

@@ -111,6 +111,16 @@ ConsultarVacaciones As screen:
             Y: =113
             ZIndex: =10
 
+        Icon6 As icon.Edit:
+            Color: =RGBA(99, 139, 44, 1)
+            Height: =46
+            Icon: =Icon.Edit
+            OnSelect: =Select(Parent)
+            Width: =44
+            X: =488
+            Y: =21
+            ZIndex: =11
+
     LabelTituloConsultarVacaciones As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)

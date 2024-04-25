@@ -1,0 +1,88 @@
+Screen1 As screen:
+
+    RectangleConsultarVacaciones_1 As rectangle:
+        Fill: =RGBA(255, 191, 0, 1)
+        Height: =128
+        Width: =1366
+        ZIndex: =1
+
+    LabelTituloConsultarVacaciones_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =128
+        Size: =30
+        Text: ="Modificar permisos"
+        Width: =634
+        X: =366
+        ZIndex: =2
+
+    IconVolverConsultarVacaciones_1 As icon.Undo:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =90
+        Icon: =Icon.Undo
+        OnSelect: =Back()
+        Width: =94
+        X: =136
+        Y: =19
+        ZIndex: =3
+
+    Label3 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =52
+        Size: =18
+        Text: |-
+            ="Empleado: "&GalleryConsultarVacaciones.Selected.NombreEmpleado&" "&GalleryConsultarVacaciones.Selected.ApellidosEmpleado
+        Width: =290
+        X: =124
+        Y: =204
+        ZIndex: =4
+
+    Label4 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =66
+        Size: =16
+        Text: |-
+            ="Tipo: "&GalleryConsultarVacaciones.Selected.Opciones.Value
+        Width: =269
+        X: =124
+        Y: =294
+        ZIndex: =5
+
+    ContainerAsuntosPropios As groupContainer.manualLayoutContainer:
+        Height: =640
+        Visible: |-
+            =If(
+                GalleryConsultarVacaciones.Selected.Opciones.Value="Asuntos Propios",
+                true,
+                false
+            )
+        Width: =822
+        X: =544
+        Y: =128
+        ZIndex: =7
+
+        DatePicker4 As datepicker:
+            X: =255
+            Y: =280
+            ZIndex: =1
+
+        Label5 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =91
+            Size: =20
+            Text: ="Selecciona la nueva fecha de asuntos propios"
+            Width: =359
+            X: =240
+            Y: =88
+            ZIndex: =2
+
+        Button7 As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            Text: ="Confirmar"
+            X: =339
+            Y: =472
+            ZIndex: =3
+
