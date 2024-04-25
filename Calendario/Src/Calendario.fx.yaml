@@ -3457,7 +3457,13 @@ Calendario As screen:
                     Set(fechapuav, dp_PUMV_Dia_Inicio_Verano_3.SelectedDate);
                     ForAll(
                         DiasFestivos,
-                        If(DateDiff(ThisRecord.Fecha, fechapuav) = 0, Collect(hayfestivo, true))
+                        If(
+                            Text(ThisRecord.Fecha,"ddd","en-GB")="Sun"
+                            ,
+                            If(DateDiff(DateAdd(ThisRecord.Fecha,1,TimeUnit.Days), fechapuav) = 0, Collect(hayfestivo, true))
+                            ,
+                            If(DateDiff(ThisRecord.Fecha, fechapuav) = 0, Collect(hayfestivo, true))
+                        )  
                     )
                     ;
                     If(
@@ -3737,8 +3743,15 @@ Calendario As screen:
                     Set(fechapuav2,dp_PUMV_Dia_Inicio_Verano_2.SelectedDate);
                     ForAll(
                         collFestivos,
-                        If(DateDiff(ThisRecord.Fecha, fechapuav1) = 0,Collect(hayfestivo, true));
-                        If(DateDiff(ThisRecord.Fecha, fechapuav2) = 0,Collect(hayfestivo2, true))
+                        If(
+                            Text(ThisRecord.Fecha,"ddd","en-GB")="Sun"
+                            ,
+                            If(DateDiff(DateAdd(ThisRecord.Fecha,1,TimeUnit.Days), fechapuav1) = 0, Collect(hayfestivo, true));
+                            If(DateDiff(DateAdd(ThisRecord.Fecha,1,TimeUnit.Days), fechapuav2) = 0,Collect(hayfestivo2, true))
+                            ,
+                            If(DateDiff(ThisRecord.Fecha, fechapuav1) = 0, Collect(hayfestivo, true));
+                            If(DateDiff(ThisRecord.Fecha, fechapuav2) = 0,Collect(hayfestivo2, true))
+                        )  
                     )
                     ;
                     If(
