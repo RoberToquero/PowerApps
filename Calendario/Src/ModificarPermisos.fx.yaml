@@ -147,97 +147,89 @@ ModificarPermisos As screen:
         Button8 As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
-            OnSelect: |+
-                =Set(enespera,true);
-                
-                    If(
-                        CountRows(
+            OnSelect: |
+                =Set(
+                    enespera,
+                    true
+                );
+                If(
+                    CountRows(
+                        Filter(
                             Filter(
-                                Filter(
-                                    AddColumns(
-                                        Vacaciones,
+                                AddColumns(
+                                    Vacaciones,
+                                    Empleados,
+                                    LookUp(
                                         Empleados,
-                                        LookUp(
-                                            Empleados,
-                                            DNI = dniEmpleado
-                                        )
-                                    ),
-                                    Opciones.Value = "Invierno"
+                                        DNI = dniEmpleado
+                                    )
                                 ),
-                                FechaInicio = LookUp(
-                                    ConfiguracionCalendario_1,
-                                    Año = Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))
-                                ).InicioInvierno && Empleados.Departamento.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
-                            )
-                        ) < (LookUp(
-                            Departamentos_1,
-                            Nombre.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
-                        ).TotalEmpleados - LookUp(
-                            Departamentos_1,
-                            Nombre.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
-                        ).MinimoEmpleados)
-                        ,
-                        Patch(
-                            Vacaciones
-                            ,
-                            First(
-                                Filter(
+                                Opciones.Value = "Invierno"
+                            ),
+                            FechaInicio = LookUp(
+                                ConfiguracionCalendario_1,
+                                Año = Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))
+                            ).InicioInvierno && Empleados.Departamento.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
+                        )
+                    ) < (LookUp(
+                        Departamentos_1,
+                        Nombre.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
+                    ).TotalEmpleados - LookUp(
+                        Departamentos_1,
+                        Nombre.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
+                    ).MinimoEmpleados),
+                    Patch(
+                        Vacaciones,
+                        First(
+                            Filter(
                                 Vacaciones,
-                                dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
-                                &&
-                                Opciones.Value=GalleryConsultarVacaciones.Selected.Opciones.Value
-                                &&
-                                FechaInicio=GalleryConsultarVacaciones.Selected.FechaInicio
-                                )
+                                dniEmpleado = GalleryConsultarVacaciones.Selected.dniEmpleado && Opciones.Value = GalleryConsultarVacaciones.Selected.Opciones.Value && FechaInicio = GalleryConsultarVacaciones.Selected.FechaInicio
                             )
-                            ,
-                            {
-                                FechaInicio: If(
-                                                Radio1.Selected.Value="Semana 1",
-                                                First(
-                                                    Filter(
-                                                        ConfiguracionCalendario_1,
-                                                        Año=Text(Year(Today()))
-                                                    )
-                                                ).InicioInvierno
-                                                ,
-                                                First(
-                                                    Filter(
-                                                        ConfiguracionCalendario_1,
-                                                        Año=Text(Year(Today()))
-                                                    )
-                                                ).InicioInvierno2
-                                            ),
-                                FechaFin: If(
-                                                Radio1.Selected.Value="Semana 1",
-                                                First(
-                                                    Filter(
-                                                        ConfiguracionCalendario_1,
-                                                        Año=Text(Year(Today()))
-                                                    )
-                                                ).FinInvierno
-                                                ,
-                                                First(
-                                                    Filter(
-                                                        ConfiguracionCalendario_1,
-                                                        Año=Text(Year(Today()))
-                                                    )
-                                                ).FinInvierno2
-                                            )
-                            }
-                        )
-                        ,
-                        Notify(
-                            "Esa semana ya está ocupada",
-                            NotificationType.Error,
-                            2000
-                        )
+                        ),
+                        {
+                            FechaInicio: If(
+                                Radio1.Selected.Value = "Semana 1",
+                                First(
+                                    Filter(
+                                        ConfiguracionCalendario_1,
+                                        Año = Text(Year(Today()))
+                                    )
+                                ).InicioInvierno,
+                                First(
+                                    Filter(
+                                        ConfiguracionCalendario_1,
+                                        Año = Text(Year(Today()))
+                                    )
+                                ).InicioInvierno2
+                            ),
+                            FechaFin: If(
+                                Radio1.Selected.Value = "Semana 1",
+                                First(
+                                    Filter(
+                                        ConfiguracionCalendario_1,
+                                        Año = Text(Year(Today()))
+                                    )
+                                ).FinInvierno,
+                                First(
+                                    Filter(
+                                        ConfiguracionCalendario_1,
+                                        Año = Text(Year(Today()))
+                                    )
+                                ).FinInvierno2
+                            )
+                        }
+                    ),
+                    Notify(
+                        "Esa semana ya está ocupada",
+                        NotificationType.Error,
+                        2000
                     )
-                  
-                ;
+                );
                 Reset(Radio1);
-                Set(enespera,false);
-                
+                Set(
+                    enespera,
+                    false
+                );
             Text: ="Confirmar"
             X: =326
             Y: =470
