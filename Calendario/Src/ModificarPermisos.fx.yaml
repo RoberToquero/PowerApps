@@ -179,7 +179,6 @@ ModificarPermisos As screen:
                                             )
                                          ).InicioInvierno2
                                      ),
-                
                         FechaFin: If(
                                          Radio1.Selected.Value="Semana 1",
                                          First(
@@ -204,6 +203,7 @@ ModificarPermisos As screen:
             ZIndex: =3
 
     ContainerVerano As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
         Height: =640
         Visible: |-
             =If(
@@ -304,6 +304,899 @@ ModificarPermisos As screen:
             X: =340
             Y: =527
             ZIndex: =9
+
+        Button3 As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |-
+                =Clear(hayfestivo);
+                Clear(haypuente);
+                ClearCollect(collFestivos,DiasFestivos);
+                If(
+                    Radio2.Selected.Value = 1
+                    ,
+                    Set(
+                        var_verano3,
+                        CountRows(
+                            Filter(
+                                collFestivos,
+                                If(
+                                    Text(Fecha,"ddd","en-GB") = "Sun"
+                                    ,
+                                    DateAdd(Fecha,1,TimeUnit.Days)>=DatePicker5.SelectedDate
+                                    &&
+                                    DateAdd(Fecha,1,TimeUnit.Days)<=DateAdd(DatePicker5.SelectedDate,20,TimeUnit.Days)
+                                    ,
+                                    If(
+                                        Text(Fecha,"ddd","en-GB") <> "Sat",
+                                        Fecha>=DatePicker5.SelectedDate
+                                        &&
+                                        Fecha<=DateAdd(DatePicker5.SelectedDate,20,TimeUnit.Days)
+                                    )
+                                    
+                                )
+                                
+                            )
+                        )
+                    )
+                    ;
+                    Clear(hayfestivo);
+                    Set(fechapuav, DatePicker5.SelectedDate);
+                    ForAll(
+                        DiasFestivos,
+                        If(
+                            Text(ThisRecord.Fecha,"ddd","en-GB")="Sun"
+                            ,
+                            If(DateDiff(DateAdd(ThisRecord.Fecha,1,TimeUnit.Days), fechapuav) = 0, Collect(hayfestivo, true))
+                            ,
+                            If(DateDiff(ThisRecord.Fecha, fechapuav) = 0, Collect(hayfestivo, true))
+                        )
+                        
+                    )
+                    ;
+                    If(
+                        Text(DatePicker5.SelectedDate,"ddd","en-GB") = "Mon"
+                        ,
+                        If(
+                            First(hayfestivo).Value=true
+                            ,
+                            Notify(
+                                "Ese dia es festivo",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            If(
+                                !(
+                                    (
+                                        DatePicker5.SelectedDate
+                                        <
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                    )
+                                    ||
+                                    (
+                                        DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                        >
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                    )
+                                )
+                                ,
+                                If(
+                                    CountRows(
+                                        Filter(
+                                            AddColumns(
+                                                Vacaciones
+                                                ,
+                                                Empleados,
+                                                LookUp(
+                                                    Empleados,
+                                                    DNI = dniEmpleado
+                                                )
+                                            )
+                                            ,
+                                            dniEmpleado<>txt_Usuario_Login.Text
+                                            &&
+                                            Opciones.Value="Verano"
+                                            &&
+                                            Empleados.Departamento.Value=dep_user
+                                            &&
+                                            (
+                                                (
+                                                    FechaInicio<=DatePicker5.SelectedDate
+                                                    &&
+                                                    FechaFin>=DatePicker5.SelectedDate
+                                                )
+                                                ||
+                                                (
+                                                    FechaInicio<=DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                                    &&
+                                                    FechaFin>=DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                                )
+                                                ||
+                                                (
+                                                    FechaInicio>=DatePicker5.SelectedDate
+                                                    &&
+                                                    FechaFin<=DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                                )
+                                            )
+                                            
+                                        )
+                                    )
+                                    <
+                                    (
+                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                        -
+                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                    )
+                                    ,
+                                    Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                    ,
+                                    Notify(
+                                        "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                )
+                                ,
+                                Notify(
+                                    "Está fuera del periodo de vacaciones",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                        ,
+                        If(
+                            Text(DatePicker5.SelectedDate,"ddd","en-GB") = "Sun"||"Sat",
+                            Notify(
+                                "Ese dia es fin de semana",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            Clear(haypuente);
+                            Set(fechapuavpuente, DateAdd(DatePicker5.SelectedDate,-1,TimeUnit.Days));
+                            ForAll(
+                                DiasFestivos,
+                                If(DateDiff(ThisRecord.Fecha, fechapuavpuente) = 0, Collect(haypuente, true))
+                            );
+                            If(
+                                First(haypuente).Value=true
+                                ,
+                                Clear(lunesfiesta);
+                                Set(lunesesasemana,
+                                    DateAdd(DatePicker5.SelectedDate,
+                                    1-Weekday(DatePicker5.SelectedDate,StartOfWeek.Monday),
+                                    TimeUnit.Days)
+                                );
+                                ForAll(
+                                    DiasFestivos,
+                                    If(DateDiff(ThisRecord.Fecha, lunesesasemana) = 0, Collect(lunesfiesta, true))
+                                );
+                                If(
+                                    First(lunesfiesta).Value=true
+                                    ,
+                                    If(
+                                        First(hayfestivo).Value=true
+                                        ,
+                                        Notify(
+                                            "Ese dia es festivo",
+                                            NotificationType.Error,
+                                            2000
+                                        )
+                                        ,
+                                        If(
+                                            DateDiff(lunesesasemana,DateAdd(DatePicker5.SelectedDate,-1,TimeUnit.Days))
+                                            =
+                                            CountIf(collFestivos,
+                                                    Fecha>=lunesesasemana,
+                                                    Fecha<=DateAdd(DatePicker5.SelectedDate,-1,TimeUnit.Days)
+                                            )
+                                            ,
+                                            If(
+                                                !(
+                                                    (
+                                                        DatePicker5.SelectedDate
+                                                        <
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                    )
+                                                    ||
+                                                    (
+                                                        DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                                        >
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                    )
+                                                )
+                                                ,
+                                                If(
+                                                    CountRows(
+                                                        Filter(
+                                                            AddColumns(
+                                                                Vacaciones
+                                                                ,
+                                                                Empleados,
+                                                                LookUp(
+                                                                    Empleados,
+                                                                    DNI = dniEmpleado
+                                                                )
+                                                            )
+                                                            ,
+                                                            dniEmpleado<>txt_Usuario_Login.Text
+                                                            &&
+                                                            Opciones.Value="Verano"
+                                                            &&
+                                                            Empleados.Departamento.Value=dep_user
+                                                            &&
+                                                            (
+                                                                (
+                                                                    FechaInicio<=DatePicker5.SelectedDate
+                                                                    &&
+                                                                    FechaFin>=DatePicker5.SelectedDate
+                                                                )
+                                                                ||
+                                                                (
+                                                                    FechaInicio<=DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                                                    &&
+                                                                    FechaFin>=DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                                                )
+                                                                ||
+                                                                (
+                                                                    FechaInicio>=DatePicker5.SelectedDate
+                                                                    &&
+                                                                    FechaFin<=DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
+                                                                )
+                                                            )
+                                                            
+                                                        )
+                                                    )
+                                                    <
+                                                    (
+                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                        -
+                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                    )
+                                                    ,
+                                                    Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                    ,
+                                                    Notify(
+                                                        "Este periodo de vacaciones entra en conflicto con demasiados compañeros de departamento",
+                                                        NotificationType.Error,
+                                                        2000
+                                                    )
+                                                )
+                                                ,
+                                                Notify(
+                                                    "Está fuera del periodo de vacaciones",
+                                                    NotificationType.Error,
+                                                    2000
+                                                )
+                                            )
+                                            ,
+                                            Notify(
+                                                "El dia tiene que ser el siguiente dia laborable después del lunes festivo",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                        )
+                                    )
+                                    ,
+                                    Notify(
+                                        "El dia tiene que ser lunes",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                )
+                                ,
+                                Notify(
+                                    "El dia tiene que ser lunes",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                    )
+                    ,
+                    Set(
+                        bloque1,
+                        false
+                    )
+                    ;
+                    Set(
+                        var_verano1,
+                        CountRows(
+                            Filter(
+                                collFestivos,
+                                If(
+                                    Text(Fecha,"ddd","en-GB") = "Sun"
+                                    ,
+                                    DateAdd(Fecha,1,TimeUnit.Days)>=DatePicker7.SelectedDate
+                                    &&
+                                    DateAdd(Fecha,1,TimeUnit.Days)<=DateAdd(DatePicker7.SelectedDate,6,TimeUnit.Days)
+                                    ,
+                                    If(
+                                        Text(Fecha,"ddd","en-GB") <> "Sat",
+                                        Fecha>=DatePicker7.SelectedDate
+                                        &&
+                                        Fecha<=DateAdd(DatePicker7.SelectedDate,6,TimeUnit.Days)
+                                    )   
+                                ) 
+                            )
+                        )
+                    )
+                    ;
+                    Set(
+                        var_verano2,
+                        CountRows(
+                            Filter(
+                                collFestivos,
+                                If(
+                                    Text(Fecha,"ddd","en-GB") = "Sun"
+                                    ,
+                                    DateAdd(Fecha,1,TimeUnit.Days)>=DatePicker6.SelectedDate
+                                    &&
+                                    DateAdd(Fecha,1,TimeUnit.Days)<=DateAdd(DatePicker6.SelectedDate,13,TimeUnit.Days)
+                                    ,
+                                    If(
+                                        Text(Fecha,"ddd","en-GB") <> "Sat",
+                                        Fecha>=DatePicker6.SelectedDate
+                                        &&
+                                        Fecha<=DateAdd(DatePicker6.SelectedDate,13,TimeUnit.Days)
+                                    )
+                                )
+                            )
+                        )
+                    )
+                    ;
+                    Clear(hayfestivo);
+                    Clear(hayfestivo2);
+                    Set(fechapuav1,DatePicker7.SelectedDate);
+                    Set(fechapuav2,DatePicker6.SelectedDate);
+                    ForAll(
+                        collFestivos,
+                        If(
+                            Text(ThisRecord.Fecha,"ddd","en-GB")="Sun"
+                            ,
+                            If(DateDiff(DateAdd(ThisRecord.Fecha,1,TimeUnit.Days), fechapuav1) = 0, Collect(hayfestivo, true));
+                            If(DateDiff(DateAdd(ThisRecord.Fecha,1,TimeUnit.Days), fechapuav2) = 0,Collect(hayfestivo2, true))
+                            ,
+                            If(DateDiff(ThisRecord.Fecha, fechapuav1) = 0, Collect(hayfestivo, true));
+                            If(DateDiff(ThisRecord.Fecha, fechapuav2) = 0,Collect(hayfestivo2, true))
+                        )  
+                    )
+                    ;
+                    If(
+                        Text(DatePicker7.SelectedDate,"ddd","en-GB") = "Mon"
+                        ,
+                        If(
+                            First(hayfestivo).Value=true
+                            ,
+                            Notify(
+                                "El dia del bloque de 1 semana es festivo",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            If(
+                                !(
+                                    (
+                                        DatePicker7.SelectedDate
+                                        <
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                    )
+                                    ||
+                                    (
+                                        DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                        >
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                    )
+                                )
+                                ,
+                                If(
+                                    CountRows(
+                                        Filter(
+                                            AddColumns(
+                                                Vacaciones
+                                                ,
+                                                Empleados,
+                                                LookUp(
+                                                    Empleados,
+                                                    DNI = dniEmpleado
+                                                )
+                                            )
+                                            ,
+                                            dniEmpleado<>txt_Usuario_Login.Text
+                                            &&
+                                            Opciones.Value="Verano"
+                                            &&
+                                            Empleados.Departamento.Value=dep_user
+                                            &&
+                                            (
+                                                (
+                                                    FechaInicio<=DatePicker7.SelectedDate
+                                                    &&
+                                                    FechaFin>=DatePicker7.SelectedDate
+                                                )
+                                                ||
+                                                (
+                                                    FechaInicio<=DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                                    &&
+                                                    FechaFin>=DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                                )
+                                                ||
+                                                (
+                                                    FechaInicio>=DatePicker7.SelectedDate
+                                                    &&
+                                                    FechaFin<=DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                                )
+                                            )
+                                            
+                                        )
+                                    )
+                                    <
+                                    (
+                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                        -
+                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                    )
+                                    ,
+                                    Set(bloque1,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                    ,
+                                    Notify(
+                                        "El bloque de 1 semana entra en conflicto con demasiados compañeros de departamento",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                )
+                                ,
+                                Notify(
+                                    "El bloque de 1 semana está fuera del periodo de vacaciones",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                        ,
+                        If(
+                            Text(DatePicker7.SelectedDate,"ddd","en-GB") = "Sun"||"Sat",
+                            Notify(
+                                "El día del bloque de 1 semana es fin de semana",
+                                NotificationType.Error,
+                                2000
+                            )
+                            ,
+                            Clear(haypuente);
+                            Set(fechapuavpuente, DateAdd(DatePicker7.SelectedDate,-1,TimeUnit.Days));
+                            ForAll(
+                                collFestivos,
+                                If(DateDiff(ThisRecord.Fecha, fechapuavpuente) = 0, Collect(haypuente, true))
+                            );
+                            If(
+                                First(haypuente).Value=true
+                                ,
+                                Clear(lunesfiesta);
+                                Set(lunesesasemana,
+                                    DateAdd(DatePicker7.SelectedDate,
+                                    1-Weekday(DatePicker7.SelectedDate,StartOfWeek.Monday),
+                                    TimeUnit.Days)
+                                );
+                                ForAll(
+                                    collFestivos,
+                                    If(DateDiff(ThisRecord.Fecha, lunesesasemana) = 0, Collect(lunesfiesta, true))
+                                );
+                                If(
+                                    First(lunesfiesta).Value=true
+                                    ,
+                                    If(
+                                        First(hayfestivo).Value=true
+                                        ,
+                                        Notify(
+                                            "El dia del bloque de 1 semana es festivo",
+                                            NotificationType.Error,
+                                            2000
+                                        )
+                                        ,
+                                        If(
+                                            DateDiff(lunesesasemana,DateAdd(DatePicker7.SelectedDate,-1,TimeUnit.Days))=
+                                            CountIf(collFestivos,
+                                                    Fecha>=lunesesasemana,
+                                                    Fecha<=DateAdd(DatePicker7.SelectedDate,-1,TimeUnit.Days)
+                                            )
+                                            ,
+                                            If(
+                                                !(
+                                                    (
+                                                        DatePicker7.SelectedDate
+                                                        <
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                    )
+                                                    ||
+                                                    (
+                                                        DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                                        >
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                    )
+                                                )
+                                                ,
+                                                If(
+                                                    CountRows(
+                                                        Filter(
+                                                            AddColumns(
+                                                                Vacaciones
+                                                                ,
+                                                                Empleados,
+                                                                LookUp(
+                                                                    Empleados,
+                                                                    DNI = dniEmpleado
+                                                                )
+                                                            )
+                                                            ,
+                                                            dniEmpleado<>txt_Usuario_Login.Text
+                                                            &&
+                                                            Opciones.Value="Verano"
+                                                            &&
+                                                            Empleados.Departamento.Value=dep_user
+                                                            &&
+                                                            (
+                                                                (
+                                                                    FechaInicio<=DatePicker7.SelectedDate
+                                                                    &&
+                                                                    FechaFin>=DatePicker7.SelectedDate
+                                                                )
+                                                                ||
+                                                                (
+                                                                    FechaInicio<=DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                                                    &&
+                                                                    FechaFin>=DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                                                )
+                                                                ||
+                                                                (
+                                                                    FechaInicio>=DatePicker7.SelectedDate
+                                                                    &&
+                                                                    FechaFin<=DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                                                )
+                                                            )
+                                                            
+                                                        )
+                                                    )
+                                                    <
+                                                    (
+                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                        -
+                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                    )
+                                                    ,
+                                                    Set(bloque1,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                    ,
+                                                    Notify(
+                                                        "El bloque de 1 semana entra en conflicto con demasiados compañeros de departamento",
+                                                        NotificationType.Error,
+                                                        2000
+                                                    )
+                                                )
+                                                ,
+                                                Notify(
+                                                    "El bloque de 1 semana está fuera del periodo de vacaciones",
+                                                    NotificationType.Error,
+                                                    2000
+                                                )
+                                            )
+                                            ,
+                                            Notify(
+                                                "El día del bloque de 1 semana tiene que ser el siguiente dia laborable después del lunes festivo",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                        )
+                                    )
+                                    ,
+                                    Notify(
+                                        "El día del bloque de 1 semana tiene que ser lunes",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                )
+                                ,
+                                Notify(
+                                    "El día del bloque de 1 semana tiene que ser lunes",
+                                    NotificationType.Error,
+                                    2000
+                                )
+                            )
+                        )
+                    )
+                    ;
+                    If(
+                        bloque1
+                        ,
+                        If(
+                            !(
+                                (
+                                    DatePicker6.SelectedDate <= DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                    &&
+                                    DatePicker7.SelectedDate <= DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                )
+                                ||
+                                (
+                                    DatePicker6.SelectedDate <= DatePicker7.SelectedDate
+                                    &&
+                                    DatePicker7.SelectedDate <= DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                )
+                                ||
+                                (
+                                    DatePicker6.SelectedDate <= DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                    &&
+                                    DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
+                                    <= 
+                                    DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                )
+                            )
+                            ,
+                            If(
+                                Text(DatePicker6.SelectedDate,"ddd","en-GB") = "Mon"
+                                ,
+                                If(
+                                    First(hayfestivo2).Value=true
+                                    ,
+                                    Notify(
+                                        "El día del bloque de 2 semanas es dia es festivo",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                    ,
+                                    If(
+                                        !(
+                                            (
+                                                DatePicker6.SelectedDate
+                                                <
+                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                            )
+                                            ||
+                                            (
+                                                DateAdd(DatePicker6.SelectedDate,13+var_verano1,TimeUnit.Days)
+                                                >
+                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                            )
+                                        )
+                                        ,
+                                        If(
+                                            CountRows(
+                                                Filter(
+                                                    AddColumns(
+                                                        Vacaciones
+                                                        ,
+                                                        Empleados,
+                                                        LookUp(
+                                                            Empleados,
+                                                            DNI = dniEmpleado
+                                                        )
+                                                    )
+                                                    ,
+                                                    dniEmpleado<>txt_Usuario_Login.Text
+                                                    &&
+                                                    Opciones.Value="Verano"
+                                                    &&
+                                                    Empleados.Departamento.Value=dep_user
+                                                    &&
+                                                    (
+                                                        (
+                                                            FechaInicio<=DatePicker6.SelectedDate
+                                                            &&
+                                                            FechaFin>=DatePicker6.SelectedDate
+                                                        )
+                                                        ||
+                                                        (
+                                                            FechaInicio<=DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                                            &&
+                                                            FechaFin>=DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                                        )
+                                                        ||
+                                                        (
+                                                            FechaInicio>=DatePicker6.SelectedDate
+                                                            &&
+                                                            FechaFin<=DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                                        )
+                                                    )
+                                                    
+                                                )
+                                            )
+                                            <
+                                            (
+                                                LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                -
+                                                LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                            )
+                                            ,
+                                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                            ,
+                                            Notify(
+                                                "El bloque de 2 semanas entra en conflicto con demasiados compañeros de departamento",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                        )
+                                        ,
+                                        Notify(
+                                            "El día del bloque de 2 semanas está fuera del periodo de vacaciones",
+                                            NotificationType.Error,
+                                            2000
+                                        )
+                                    )
+                                )
+                                ,
+                                If(
+                                    Text(DatePicker6.SelectedDate,"ddd","en-GB") = "Sun"||"Sat",
+                                    Notify(
+                                        "El día del bloque de 2 semanas es fin de semana",
+                                        NotificationType.Error,
+                                        2000
+                                    )
+                                    ,
+                                    Clear(haypuente);
+                                    Set(fechapuavpuente, DateAdd(DatePicker6.SelectedDate,-1,TimeUnit.Days));
+                                    ForAll(
+                                        collFestivos,
+                                        If(DateDiff(ThisRecord.Fecha, fechapuavpuente) = 0, Collect(haypuente, true))
+                                    );
+                                    If(
+                                        First(haypuente).Value=true
+                                        ,
+                                        Clear(lunesfiesta);
+                                        Set(lunesesasemana,
+                                            DateAdd(DatePicker6.SelectedDate,
+                                            1-Weekday(DatePicker6.SelectedDate,StartOfWeek.Monday),
+                                            TimeUnit.Days)
+                                        );
+                                        ForAll(
+                                            collFestivos,
+                                            If(DateDiff(ThisRecord.Fecha, lunesesasemana) = 0, Collect(lunesfiesta, true))
+                                        );
+                                        If(
+                                            First(lunesfiesta).Value=true
+                                            ,
+                                            If(
+                                                First(hayfestivo2).Value=true
+                                                ,
+                                                Notify(
+                                                    "El día del bloque de 2 semanas es festivo",
+                                                    NotificationType.Error,
+                                                    2000
+                                                )
+                                                ,
+                                                If(
+                                                    DateDiff(lunesesasemana,DateAdd(DatePicker6.SelectedDate,-1,TimeUnit.Days))=
+                                                    CountIf(collFestivos,
+                                                            Fecha>=lunesesasemana,
+                                                            Fecha<=DateAdd(DatePicker6.SelectedDate,-1,TimeUnit.Days)
+                                                    )
+                                                    ,
+                                                    If(
+                                                        !(
+                                                            (
+                                                                DatePicker6.SelectedDate
+                                                                <
+                                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                            )
+                                                            ||
+                                                            (
+                                                                DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                                                >
+                                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                            )
+                                                        )
+                                                        ,
+                                                        If(
+                                                            CountRows(
+                                                                Filter(
+                                                                    AddColumns(
+                                                                        Vacaciones
+                                                                        ,
+                                                                        Empleados,
+                                                                        LookUp(
+                                                                            Empleados,
+                                                                            DNI = dniEmpleado
+                                                                        )
+                                                                    )
+                                                                    ,
+                                                                    dniEmpleado<>txt_Usuario_Login.Text
+                                                                    &&
+                                                                    Opciones.Value="Verano"
+                                                                    &&
+                                                                    Empleados.Departamento.Value=dep_user
+                                                                    &&
+                                                                    (
+                                                                        (
+                                                                            FechaInicio<=DatePicker6.SelectedDate
+                                                                            &&
+                                                                            FechaFin>=DatePicker6.SelectedDate
+                                                                        )
+                                                                        ||
+                                                                        (
+                                                                            FechaInicio<=DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                                                            &&
+                                                                            FechaFin>=DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                                                        )
+                                                                        ||
+                                                                        (
+                                                                            FechaInicio>=DatePicker6.SelectedDate
+                                                                            &&
+                                                                            FechaFin<=DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
+                                                                        )
+                                                                    )
+                                                                    
+                                                                )
+                                                            )
+                                                            <
+                                                            (
+                                                                LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                                -
+                                                                LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                            )
+                                                            ,
+                                                            Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                                                            ,
+                                                            Notify(
+                                                                "El bloque de 2 semanas entra en conflicto con demasiados compañeros de departamento",
+                                                                NotificationType.Error,
+                                                                2000
+                                                            )
+                                                        )
+                                                        ,
+                                                        Notify(
+                                                            "El bloque de 2 semanas está fuera del periodo de vacaciones",
+                                                            NotificationType.Error,
+                                                            2000
+                                                        )
+                                                    )
+                                                    ,
+                                                    Notify(
+                                                        "El día del bloque de 2 semanas tiene que ser el siguiente dia laborable después del lunes festivo",
+                                                        NotificationType.Error,
+                                                        2000
+                                                    )
+                                                )
+                                            )
+                                            ,
+                                            Notify(
+                                                "El día del bloque de 2 semanas tiene que ser lunes",
+                                                NotificationType.Error,
+                                                2000
+                                            )
+                                        )
+                                        ,
+                                        Notify(
+                                            "El día del bloque de 2 semanas tiene que ser lunes",
+                                            NotificationType.Error,
+                                            2000
+                                        )
+                                    )
+                                )
+                            )
+                            ,
+                            Notify(
+                                "El el bloque de 1 semana y el bloque de 2 semanas no pueden coincidir",
+                                NotificationType.Error,
+                                2000
+                            )
+                        )
+                    )
+                )
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+            Text: ="Comprobar"
+            X: =340
+            Y: =527
+            ZIndex: =10
 
         Group3 As group:
             Height: =5
