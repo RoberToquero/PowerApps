@@ -64,8 +64,8 @@ ModificarPermisos As screen:
 
         DatePicker4 As datepicker:
             DefaultDate: =GalleryConsultarVacaciones.Selected.FechaInicio
-            X: =255
-            Y: =280
+            X: =247
+            Y: =268
             ZIndex: =1
 
         Label5 As label:
@@ -73,9 +73,9 @@ ModificarPermisos As screen:
             FontWeight: =FontWeight.Semibold
             Height: =91
             Size: =20
-            Text: ="Selecciona la nueva fecha de asuntos propios"
+            Text: ="Selecciona la nueva fecha de Libre Elección"
             Width: =359
-            X: =240
+            X: =232
             Y: =88
             ZIndex: =2
 
@@ -105,8 +105,8 @@ ModificarPermisos As screen:
                 )
             Text: ="Confirmar"
             Width: =155
-            X: =328
-            Y: =472
+            X: =334
+            Y: =464
             ZIndex: =3
 
     ContainerInvierno As groupContainer.manualLayoutContainer:
