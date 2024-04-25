@@ -111,6 +111,12 @@ Screen1 As screen:
 
     ContainerInvierno As groupContainer.manualLayoutContainer:
         Height: =638
+        Visible: |-
+            =If(
+                GalleryConsultarVacaciones.Selected.Opciones.Value="Invierno",
+                true,
+                false
+            )
         Width: =822
         X: =544
         Y: =130
