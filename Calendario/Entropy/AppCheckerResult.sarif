@@ -7483,36 +7483,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ConsultarVacaciones",
-                "type": "ConsultarVacaciones.IconVolverConsultarVacaciones"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.TabIndex"
                 }
               ],
@@ -7537,6 +7507,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ConsultarVacaciones.IconVolverConsultarVacaciones.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ConsultarVacaciones",
+                "type": "ConsultarVacaciones.IconVolverConsultarVacaciones"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
         },
         {
           "locations": [

@@ -420,7 +420,8 @@ ModificarPermisos As screen:
                     )
                 )
                 ;
-                Set(popUpEliminarModificarPermisos,false)
+                Set(popUpEliminarModificarPermisos,false);
+                Navigate(ConsultarVacaciones)
             Text: ="Aceptar"
             Visible: =popUpEliminarModificarPermisos
             X: =715
