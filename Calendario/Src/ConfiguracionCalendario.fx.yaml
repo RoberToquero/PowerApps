@@ -285,7 +285,8 @@ ConfiguracionCalendario As screen:
         ZIndex: =26
 
     Button2 As button:
-        Fill: =RGBA(149, 149, 149, 1)
+        Fill: =RGBA(255, 166, 230, 1)
+        OnSelect: =Navigate(ConfiguracionFestivos)
         Text: ="Festivos"
         X: =1161
         Y: =30

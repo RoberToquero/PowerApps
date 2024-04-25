@@ -1,15 +1,9 @@
-Screen3 As screen:
+ConfiguracionFestivos As screen:
 
-    Rectangle1 As rectangle:
-        Fill: =RGBA(241, 244, 249, 0.7)
-        Height: =668
-        Width: =468
-        Y: =100
-        ZIndex: =1
-
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+    "GalleryFestivos As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         '#CopilotOverlayLabel': ="Filtrada"
         DelayItemLoading: =true
+        Fill: =RGBA(241, 244, 249, 0.7)
         Height: =668
         Items: |-
             =Sort(
@@ -97,7 +91,7 @@ Screen3 As screen:
         X: =318
         ZIndex: =4
 
-    Icon2_1 As icon.Undo:
+    VolverConfigFestivos As icon.Undo:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Undo
         OnSelect: =Back()
@@ -105,29 +99,25 @@ Screen3 As screen:
         Y: =18
         ZIndex: =5
 
-    DatePicker1 As datepicker:
-        X: =764
-        Y: =240
-        ZIndex: =6
-
-    TextInput1 As text:
-        Default: ="Entrada de texto"
+    txtMotivoFestivo As text:
+        Default: =
         Height: =49
+        HintText: ="Motivo"
         Width: =328
         X: =764
         Y: =365
         ZIndex: =7
 
-    Button3 As button:
+    BtnAñadirFestivos As button:
         Fill: =RGBA(54, 176, 75, 1)
         OnSelect: |-
             =If(
-                IsBlank(DatePicker1)||IsBlank(TextInput1),
+                IsBlank(dpFestivos)||IsBlank(txtMotivoFestivo),
                 Collect(
                     DiasFestivos,
                     {
-                        Fecha: DatePicker1.SelectedDate,
-                        Motivo: TextInput1.Text
+                        Fecha: dpFestivos.SelectedDate,
+                        Motivo: txtMotivoFestivo.Text
                     }
                 )
                 ,
@@ -142,7 +132,12 @@ Screen3 As screen:
         Y: =548
         ZIndex: =8
 
-    Group1 As group:
+    dpFestivos As datepicker:
+        X: =764
+        Y: =240
+        ZIndex: =16
+
+    PopupEliminarFestivos As group:
         Height: =5
         Width: =5
         X: =40
@@ -186,7 +181,7 @@ Screen3 As screen:
             Y: =251
             ZIndex: =12
 
-        Button4 As button:
+        btnCancelarEliminarFestivo As button:
             Fill: =RGBA(255, 0, 0, 1)
             OnSelect: =Set(popupeliminarfestivo,false)
             Text: ="Cancelar"
@@ -195,12 +190,12 @@ Screen3 As screen:
             Y: =461
             ZIndex: =13
 
-        Button5 As button:
+        btnAceptarEliminarFestivo As button:
             Fill: =RGBA(54, 176, 75, 1)
             OnSelect: |-
                 =Remove(
                     DiasFestivos,
-                    Gallery1.Selected
+                    GalleryFestivos.Selected
                 )
                 ;
                 Set(popupeliminarfestivo,false)
@@ -216,7 +211,7 @@ Screen3 As screen:
             FontWeight: =FontWeight.Semibold
             Height: =54
             Size: =14
-            Text: =Gallery1.Selected.Motivo&"     "&Gallery1.Selected.Fecha
+            Text: =GalleryFestivos.Selected.Motivo&"     "&GalleryFestivos.Selected.Fecha
             Visible: =popupeliminarfestivo
             Width: =432
             X: =466

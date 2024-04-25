@@ -116,7 +116,7 @@ Calendario As screen:
                 tabla_calendario,
                 LookUp(
                     DiasFestivos,
-                    Day(Fecha) = coll_mes[@Value] && Month(Fecha) = var_mes
+                    Day(Fecha) = coll_mes[@Value] && Month(Fecha) = var_mes && Year(Fecha)=var_año
                 )
             )
         Layout: =Layout.Vertical
