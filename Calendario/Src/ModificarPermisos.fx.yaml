@@ -420,16 +420,30 @@ ModificarPermisos As screen:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
             OnSelect: |-
-                =Remove(
-                    Vacaciones,
-                    First(
+                =If(
+                    GalleryConsultarVacaciones.Selected.Opciones.Value<>"Verano"
+                    ,
+                    Remove(
+                        Vacaciones,
+                        First(
+                            Filter(
+                                Vacaciones,
+                                dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
+                                &&
+                                FechaInicio=GalleryConsultarVacaciones.Selected.FechaInicio
+                                &&
+                                Opciones.Value=GalleryConsultarVacaciones.Selected.Opciones.Value
+                            )
+                        )
+                    )
+                    ,
+                    Remove(
+                        Vacaciones,
                         Filter(
                             Vacaciones,
                             dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
                             &&
-                            FechaInicio=GalleryConsultarVacaciones.Selected.FechaInicio
-                            &&
-                            Opciones.Value=GalleryConsultarVacaciones.Selected.Opciones.Value
+                            Opciones.Value="Verano"
                         )
                     )
                 )
