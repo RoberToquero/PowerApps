@@ -863,10 +863,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 10,
+                  "charLength": 398,
                   "charOffset": 90,
                   "snippet": {
-                    "text": "Day(Fecha)"
+                    "text": "If(\n            Text(Fecha;\"ddd\";\"en-GB\") = \"Sun\"\n            ;\n            Day(DateAdd(Fecha;1;TimeUnit.Days)) = coll_mes[@Value] \n             &&\n             Month(DateAdd(Fecha;1;TimeUnit.Days)) = var_mes \n             &&\n             Year(DateAdd(Fecha;1;TimeUnit.Days))=var_año\n            ;\n            Day(Fecha) = coll_mes[@Value] && Month(Fecha) = var_mes && Year(Fecha)=var_año\n        )"
                   }
                 }
               },
@@ -879,127 +879,7 @@
           ],
           "message": {
             "arguments": [
-              "Day"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Calendario.GalleryCalendario.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Calendario.GalleryCalendario.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 101,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Calendario",
-                "type": "Calendario.GalleryCalendario"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Calendario.GalleryCalendario.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Calendario.GalleryCalendario.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 120,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Calendario",
-                "type": "Calendario.GalleryCalendario"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Calendario.GalleryCalendario.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Calendario.GalleryCalendario.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 146,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Calendario",
-                "type": "Calendario.GalleryCalendario"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
+              "If"
             ],
             "id": "issue"
           },
