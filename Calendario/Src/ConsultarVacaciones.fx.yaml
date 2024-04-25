@@ -116,6 +116,12 @@ ConsultarVacaciones As screen:
             Height: =46
             Icon: =Icon.Edit
             OnSelect: =Navigate(ModificarPermisos)
+            Visible: |-
+                =If(
+                    ThisItem.Opciones.Value="Baja"||ThisItem.Opciones.Value="Asuntos Propios",
+                    false,
+                    true
+                )
             Width: =44
             X: =488
             Y: =21
