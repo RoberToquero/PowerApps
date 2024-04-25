@@ -2654,11 +2654,11 @@ Calendario As screen:
                 Clear(hayfestivo2);
                 Set(
                     fechapuale,
-                    dp_ALE1.SelectedDate
+                    dp_MLE1.SelectedDate
                 );
                 Set(
                     fechapuale2,
-                    dp_ALE2.SelectedDate
+                    dp_MLE2.SelectedDate
                 );
                 ClearCollect(
                     collFestivos,
@@ -2703,11 +2703,11 @@ Calendario As screen:
                         ),
                         If(
                             Text(
-                                dp_ALE1.SelectedDate,
+                                dp_MLE1.SelectedDate,
                                 "ddd",
                                 "en-GB"
                             ) = "Sun" || Text(
-                                dp_ALE1.SelectedDate,
+                                dp_MLE1.SelectedDate,
                                 "ddd",
                                 "en-GB"
                             ) = "Sat",
@@ -2718,11 +2718,11 @@ Calendario As screen:
                             ),
                             If(
                                 Text(
-                                    dp_ALE2.SelectedDate,
+                                    dp_MLE2.SelectedDate,
                                     "ddd",
                                     "en-GB"
                                 ) = "Sun" || Text(
-                                    dp_ALE2.SelectedDate,
+                                    dp_MLE2.SelectedDate,
                                     "ddd",
                                     "en-GB"
                                 ) = "Sat",
@@ -2733,7 +2733,7 @@ Calendario As screen:
                                 )
                                 ,
                                 If(
-                                    dp_ALE1<>dp_ALE2
+                                    dp_MLE1<>dp_MLE2
                                     ,
                                     If(
                                         CountRows(
@@ -2741,7 +2741,7 @@ Calendario As screen:
                                                 Vacaciones,
                                                 dniEmpleado=txt_Usuario_Login.Text
                                                 &&
-                                                FechaInicio=dp_ALE1.SelectedDate
+                                                FechaInicio=dp_MLE1.SelectedDate
                                             )
                                         )>0
                                         ,
@@ -2757,7 +2757,7 @@ Calendario As screen:
                                                     Vacaciones,
                                                     dniEmpleado=txt_Usuario_Login.Text
                                                     &&
-                                                    FechaInicio=dp_ALE2.SelectedDate
+                                                    FechaInicio=dp_MLE2.SelectedDate
                                                 )
                                             )>0
                                             ,

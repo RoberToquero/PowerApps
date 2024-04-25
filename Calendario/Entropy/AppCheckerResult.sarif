@@ -2146,7 +2146,7 @@
                   "charLength": 313,
                   "charOffset": 1880,
                   "snippet": {
-                    "text": "CountRows(\n                            Filter(\n                                Vacaciones;\n                                dniEmpleado=txt_Usuario_Login.Text\n                                &&\n                                FechaInicio=dp_ALE1.SelectedDate\n                            )\n                        )"
+                    "text": "CountRows(\n                            Filter(\n                                Vacaciones;\n                                dniEmpleado=txt_Usuario_Login.Text\n                                &&\n                                FechaInicio=dp_MLE1.SelectedDate\n                            )\n                        )"
                   }
                 }
               },
@@ -2186,7 +2186,7 @@
                   "charLength": 341,
                   "charOffset": 2518,
                   "snippet": {
-                    "text": "CountRows(\n                                Filter(\n                                    Vacaciones;\n                                    dniEmpleado=txt_Usuario_Login.Text\n                                    &&\n                                    FechaInicio=dp_ALE2.SelectedDate\n                                )\n                            )"
+                    "text": "CountRows(\n                                Filter(\n                                    Vacaciones;\n                                    dniEmpleado=txt_Usuario_Login.Text\n                                    &&\n                                    FechaInicio=dp_MLE2.SelectedDate\n                                )\n                            )"
                   }
                 }
               },
