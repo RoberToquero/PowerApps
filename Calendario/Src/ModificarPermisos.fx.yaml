@@ -300,6 +300,61 @@ ModificarPermisos As screen:
         Button9 As button:
             Fill: =RGBA(54, 176, 75, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
+            OnSelect: |
+                =Set(enespera,true)
+                ;
+                Remove(
+                    Vacaciones,
+                    Filter(
+                        Vacaciones,
+                        Opciones.Value="Verano"
+                        &&
+                        Year(FechaInicio)=Year(GalleryConsultarVacaciones.Selected.FechaInicio)
+                        &&
+                        dniEmpleado=GalleryConsultarVacaciones.Selected.dniEmpleado
+                    )
+                ) 
+                ;
+                If(
+                    Radio2.Selected.Value=1
+                    ,
+                    Collect(
+                        Vacaciones,
+                        {
+                            dniEmpleado: GalleryConsultarVacaciones.Selected.dniEmpleado,
+                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,
+                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            Duracion: 21+var_verano3,
+                            Modificada: true
+                        }
+                    )
+                    ,
+                    Collect(
+                        Vacaciones,
+                        {
+                            dniEmpleado: GalleryConsultarVacaciones.Selected.dniEmpleado,
+                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,
+                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            Duracion: 7+var_verano1,
+                            Modificada: true
+                        }
+                        ,
+                        {
+                            dniEmpleado: GalleryConsultarVacaciones.Selected.dniEmpleado,
+                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,
+                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days),
+                            Opciones: {Value: "Verano", Label: "Verano"},
+                            Duracion: 14+var_verano2,
+                            Modificada: true
+                        }
+                    )
+                )
+                ;
+                Set(enespera,false);
+                Set(pumvesvalido,false);
+                Reset(Radio2);
             Text: ="Confirmar"
             X: =340
             Y: =527
@@ -371,13 +426,13 @@ ModificarPermisos As screen:
                                     (
                                         DatePicker5.SelectedDate
                                         <
-                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).InicioVerano
                                     )
                                     ||
                                     (
                                         DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
                                         >
-                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).FinVerano
                                     )
                                 )
                                 ,
@@ -394,11 +449,11 @@ ModificarPermisos As screen:
                                                 )
                                             )
                                             ,
-                                            dniEmpleado<>txt_Usuario_Login.Text
+                                            dniEmpleado<>GalleryConsultarVacaciones.Selected.dniEmpleado
                                             &&
                                             Opciones.Value="Verano"
                                             &&
-                                            Empleados.Departamento.Value=dep_user
+                                            Empleados.Departamento.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
                                             &&
                                             (
                                                 (
@@ -424,9 +479,9 @@ ModificarPermisos As screen:
                                     )
                                     <
                                     (
-                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).TotalEmpleados
                                         -
-                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).MinimoEmpleados
                                     )
                                     ,
                                     Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -498,13 +553,13 @@ ModificarPermisos As screen:
                                                     (
                                                         DatePicker5.SelectedDate
                                                         <
-                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).InicioVerano
                                                     )
                                                     ||
                                                     (
                                                         DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days)
                                                         >
-                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).FinVerano
                                                     )
                                                 )
                                                 ,
@@ -521,11 +576,11 @@ ModificarPermisos As screen:
                                                                 )
                                                             )
                                                             ,
-                                                            dniEmpleado<>txt_Usuario_Login.Text
+                                                            dniEmpleado<>GalleryConsultarVacaciones.Selected.dniEmpleado
                                                             &&
                                                             Opciones.Value="Verano"
                                                             &&
-                                                            Empleados.Departamento.Value=dep_user
+                                                            Empleados.Departamento.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
                                                             &&
                                                             (
                                                                 (
@@ -551,9 +606,9 @@ ModificarPermisos As screen:
                                                     )
                                                     <
                                                     (
-                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).TotalEmpleados
                                                         -
-                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).MinimoEmpleados
                                                     )
                                                     ,
                                                     Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -681,13 +736,13 @@ ModificarPermisos As screen:
                                     (
                                         DatePicker7.SelectedDate
                                         <
-                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).InicioVerano
                                     )
                                     ||
                                     (
                                         DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
                                         >
-                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).FinVerano
                                     )
                                 )
                                 ,
@@ -704,11 +759,11 @@ ModificarPermisos As screen:
                                                 )
                                             )
                                             ,
-                                            dniEmpleado<>txt_Usuario_Login.Text
+                                            dniEmpleado<>GalleryConsultarVacaciones.Selected.dniEmpleado
                                             &&
                                             Opciones.Value="Verano"
                                             &&
-                                            Empleados.Departamento.Value=dep_user
+                                            Empleados.Departamento.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
                                             &&
                                             (
                                                 (
@@ -734,9 +789,9 @@ ModificarPermisos As screen:
                                     )
                                     <
                                     (
-                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).TotalEmpleados
                                         -
-                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).MinimoEmpleados
                                     )
                                     ,
                                     Set(bloque1,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -807,13 +862,13 @@ ModificarPermisos As screen:
                                                     (
                                                         DatePicker7.SelectedDate
                                                         <
-                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).InicioVerano
                                                     )
                                                     ||
                                                     (
                                                         DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days)
                                                         >
-                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                        LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).FinVerano
                                                     )
                                                 )
                                                 ,
@@ -830,11 +885,11 @@ ModificarPermisos As screen:
                                                                 )
                                                             )
                                                             ,
-                                                            dniEmpleado<>txt_Usuario_Login.Text
+                                                            dniEmpleado<>GalleryConsultarVacaciones.Selected.dniEmpleado
                                                             &&
                                                             Opciones.Value="Verano"
                                                             &&
-                                                            Empleados.Departamento.Value=dep_user
+                                                            Empleados.Departamento.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
                                                             &&
                                                             (
                                                                 (
@@ -860,9 +915,9 @@ ModificarPermisos As screen:
                                                     )
                                                     <
                                                     (
-                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).TotalEmpleados
                                                         -
-                                                        LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                        LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).MinimoEmpleados
                                                     )
                                                     ,
                                                     Set(bloque1,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -948,13 +1003,13 @@ ModificarPermisos As screen:
                                             (
                                                 DatePicker6.SelectedDate
                                                 <
-                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).InicioVerano
                                             )
                                             ||
                                             (
                                                 DateAdd(DatePicker6.SelectedDate,13+var_verano1,TimeUnit.Days)
                                                 >
-                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).FinVerano
                                             )
                                         )
                                         ,
@@ -971,11 +1026,11 @@ ModificarPermisos As screen:
                                                         )
                                                     )
                                                     ,
-                                                    dniEmpleado<>txt_Usuario_Login.Text
+                                                    dniEmpleado<>GalleryConsultarVacaciones.Selected.dniEmpleado
                                                     &&
                                                     Opciones.Value="Verano"
                                                     &&
-                                                    Empleados.Departamento.Value=dep_user
+                                                    Empleados.Departamento.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
                                                     &&
                                                     (
                                                         (
@@ -1001,9 +1056,9 @@ ModificarPermisos As screen:
                                             )
                                             <
                                             (
-                                                LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).TotalEmpleados
                                                 -
-                                                LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).MinimoEmpleados
                                             )
                                             ,
                                             Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -1074,13 +1129,13 @@ ModificarPermisos As screen:
                                                             (
                                                                 DatePicker6.SelectedDate
                                                                 <
-                                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).InicioVerano
+                                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).InicioVerano
                                                             )
                                                             ||
                                                             (
                                                                 DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days)
                                                                 >
-                                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(Today()))).FinVerano
+                                                                LookUp(ConfiguracionCalendario_1,Año=Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))).FinVerano
                                                             )
                                                         )
                                                         ,
@@ -1097,11 +1152,11 @@ ModificarPermisos As screen:
                                                                         )
                                                                     )
                                                                     ,
-                                                                    dniEmpleado<>txt_Usuario_Login.Text
+                                                                    dniEmpleado<>GalleryConsultarVacaciones.Selected.dniEmpleado
                                                                     &&
                                                                     Opciones.Value="Verano"
                                                                     &&
-                                                                    Empleados.Departamento.Value=dep_user
+                                                                    Empleados.Departamento.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
                                                                     &&
                                                                     (
                                                                         (
@@ -1127,9 +1182,9 @@ ModificarPermisos As screen:
                                                             )
                                                             <
                                                             (
-                                                                LookUp(Departamentos_1,Nombre.Value=dep_user).TotalEmpleados
+                                                                LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).TotalEmpleados
                                                                 -
-                                                                LookUp(Departamentos_1,Nombre.Value=dep_user).MinimoEmpleados
+                                                                LookUp(Departamentos_1,Nombre.Value=GalleryConsultarVacaciones.Selected.DepartamentoEmpleado).MinimoEmpleados
                                                             )
                                                             ,
                                                             Set(puavesvalido,true)//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
