@@ -349,6 +349,18 @@ ModificarPermisos As screen:
         Y: =557
         ZIndex: =10
 
+    Label15 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =85
+        Text: |-
+            ="¿Quieres eliminar solo este registro, o todos los registros de vacaciones de verano de este año del empleado: Manolo Ruiz?"
+        Visible: =popUpEliminarModificarPermisos&&GalleryConsultarVacaciones.Selected.Opciones.Value="Verano"
+        Width: =427
+        X: =490
+        Y: =290
+        ZIndex: =17
+
     Group4 As group:
         Height: =5
         Width: =5
@@ -377,7 +389,7 @@ ModificarPermisos As screen:
             Height: =87
             Size: =18
             Text: ="¿Seguro que quieres eliminar este registro?"
-            Visible: =popUpEliminarModificarPermisos
+            Visible: =popUpEliminarModificarPermisos && GalleryConsultarVacaciones.Selected.Opciones.Value<>"Verano"
             Width: =285
             X: =540
             Y: =321
@@ -386,8 +398,10 @@ ModificarPermisos As screen:
         Icon7 As icon.Information:
             Color: =RGBA(255, 0, 0, 1)
             Fill: =RGBA(255, 255, 0, 1)
+            Height: =49
             Icon: =Icon.Information
             Visible: =popUpEliminarModificarPermisos
+            Width: =54
             X: =416
             Y: =272
             ZIndex: =14
@@ -399,7 +413,7 @@ ModificarPermisos As screen:
             Text: ="Cancelar"
             Visible: =popUpEliminarModificarPermisos
             X: =490
-            Y: =473
+            Y: =486
             ZIndex: =15
 
         Button12 As button:
@@ -425,6 +439,20 @@ ModificarPermisos As screen:
             Text: ="Aceptar"
             Visible: =popUpEliminarModificarPermisos
             X: =715
-            Y: =473
+            Y: =486
             ZIndex: =16
+
+    Radio3 As radio:
+        Color: =RGBA(255, 255, 255, 1)
+        Default: ="Solo este"
+        FontWeight: =FontWeight.Bold
+        Height: =62
+        Items: =["Solo este","Todos"]
+        Layout: =Layout.Horizontal
+        Size: =18
+        Visible: =popUpEliminarModificarPermisos&&GalleryConsultarVacaciones.Selected.Opciones.Value="Verano"
+        Width: =365
+        X: =500
+        Y: =393
+        ZIndex: =18
 
