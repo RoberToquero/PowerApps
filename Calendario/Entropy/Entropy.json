@@ -433,7 +433,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/25/2024 14:36:35",
+  "HeaderLastSavedDateTimeUTC": "04/25/2024 14:47:49",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "129484a6-239e-431b-a34f-d24fb22b69b7": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/c9cc2931d5ba4d1a80ef2165833840d9\"",
@@ -1348,7 +1348,7 @@
     "Label1": 375,
     "Label10": 398,
     "Label11": 132,
-    "Label11_1": 362,
+    "Label11_1": 363,
     "Label12": 142,
     "Label12_1": 143,
     "Label12_2": 141,
@@ -1436,7 +1436,7 @@
     "PopUpAñadirVacaciones": 40,
     "PopupCambio": 273,
     "PopUpEliminar": 172,
-    "PopupEliminarFestivos": 364,
+    "PopupEliminarFestivos": 362,
     "PopUpModificarVacaciones": 50,
     "PortalEmpleados": 329,
     "PUAV_Invierno": 43,
@@ -1521,7 +1521,7 @@
     "txt_Usuario_Login": 4,
     "txtMotivoFestivo": 377,
     "VentanaEspera": 22,
-    "VolverConfigFestivos": 363
+    "VolverConfigFestivos": 364
   },
   "ResourcesJsonIndices": {
     "Image-logo": 1,
