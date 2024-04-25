@@ -63,6 +63,7 @@ Screen1 As screen:
         ZIndex: =7
 
         DatePicker4 As datepicker:
+            DefaultDate: =GalleryConsultarVacaciones.Selected.FechaInicio
             X: =255
             Y: =280
             ZIndex: =1
@@ -97,7 +98,8 @@ Screen1 As screen:
                     )
                     ,
                     {
-                        FechaInicio: DatePicker4.SelectedDate
+                        FechaInicio: DatePicker4.SelectedDate,
+                        FechaFin: DatePicker4.SelectedDate
                     }
                 )
             Text: ="Confirmar"
