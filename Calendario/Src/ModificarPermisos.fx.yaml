@@ -318,6 +318,7 @@ ModificarPermisos As screen:
         Radio2 As radio:
             Default: ="1"
             Items: =RadioSample
+            OnChange: =Set(puavesvalido,false)
             X: =508
             Y: =44
             ZIndex: =2
@@ -408,8 +409,8 @@ ModificarPermisos As screen:
                         Vacaciones,
                         {
                             dniEmpleado: GalleryConsultarVacaciones.Selected.dniEmpleado,
-                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,
-                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_3.SelectedDate,20+var_verano3,TimeUnit.Days),
+                            FechaInicio: DatePicker5.SelectedDate,
+                            FechaFin: DateAdd(DatePicker5.SelectedDate,20+var_verano3,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
                             Duracion: 21+var_verano3,
                             Modificada: true
@@ -420,8 +421,8 @@ ModificarPermisos As screen:
                         Vacaciones,
                         {
                             dniEmpleado: GalleryConsultarVacaciones.Selected.dniEmpleado,
-                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,
-                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_1.SelectedDate,6+var_verano1,TimeUnit.Days),
+                            FechaInicio: DatePicker7.SelectedDate,
+                            FechaFin: DateAdd(DatePicker7.SelectedDate,6+var_verano1,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
                             Duracion: 7+var_verano1,
                             Modificada: true
@@ -429,8 +430,8 @@ ModificarPermisos As screen:
                         ,
                         {
                             dniEmpleado: GalleryConsultarVacaciones.Selected.dniEmpleado,
-                            FechaInicio: dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,
-                            FechaFin: DateAdd(dp_PUMV_Dia_Inicio_Verano_2.SelectedDate,13+var_verano2,TimeUnit.Days),
+                            FechaInicio: DatePicker6.SelectedDate,
+                            FechaFin: DateAdd(DatePicker6.SelectedDate,13+var_verano2,TimeUnit.Days),
                             Opciones: {Value: "Verano", Label: "Verano"},
                             Duracion: 14+var_verano2,
                             Modificada: true
@@ -440,7 +441,7 @@ ModificarPermisos As screen:
                 ;
                 Set(puavesvalido,false);
                 Reset(Radio2);
-            Text: ="Confirmar"
+            Text: ="Aceptar"
             Visible: =puavesvalido
             X: =340
             Y: =527
