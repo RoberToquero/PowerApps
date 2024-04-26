@@ -154,6 +154,10 @@ ModificarPermisos As screen:
                                     FechaFin: DatePicker4.SelectedDate
                                 }
                             )
+                            ;
+                            Reset(DatePicker4)
+                            ;
+                            Navigate(ConsultarVacaciones)
                         )
                     )
                 )
