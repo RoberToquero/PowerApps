@@ -1,0 +1,47 @@
+Screen1 As screen:
+
+    Label15 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =16
+        Text: |-
+            ="Destinatario:"
+        X: =124
+        Y: =148
+        ZIndex: =1
+
+    Label19 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =16
+        Text: |-
+            ="Asunto:"
+        X: =698
+        Y: =148
+        ZIndex: =2
+
+    Label21 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =16
+        Text: |-
+            ="Descripción:"
+        X: =124
+        Y: =288
+        ZIndex: =3
+
+    TextInput1 As text:
+        Default: =
+        Height: =47
+        Width: =560
+        X: =698
+        Y: =204
+        ZIndex: =4
+
+    TextInput2 As text:
+        Default: =
+        Height: =298
+        HintText: ="Especifique el tipo de permiso (vacaciones de verano, vacaciones de invierno, dias de libre elección), las fechas actuales y las nuevas así como el motivo de la modificación"
+        Mode: =TextMode.MultiLine
+        Width: =1134
+        X: =124
+        Y: =344
+        ZIndex: =5
+
