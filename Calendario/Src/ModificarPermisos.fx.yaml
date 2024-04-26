@@ -441,6 +441,10 @@ ModificarPermisos As screen:
                 ;
                 Set(puavesvalido,false);
                 Reset(Radio2);
+                Reset(DatePicker5);
+                Reset(DatePicker6);
+                Reset(DatePicker7);
+                Navigate(ConsultarVacaciones)
             Text: ="Aceptar"
             Visible: =puavesvalido
             X: =340
