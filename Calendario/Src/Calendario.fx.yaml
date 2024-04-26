@@ -4457,11 +4457,13 @@ Calendario As screen:
         Rectangle1 As rectangle:
             Fill: =RGBA(0, 0, 0, 0.2)
             Height: =768
+            Visible: =false
             Width: =1366
             ZIndex: =105
 
         Rectangle2 As rectangle:
             Height: =380
+            Visible: =false
             Width: =597
             X: =382
             Y: =166
@@ -4474,6 +4476,7 @@ Calendario As screen:
             Height: =97
             Size: =20
             Text: ="Solo se puede modificar una vez cada permiso"
+            Visible: =false
             Width: =337
             X: =515
             Y: =190
@@ -4483,6 +4486,7 @@ Calendario As screen:
             Fill: =RGBA(255, 0, 0, 1)
             HoverFill: =ColorFade(Self.Fill, 20%)
             Text: ="Cancelar"
+            Visible: =false
             X: =476
             Y: =446
             ZIndex: =108
@@ -4494,6 +4498,7 @@ Calendario As screen:
             Height: =97
             Size: =16
             Text: ="¿Quieres hacer una solicitud de modificación a un admin?"
+            Visible: =false
             Width: =337
             X: =515
             Y: =307
@@ -4502,6 +4507,7 @@ Calendario As screen:
         Button5 As button:
             Fill: =RGBA(54, 176, 75, 1)
             Text: ="Solicitar"
+            Visible: =false
             X: =725
             Y: =446
             ZIndex: =110
@@ -4510,6 +4516,7 @@ Calendario As screen:
             Color: =RGBA(255, 0, 0, 1)
             Fill: =RGBA(255, 255, 0, 1)
             Icon: =Icon.Information
+            Visible: =false
             X: =399
             Y: =183
             ZIndex: =111
