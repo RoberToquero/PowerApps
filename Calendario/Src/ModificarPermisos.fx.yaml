@@ -157,7 +157,7 @@ ModificarPermisos As screen:
                         )
                     )
                 )
-            Text: ="Confirmar"
+            Text: ="Aceptar"
             Width: =155
             X: =334
             Y: =464
