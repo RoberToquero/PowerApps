@@ -1420,13 +1420,26 @@ ModificarPermisos As screen:
             Text: |-
                 =If(
                     GalleryConsultarVacaciones.Selected.Opciones.Value="Verano",
-                    "¿Seguro que quieres eliminar los registros de las vacaciones de verano de este año del empleado: "
+                    "¿Seguro que quieres eliminar los registros de las vacaciones de verano de "
+                     &Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))
+                     &" del empleado: "
                      &GalleryConsultarVacaciones.Selected.NombreEmpleado
                      &" "
                      &GalleryConsultarVacaciones.Selected.ApellidosEmpleado
                      &"?"
                     ,
-                    "¿Seguro que quieres eliminar este registro?"
+                    If(
+                        GalleryConsultarVacaciones.Selected.Opciones.Value="Invierno",
+                        "¿Seguro que quieres eliminar los registros de las vacaciones de invierno de "
+                         &Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))
+                         &" del empleado: "
+                         &GalleryConsultarVacaciones.Selected.NombreEmpleado
+                         &" "
+                         &GalleryConsultarVacaciones.Selected.ApellidosEmpleado
+                         &"?"
+                        ,
+                        ""
+                    )
                 )
             Visible: =popUpEliminarModificarPermisos
             Width: =417
