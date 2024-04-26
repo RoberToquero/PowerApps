@@ -1438,7 +1438,13 @@ ModificarPermisos As screen:
                          &GalleryConsultarVacaciones.Selected.ApellidosEmpleado
                          &"?"
                         ,
-                        ""
+                        "¿Seguro que quieres eliminar el registro de Día de Libre Elección con fecha: "
+                         &GalleryConsultarVacaciones.Selected.FechaInicio
+                         &" del empleado: "
+                         &GalleryConsultarVacaciones.Selected.NombreEmpleado
+                         &" "
+                         &GalleryConsultarVacaciones.Selected.ApellidosEmpleado
+                         &"?"
                     )
                 )
             Visible: =popUpEliminarModificarPermisos
