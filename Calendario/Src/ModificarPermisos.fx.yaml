@@ -165,7 +165,7 @@ ModificarPermisos As screen:
 
     ContainerInvierno As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.None
-        Height: =638
+        Height: =640
         Visible: |-
             =If(
                 GalleryConsultarVacaciones.Selected.Opciones.Value="Invierno",
@@ -174,7 +174,7 @@ ModificarPermisos As screen:
             )
         Width: =822
         X: =544
-        Y: =130
+        Y: =128
         ZIndex: =8
 
         Radio1 As radio:
@@ -337,7 +337,7 @@ ModificarPermisos As screen:
                         true,
                         false
                     )
-                X: =430
+                X: =378
                 Y: =384
                 ZIndex: =4
 
@@ -348,7 +348,7 @@ ModificarPermisos As screen:
                         true,
                         false
                     )
-                X: =430
+                X: =378
                 Y: =244
                 ZIndex: =5
 
@@ -365,7 +365,7 @@ ModificarPermisos As screen:
                         false
                     )
                 Width: =154
-                X: =186
+                X: =134
                 Y: =223
                 ZIndex: =6
 
@@ -382,7 +382,7 @@ ModificarPermisos As screen:
                         false
                     )
                 Width: =153
-                X: =186
+                X: =134
                 Y: =367
                 ZIndex: =7
 
