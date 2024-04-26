@@ -4321,6 +4321,12 @@ Calendario As screen:
             Y: =566
             ZIndex: =90
 
+    Rectangle1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.2)
+        Height: =768
+        Width: =1366
+        ZIndex: =105
+
     Leyenda As group:
         Height: =5
         Width: =5
@@ -4446,4 +4452,50 @@ Calendario As screen:
             X: =911
             Y: =711
             ZIndex: =104
+
+    Rectangle2 As rectangle:
+        Height: =380
+        Width: =597
+        X: =382
+        Y: =166
+        ZIndex: =106
+
+    Label6 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =97
+        Size: =20
+        Text: ="Solo se puede modificar una vez cada permiso"
+        Width: =337
+        X: =515
+        Y: =190
+        ZIndex: =107
+
+    Button4 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        HoverFill: =ColorFade(Self.Fill, 20%)
+        Text: ="Cancelar"
+        X: =476
+        Y: =446
+        ZIndex: =108
+
+    Label6_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =97
+        Size: =16
+        Text: ="¿Quieres hacer una solicitud de modificación a un admin?"
+        Width: =337
+        X: =515
+        Y: =307
+        ZIndex: =109
+
+    Button5 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Text: ="Solicitar"
+        X: =725
+        Y: =446
+        ZIndex: =110
 
