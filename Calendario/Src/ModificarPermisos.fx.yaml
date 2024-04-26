@@ -285,7 +285,7 @@ ModificarPermisos As screen:
                     enespera,
                     false
                 );
-            Text: ="Confirmar"
+            Text: ="Aceptar"
             X: =326
             Y: =470
             ZIndex: =3
