@@ -224,11 +224,14 @@ ModificarPermisos As screen:
                                     )
                                 ),
                                 Opciones.Value = "Invierno"
-                            ),
+                            )
+                            ,
                             FechaInicio = LookUp(
                                 ConfiguracionCalendario_1,
                                 Año = Text(Year(GalleryConsultarVacaciones.Selected.FechaInicio))
-                            ).InicioInvierno && Empleados.Departamento.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
+                            ).InicioInvierno
+                            && Empleados.Departamento.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
+                            && dniEmpleado <> GalleryConsultarVacaciones.Selected.dniEmpleado
                         )
                     ) < (LookUp(
                         Departamentos_1,
@@ -236,7 +239,8 @@ ModificarPermisos As screen:
                     ).TotalEmpleados - LookUp(
                         Departamentos_1,
                         Nombre.Value = GalleryConsultarVacaciones.Selected.DepartamentoEmpleado
-                    ).MinimoEmpleados),
+                    ).MinimoEmpleados)
+                    ,
                     Patch(
                         Vacaciones,
                         First(
