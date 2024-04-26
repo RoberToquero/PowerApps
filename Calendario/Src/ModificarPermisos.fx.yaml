@@ -34,8 +34,8 @@ ModificarPermisos As screen:
         Text: |-
             ="Empleado: "&GalleryConsultarVacaciones.Selected.NombreEmpleado&" "&GalleryConsultarVacaciones.Selected.ApellidosEmpleado
         Width: =442
-        X: =68
-        Y: =204
+        X: =102
+        Y: =217
         ZIndex: =4
 
     Label4 As label:
@@ -45,8 +45,8 @@ ModificarPermisos As screen:
         Text: |-
             ="Tipo: "&GalleryConsultarVacaciones.Selected.Opciones.Value
         Width: =269
-        X: =97
-        Y: =288
+        X: =131
+        Y: =301
         ZIndex: =5
 
     ContainerLibreEleccion As groupContainer.manualLayoutContainer:
@@ -273,18 +273,23 @@ ModificarPermisos As screen:
                                 ).FinInvierno2
                             )
                         }
-                    ),
+                    )
+                    ;
+                    Reset(Radio1)
+                    ;
+                    Navigate(ConsultarVacaciones)
+                    ;
+                    Set(
+                        enespera,
+                        false
+                    );
+                    ,
                     Notify(
                         "Esa semana ya está ocupada",
                         NotificationType.Error,
                         2000
                     )
-                );
-                Reset(Radio1);
-                Set(
-                    enespera,
-                    false
-                );
+                )
             Text: ="Aceptar"
             X: =326
             Y: =470
@@ -1385,8 +1390,8 @@ ModificarPermisos As screen:
         HoverFill: =ColorFade(Self.Fill, 20%)
         OnSelect: =Set(popUpEliminarModificarPermisos,true)
         Text: ="Eliminar"
-        X: =189
-        Y: =557
+        X: =223
+        Y: =570
         ZIndex: =10
 
     Group4 As group:
